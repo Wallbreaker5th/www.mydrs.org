@@ -1,0 +1,292 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2002《贪吃的九头龙》-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>NOI2002《贪吃的九头龙》
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2002《贪吃的九头龙》</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/12/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'">贪吃的九头龙</SPAN><SPAN lang=EN-US style="FONT-SIZE: 18pt; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 黑体"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US>&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【问题描述】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">传说中的九头龙是一种特别贪吃的动物。虽然名字叫“九头龙”，但这只是说它出生的时候有九个头，而在成长的过程中，它有时会长出很多的新头，头的总数会远大于九，当然也会有旧头因衰老而自己脱落。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">有一天，有</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">M</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个脑袋的九头龙看到一棵长有</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">N</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子的果树，喜出望外，恨不得一口把它全部吃掉。可是必须照顾到每个头，因此它需要把</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">N</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子分成</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">M</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">组，每组至少有一个果子，让每个头吃一组。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">这</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">M</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个脑袋中有一个最大，称为“大头”，是众头之首，<I style="mso-bidi-font-style: normal"><U>它要吃掉恰好</U></I></SPAN><I style="mso-bidi-font-style: normal"><U><SPAN lang=EN-US style="FONT-SIZE: 12pt">K</SPAN></U></I><I style="mso-bidi-font-style: normal"><U><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，而且</SPAN></U></I><I style="mso-bidi-font-style: normal"><U><SPAN lang=EN-US style="FONT-SIZE: 12pt">K</SPAN></U></I><I style="mso-bidi-font-style: normal"><U><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子中理所当然地应该包括唯一的一个最大的果子<SPAN style="COLOR: black">。</SPAN></SPAN></U></I><SPAN style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">果子由</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt; COLOR: black">N-1</SPAN><SPAN style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">根树枝连接起来，由于果树是一个整体，因此可以从任意一个果子出发沿着树枝“走到”任何一个其他的果子。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt; COLOR: black"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于每段树枝，如果它所连接的两个果子需要由不同的头来吃掉，那么两个头会共同把树枝弄断而把果子分开；如果这两个果子是由同一个头来吃掉，</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">那么这个头会懒得把它弄断而直接把果子连同树枝一起吃掉。当然，吃树枝并不是很舒服的，因此每段树枝都有一个吃下去的“难受值”，而九头龙的难受值就是所有头吃掉的树枝的“难受值”之和。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">九头龙希望它的“难受值”尽量小，你能帮它算算吗？</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">例如图</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">1</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">所示的例子中，果树包含</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">8</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">7</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">段树枝，各段树枝的“难受值”标记在了树枝的旁边。九头龙有两个脑袋，大头需要吃掉</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">4</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，其中必须包含最大的果子。即</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">N=8</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">M=2</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">K=4</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t61 adj="1350,25920" path=" m0,0 l0@8@12@24,0@9,0,21600@6,21600@15@27@7,21600,21600,21600,21600@9@18@30,21600@8,21600,0@7,0@21@33@6,0 xe" o:spt="61" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="sum 10800 0 #0 "></v:f><v:f eqn="sum 10800 0 #1 "></v:f><v:f eqn="sum #0 0 #1 "></v:f><v:f eqn="sum @0 @1 0 "></v:f><v:f eqn="sum 21600 0 #0 "></v:f><v:f eqn="sum 21600 0 #1 "></v:f><v:f eqn="if @0 3600 12600 "></v:f><v:f eqn="if @0 9000 18000 "></v:f><v:f eqn="if @1 3600 12600 "></v:f><v:f eqn="if @1 9000 18000 "></v:f><v:f eqn="if @2 0 #0 "></v:f><v:f eqn="if @3 @10 0 "></v:f><v:f eqn="if #0 0 @11 "></v:f><v:f eqn="if @2 @6 #0 "></v:f><v:f eqn="if @3 @6 @13 "></v:f><v:f eqn="if @5 @6 @14 "></v:f><v:f eqn="if @2 #0 21600 "></v:f><v:f eqn="if @3 21600 @16 "></v:f><v:f eqn="if @4 21600 @17 "></v:f><v:f eqn="if @2 #0 @6 "></v:f><v:f eqn="if @3 @19 @6 "></v:f><v:f eqn="if #1 @6 @20 "></v:f><v:f eqn="if @2 @8 #1 "></v:f><v:f eqn="if @3 @22 @8 "></v:f><v:f eqn="if #0 @8 @23 "></v:f><v:f eqn="if @2 21600 #1 "></v:f><v:f eqn="if @3 21600 @25 "></v:f><v:f eqn="if @5 21600 @26 "></v:f><v:f eqn="if @2 #1 @8 "></v:f><v:f eqn="if @3 @8 @28 "></v:f><v:f eqn="if @4 @8 @29 "></v:f><v:f eqn="if @2 #1 0 "></v:f><v:f eqn="if @3 @31 0 "></v:f><v:f eqn="if #1 0 @32 "></v:f><v:f eqn="sum #0 0 0 "></v:f><v:f eqn="sum #1 0 0 "></v:f></v:formulas><v:path o:connecttype="custom" o:connectlocs="10800,0;0,10800;10800,21600;21600,10800;@34,@35"></v:path><v:handles><v:h position="#0,#1"></v:h></v:handles></v:shapetype><v:shape id=_x0000_s1029 style="MARGIN-TOP: 0px; Z-INDEX: 4; LEFT: 0px; MARGIN-LEFT: 1in; WIDTH: 1in; POSITION: absolute; HEIGHT: 23.4pt; TEXT-ALIGN: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text" adj="60,30692" coordsize="21600,21600" o:allowincell="f" type="#_x0000_t61"><v:textbox style="MARGIN-TOP: 4.718pt; LEFT: auto; MARGIN-LEFT: 9.812pt; WIDTH: 56.875pt; TOP: auto; HEIGHT: 15.437pt"><BR><TABLE cellSpacing=0 cellPadding=0 width="100%"><BR><TBODY><BR><TR><BR><TD><BR><DIV><BR><P class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">最大的果子</SPAN></P></DIV></TD></TR></TBODY></TABLE></v:textbox></v:shape><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN><BR><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">最大的果子</SPAN></P><P><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t202 path=" m0,0 l0,21600,21600,21600,21600,0 xe" o:spt="202" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:path o:connecttype="rect" gradientshapeok="t"></v:path></v:shapetype><v:shape id=_x0000_s1026 style="MARGIN-TOP: 23.4pt; Z-INDEX: 1; LEFT: 0px; MARGIN-LEFT: 243pt; WIDTH: 171pt; POSITION: absolute; HEIGHT: 70.05pt; TEXT-ALIGN: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text" coordsize="21600,21600" o:allowincell="f" type="#_x0000_t202" stroked="f"></v:shape><SPAN style="Z-INDEX: 1; LEFT: 0pt; POSITION: absolute"><BR><TABLE cellSpacing=0 cellPadding=0 width="100%"><BR><TBODY><BR><TR><BR><TD><BR><DIV class=shape style="PADDING-RIGHT: 7.2pt; PADDING-LEFT: 7.2pt; PADDING-BOTTOM: 3.6pt; PADDING-TOP: 3.6pt" v:shape="_x0000_s1026"><BR><P class=MsoNormal><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">大头吃</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，用实心点标识；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><BR><P class=MsoNormal><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小头吃</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，用空心点标识；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></SPAN></P><BR><P class=MsoNormal><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">九头龙的难受值为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; COLOR: black; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，因为图中用细边标记的树枝被大头吃掉了。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; COLOR: black; mso-bidi-font-size: 12.0pt"><o:p></o:p></SPAN></P></DIV></TD></TR></TBODY></TABLE></SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><v:shapetype id=_x0000_t75 path=" m@4@5 l@4@11@9@11@9@5 xe" o:spt="75" coordsize="21600,21600" stroked="f" filled="f" o:preferrelative="t"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn="sum @0 1 0 "></v:f><v:f eqn="sum 0 0 @1 "></v:f><v:f eqn="prod @2 1 2 "></v:f><v:f eqn="prod @3 21600 pixelWidth "></v:f><v:f eqn="prod @3 21600 pixelHeight "></v:f><v:f eqn="sum @0 0 1 "></v:f><v:f eqn="prod @6 1 2 "></v:f><v:f eqn="prod @7 21600 pixelWidth "></v:f><v:f eqn="sum @8 21600 0 "></v:f><v:f eqn="prod @7 21600 pixelHeight "></v:f><v:f eqn="sum @10 21600 0 "></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock v:ext="edit" aspectratio="t"></o:lock></v:shapetype><v:shape id=_x0000_i1025 style="WIDTH: 246pt; HEIGHT: 103.5pt" coordsize="21600,21600" type="#_x0000_t75" fillcolor="winColor(17)"><v:imagedata src="index.htm" temptabs="http://www.mydrs.org/program/dragon.files/image002.png" o:title="net1"></v:imagedata></v:shape><o:p></o:p></SPAN><BR><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">大头吃</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，用实心点标识；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小头吃</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子，用空心点标识；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; mso-bidi-font-size: 12.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">九头龙的难受值为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; COLOR: black; mso-bidi-font-size: 12.0pt">4</SPAN><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，因为图中用细边标记的树枝被大头吃掉了。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; COLOR: black; mso-bidi-font-size: 12.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><BR><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shape id=_x0000_s1027 style="MARGIN-TOP: 0px; Z-INDEX: 2; LEFT: 0px; MARGIN-LEFT: 45pt; WIDTH: 45pt; POSITION: absolute; HEIGHT: 23.4pt; TEXT-ALIGN: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text" coordsize="21600,21600" o:allowincell="f" type="#_x0000_t202" stroked="f"></v:shape><v:shape id=_x0000_s1028 style="MARGIN-TOP: 1.75pt; Z-INDEX: 3; LEFT: 0px; MARGIN-LEFT: 234pt; WIDTH: 45pt; POSITION: absolute; HEIGHT: 23.4pt; TEXT-ALIGN: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text" coordsize="21600,21600" o:allowincell="f" type="#_x0000_t202" stroked="f"></v:shape><SPAN style="Z-INDEX: 2; POSITION: absolute"><BR><TABLE cellSpacing=0 cellPadding=0 width="100%"><BR><TBODY><BR><TR><BR><TD><BR><DIV class=shape style="PADDING-RIGHT: 7.2pt; PADDING-LEFT: 7.2pt; PADDING-BOTTOM: 3.6pt; PADDING-TOP: 3.6pt" v:shape="_x0000_s1027"><BR><P class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图一</SPAN></P></DIV></TD></TR></TBODY></TABLE></SPAN><SPAN style="Z-INDEX: 3; POSITION: absolute"><BR><TABLE cellSpacing=0 cellPadding=0 width="100%"><BR><TBODY><BR><TR><BR><TD><BR><DIV class=shape style="PADDING-RIGHT: 7.2pt; PADDING-LEFT: 7.2pt; PADDING-BOTTOM: 3.6pt; PADDING-TOP: 3.6pt" v:shape="_x0000_s1028"><BR><P class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图二</SPAN></P></DIV></TD></TR></TBODY></TABLE></SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN><BR><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图一</SPAN><BR><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图二</SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图一描述了果树的形态，图二描述了最优策略。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【输入文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">dragon.in</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的第</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">1</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行包含三个整数</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">N (1&lt;=N&lt;=300)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">M (2&lt;=M&lt;=N)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">K (1&lt;=K&lt;=N)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><SPAN style="FONT-SIZE: 12pt"> <SPAN lang=EN-US>N</SPAN></SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个果子依次编号</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">1,2,...,N</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，且<I style="mso-bidi-font-style: normal"><U>最大的果子的编号总是</U></I></SPAN><I style="mso-bidi-font-style: normal"><U><SPAN lang=EN-US style="FONT-SIZE: 12pt">1</SPAN></U></I><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。第</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">2</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行到第</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">N</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行描述了果树的形态，每行包含三个整数</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">a (1&lt;=a&lt;=N)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">b (1&lt;=b&lt;=N)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">c (0&lt;=c&lt;=10<SUP>5</SUP>)</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示存在一段难受值为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">c</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的树枝连接果子</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">a</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和果子</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">b</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【输出文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">dragon.out</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">仅有一行，包含一个整数，表示在满足“大头”的要求的前提下，九头龙的难受值的最小值。如果无法满足要求，输出</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt">-1</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【样例输入】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">8 2 4<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">1 2 20<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">1 3 4 <?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">1 4 13<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">2 5 10<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">2 6 12<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">3 7 15<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">3 8 5<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【样例输出】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">4<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN lang=EN-US style="FONT-SIZE: 12pt">&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">【样例说明】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">该样例对应于题目描述中的例子。</SPAN><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有2447位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=403.htm" temptabs="http://www.mydrs.org/program/list?id=403">NOI2002《调皮的小孩》</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=405.htm" temptabs="http://www.mydrs.org/program/list?id=405">NOI2002笔试选择题</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=404.htm" temptabs="http://www.mydrs.org/program/sendmail?id=404" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2002《贪吃的九头龙》.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0404.htm" temptabs="http://www.mydrs.org/program/html/0404.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

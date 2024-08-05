@@ -1,0 +1,276 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>程序设计中的数学方法-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>程序设计中的数学方法
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>程序设计中的数学方法</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/4/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <STRONG><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: Verdana"><FONT size=2>[一.数学方法简介]</FONT></SPAN></STRONG><FONT face=Verdana size=2><SPAN lang=EN-US style="COLOR: black"><BR>&nbsp;&nbsp;&nbsp; &nbsp; 程序设计中可采用多种数学方法，恰如其分的数学方法可以大大减少程序运行的时间和所需空间，起到优化程序的作用。遇到一道题目时,如进制运算,多项式运算等,应不急于马上用递归,回溯等算法,无妨先用笔算,从中发现一些规律.但是也不是每一道题都可以用数学方法完成,数学方法只能用于一些求总数,最值之类的题目上.</SPAN></FONT><STRONG><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: Verdana"><FONT size=2><BR>[二.举例]</FONT></SPAN></STRONG><FONT face=Verdana><B><SPAN lang=EN-US style="COLOR: black"><FONT size=2><BR></FONT></SPAN></B><SPAN lang=EN-US style="COLOR: black"><FONT size=2>1. 砝码设计 (江苏省队组队选拔赛)<BR>&nbsp;&nbsp;&nbsp;&nbsp; 设有一个天平,可以用来称重.<BR>&nbsp;&nbsp;&nbsp;&nbsp; 任务一:设计n个砝码的重量,用他们能称出尽可能多的整数重量.例如,n=2,设计2个砝码的重量分别为1和3, 可称重为1,2,3,4的连续重量.<BR>&nbsp;&nbsp;&nbsp;&nbsp; 任务二:在给出n个砝码能称出最大重量范围的一重量x,试给出称出x的方案.<BR>&nbsp;&nbsp;&nbsp;&nbsp; 在上例中:<BR>&nbsp;&nbsp;&nbsp;&nbsp; 给出x=2称出的方案为2+1:3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;x=4称出的方案为4:1+3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;x=1称出的方案为1:1<BR>&nbsp;&nbsp;&nbsp;&nbsp; 输入:n,x(n为砝码个数,x是在称出最大重量范围内的重量)<BR>&nbsp;&nbsp;&nbsp;&nbsp; 输出:砝码方案,称出x的方案.<BR>&nbsp;&nbsp;&nbsp;&nbsp; 输入样例1:2,2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输入样例2:2,4<BR>&nbsp;&nbsp;&nbsp;&nbsp; 输出样例1:1,3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出样例2:1,3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2+1:3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4:1+3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN></FONT><BR><FONT face=Verdana size=2><SPAN lang=EN-US style="COLOR: black">2. 思路分析<BR>&nbsp;&nbsp;&nbsp;&nbsp; 由题目任务一可知:n=2时砝码重量最优解为1,3. 我们可以试n=3,n=4...的情况,不难发现砝码的重量均为3的1至n次方,由于理论推导涉及到累加等数学知识,我们着重看任务二.<BR>&nbsp;&nbsp;&nbsp;&nbsp; 任务二要求输出用砝码称出重为x的重量,实际上就是用3的1至n次方的和差来表示x,如样例中的2=3-1,4=1+3等,不难发现,当x除以3余1时,必然x要表示为x=a1+a2...+1,余2时x=a1+a2...-1,余0时不用1的砝码.因此取x除以3的余数,可以确定砝码1用不用和用在天平的哪一边.同理,判断3的砝码位置时,可先将x先除以3四舍五入,再除以3取余判断.能用3的1至n次方的和差来表示x后,屏幕输出再用一个数组来处理就行了.</SPAN></FONT><BR><FONT face=Verdana size=2><SPAN lang=EN-US style="COLOR: black">3. 示范程序</SPAN></FONT><BR><FONT face=Verdana size=2><SPAN lang=EN-US style="COLOR: black">program fdsa;<BR>uses crt,dos;<BR>var<BR>&nbsp; x,a,b,c,m,n,i,j,k:longint;<BR>&nbsp; t1,t2:integer;<BR>&nbsp; ch1,ch2:array [1..10] of integer;<BR>begin<BR>&nbsp; clrscr;<BR>&nbsp; write('PLEASE INPUT N : '); readln(n);<BR>&nbsp; write('PLEASE INPUT X : '); readln(x);<BR>&nbsp; m:=x; a:=1; write(a); a:=3;<BR>&nbsp; for i:=1 to n-1 do<BR>&nbsp; begin<BR>&nbsp;&nbsp;&nbsp; write(', ',a); a:=a*3;<BR>&nbsp; end;<BR>&nbsp; t1:=0; t2:=0; j:=1;<BR>&nbsp; repeat<BR>&nbsp;&nbsp;&nbsp; b:=x mod 3;<BR>&nbsp;&nbsp;&nbsp; x:=round(x/3);<BR>&nbsp;&nbsp;&nbsp; if b=2 then begin t1:=t1+1; ch1[t1]:=j; end;<BR>&nbsp;&nbsp;&nbsp; if b=1 then begin t2:=t2+1; ch2[t2]:=j; end;<BR>&nbsp;&nbsp;&nbsp; j:=j*3;<BR>&nbsp; until x=0;<BR>&nbsp; writeln;<BR>&nbsp; write(m,' ');<BR>&nbsp; for i:=1 to t1 do<BR>&nbsp; write('+ ',ch1[i],' ');<BR>&nbsp; write(': ');<BR>&nbsp; write(ch2[1]);<BR>&nbsp; for i:=2 to t2 do<BR>&nbsp; write('+ ',ch2[i]);<BR>end.</SPAN></FONT><BR><STRONG><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: Verdana"><FONT size=2>[三.总结]</FONT></SPAN></STRONG><FONT face=Verdana><SPAN lang=EN-US><FONT size=2><BR>&nbsp;&nbsp;&nbsp;&nbsp; 数学方法的合理运用,可以给编程带来很大方便,现在一些省市的信息学竞赛题,越来越多的用到数学推导.在竞赛中要取得好成绩,坚实的数学基础是很重要的.</FONT></SPAN></FONT><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：DotOI<br>
+                            
+                            共有8456位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=372.htm" temptabs="http://www.mydrs.org/program/list?id=372">递归算法及其应用</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=374.htm" temptabs="http://www.mydrs.org/program/list?id=374">编译开关的使用介绍</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=373.htm" temptabs="http://www.mydrs.org/program/sendmail?id=373" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\程序设计中的数学方法.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0373.htm" temptabs="http://www.mydrs.org/program/html/0373.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=373.htm" temptabs="http://www.mydrs.org/program/list?id=373">程序设计中的数学方法</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

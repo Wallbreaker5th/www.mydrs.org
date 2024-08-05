@@ -1,0 +1,278 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>图论模型-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>图论模型
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>图论模型</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;9/25/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <STRONG></STRONG><PRE>强烈推荐IOI2000集训队徐静的论文《图论模型的建立与转化》!!!</P><P>内容比较多，我会一点一点的写，请大家耐心等待...</P><P><h4>1 图论基础：</h4><BR>这里有几篇英文文章(pdf)，很基础的，大家认真看啊！<BR><A href="http://www.cqfls.com/oibh/sbs/graph.pdf">Graph Theory</A><BR>1)<A href="http://www.cqfls.com/oibh/sbs/e/floodfill.htm">图周游</A><BR>2)<A href="http://www.cqfls.com/oibh/sbs/e/short.htm">最短路问题</A><BR>3)<A href="http://www.cqfls.com/oibh/sbs/e/span.htm">最小生成树</A><BR>4)<A href="http://www.cqfls.com/oibh/sbs/e/euler.htm">欧拉回路/道路</A><BR>5)<A href="http://www.cqfls.com/oibh/sbs/e/flow.htm">网络流</A><BR>等大家把这些内容吃透了，在看下面的内容，就会觉得轻松很多。<BR>下面，我准备不拘泥于形式，先随便讲，再系统化，如何？</P><P><h4>2 知识点回顾</h4><BR>下面是一些图论知识点。大家可以看看自己哪些方面还不熟悉。<BR>因为大部分书都要讲，这里我就不说了。</P><P><B>1.图的概念。</B><BR>图的定义，图的阶，图的边数，邻接，关联。<BR>有向图，加权图。<BR>简单图，多重图，广义图。平行边，环(loop)。<BR>点度，出度，入度<BR>零图，平凡图，正则图，完全图Kn,竞赛图，二分图<BR>子图，补图<BR>图的同构</P><P><B>2.图的代数表示和计算机表示</B><BR>邻接矩阵/关联矩阵/邻接表/边列表</P><P><B>3.树</B><BR>树的几种等价定义<BR>基本关联矩阵,回路矩阵，割集矩阵及其关系。<BR>内向树，外向树<BR>生成树,最小生成树与生成树计数<BR>Huffman树</P><P><B>3.道路与回路</B><BR>道路，回路，简单道路，圈(cycle)<BR>道路图Pn, 圈图Cn<BR>欧拉道路，回路<BR>哈密顿道路，回路<BR>旅行商问题<BR>中国邮路</P><P><B>4.平面图</B><BR>平面图的定义<BR>欧拉公式d=m-n+2,极大平面图极其性质<BR>简单平面图的性质，m<=3n-6, d<=2n-4<BR>K5,K3,3是非平面图的证明<BR>Kuratowski定理<BR>对偶图,D过程,五色定理</P><P><B>5.图的着色</B><BR>色数，边色数<BR>色数多项式</P><P><B>6.连通性</B><BR>割点，割边和块的几个等价性质<BR>断集，断量，边断集，边断量<BR>Menger定理，边连通度的判定和其基于网络流的算法<BR>DFS算法</P><P><B>7.匹配</B><BR>二分图：最大匹配，完全匹配，最佳匹配, 一般图的最大匹配</P><P><B>8.网络流</B><BR>概念，最小切割-最大流定理<BR>ford-fulkerson算法, Edmonds-Karp算法<BR>最小费用/最大收益流<BR>点容量，流量下界，多源多汇等变形问题</P><P><B>9.最短路</B><BR>dijkstra算法/bellman-ford算法/floyd-warshall算法*johnson算法<BR>第k最短路，最短路算法的变形</P><P><h4>3 INTERNET资源</h4><BR>有两个词典，在：<BR>http://www.utm.edu/cgi-bin/caldwell/tutor/departments/math/graph/glossary<BR>http://www.math.fau.edu/locke/graphthe.htm#Index</P><P><h4>4 一些可能比较陌生的内容和它们的算法思想</h4><BR>其中下面的东西可能需要说一下。可能内容难一点，但是我们的目的不是<BR>记住这些算法，而是理解算法思想，打开我们的思路。</P><P><B>1.平面性检测:</B><BR>预处理：<BR>a.如果G非连通，应检测每一个连通支<BR>b.如果G存在割点v,应把G从v处分离。G可平面当且仅当每一块是可平面的。<BR>c.移去自环(loop)<BR>d.如果v的度为2，且v与v1,v2邻接，删去v,加边(v1,v2)</P><P>DMP算法(Demoucron, Malgrange, Pertuiset, 1964) P75</P><P>DMP算法不是最好的，但是比较容易理解，所以就说一下。</P><P>* 片的概念<BR>设H是G的可平面子图，如果在G-H中存在另一个G的平面子图B，且<BR>B和H有2个以上的共同节点，则称B是G中的片，片B与H的公共点称为片B的<BR>附着点。<BR>  ~<BR>记H为G的子图H的一个平面嵌入。</P><P>算法基本思想就是：<BR>先找一个回路C，初始的H<-C<BR>每次取一个片B，试图画在已有的图中。</P><P>只有当B的所有附着点都在H的某一个面<BR>f(这样的面的集合叫F(B,H))的边界上，B才能"嵌"在这个面中（自己画一画<BR>就会明白）.如果最后把每个B都画完了，就找到了G的一个平面嵌入，如果B<BR>画不进去，G就不是可平面图。</P><P>* 算法描述<BR>1.找G的一个回路C<BR>2.i<-1<BR>         ~<BR>3.G1<-C, G1<-C<BR>4.f<-2</P><P>5.EMBEDDABLE<-true<BR>6.while f<>m-2+2 and EMBEDDABLE do<BR>  begin<BR>7   找G关于Gi的每一个片B<BR>                       ~<BR>8   对每一个片B，求F(B,Gi)<BR>                       ~<BR>9   若对于某一个B，F(B,Gi)为空，G为非可平面图，结束。<BR>10  if EMBEDDABLE then<BR>    begin<BR>                         ~                  ~<BR>11    if 对于某个B，|F(B,Gi)|=1 then F<-F(B,Gi)<BR>                                   ~<BR>      else 令B是任何一个片，F是集合F(B,Gi)中的任何一个面<BR>12    找一条路径PiB, Pi的两个端点是Gi的结点。<BR>13    Gi+1<-Gi+P<BR>              ~                            ~<BR>14    将Pi画到Gi的面F内，得到Gi+1的平面嵌入Gi+1<BR>15    i<-i+1<BR>16    f<-f+1<BR>17    若f=m-n+2 then G可平面，结束。<BR>    end<BR>  end<BR>如果G是可平面的，算法在Gm-n+1时结束。<BR>                 ~<BR>算法递推Gi, f记录Gi的面的数目<BR>算法复杂度是O(n^2)<BR>如果没有看懂，可以与我联系。<BR>有一个更好的O(n)算法，很长，是Hopcroft和Tarjan给出的。<BR>文章是：<BR>J. Hopcroft and R. Tarjan. Efficient planarity testing. Journal of the ACM, 21:549--569, 1974. </P><P><B>2.色数多项式</B><BR>定理:f(G,t)代表用t种颜色给G着色的不同方案总数,则f(G,t)是t的多项式，且：<BR>    _                               .<BR>记：Gij为加上一条边(vi,vj)得到的图，Gij表示把vi,vj变成一点得到的图。<BR>         _        .<BR>f(G,t)=f(Gij,t)+f(Gij,t) (vi,vj不相邻)<BR>证明很简单。用加法原理，第一种为vi,vj顶点不同色,一种是同色。剩下的不用我<BR>说了吧^_^</P><P>两种特殊的图<BR>G为完全图：<BR>f(G,t)=t(t-1)(t-2)..(t-n+1)<BR>G为树<BR>f(G,t)=t(t-1)^(n-1)<BR>结论是显然的，自己证明吧。</P><P>这个证明的思想可以用来求色数，即：<BR>           _      .<BR>X(G)=min{X(Gij),X(Gij)} (vi,vj不相邻)<BR>证明需要得到左边>=右边和左边<=右边即可。</P><P>算法终止于完全图。X(Kr)=r</P><P><B>3.逻辑算法</B><BR>逻辑运算的法则是：<BR>X+Y=Y+X XY=YX<BR>(X+Y)+Z=X+(Y+Z)  (XY)Z=X(YZ)<BR>X(Y+Z)=XY+XZ (Y+Z)X=XY+XZ<BR>(吸收律)X+X=X XX=X X+XY=X</P><P>有的数用V和^,其中X^Y就是XY,XVY就是X+Y</P><P>极小支配集的公式：<BR> n<BR> __<BR> ||(Vi + sum(u))<BR>i =1     u与vi相邻 <BR>最后展开成积之和的形式，每一项是一个极小支配集。<BR>例如图的邻接矩阵是<BR>  v1 v2 v3 v4 v5 v6<BR>v1 0  1  1  1  0  0<BR>v2 1  0  0  1  0  0<BR>v3 1  0  0  1  0  0<BR>v4 1  1  1  0  1  1<BR>v5 0  0  0  1  0  0<BR>v6 0  0  0  1  0  0<BR>计算方法是：<BR>(v1+v2+v3+V4)(v2+v1+V4)(v3+v1+v4)(v4+v1+v2+v3+v5+v6)(v5+v4+v6)(v6+v4+v5)<BR>(懒得写v了)<BR>=15+16+4+235+236</P><P>极小覆盖集：<BR>n<BR>__      __<BR>||(Vi + ||u)<BR>i=1   u与vi相邻</P><P>从G中去掉极小覆盖集，得到极大独立集。</P><P>请大家自己证明这两个公式和定律。</P><P></P><P><h4>5 对一些问题的探讨</h4></P><P><B>1.dijkstra算法: 局限性，推广和其他算法。</B></P><P>首先，我们来证明dijkstra算法的正确性。<BR>引理1（Lemma 1）正权图中P(i)为v1到vi的最短路，vj属于P(i),则P(j)是v1到<BR>vj的一条最短路。<BR>引理2 正权图中任意一条最短路的长度大于其局部路径的长度。</P><P>这两个结论是显然的。</P><P>假设已经得到从v1到其余各点的最短路P(ik)(k=1,2,3..n)，并且满足：<BR>d[1]=d[i1]<=d[i2]<=..<=d[in]<BR>由引理2知道，若k > l(l>=1),则P(ik)不可能是P(il)的一部分。再由引理1可得<BR>d[il]=  min { d[ij] + W[ij,il] }<BR>      1<=j < l<BR>这样，逐步确定d[i1],d[i2],d[i3]直到全部。</P><P>从证明中大家可能注意到了，只要满足引理1,2,“最短路”的确切定义是无关紧要的。<BR>正如IOI99第二试的第一题《交通信号灯》，“最短路”是权和加上等待时间，<BR>但是因为仍然满足引理1和2，故仍然可以用dijkstra算法。显然，这种dijkstra<BR>算法已经是推广了的。</P><P>对于引理2，如果G有负权，dijkstra算法可能失效。这里推荐采用bellman-ford<BR>算法:<BR>a. d[1]:=1 d[i]:=maxint i=2,3,..n<BR>b.for i:=2 to n do<BR>  d[i]:=min{ d[i], min{d[j]+w[j,i]} }<BR>                  j到i有通路<BR>c. 若全部d[i]都没有变化，结束，否则转b.<BR>b也叫做松弛操作。由于d[i]在减小且有下界（真实的最短路）,算法必将收敛。<BR>当然，如果有负权回路，就不行了，呵呵。幸亏可以证明，没有负权回路时，<BR>算法最多迭代n-1次。如果在第n次迭代的时候仍有边发生变化，只能说明...</P><P>在最坏情况下Ford算法的的时间复杂度是O(mn)<BR>Ford主要取决于松弛操作的次数。这样当负权边少时，可以忽略负权边，用<BR>dijkstra算法得到一个最短路的上界，取代初始化步骤a,可以加快速度。<BR></PRE><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：SRbGa <br>
+                            
+                            来 源：OIBH<br>
+                            
+                            共有5132位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=221.htm" temptabs="http://www.mydrs.org/program/list?id=221">NOI2001测试数据</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=222.htm" temptabs="http://www.mydrs.org/program/sendmail?id=222" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\图论模型.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0222.htm" temptabs="http://www.mydrs.org/program/html/0222.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=222.htm" temptabs="http://www.mydrs.org/program/list?id=222">图论模型</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

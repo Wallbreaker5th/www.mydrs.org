@@ -1,0 +1,372 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>第九届分区联赛普及组初赛试题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>第九届分区联赛普及组初赛试题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>第九届分区联赛普及组初赛试题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;12/4/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              ●● 全部试题答案均要求写在答卷纸上，写在试卷纸上一律无效 ●●　　
+<P>一．选择一个正确答案代码(A／B／C／D／E)，填入每题的括号内(每题1．5分，共30分) </P>
+<P>　　1．下列计算机设备中，既是输入设备，又是输出设备的是( )。 </P>
+<P>　　　　A)键盘 B)触摸屏 C)扫描仪 D)投影仪 E)数字化仪 </P>
+<P>　　2．下列分辨率的显示器所显示出的图像，最清晰的是( )。 </P>
+<P>　　　　A)800*600 B)1024*768 C)640*480 D)1280*1024 E)800*1000 </P>
+<P>　　3．下列说法中，正确的是( )。 </P>
+<P>　　　　A)在内存中，可执行程序用二进制码表示，源程序用八进制表示。<BR>　　　　B)程序和数据在内存中都是用二进制码表示的。<BR>　　　　C)内存中数据的存取是以二进制位为单位的。<BR>　　　　D)中央处理器CPU执行的每条指令的长度都不同。<BR>　　　　E)一般来说，在计算机内部，中文信息用十六进制表示，英文信息用八进制表示。 </P>
+<P>　　4．下列说法中，错误的是( )。 </P>
+<P>　　　　A)程序是指令的序列，它有三种结构：顺序、分支和循环。<BR>　　　　B)地址总线决定了中央处理器CPU所能访问的最大内存空间的大小。<BR>　　　　C)中央处理器CPU内部有寄存器组，用来存储数据。<BR>　　　　D)不同厂家生产的CPU所能处理的指令集不一定相同。<BR>　　　　E)数据传输过程中不可能会出错。 </P>
+<P>　　5．CPU访问内存的速度比访问下列哪个存储设备要慢( )。 </P>
+<P>　　　　A)寄存器 B)硬盘 C)软盘 D)磁带 E)光盘 </P>
+<P>　　6．下列电子邮件地址，正确的是( )。 </P>
+<P>　　　　A)wang@hotmail.com B)cai@jcc.pc.tool@rf.edu.jp<BR>　　　　C)162.105.111.22 D)ccf.edu.cn<BR>　　　　E)http：//www.sina.com </P>
+<P>　　7．数字图像文件可以用下列哪个软件来编辑( )。 </P>
+<P>　　　　A)画笔(Paintbrush) B)记事簿(Notepad) C)Recorder<BR>　　　　D)WinRAR E)MidiSoft </P>
+<P>　　8．下列哪个软件不是操作系统软件的名字( )。 </P>
+<P>　　　　A)Windows XP B)DOS C)Linux D)OS／2 E)Arch／Info </P>
+<P>　　9．下列哪个不是个人计算机的硬件组成部分( )。 </P>
+<P>　　　　A)主板 B)操作系统 C)电源 D)硬盘 E)软驱 </P>
+<P>　　10．图灵(Alan Turing)是( )。 </P>
+<P>　　　　A)美国人 B)英国人 C)德国人 D)匈牙利人 E)法国人 </P>
+<P>　　11．第一个给计算机写程序的人是( )。 </P>
+<P>　　　　A)Alan Mathison Turing<BR>　　　　B)Ada Lovelace<BR>　　　　C)John von Neumann<BR>　　　　D)John McCarthy<BR>　　　　E)Edsger Wybe Dijkstra </P>
+<P>　　12．十进制数2003等值于二进制数( )。 </P>
+<P>　　　　A)11111010011 B)10000011 C)110000111 D)010000011l E)1111010011 </P>
+<P>　　13．运算式(2008)<SUB>10</SUB>－(3723)<SUB>8</SUB>的结果是( )。 </P>
+<P>　　　　A) (-1715)<SUB>10</SUB> B) (5)<SUB>10</SUB> C) (-5)<SUB>16</SUB> D) (111)<SUB>2</SUB> E) (3263)<SUB>8</SUB> </P>
+<P>　　14．下列关于程序语言的叙述，不正确的是( )。 </P>
+<P>　　　　A)编写机器代码不比编写汇编代码容易。<BR>　　　　B)高级语言需要编译成目标代码或通过解释器解释后才能被CPU执行。<BR>　　　　C)同样一段高级语言程序通过不同的编译器可能产生不同的可执行程序。<BR>　　　　D)汇编代码可被CPU直接运行。<BR>　　　　E)不同的高级语言语法略有不同。 </P>
+<P>　　15．假设A=true，B=false，C=true，D=true，逻辑运算表达式A∧B∨C∧D的值是( )。 </P>
+<P>　　　　A)true B)false C)0 D)1 E)NULL </P>
+<P>　　16．一个高度为h的二叉树最小元素数目是( )。 </P>
+<P>　　　　A)2h+l B)h C)2h-1 D)2h E)2<SUP><SUP>h</SUP></SUP>-l </P>
+<P>　　17．已知队列(13，2，11，34，41，77，5，7，18，26，15)，第一个进入队列的元素是13，则第五个出队列的元素是( )。 </P>
+<P>　　　　A)5 B)41 C)77 D)13 E)18 </P>
+<P>　　18．下列关于文件的叙述，不正确的是( )。 </P>
+<P>　　　　A)一个可执行程序其实也是一个文件。<BR>　　　　B)文件可大可小，大的文件一张软盘装不下。<BR>　　　　C)一个文件夹下面可以有两个同名的文件，只要它们的大小不同就行了。<BR>　　　　D)文件的创建日期和最新修改日期可以在资源管理器中看到。<BR>　　　　E)某些文件的内容可以用记事本(Notepad)看到。 </P>
+<P>　　19．活动硬盘的容量比固定硬盘的容量( )。 </P>
+<P>　　　　A)大 B)小 C)相等 D)不一定大 E)大致相等 </P>
+<P>　　20．IP地址是一个( )位二进制码。 </P>
+<P>　　　　A)8 B)16 C)32 D)64 E)12</P>
+<P>二．问题求解(每题5分，共10分) </P>
+<P>　　1．现在市场上有一款汽车A很热销，售价是2万美元。汽车A每加仑汽油可以行驶20英里。普通汽车每年大约行驶12000英里。油价是每加仑1美元。不久我公司就要推出新款节油汽车B，汽车B每加仑汽油可以行驶30英里。现在我们要为B制定价格(它的价格略高于A)：我们预计如果用户能够在两年内通过节省油钱把B高出A的价钱弥补回来，则他们就会购买B，否则就不会购买B。那么B的最高价格应为<U>　　　　</U>万美元。 </P>
+<P>　　2．无向图G有16条边，有3个4度顶点、4个3度顶点，其余顶点的度均小于3，则G至少有<U>　　　　</U>个顶点。 </P>
+<P>三．阅读程序(每题8分，共32分) </P>
+<P>1．program Programl；<BR>　 var<BR>　　 a，x，y，okl，ok2：integer；<BR>　 begin<BR>　　 a ：=100：<BR>　　 x：=l0；<BR>　　 y：=20；<BR>　　 okl：=5：<BR>　　 ok2：=0；<BR>　　 if ((x&gt;y) or ((y&lt;&gt;20) and (okl=0)) and (ok2&lt;&gt;0)) then<BR>　　　 a：=1<BR>　　 else if ((okl&lt;&gt;0) and (ok2=、0)) then<BR>　　　　　 a：=-1<BR>　　　　 else<BR>　　　　　 a：=0；<BR>　　 writeln(a)；<BR>　 end． </P>
+<P>输出：<U>　　　　</U> </P>
+<P>2．program Program2；<BR>　 var<BR>　　a，t：string；<BR>　　i，j：integer；<BR>　 begin<BR>　　a：=`morning`；<BR>　　j：= l；<BR><BR>　　 for i：=2 to 7 do<BR>　　　 if (a[j]&lt;a[i])then<BR>　　　　　j：= i；<BR>　　 j：= j-1；<BR>　　 for i：=1 to j do<BR>　　　 write (a[i])；<BR>　　end． </P>
+<P>输出：<U>　　　　</U> </P>
+<P>3．program Program3；<BR>　 Var<BR>　　 a，b，c，d，sum：longint；<BR>　 begin<BR>　　 read (a，b，c，d)；<BR>　　 a：=a mod 23：<BR>　　 b：=b mod 28；<BR>　　 c：=c mod 33；<BR>　　 sum：=a*5544+b* 14421+c*1288-d;<BR>　　 sum：=sum+21252;<BR>　　 sum：=sum mod 21252;<BR>　　 if (sum=0)then<BR>　　　　sum：=21252;<BR>　　 writeln(sum)；<BR>　 end． </P>
+<P>输入：283 102 23 320 输出：<U>　　　　</U> </P>
+<P>4．program program4；<BR>　 var<BR>　 a： array[0．．5] of integer；<BR>　 sum，n，max，i，j，k：integer；<BR>　 cover：array[0．．22000]of boolean；<BR>　 begin<BR>　　 read (a[5]，a[4]，a[3]，a[2]，a[1]，a[0])；<BR>　　 if ((a[5]=0) and (a[3]=0) and (a[1]=0)) then<BR>　　 begin<BR>　　　a[5]：=a[4]；a[4]：=a[2]； a[3]：=a[0]； a[2]：=0 a[0]：=0；<BR>　　 end：<BR>　　 for i：=0 to 5 do<BR>　　 if (a[i]&gt;10) then a[i]：=10+(a[i] mod 2)；<BR>　　 sum：=0：<BR>　　 for i：=0 to 5 do sum：=sum+a[i]*(6-i)；<BR>　　 if ((sum mod 2) &lt;&gt;0) then　　begin<BR>　　　　　　　　　　　　　　　　　　writeln(`Can``t be divided.`)；<BR>　　　　　　　　　　　　　　　　　　Exit;<BR>　　　　　　　　　　　　　　　　End;<BR>　　 sum：=sum div 2； max：=0； cover[0]：=True；<BR>　　 for i：=1 to sum*2 do cover[i]：=False；<BR>　　 for i：=0 to 5 do<BR>　　 begin<BR>　　　 j：=0；<BR>　　　 while (j&lt;a[i])do<BR>　　　　 begin<BR>　　　　　 for k：=max downto 0 do<BR>　　　　　　 begin if (cover[k]) then cover[k+6-i]：=True；end；<BR>　　　　　max：=max+6-i： j：=j+1；<BR>　　　　 end;<BR>　　　end;<BR>　　　if (cover[sum]) then writeln (`Can be divided.`)<BR>　　　　　　　　　　　else writeln(`can``t be divided.`)；<BR>　 end． </P>
+<P>输入：4 7 9 20 56 48 输入：1000 7 101 20 55 1 输入：2000 5 l 1 0 0<BR>输出：<U>　　　　　　　</U> 输出：<U>　　　　　　　　　</U> 输出：<U>　　　　</U><U>　　　　</U> </P>
+<P>四、完善程序(第l空2分，其余每空3分共28分) </P>
+<P>　　1．一元二次方程 </P>
+<P>　　题目描述： </P>
+<P>　　　　方程ax＾2+bx+c=0，要求给出它的实数解． </P>
+<P>　　输 入： </P>
+<P>　　　　三个实数：a，b，c，是方程的三个系数(a≠0)． </P>
+<P>　　输 出： </P>
+<P>　　　　如果无实数解，则输出"No solution"；<BR>　　　　如果有两个相等的实数解，则输出其中一个，四舍五入到小数点后面3位；<BR>　　　　如果有两个不等的实数解，则解与解之间用逗号隔开，同样要四舍五入到小数点后3位。 </P>
+<P>　　输入样例： </P>
+<P>　　　　　　l 2 1 </P>
+<P>　　输出样例： </P>
+<P>　　　　　　-1.000 </P>
+<P>　　程 序： </P>
+<P>　　　　program Program41；<BR>　　　　var<BR>　　　　　a，b，c，m：real；<BR>　　　　begin<BR>　　　　　read (a，b，c)；<BR>　　　　　m：=b*b -4*a*c；<BR>　　　　　if ( ① )then<BR>　　　　　　begin<BR>　　　　　　　write ( ② ：0：3)；<BR>　　　　　　　write( ` , ` );<BR>　　　　　　　write ((-1*b-sqrt(m))／(2*a)：0： ③ )；<BR>　　　　　　end<BR>　　　　　　else if ( ④ )then<BR>　　　　　　　write( ⑤ )<BR>　　　　　　　else begin<BR>　　　　　　　　　　write (`No solution`)；<BR>　　　　　　　　　 end<BR>　　　　end． </P>
+<P>　　2．翻硬币 </P>
+<P>　　题目描述： </P>
+<P>　　一摞硬币共有m枚，每一枚都是正面朝上。取下最上面的一枚硬币，将它翻面后放回原处。然后取下最上面的2枚硬币，将他们一起翻面后再放回原处。再取3枚，取4枚……直至m枚。然后再从这摞硬币最上面的一枚开始，重复刚才的做法。这样一直做下去，直到这摞硬币中的每一枚又都是正面朝上为止。例如，m为1时，翻两次即可。m为2时，翻3次即可；m为3时，翻9次即可；m为4时，翻11次即可；m为5时，翻24次即可；…；m为30时，翻899次即可；… </P>
+<P>　　输 入： </P>
+<P>　　仅有的一个数字是这摞硬币的枚数m，0&lt;m&lt;1000。 </P>
+<P>　　输 出： </P>
+<P>　　为了使这摞硬币中的每一枚又都是正面朝上所必需翻的次数。 </P>
+<P>　　输入样例： </P>
+<P>　　　　　　30 </P>
+<P>　　输出样例： </P>
+<P>　　　　　　899 </P>
+<P>　　程 序： </P>
+<P>　　　　program Programl；<BR>　　　　var m：integer；<BR>　　　　　function solve (m：integer)：integer；<BR>　　　　　vat i，t，d：integer；<BR>　　　　　　　flag：boolean;<BR>　　　　　begin<BR>　　　　　　if (m=1)then<BR>　　　　　　　so1ve：= ① <BR>　　　　　　else begin<BR>　　　　　　　　　d：=2*m+1；<BR>　　　　　　　　　t：= 2;<BR>　　　　　　　　　i：= 1;<BR>　　　　　　　　　flag：=False；<BR>　　　　　　　　　repeat<BR>　　　　　　　　　　if (t=1)then<BR>　　　　　　　　　　　begin<BR>　　　　　　　　　　　　solve：= ② <BR>　　　　　　　　　　　　flag：=True；<BR>　　　　　　　　　　　end<BR>　　　　　　　　　　else if ( ③ )then<BR>　　　　　　　　　　　　　　begin<BR>　　　　　　　　　　　　　　　solve：=i*m-1；<BR>　　　　　　　　　　　　　　　flag：=True；<BR>　　　　　　　　　　　　　　end<BR>　　　　　　　　　　　　　else<BR>　　　　　　　　　　　　　　t：= ④ ；<BR>　　　　　　　　　　i：=i+1；<BR>　　　　　　　　　until flag；<BR>　　　　　　　　end<BR>　　　　　　end;<BR>　　　　begin<BR>　　　　　read (m);<BR>　　　　　if ((m＞0) and (m＜1000)) then<BR>　　　　　　writeln ( ⑤ );<BR>　　　　end.</P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有13676位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=536.htm" temptabs="http://www.mydrs.org/program/list?id=536">Pascal中的常用数学函数</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=538.htm" temptabs="http://www.mydrs.org/program/list?id=538">第九届分区普及组初赛参考答案</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=537.htm" temptabs="http://www.mydrs.org/program/sendmail?id=537" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\第九届分区联赛普及组初赛试题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0537.htm" temptabs="http://www.mydrs.org/program/html/0537.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

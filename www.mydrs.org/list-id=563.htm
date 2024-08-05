@@ -1,0 +1,287 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>专访神舟五号软件专家何新贵院士-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>专访神舟五号软件专家何新贵院士
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>专访神舟五号软件专家何新贵院士</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/27/2004&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　<STRONG>何新贵</STRONG>院士，1955年高中毕业于浙江杭州第二中学，1960年北京大学数学力学系毕业。1967年北大研究生毕业。20世纪80年代初留学美国俄亥俄州立大学(The Ohio State University)计算机和信息科学系，研究数据库及数据库机技术。现任<STRONG>中国载人飞船工程软件专家组组长</STRONG>、<STRONG>北京大学信息科学技术学院院长</STRONG>、博士生导师、北京计算机学会理事长、中国计算机学会抗恶劣环境计算机专业委员会主任委员、并任《计算机学报》副主编和《计算机工程与设计》主编。2001年当选中国工程院院士。 </P>
+<P>　　何新贵院士在软件工程实践方面有着丰富的实践经验，从1960年代初开始，为我国导弹武器进行科学计算和数字仿真，在计算方法上提出了较有影响的最优分段逼近和有理平方逼近等理论和方法；1962年在我国最早开发成功宏汇编系统；1973年在国产计算机上开发成多个FORTRAN编译系统；1980年代中，任工程总师，领导实现了我国早期的一个网络工程和其上的管理信息系统；从1986年开始长期担任我军大型软件工程“军用共性软件系统”的技术负责人和总设计师，负责该工程的总体设计和组织实施等全面工作；从1996年开始至今，担任92l工程软件专家组组长，从事中国载人飞船工程的软件工程总体方案的设计和实施工作，进行全工程级的软件质量保证。到2001年止，他先后获国家或部委级以上科技进步等奖励19项，其中12项排名第一。 </P>
+<P>记者：您是我国载人飞船工程软件专家组组长，您能简单地介绍一下神舟飞船的情况吗？<BR><BR>何院士：神州5号的成功发射，载人航天工程的第一期就结束了，下一阶段，也就是二期工程，即神舟6号，初步计划是明年秋季结束之前发射。目前有两种方案，报纸上也有报道，就是两个人到天上转5－7天，或是3个人转3天。这个都可能。我们现在有14个航天员，包括杨立伟在内，都在接受训练。我个人认为，两个方案都有合理的成份。你们有没有去参观过神舟5号里面的舱？飞船的舱不是太大的，如果3个人进去的话，可能会比较挤了；两个人的话，中间还可以空一块地方。<BR><BR>记者：我从画面上看，中间空间特别小。<BR><BR>何院士：对，而且还有很多仪表。神舟6号上去的话，航天员要从返回舱，就是你们看到的杨立伟所在的那个舱，爬到轨道舱中去操作仪器，包括操作照相等相关工作。如果只有一个人上天的话，就不能互相照顾，所以至少要两个人。现在航天员做训练也是这样两个人一组一组地进行。载3个人的话，空间就比较挤了。按照能力来说，都可以。火箭的推力没有问题。但是我觉得两个人转5－7天比较合理一些，一个就是说航天员舒服一点，重量方面，少上去一个人，可以多装一些仪器，可以把有效载荷做到更好。报纸上报道的3个人3天，2个人5－7天，都是有根据的。<BR><BR>　　除了多人航天之外，下阶段还要为空间站做些准备。空间站很重要的一个技术就是交会对接。整个飞船软件的工程量是很大的，可以肯定二期工程，软件工程量会更大。因为软件相对来说修改起来比较灵活和容易，硬件相对来说，改起来比较麻烦。过去往往是这样，需要经常改的东西，会用软件来实现，这样更加灵活。国外也是一样，例如美国这次向火星上发射的勇气号，出现了问题，后来修好了，实际上就是软件出现了问题，通过远程注入的方法将软件重新初始化后，问题就解决了。这就是软件的优势，硬件就没有办法了，我们不可能到火星上面去修改硬件。所以二期以后，软件承担的任务会越来越多。<BR><BR>记者：您在部队工作的40多年里，一直从事着航天软件工程的研究和实践工作，您能结合神舟5号的成功经验，谈谈如何将软件当作工程来做吗？<BR><BR>何院士：作为中国载人飞船工程软件专家组的组长，我的具体工作就是给整个工程的技术质量把关。1992年工程上马之前的论证工作是我们国防科工委系统所做的；1995年初，由于大量的软件上马，就提出了软件工程这个问题。当时已经估计到飞船的软件很多，系统很大。当时还不能确切地知道多大，现在知道了，真是非常大。当时心里没底，不知道怎么做这个。<BR><BR>　　当时我们上马的时候，调查了一下，情况不是很好的。当时从事软件相关工作的人员，很多都不是软件科班出身的。对于系统来说，特别是嵌入式系统，软件和硬件非常密切，它们都是嵌入到设备里面，和硬件结合一起。要搞软件必须十分了解设备本身，了解硬件。可是当时工程人员对于软件工程却非常不熟悉，因为过去没有这个概念。所以在当时，质量怎么保证，很成问题。但是，经过我们的努力和探索，我们找到了一条行之有效的途径。应该说载人飞船工程是实施软件工程化，即把软件当作一个工程来做，在航天工程中是做得最好的。</P>
+<P>　　在学术研究方面，何新贵院士长期从事计算机软件和人工智能的理论研究和工程实践工作，是我国首批计算机软件工作者之一。特别在模糊理论与技术、知识处理及数据库等方面做出了具有创造性和系统性的贡献。他提出了一套较完整的模糊数据库的理论与技术，提出了加权模糊逻辑、模糊计算逻辑、模糊区间值逻辑和模糊分布值逻辑等多种非标准模糊逻辑，并提出了一种巨并行的浸润推理模式、加权神经元网络和过程神经元网络等理论，这对边缘科学《知识处理学》的最终建立和发展起了较大促进作用。何院士提出的可执行模糊语义网、模糊H网和主动模糊网络等概念，可应用于从生产过程仿真到视觉处理模拟等广泛领域。此外，他对编译程序和数据库管理系统的实现技术，以及软件过程改进技术(CMM)等也做出了较大贡献。至今，已发表第一作者学术论文130多篇，并著有《模糊知识处理的理论与技术》(初版和第2版)、《模糊数据库系统》、《特种数据库技术》、《知识处理与专家系统》、《编译程序方法导引》和《The Implementation of A Multi-backend Database　System》等10部专著(其中英文专著由Prentice-Hall出版)，编撰《软件工程进展》、《人工智能新进展》等5本文集，并是我国《军事百科全书》、《数据库大辞典》、《新编英汉计算机缩略语大辞典》等多部大型辞书的主要撰稿和审稿人。曾先后被特邀在多个国家讲学和在国际学术会议上作大会主题报告。</P>
+<P>记者：您刚才提到，把软件当作工程来做，就是软件工程，而且，您在这方面做出了很大的贡献，请您具体地谈谈，可以吗？<BR><BR>何院士：做了一点工作，谈不上很大贡献。具体地说，软件作为一个工程来说的话，应具备4个要素。我从这4个方面来与印度的情况做一下比较。 <BR><BR>　　第一，&nbsp;理论与技术。过去我们大学的教科书，主要内容都是关于这方面的，结构化教授、面向对象的理论技术、快速原型、各种理论、模型之类等等都是在讲这方面内容，而且介绍得很多。对于中国人来说，只要国外出现新理论，我看不超过半年，国内大概就知道了，并且可以很快掌握相关原理。我认为这方面不是问题，我们一点也不比印度差，甚至比他们强。<BR><BR>　　第二，&nbsp;工具和环境。例如，机械工程，要有车床；土木工程，要有大吊车、和水泥的机器、脚手架等；在软件工程里，也应有很多软件工具和软件环境，以使软件的开发更加方便容易。在这个方面，与印度相比，我们就差得多。 <BR><BR>　　第三，&nbsp;标准和规范。举个简单的例子，一个螺丝钉也有其相应的工艺要求，否则就拧不起来。任何工程，标准都非常重要而严格。可是在软件工程方面，虽然国内制定的标准也不少，但没有很认真地执行。这点我认为载人飞船工程做得比较好。我们就是严把标准与规范，包括文档，该怎么写，该写几章、几节，每节的内容有什么，都有标准和规定，甚至标题，都不能随便改。载人飞船工程的软件文档格式，包括风格，不管是谁写的，基本上都相同。即使在某一节里没有内容，也要求写上“此节无内容”，而不能删除此节。我们就一直按照标准严格执行。在这个方面，国内和印度差得更多了。我们国内搞软件往往自由化，不愿意写文档，通常大家也不愿意按照标准和规范写，觉得浪费时间，这种观点是错误的。“没有规矩不成方圆”，这点和其它工程的要求应该是完全一样的。<BR><BR>　　第四，&nbsp;管理与控制。在这一点上，我们是最差的。软件开发不仅仅是一个技术问题，更重要的是管理问题。管理就是要认真做计划，计划制定后应跟踪实施效果。计划要基于现实情况的精确估计，计划制定之后，必须进行监督和跟踪。万一所制定的计划不符合实际情况，就应适当地修改。控制指的是质量控制。<BR>与印度相比，在这四个要素中，第一要素，即理论与技术方面，我们不比他们差，我们中国人是很聪明的。可是后面三个要素，特别是第四个要素，我们就差得比较远。所以，现在大家都很重视软件过程能力模型，清华也在研究，我在清华大学出版社出过一本书 ，叫CMM（软件能力成熟度模型），是关于专门控制软件质量的，通过软件过程的不断改进来逐步地优化软件的管理和控制。软件开发必须有其标准和规范。现在，有些人对CMM的很多规定，还是不理解。应该说，CMM是美国的经验之谈。我认为，全面的谈软件工程化，应该从以上四个方面来讲。软件要工程化，就要从这四个方面进行。当然我国与印度之间的差距，还有某些客观因素，例如，很多印度人的母语是英语，这个因素不能小看，尽管我们年轻人英语水平提高了，但是总体水平与印度相比还是有较大差距；再比如我们一些体制，诸如出国的管理，虽然现在是越来越灵活，但是，印度的出国签证成功率要比我们高得多，由于签证等原因，我们可能丢掉很多商机。这是制度和语言方面的制约。<BR><BR>　　我想，软件也是一种文化，文化包括人和环境等因素，而软件要发展，仅在某一个方面努力还不太够，包括文化里面很重要的语言因素。例如标书的书写，要按照西方的习惯，按照规范写，并且要写得生动有说服力，我们要达到这样的要求还有很大的差距。这些客观因素的提高比较难。我们要想办法尽快赶上去。<BR>　　“软件是一种文化，是潜移默化的过程。”</P>
+<P>记者：近年来，我国政府对软件的扶持也很大，包括18号文件出台，政府采购倾斜国产软件等，今年6月份，政府采购细则将颁布，我们将在政策上规定，在政府采购中，国产软件将作为首选。这么多年以来，虽然政府一直在扶持，但是我国的软件业却一直没有做大，您认为这其中的主要原因是什么？<BR><BR>何院士：现在确实存在这样的状况。像18号文件出台后，对我国软件业的发展是有一定的促进作用的。但是实施起来还是会遇到很多困难，举个例子，像华为，主要是做交换机，研发人员中据说70％是研发软件的，大概30％的研发人员做硬件，这样的人员比例说明软件研发占很大比重，但是，在税收方面据说却不能享受软件公司的特惠政策，像退税之类，这是18号文件中所规定的，当然这个案例有点特殊性；另外，像我刚才提到的，软件工程作为一种文化，不是一两个政令、一两次号召就可以得到很大的发展和提高，包括像“阿拉神灯杯”中国青年实用软件设计大赛，我们就是要创造一种氛围，让整个社会来关注软件的现状和发展，让年轻人对软件感兴趣，慢慢地实现观念的转变；文化氛围的转变，是潜移默化的过程。我希望“阿拉神灯杯”中国青年实用软件设计大赛等类似的比赛能够长期举办下去，这样才能对软件业的发展起到一定的促进作用。往往几个政令，可以推动一下，包括政府采购。我个人认为政府采购有很大作用，但也是有限的。作为政府采购的软件，现在主要是办公软件。目前，办公软件基本上是微软垄断。应用软件往往先入为主，例如，学校老师多年习惯教人用枪，如果要让他改用刀，或者稍微改改方法，他就会觉得别扭。所谓用户是上帝，当他使用国产的office软件时，由于习惯的问题，总会认为不能够做到和微软的软件一样方便。所以用户一碰到这些问题，就会认为软件有问题，或者不兼容，从而不愿用。编制好的文件，在国产软件上运行，一旦发生问题，用户就会挑剔，这就是“先入为主”。过去，像我们年轻时的那个年代，政治挂帅，大家会响应号召用国产的软件，不用微软的。现在是市场经济，而且由于国外的软件实行降价等市场推销策略，对国内软件企业造成很大的冲击。政府采购的作用，我个人认为，不可估计得太高，软件业的现状不可能一夜之间改变。我也参加过一些活动，例如支持一些部门采用开放源代码的工作，愿望当然很好，不过要做好并不容易。这种完全靠和国外软件兼容来取得市场份额的方式，我个人看不是彻底的解决办法。现在很多人说软件里面也有核心技术，没有核心技术，就是“空心的”，包括汽车、电子设备等，很多都是空心的，好多专利都被国外掌握着，生产一台，还得给人家交多少专利费。软件也有一样的问题，自主知识产权的东西少一些。“冰冻三尺，非一日之寒”，要把冰化掉，也不是一两天的功夫。面对这个现状不能心急，但我相信很有希望通过我们的努力得以不断改善，我也相信我们可以改变现状。<BR><BR>记者：您对教育一直比较关注，以前在部队有搞开发的经历，同时也负责带一些梯队开发软件，您现任北大信息科学技术学院院长，那么您认为哪些东西可以在北大方面借鉴，哪些经验最值得移植过来？<BR><BR>何院士：从教育来说，军队的一些方法、方式是有借鉴可取之处的。军人以服从命令为天职，纪律性比较强。从软件开发来说，做软件的人，如果天马行空，独来独往，往往是不行的，做软件很需要团队协作精神。当然个人行为说明这个人可能很能干，不过，对于软件团队来说，更重要的是需要一种相互协调合作的精神。载人飞船工程两年前统计，软件行数已经超过XXXX万，整个系统，包括天上、地面和海上，所有的CPU就有1000多个，这么大规模的软件系统不可能一个人或少数人完成所有任务。软件质量也是这样，仅仅保证一个人负责的某一块软件质量高并没有用，必须大家完成的各个部分都很好才能够保证整个系统的质量。我经常给我的学生讲一个道理，就是木桶效应。南方的人会比较清楚，木桶效应是指木桶装水的最大容量是由用来箍桶的最矮的那块木板决定的，其它木板再高也没用，也就是说，短板越长，水就装得越多。软件团队也是这样。军队比较强调纪律性、团队性，和打仗一样，仅仅一个人冲锋是没有用的。我认为，这是值得地方学校借鉴和效仿的。</P>
+<P>　　举办青年软件设计竞赛非常重要，这将在一定程度上推动软件业的发展，增强我国的综合国力，希望这样的比赛能够连年举办，并且应该办得像奥赛一样具有影响力。原则上讲，像我们这个年龄，有些经验，出出点子可以，可是真正干软件开发时，绝对不如你们年轻人，希望寄托于青年，所以我对“中国青年软件振兴计划”比较热心也是出于这个原因。</P>
+<P>记者：何院士，中国青年软件振兴计划自举办以来，受到很多关注，其中包括很多军校学生的关注，他们来电、来信咨询我们有关“阿拉神灯杯”中国青年实用软件设计大赛等的事宜，部队对于军人参加社会上的此类大赛，是什么态度呢？<BR><BR>何院士：据我了解，部队学生还是很愿意参加的。军队过去对于学生参加比赛之类，可能相对比较保守一些，现在已经改变。像我比较了解的国防科大、石家庄陆军指挥学院、郑州的通信学院等，计算机和软件力量都很强，这些学校，学生对软件类的竞赛，包括“中国青年软件振兴计划”里面的竞赛，还包括两年一次由团中央、学联、科协、教育部四个单位联合举办的“挑战杯”比赛，都比较热心，我有很多同事，都在军校当校长、副校长，总的来说是很支持这样的比赛的。从培养人才角度，年轻人参加比赛，不能说只是为了得一个桂冠，学校对此还是很重视的，包括我们北大也很重视，参赛获奖回校后，都还另有一些奖励。军队除了奖励外，如果成绩很突出的话，还会授予三等功之类，应该说很重视，而且也很积极地参加。但是如何吸引他们来参加比赛，还要多做些宣传工作，以便让更多的军校学生了解并参加。<BR><BR>记者：那您认为这个宣传工作，怎么做才可以“深入军队内部”呢？<BR>何院士：比赛本身就是一个很好的宣传。如果军校学生得奖就会进行宣传报道，包括看《解放军报》等方式了解相关信息，这些都很受重视。很多事情太急也没有用，其实是潜移默化的过程，与地方院校相比，军队院校对各种竞赛的关注度可能差一点，不过现在大家相应地表现得比较热心，但是要在一夜之间提得很高，也不太可能，这需要一个过程。<BR><BR>记者：您出任“中国青年软件振兴计划”评委会主席团主席的初衷是什么？<BR>何院士：中国青年软件振兴计划，我很愿意参加，并且出任评委会主席团主席的主要原因是这项活动非常有意义。振兴中国软件还要依靠青年，所以我对类似“阿拉神灯杯”中国青年实用软件设计大赛等类似比赛，只要我的精力允许，我很愿意参与。“阿拉神灯杯”中国青年实用软件设计大赛，虽然在开始组织的时候，是以企业的名义在做，可是，我认为如果做得好的话，其意义和各种奥林匹克比赛的意义是一样的。首先，可以在全国起到一定的宣传教育作用。就像载人飞船工程，起初并不是非常重视软件，而是重硬轻软；这几年，在工程界，在社会上，人们对软件的重视程度提高得非常快，可是过去并不是这样。这几年软件出了些事故，教育了大家，慢慢地使社会开始重视软件，崇尚软件，这样的变化对软件业的发展有很大的促进作用，而这样的软件设计大赛对提高我们国家的软件水平、国家竞争力，都会起到一定作用，因此我希望“阿拉神灯杯”中国青年实用软件设计大赛能够继续办下去，不要办了这届就结束，<STRONG>应该争取办得像奥赛一样具有影响力</STRONG>。尽管现在还有差距，但是目标是这样的，意义上是一样的。这样的软件设计大赛对院校是一种鼓舞。其次，是人才培养。没有人才的话，什么也做不成。神舟5号之所以做得比较好，一个重要的原因就是凝聚了大批人才。通过“阿拉神灯杯”中国青年实用软件设计大赛这样的竞赛，吸引全国优秀的青年对软件感兴趣，愿意投身于软件研究的事业中，这是需要一个过程的。因为软件是什么，对外行不易说清，可是计算机是什么，很直观，一看就知道。通过这样的竞赛，吸引很多优秀的青年来做软件研究，对振兴中国的软件事业具有非常重大的意义。此外，客观上，要取得好成绩，平时必须重视软件理论的学习以及技术的训练，这个过程本身就是培养人才的过程。当然也不是通过一两次比赛，就能够客观地说明参赛者的水平，我认为软件文化的培养是渐进的过程。这样的软件类比赛适合青年人搞，得了好成绩也是好事情，对获奖者也是一种鼓励，激励青年上进，并将吸引更多的优秀青年到软件界来。<STRONG>现在很多高中也开设了计算机课程，例如计算机原理、程序设计等课程，目前适合大学生参加的软件比赛比较多，我建议再多举办一些适合中学生参加的软件类比赛，让更多的中学生参与进来。</STRONG>志向的形成，在中学阶段有着非常重要的作用。一个人今后做什么，往往中学老师的几句话就会定下来，这个阶段的可塑性很大，当然大学阶段影响也很大。高中阶段决定考工科的话，相应地对文科课程的兴趣就会少些。<STRONG>所以举办少年类的软件比赛，使参赛群体更加广泛，对我国软件业的发展会有较大的促进作用。</STRONG><BR><BR>记者：您有40多年主持软件工程的经历，不仅具有丰富的经验，同时也带出了大批年轻人，能不能请您给我们现在的软件青年一些建议，例如，从哪些方面开始努力更有利于自身成才，如何对软件业的发展做一些贡献？<BR><BR>何院士：我认为，我们的年轻人是非常聪明的，只要努力奋斗的话，中国成为一个软件强国，超过印度，是没有问题的。<BR><BR>　　首先，树立信心是很重要的。相应来说，我们做软件人员的素质并不比印度低。中国成为一个软件强国，而且技术上引领世界软件技术的潮流是有很大可能的，我们应该有这样的信心。<BR><BR>　　第二点就是要脚踏实地，细致入微地做好相应工作。年轻人如果整天想入非非，拈轻怕重，是做不好事情的。我刚才讲软件工程的四个方面，其中，管理和控制是我们最差的，对于青年一代来说，软件的理论和技术固然重要，但是也要重视自身在管理和控制方面知识的提高。如果是工程型的软件，没有管理控制的话，要真正做得好是很困难的。<BR><BR>　　第三点，要有团队精神，善于与他人合作。要完成一个软件工程，必须大家齐心合力，互相协作。一个人负责的部分出了问题，必将影响整个程序。因此必须要有全局观念，要意识到个人问题影响的将是整体，将是整个大局。总之，对于年轻人来说，一方面创新精神很重要，另方面团队精神和协作精神也非常重要。软件业的发展寄托在年轻人身上。</P>
+<P>后记：<BR>在采访即将结束的时候，何院士满怀深情地提起自己的母校――<STRONG>浙江省杭州第二中学</STRONG>。他说：“我非常感激我的母校――杭州二中，她教会了我很多东西，令我终身难忘。我是杭州二中第14位院士。”杭州第二中学是江南名校，素有爱国民主传统和体育运动精神。杭州二中人才辈出，育有化学家苏元复、水利专家钱宁、材料物理学家周本濂、环保专家金鉴明，航天航空软件专家何新贵等多位院士。</P>
+<P>&nbsp;</P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：CSDN<br>
+                            
+                            共有4457位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=562.htm" temptabs="http://www.mydrs.org/program/list?id=562">专访吴文虎教授―创新教育势在必行</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=564.htm" temptabs="http://www.mydrs.org/program/list?id=564">信息学分区联赛复赛备赛建议</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=563.htm" temptabs="http://www.mydrs.org/program/sendmail?id=563" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\专访神舟五号软件专家何新贵院士.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0563.htm" temptabs="http://www.mydrs.org/program/html/0563.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=563.htm" temptabs="http://www.mydrs.org/program/list?id=563">专访神舟五号软件专家何新贵院士</a><br>
+                  
+                  <a href="list-id=562.htm" temptabs="http://www.mydrs.org/program/list?id=562">专访吴文虎教授―创新教育势在必行</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

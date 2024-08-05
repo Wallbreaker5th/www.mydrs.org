@@ -1,0 +1,366 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>信息学分区联赛复赛备赛建议-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>信息学分区联赛复赛备赛建议
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>信息学分区联赛复赛备赛建议</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;9/13/2004&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>成功的要素没有靠机遇和取巧（遇到已做过的题或直接抄写示例）成功的任何可能，只有靠<B>勤奋+智慧</B> </P>
+<P>&nbsp;&nbsp; 基础（数据结构和算法知识+编程技术）+良好的心理素质（沉稳+爆发力）+悟性（在扎实的基础上的灵感和悟顿） </P>
+<P>复习 </P>
+<P>1、&nbsp;&nbsp;看书、补充知识 </P>
+<P>2、&nbsp;&nbsp;作题（家中做题专找“吃不准”的题目，并把问题拿到集训队里来讨论） </P>
+<P>3、&nbsp;&nbsp;总结已做成功的试题，进行一般题形和一般对应算法的“归类”，构建知识网络 </P>
+<P>竞赛解题分析的思维过程（一般在30分钟以内） </P>
+<P>&nbsp;&nbsp;机理分析法→统计分析法（构造部分解，寻找数学规律）→有无比较合适的贪心策略→用搜索创关 </P>
+<P>数据结构 </P>
+<P>1、&nbsp;&nbsp;并查集（发展趋势：一般并查集→计算并查集中元素的相对位置→？。一般采用树结构，并进行路径压缩） </P>
+<P>2、&nbsp;&nbsp;查找问题：（哈希表（注意哈希函数的选择）、哈夫曼（已知顶点的访问频率）、线段树、在二叉树上进行统计（保留取间的中间点、用一维数组存储）、树状数组） </P>
+<P>搜索 </P>
+<P>1、&nbsp;&nbsp;事先考虑数学规律和贪心策略（俄罗斯方块） </P>
+<P>2、&nbsp;&nbsp;尽量减少搜索范围（循环变量的上下界和边界条件）、苛刻约束条件（尽量利用计数公式） </P>
+<P>动态程序设计 </P>
+<P>向深层次发展 </P>
+<P>1、&nbsp;&nbsp;显性变隐性（难以看出阶段特征、难以确定状态和状态转移方程） </P>
+<P>2、&nbsp;&nbsp;注意递归求解（九头龙） </P>
+<P>3、&nbsp;&nbsp;多进程决策问题（多条最短路径） </P>
+<P>4、&nbsp;&nbsp;双重动态程序设计（在添m条有权边的情况下求最短路径） </P>
+<P>5、&nbsp;&nbsp;对有些具备阶段性和状态转移特征的问题，可通过动态程序设计计算所有方案 </P>
+<P>6、&nbsp;&nbsp;对不具备最优子结构、但具备阶段性和状态转移特征的问题，可通过动态程序设计转化为判定性问题，然后递推最优解 </P>
+<P>模拟问题 </P>
+<P>1、&nbsp;&nbsp;直叙式模拟不疏漏任何条件，精心设计数据结构（天鼠行动） </P>
+<P>2、&nbsp;&nbsp;筛选法模拟 </P>
+<P>3、&nbsp;&nbsp;构造法模拟（关键是数学模型） </P>
+<P>对策问题 </P>
+<P>注意博弈游戏，关键是哪些情况可产生相同局面，怎样避免它们的重复演算，怎样为局面设计合适的数据结构，怎样从局面的演变过程只找出数学规律 </P>
+<P><B>一般性方法</B><B> </P></B>
+<P>&nbsp;</P>
+<P>l状&nbsp;&nbsp;态 </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;列举影响结局胜负的所有因素，综合描述成“<B>状态</B>”。根据对局时状态之间的变化，<B>自顶而下</B>构造出“<B>状态转移的拓扑结构</B>”。 </P>
+<P>l扩展规则 </P>
+<P>在某些场合下，还可以记录一个状态先手胜（负）的最大（最小）利益，以数值形式描述，再根据题目中相应的条件，构成新的具有<B>针对性</B>的推算规则 </P>
+<P>l实现方法 </P>
+<P>&nbsp;&nbsp;1预先处理（关键） </P>
+<P>&nbsp;&nbsp;列举状态；构造“状态转移的拓扑结构”；动态规划或记忆化搜索求状态先手胜负。 </P>
+<P>&nbsp;&nbsp;1对局策略 </P>
+<P>&nbsp;&nbsp;依据已知的状态胜负，时刻把先手必败的状态留给对方。 </P>
+<P>&nbsp;</P>
+<P><B>特殊性方法”</B> </P>
+<P>l逆向分析 </P>
+<P>&nbsp;</P>
+<P>是从结局或残局出发，自底而上分析，无须构造“<B>状态转移的拓扑结构</B>”，无须考察所有可能的状态与策略，时间和空间复杂度相对于“一般性方法”都不高。 </P>
+<P>&nbsp;&nbsp; </P>
+<P>一般性方法： </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; 自顶而下&nbsp;&nbsp;&nbsp;&nbsp;考察所有状态胜负 </P>
+<P>&nbsp;&nbsp; 特殊性方法： </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; 自底而上&nbsp;&nbsp;&nbsp;&nbsp;研究一类平衡状态 </P>
+<P>l胜负规则&nbsp;&nbsp; </P>
+<P>一般性方法：有通行胜负规则&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;特殊性方法：无通行胜负规则 </P>
+<P>“一般性方法”<B>从统一的角度，考察所有状态，来决定对局策略。</B><B> </P></B>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;“特殊性方法”<B>从特殊的角度，考察一类状态，来决定对局策略。 </P></B>
+<P>&nbsp;</P>
+<P>几何计算 </P>
+<P>1、&nbsp;&nbsp;计算三角形面积和多边形面积 </P>
+<P>2、&nbsp;&nbsp;两条有向线段P0P1、P0P1 在公共端点P0处的转向（叉积） </P>
+<P>3、&nbsp;&nbsp;确定两条连续的有向线段P0P1和P1P2 在P1处的转向（添辅助线和叉积） </P>
+<P>4、&nbsp;&nbsp;确定两条线段是否相交（跨立实验和快速排斥试验）、两个长方形是否相交（与坐标轴平行与不平行）、在一组线段中确定任意一对线段是否相交 </P>
+<P>5、&nbsp;&nbsp;寻找凸包（graham扫描法或Jarris步进法） </P>
+<P>6、 寻找最近点对 </P>
+<P>图论1、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算连通图和连通分支、计算求极大强连通子图 </P>
+<P>2、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对连通的、且不存在“桥” 的无向图G，给定每条的方向，使之成为强连通图。 </P>
+<P>3、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算顶点连通度和块（网络流和深度优先搜索） </P>
+<P>4、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算边连通度（网络流） </P>
+<P>5、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算顶色数（贪心法）和边色数（边转化为顶点计算） </P>
+<P>6、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二分图的最大匹配（网络流或匈牙利算法），边带权，则为最佳匹配，关键是把问题转化为二分图 </P>
+<P>7、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在允许重复走边的情况下，计算走遍所有边的最短路径。</P>
+	
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：天☆之★龙 <br>
+                            
+                            来 源：论坛精华<br>
+                            
+                            共有12312位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=563.htm" temptabs="http://www.mydrs.org/program/list?id=563">专访神舟五号软件专家何新贵院士</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=565.htm" temptabs="http://www.mydrs.org/program/list?id=565">小议竞赛的准备和考试技巧</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=564.htm" temptabs="http://www.mydrs.org/program/sendmail?id=564" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\信息学分区联赛复赛备赛建议.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0564.htm" temptabs="http://www.mydrs.org/program/html/0564.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

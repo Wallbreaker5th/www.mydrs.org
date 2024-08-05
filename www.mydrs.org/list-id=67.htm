@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>分区联赛初赛经验谈-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>分区联赛初赛经验谈
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>分区联赛初赛经验谈</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/24/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              我初三第一次参加信息学竞赛，初赛连做带猜居然考了70多分。由于后来的几次感觉似乎越来越有经验了，<BR>这里我就随便写一点自己的体会，希望对初学者有点帮助。</P><P>1.知识是基础，能力最重要<BR>初赛考的知识点，大纲如是说：计算机基本常识/基本操作和程序设计基本知识。<BR>选择题考查的是知识，而填空题更加重视能力的考查。例如写程序运行结果，大纲规定是<BR>必考的。试卷中给出程序的并不复杂，语句的含义容易明白，但是悟性好的选手总是很快就能体<BR>会到程序的设计思路并得出正确的答案，机械模仿计算机硬算出结果的同学往往做的慢的多，而<BR>且容易失误。</P><P>2.各种题型的解题经验。<BR>1)选择题<BR>一般它们是比较容易得分的，一共30分，不可错过！<BR>我建议大家找一本等级考试二级的书看，知识讲的系统一些。选择题一般不超过二级的知识点。<BR>另外，有DOS经验的选手可能会占一点便宜，因为有些题目可以根据经验判断。</P><P>2)填空<BR>这部分题目对数学要求要高一点，往往考查的是代数变形，数列（一般是考递推），也考查<BR>一些算法和数据结构知识。建议大家多花一点时间做，尽量做对。<BR>例题：</P><P>1.数组A[30..100,20..100]以行优先的方式存储,每个元素占8个字节,且已知A[40  ,30]<BR>的地址为2000,则A[60,90]的地址为:_________________<BR>  如果以列优先存储,则为:_________________</P><P>考查了数据结构中数组存储方式。<BR>      ^^^^^^^^  ^^^^</P><P>2.设栈S的初始状态为空,现有6个元素组成的序列{1,3,5,7,9,11},对该序列在S 栈上依<BR>次进行如下操作(从序列中的1开始,出栈后不在进栈):进栈,出栈,进栈,进栈, 进栈,进栈<BR>,出栈,进栈,问出栈的元素序列是:_________,栈顶指针的值为______<BR>栈顶元素为:___________________</P><P><BR>考查了数据结构中的栈。<BR>      ^^^^^^^^    ^^</P><P>3.把中缀表达式写成后缀及前缀表达式<BR>(1)  (P+Q)*(A-B)/((C+D)/(E-F))-G<BR>     后:_________________<BR>     前:_________________<BR>(2)  A-C*D+B/E*(D/A)<BR>     后:_________________<BR>     前:_________________</P><P>4.根据后缀表达式,写出前缀及中缀表达式<BR>     ABC/DE+GH-/*+<BR>     前:_________________<BR>     中:_________________</P><P>这两题实际上考查了数据结构中的表达式树<BR>                  ^^^^^^^^    ^^^^^^^^</P><P>5.用一个字节来表示整数,最高位用作符号位(1为正,0为负),其他位表示数值,<BR>  (1)这样的表示法称为原码表示法,表示数的范围为:_________________<BR>  (2)原码表示法,将出现_________________有两种表示<BR>  (3)实际上计算机中是用补码表示数,其表示范围为:_________________</P><P>考查了数的原码，补码表示。</P><P>6.已知N*N个数据成方阵排列:<BR>   A11   A12   A13 ...  A1n<BR>   A21   A22   A23 ...  A2n<BR>   ...<BR>   An1   An2   An3 ...  Ann<BR>  已知Aij=Aji,<BR> (1)将A11,A21,A22,A31,A32,A33... 存储到一维数组A(1),A(2),A(3)...A(K)<BR>    给出i,j 写出求K的表达式:_________________<BR> (2)将A11,A12,...A1n,A22,A23,...A2n,A33... Ann存储到一维数组A(1),A(2),<BR>    A(3)...A(K),  给出i,j 写出求K的表达式:_________________</P><P>7.已知一个数列U1,U2,U3...Un...,往往可以找到一个最小的K值和K个数a1,a2,..,ak,<BR>使得数列从某项开始都满足:U(n+k)=a1*U(n+k-1)＋a2*U(n+k-2)+...＋akUn   (式A)<BR>例如数列 1,1,2,3,5...可以发现:当K=2,a1=1,a2=1时,从第3项起(N>=1)满足:<BR>     U(n+2)＝U(n+1) ＋ Un<BR>试对数列1^3 ,2^3 ,3^3 ,...,N^3,...,求K和a1,a2,...ak,使得式A成立. </P><P>实质是考数学。</P><P><BR>8.给出一棵二叉树的中序遍历:DBGEACHFI与后序遍历:DGEBHIFCA,画出此二叉树<BR>9.给出二叉树的前序遍历与后序遍历,能确定一棵二叉树吗,举例说明.<BR>10.下面是一个利用完全二叉树特性,用顺序表来存储的一个二叉树,结点数据为字符型(结<BR>点层次从小到大,同一层从左到右顺序存储,#表示空结点,@表示存储数据结束)<BR>结点 1   2   3   4   5    6   7   8   9   10   11    12   13   14   15<BR>数据 A   B   C   #   #    D   E   #   #   #    #     #    G    F    @<BR>画出对应的二叉树:</P><P>考查了数据结构中的二叉树<BR>      ^^^^^^^^    ^^^^^^</P><P><BR>10.用邻接矩阵表示有向图（图略）</P><P>考查了数据结构中的图的表示<BR>      ^^^^^^^^    ^^</P><P>11 根据Nocomachns定理，任何一个正整数n的立方一定可以表示成n个连续的奇数的和。<BR>   例如：<BR>   13=1<BR>   23=3+5<BR>   33=7+9+11<BR>   43=13+15+17+19<BR>   在这里，若将每一个式中的最小奇数称为X，那么当给出n之后，请写出X与n之间的关系表达式：＿＿＿</P><P>其实是考代数</P><P><BR>12<BR>某班有50名学生，每位学生发一张调查卡，上写a,b,c三本书的书名，将读过的书打“*”，结果统计数字如下：<BR>只读a者8人；只读b者4人；只读c者3人；全部读过的有2人；读过a,b两本书的有4人；读过a,c两本书的有2人；读过b,c两本书的有3人。<BR>（1）读过a的人数是（　　）。<BR>（2）一本书也没读过的人数是（　　）。</P><P>数学好的小学生大概都可以做吧？<BR>　　</P><P>3)写运行结果<BR>几乎是送分题，而且占的分数奇多，但得分率却不见得高。大家一定不要错过这个得分点啊！<BR>一般做这类题目的核心是找程序目的，即这个程序想干什么。迄今为止考过的题目还没有“乱写”<BR>的，总有一点“写作目的”的。抓住了它，不仅得出答案变得很容易了，而且对自己的结果也会<BR>比较有信心。下面举几个例子。</P><P>1．(99年分区联赛)<BR>Program excpl;<BR>var<BR>  x,y,y1,jk,j1,g,e:Integer;<BR>  a:array[1..20] of 0..9;<BR>begin<BR>  x:=3465; y:=264; jk:=20;<BR>  for j1:=1 to 20 do a[j1]:=0;<BR>  while y<>0 do<BR>  begin<BR>    y1:=y mod 10;<BR>    y:=y div 10;<BR>    while y1<>0 do<BR>    begin<BR>      g:=x;<BR>      for e:=Jk downto 1 do<BR>      begin<BR>        g:=g+a[e];<BR>        a[e]:=g mod 10;<BR>        g:=g div 10<BR>      end;<BR>      y1:=y1-1<BR>    end;<BR>  jk:=jk-1<BR>  end;<BR>  j1:=1;<BR>  while a[j1]=0 do j1:=j1+1;<BR>  for Jk:=j1 to 20 do write(a[jk]:4);<BR>  writeln<BR>end.</P><P>程序不长，但是有一定的难度。高手最多半分钟就看懂了程序的意思，但初学者往往算了很久得出了<BR>结果却是错的。下面我们还是先以一个初学者的身份分析一下这个程序。记住，不要一开始就模拟电脑<BR>来一个个语句“执行”- 你算过自己是多少Hz的CPU没有？！</P><P>好了，废话少说。<BR>分析程序一般从以下几点入手：<BR>1.变量<BR>首先是变量的名字。可惜分区联赛题目中的变量不是I就是J，很讨厌。I和J一般作为循环计数器，<BR>没有什么意思，因此不要管它了。然后要看变量在程序的哪里出现过，着重看它与其他变量的相互<BR>引用关系，猜测它的作用。<BR>例如上题。</P><P>x:只在g:=x中出现，暂时不要管它，因为它很可能只是一个初始数据。<BR>y:有三处：<BR>1) while y<>0 do<BR>2) y1:=y mod 10;<BR>3) y:=y div 10;<BR>很明显，y每次少了最后一位数字,把这位数字给了y1。有经验的选手应该体会到了什么，不过我们继续。<BR>现在我们知道了：y对程序的作用是：每次提供最后一位给y1,即y1每次的值依次是：4,6,2<BR>y1:<BR>1)while y1<>0 do<BR>2)y1=y1-1<BR>很明显就是一个循环嘛！循环y1次！写得那么肉麻...</P><P>jk:<BR>1)for e:=jk downto 1 do<BR>2)jk:=jk-1<BR>jk作为循环初始值，居然一次比一次少...其原因有待进一步分析。</P><P>j1:<BR>1)for j1:=1 to 20 do a[j1]:=0;<BR>2)j1:=1;<BR>3)while a[j1]=0 do j1:=j1+1;<BR>4)for Jk:=j1 to 20 do write(a[jk]:4);</P><P>显然，j1和其它变量没有什么联系。1)是初始化，2)3)4)是输出数组a</P><P>g:<BR>出现的位置是几层循环之内了，应该很重要！一会儿再分析！ <BR>e:作为循环变量，没有什么意思。</P><P>通过变量分析，我们知道了：<BR>x,y是数据，y每次提供最后一位给y1,循环y1次。j1和g的作用有待分析。</P><P>2.程序结构<BR>我们把程序分成几块。<BR>1）<BR>  x:=3465; y:=264; jk:=20;<BR>  for j1:=1 to 20 do a[j1]:=0;<BR>  初始化。不要管它。</P><P>2)while y<>0 do<BR>  begin<BR>    y1:=y mod 10;<BR>    y:=y div 10;<BR>    while y1<>0 do<BR>    begin<BR>  <<  g:=x;<BR>      for e:=Jk downto 1 do<BR>      begin<BR>        g:=g+a[e];<BR>        a[e]:=g mod 10;<BR>        g:=g div 10<BR>      end; <BR>   >><BR>      y1:=y1-1<BR>    end;<BR>  jk:=jk-1<BR>  end;</P><P>3)<BR>  j1:=1;<BR>  while a[j1]=0 do j1:=j1+1;<BR>  for Jk:=j1 to 20 do write(a[jk]:4);<BR>  writeln<BR>  输出结果，也不要管它。</P><P>块2最重要。<BR>它的思想是：<BR>每次取Y的最第位y1,执行<<>>y1次，每次把jk减一。<BR>现在最重要的是<<>>中的在干什么。<BR>    ^^^^^^<BR>注意到最后输出的a[],要留意a[]的变化！<BR>a[e]总是取个位(g mod 10)，g每次少一位，和a[e-1](别忘了e在循环！)相加...<BR>难道是...高精度加法？？？<BR>RIGHT。<BR>它执行了y1次，y1每次都是y的个位...<BR>对了。程序就是在做x*y<BR>所以答案就是 3465*264=914760<BR>再看它的输出格式，输出的应该是：___9___1___4___7___6___0</P><P>其实有经验的话，看到g这个变量名和g:=g+a[e]; a[e]:=g mod 10;这几个标志句子。就可以一下子知道程序的用意了。</P><P>什么？<<>>那一段我讲的太快，听不懂？<BR>真不好意思，好象是的。如果你真的不懂，我只好多讲一点。</P><P><<>>中只有6行，你可以模拟电脑“执行”几个语句在找规律。<BR>方法是：把循环“展开”，再写一个变量值表<BR>即：<BR>语句              执行后变量情况：<BR>g:=x; <BR>g:=g+a[e];         g=x+a[e];<BR>a[e]:=g mod 10;    a[e]:=x+a[e]的个位<BR>g:=g div 10;       g=(x+a[e])的前几位<BR>g:=g+a[e-1];       g=(x+a[e])的前几位+a[e-1];<BR>a[e-1]:=g mod 10;  a[e-1]=a[e-1]+(x+a[e])的进位<BR>....<BR>好了，明白了没有？还没有明白就写信给我。</P><P>4)完善程序<BR>这部分题目得分率似乎不高。没关系，尽量做吧。把一些简单的填好就行了。<BR>注意：<BR>1）初始化(i:=0; j:=0; for i:=1 to n do a[i]:=0之类的)<BR>2）一些明显的动作：<BR>a.结果没有储存在需要的地方。<BR>b.累加器没有做加法<BR>c.输出<BR>3)关键动作。<BR>例如交换排序程序的“交换”操作等很明显需要完成的操作。<BR>分析方法和写运行结果类似，注意分析变量和程序结构，理解变量和模块的作用是解题的关键。<BR>不熟练是不妨用自然语言描述一下。这里我就不举例子了。<BR>	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：SRbGa <br>
+                            
+                            来 源：OIBH<br>
+                            
+                            共有1881位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=66.htm" temptabs="http://www.mydrs.org/program/list?id=66">初学编程的常见困难</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=67.htm" temptabs="http://www.mydrs.org/program/sendmail?id=67" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\分区联赛初赛经验谈.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0067.htm" temptabs="http://www.mydrs.org/program/html/0067.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=467.htm" temptabs="http://www.mydrs.org/program/list?id=467">第八届分区联赛复测消息</a><br>
+                  
+                  <a href="list-id=418.htm" temptabs="http://www.mydrs.org/program/list?id=418">第六届分区联赛提高组初赛答案</a><br>
+                  
+                  <a href="list-id=417.htm" temptabs="http://www.mydrs.org/program/list?id=417">第六届分区联赛提高组初赛</a><br>
+                  
+                  <a href="list-id=416.htm" temptabs="http://www.mydrs.org/program/list?id=416">第七届分区联赛提高组复赛</a><br>
+                  
+                  <a href="list-id=401.htm" temptabs="http://www.mydrs.org/program/list?id=401">分区联赛指南</a><br>
+                  
+                  <a href="list-id=309.htm" temptabs="http://www.mydrs.org/program/list?id=309">第七届分区提高组初赛答案</a><br>
+                  
+                  <a href="list-id=308.htm" temptabs="http://www.mydrs.org/program/list?id=308">第七届分区联赛提高组初赛</a><br>
+                  
+                  <a href="list-id=307.htm" temptabs="http://www.mydrs.org/program/list?id=307">第七届分区普及组初赛答案</a><br>
+                  
+                  <a href="list-id=306.htm" temptabs="http://www.mydrs.org/program/list?id=306">第七届分区联赛普及组初赛</a><br>
+                  
+                  <a href="list-id=304.htm" temptabs="http://www.mydrs.org/program/list?id=304">全国分区联赛复赛评奖消息</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

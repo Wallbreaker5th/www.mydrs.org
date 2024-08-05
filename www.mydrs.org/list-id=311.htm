@@ -1,0 +1,280 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>搜索算法基础教程-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>搜索算法基础教程
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>搜索算法基础教程</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;1/25/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <PRE>    搜索算法是利用计算机的高性能来有目的的穷举一个问题的部分或所有的可能情况，从而求出问题的解<BR>的一种方法。搜索过程实际上是根据初始条件和扩展规则构造一棵解答树并寻找符合目标状态的节点的过程。<BR>所有的搜索算法从其最终的算法实现上来看，都可以划分成两个部分──控制结构和产生系统，而所有的算<BR>法的优化和改进主要都是通过修改其控制结构来完成的。现在主要对其控制结构进行讨论，因此对其产生系<BR>统作如下约定：</PRE><PRE><STRONG>Function</STRONG> ExpendNode(Situation:Tsituation;ExpendWayNo:Integer):TSituation;</PRE><PRE>表示对给出的节点状态Sitution采用第ExpendWayNo种扩展规则进行扩展，并且返回扩展后的状态。</PRE><PRE>（本文所采用的算法描述语言为类Pascal。）</PRE><PRE>一、回溯算法</PRE><PRE>    回溯算法是所有搜索算法中最为基本的一种算法，其采用了一种“走不通就掉头”思想作为其控制结构，<BR>其相当于采用了先根遍历的方法来构造解答树，可用于找解或所有解以及最优解。具体的算法描述如下：</PRE><PRE><STRONG>[非递归算法]<BR>&lt;Type&gt;<BR></STRONG>   Node(节点类型)＝<STRONG>Record</STRONG><BR>     Situtation:TSituation（当前节点状态）;<BR>     Way-NO:Integer（已使用过的扩展规则的数目）;<BR>   End<BR><STRONG>&lt;Var&gt;<BR></STRONG>   List(回溯表):<STRONG>Array</STRONG>[1..Max(最大深度)] <STRONG>of</STRONG> Node;<BR>   pos(当前扩展节点编号):Integer;<BR><STRONG>&lt;Init&gt;</STRONG><BR>   List&lt;-0;<BR>   pos&lt;-1;<BR>   List[1].Situation&lt;-初始状态;<BR><STRONG>&lt;Main Program&gt;<BR>While</STRONG> (pos&gt;0(有路可走)) <STRONG>and</STRONG> ([未达到目标]) <STRONG>do</STRONG><BR><STRONG>Begin</STRONG><BR>  <STRONG>If</STRONG> pos&gt;=Max <STRONG>then</STRONG> (数据溢出,跳出主程序);<BR>  List[pos].Way-NO:=List[pos].Way-No+1;<BR>  <STRONG>If</STRONG> (List[pos].Way-NO&lt;=TotalExpendMethod) <STRONG>then</STRONG> (如果还有没用过的扩展规则)<BR>  <STRONG>Begin</STRONG><BR>    <STRONG>If</STRONG> (可以使用当前扩展规则) <STRONG>then</STRONG><BR>    <STRONG>Begin</STRONG><BR>      (用第way条规则扩展当前节点)<BR>      List[pos+1].Situation:=ExpendNode(List[pos].Situation,<BR>                                        List[pos].Way-NO);<BR>      List[pos+1].Way-NO:=0;<BR>      pos:=pos+1;<BR>    <STRONG>End-If</STRONG>;<BR>  <STRONG>End-If</STRONG><BR>  <STRONG>Else</STRONG> <STRONG>Begin</STRONG><BR>         pos:=pos-1;<BR>       <STRONG>End-Else</STRONG><BR><STRONG>End-While</STRONG>;</PRE><PRE><STRONG>[递归算法]<BR>Procedure</STRONG> BackTrack(Situation:TSituation;deepth:Integer);<BR><STRONG>Var</STRONG>  I    :Integer;<BR><STRONG>Begin</STRONG><BR>  <STRONG>If</STRONG> deepth&gt;Max <STRONG>then</STRONG> (空间达到极限,跳出本过程);<BR>  <STRONG>If</STRONG> Situation=Target <STRONG>then</STRONG> (找到目标);<BR>  <STRONG>For</STRONG> I:=1 <STRONG>to</STRONG> TotalExpendMethod <STRONG>do</STRONG><BR>  <STRONG>Begin</STRONG><BR>    BackTrack(ExpendNode(Situation,I),deepth+1);<BR>  <STRONG>End-For</STRONG>;<BR><STRONG>End</STRONG>;</PRE><PRE>范例：一个M*M的棋盘上某一点上有一个马，要求寻找一条从这一点出发不重复的跳完棋盘上所有的点的路线。</PRE><PRE>评价：回溯算法对空间的消耗较少，当其与分枝定界法一起使用时，对于所求解在解答树中层次较深的问题<BR>      有较好的效果。但应避免在后继节点可能与前继节点相同的问题中使用，以免产生循环。</PRE><PRE>二、深度搜索与广度搜索</PRE><PRE>    深度搜索与广度搜索的控制结构和产生系统很相似，唯一的区别在于对扩展节点选取上。由于其保留了<BR>所有的前继节点，所以在产生后继节点时可以去掉一部分重复的节点，从而提高了搜索效率。这两种算法每<BR>次都扩展一个节点的所有子节点，而不同的是，深度搜索下一次扩展的是本次扩展出来的子节点中的一个，<BR>而广度搜索扩展的则是本次扩展的节点的兄弟节点。在具体实现上为了提高效率,所以采用了不同的数据结构.</PRE><PRE><STRONG>[广度搜索]<BR>&lt;Type&gt;<BR></STRONG>   Node(节点类型)＝<STRONG>Record</STRONG><BR>     Situtation:TSituation（当前节点状态）;<BR>     Level:Integer(当前节点深度);<BR>     Last :Integer(父节点);<BR>   End<BR><STRONG>&lt;Var&gt;<BR></STRONG>   List(节点表):<STRONG>Array</STRONG>[1..Max(最多节点数)] <STRONG>of</STRONG> Node(节点类型);<BR>   open(总节点数):Integer;<BR>　 close(待扩展节点编号):Integer;<BR>   New-S:TSituation;(新节点)<BR><STRONG>&lt;Init&gt;<BR></STRONG>   List&lt;-0;<BR>   open&lt;-1;<BR>   close&lt;-0;<BR>   List[1].Situation&lt;- 初始状态;<BR>   List[1].Level:=1;<BR>   List[1].Last:=0;<BR><STRONG>&lt;Main Program&gt;<BR></STRONG>   <STRONG>While</STRONG> (close&lt;open(还有未扩展节点)) <STRONG>and</STRONG> <BR>         (open&lt;Max(空间未用完)) <STRONG>and</STRONG> <BR>         (未找到目标节点) <STRONG>do</STRONG><BR>   <STRONG>Begin</STRONG><BR>　　     close:=close+1;<BR>         <STRONG>For</STRONG> I:=1 <STRONG>to</STRONG> TotalExpendMethod <STRONG>do</STRONG>（扩展一层子节点）<BR>         <STRONG>Begin</STRONG><BR>           New-S:=ExpendNode(List[close].Situation,I);<BR>           <STRONG>If</STRONG> <STRONG>Not</STRONG> (New-S <STRONG>in</STRONG> List) <STRONG>then</STRONG> <BR>           (扩展出的节点从未出现过)<BR>           <STRONG>Begin</STRONG><BR>             open:=open+1; <BR>             List[open].Situation:=New-S;<BR>             List[open].Level:=List[close].Level+1;<BR>             List[open].Last:=close;<BR>           <STRONG>End-If</STRONG><BR>         <STRONG>End-For</STRONG>;<BR>   <STRONG>End-While</STRONG>;</PRE><PRE><STRONG>[深度搜索]<BR>&lt;Var&gt;<BR></STRONG>   Open:<STRONG>Array</STRONG>[1..Max] <STRONG>of</STRONG> Node;(待扩展节点表)<BR>   Close:<STRONG>Array</STRONG>[1..Max] <STRONG>of</STRONG> Node;(已扩展节点表)<BR>   openL,closeL:Integer;(表的长度)<BR>   New-S:Tsituation;(新状态)<BR><STRONG>&lt;Init&gt;<BR></STRONG>   Open&lt;-0; Close&lt;-0;<BR>   OpenL&lt;-1;CloseL&lt;-0;<BR>   Open[1].Situation&lt;- 初始状态;<BR>   Open[1].Level&lt;-1;<BR>   Open[1].Last&lt;-0;<BR><STRONG>&lt;Main Program&gt;<BR></STRONG>   <STRONG>While</STRONG> (openL&gt;0) <STRONG>and</STRONG> (closeL&lt;Max) <STRONG>and</STRONG> (openL&lt;Max) <STRONG>do</STRONG><BR>   <STRONG>Begin</STRONG><BR>     closeL:=closeL+1;<BR>     Close[closeL]:=Open[openL];<BR>     openL:=openL-1;<BR>     <STRONG>For</STRONG> I:=1 <STRONG>to</STRONG> TotalExpendMethod <STRONG>do</STRONG>（扩展一层子节点）<BR>     <STRONG>Begin</STRONG><BR>       New-S:=ExpendNode(Close[closeL].Situation,I);<BR>       <STRONG>If</STRONG> <STRONG>Not</STRONG> (New-S <STRONG>in</STRONG> List) <STRONG>then</STRONG> <BR>       (扩展出的节点从未出现过)<BR>       <STRONG>Begin</STRONG><BR>         openL:=openL+1; <BR>         Open[openL].Situation:=New-S;<BR>         Open[openL].Level:=Close[closeL].Level+1;<BR>         Open[openL].Last:=closeL;<BR>       <STRONG>End-If</STRONG><BR>     <STRONG>End-For</STRONG>;<BR>  <STRONG> End</STRONG>;</PRE><PRE>范例：迷宫问题，求解最短路径和可通路径。</PRE><PRE>评价：广度搜索是求解最优解的一种较好的方法，在后面将会对其进行进一步的优化。而深度搜索多用于只<BR>      要求解，并且解答树中的重复节点较多并且重复较难判断时使用，但往往可以用分支定界或回溯算法代替。</PRE> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：同济大学 <br>
+                            
+                            来 源：编程之道<br>
+                            
+                            共有7827位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=310.htm" temptabs="http://www.mydrs.org/program/list?id=310">关于2002年冬令营的通知</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=312.htm" temptabs="http://www.mydrs.org/program/list?id=312">ASCⅡ码字符串输出</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=311.htm" temptabs="http://www.mydrs.org/program/sendmail?id=311" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\搜索算法基础教程.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0311.htm" temptabs="http://www.mydrs.org/program/html/0311.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=311.htm" temptabs="http://www.mydrs.org/program/list?id=311">搜索算法基础教程</a><br>
+                  
+                  <a href="list-id=179.htm" temptabs="http://www.mydrs.org/program/list?id=179">枚举算法入门</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

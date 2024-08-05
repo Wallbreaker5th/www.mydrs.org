@@ -1,0 +1,459 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2003 Day1 文本编译器-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>NOI2003 Day1 文本编译器
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2003 Day1 文本编译器</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/6/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <H2 style="MARGIN: auto 0cm; LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 18.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">【问题描述】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">很久很久以前，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>DOS3.x</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的程序员们开始对</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>EDLIN</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">感到厌倦。于是，人们开始纷纷改用自己写的文本编辑器……</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">多年之后，出于偶然的机会，小明找到了当时的一个编辑软件。进行了一些简单的测试后，小明惊奇地发现：那个软件每秒能够进行上万次编辑操作（当然，你不能手工进行这样的测试）！于是，小明废寝忘食地想做一个同样的东西出来。你能帮助他吗？</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为了明确任务目标，小明对“文本编辑器”做了一个抽象的定义：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文本：</SPAN></B><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">由</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>0</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个或多个字符构成的序列。这些字符的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>ASCII</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">码在闭区间</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>[32, 126]</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">内，也就是说，这些字符均为可见字符或空格。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">光标：</SPAN></B><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在一段文本中用于指示位置的标记，可以位于文本的第一个字符之前，文本的最后一个字符之后或文本的某两个相邻字符之间。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文本编辑器：</SPAN></B><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为一个可以对一段文本和该文本中的一个光标进行如下六条操作的程序。如果这段文本为空，我们就说这个文本编辑器是空的。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<TABLE style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 14.4pt; BORDER-LEFT: medium none; WIDTH: 432pt; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" cellSpacing=0 cellPadding=0 width=576 border=1>
+<TBODY>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent" vAlign=top width=108>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作名称</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件中的格式</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">功能</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>MOVE(k)<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Move k<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">将光标移动到第</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">k</SPAN></I><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">个字符之后，如果</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">k</SPAN></I><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial">=0</SPAN></SPAN><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">，将光标移到文本第一个字符之前</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>INSERT(n, s)<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert n</FONT></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&iquest;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>S<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">在光标后插入长度为</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">的字符串</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">s</SPAN></I><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">，光标位置不变，</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> </SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&sup3;</SPAN></SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> 1</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>DELETE(n)<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Delete n<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">删除光标后的</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">个字符，光标位置不变，</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> </SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&sup3;</SPAN></SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> 1</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>GET(n)<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Get n<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">输出光标后的</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">个字符，光标位置不变，</SPAN></SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="mso-bidi-font-family: Arial">n</SPAN></I><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> </SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&sup3;</SPAN></SPAN></SPAN><SPAN class=char0><SPAN lang=EN-US style="mso-bidi-font-family: Arial"> 1</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>PREV()<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Prev<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">光标前移一个字符</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>NEXT()<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 72pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=96>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Next<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 279pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=372>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">光标后移一个字符</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">比如从一个空的文本编辑器开始，依次执行操作</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">INSERT(13, “Balanced</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">tree”)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">MOVE(2)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">DELETE(5)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">NEXT()</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">INSERT(7, “</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">editor”)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">MOVE(0)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">GET(15)</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">后，会输出“</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">Bad</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">editor</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">tree</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”，如下表所示：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<TABLE style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 14.4pt; BORDER-LEFT: medium none; WIDTH: 432pt; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" cellSpacing=0 cellPadding=0 width=576 border=1>
+<TBODY>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent" vAlign=top width=108>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作前的文本</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作后的结果</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>INSERT(13, </FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">“</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Balanced</FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree</FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">”</SPAN></SPAN><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">)</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">|<o:p></o:p></SPAN></B></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: Arial">（只有光标，文本为空）</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">|</SPAN></B></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">Balanced</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">MOVE(2)</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><SPAN class=charchar><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">|</SPAN></B></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Balanced</SPAN></SPAN></FONT><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN></SPAN><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">Ba<B style="mso-bidi-font-weight: normal">|</B>lanced</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">DELETE(5)</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Ba<B style="mso-bidi-font-weight: normal">|</B>lanced</FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN></SPAN><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">Ba<B style="mso-bidi-font-weight: normal">|</B>d</SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">NEXT()</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Ba<B style="mso-bidi-font-weight: normal">|</B>d</FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN></SPAN><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">Bad<B style="mso-bidi-font-weight: normal">|</B></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>INSERT(7, </FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">“□</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">”</SPAN></SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>)</FONT></SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Bad<B style="mso-bidi-font-weight: normal">|</B></FONT></SPAN></SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN></SPAN><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">tree</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Bad<B style="mso-bidi-font-weight: normal">|</B></FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree<o:p></o:p></FONT></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>MOVE(0)<o:p></o:p></FONT></SPAN></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Bad<B style="mso-bidi-font-weight: normal">|</B></FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">|</SPAN></B><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Bad</SPAN></FONT><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree<o:p></o:p></FONT></SPAN></P></TD></TR>
+<TR>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=108>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">GET(15)</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 171pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=228>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><FONT face=Arial><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">|</SPAN></B><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Bad</SPAN></FONT><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree<o:p></o:p></FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 180pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign=top width=240>
+<P class=char style="MARGIN: 0cm 0cm 2pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">输出“</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Bad</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">□</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>tree</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">”</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">上表中，“</SPAN><SPAN class=charchar><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">|</SPAN></B></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”表示光标，“</SPAN><SPAN class=charchar><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'">□</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”表示空格。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你的任务是：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">建立一个空的文本编辑器。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">从输入文件中读入一些操作指令并执行。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对所有执行过的</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">GET</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作，将指定的内容写入输出文件。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="MARGIN: auto 0cm; LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 18.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">【输入文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>editor.in</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的第一行是指令条数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>t</FONT></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，以下是需要执行的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>t</FONT></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个操作。其中：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为了使输入文件便于阅读，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作的字符串中可能会插入一些回车符，请忽略掉它们（如果难以理解这句话，可以参考样例）。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">除了回车符之外，输入文件的所有字符的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>ASCII</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">码都在闭区间</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>[32, 126]</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">内。且行尾没有空格。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">这里我们有如下假定：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">MOVE</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作不超过</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>50000</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">INSERT</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">DELETE</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作的总个数不超过</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>4000</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">PREV</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">NEXT</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作的总个数不超过</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>200000</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">所有</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">INSERT</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入的字符数之和不超过</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>2M</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>1M=1024*1024</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），正确的输出文件长度不超过</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>3M</FONT></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">字节。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">DELETE</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作和</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">GET</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作执行时光标后必然有足够的字符。</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">MOVE</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">PREV</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 12.0pt">NEXT</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">操作不会把光标移动到非法位置。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件没有错误。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt 24pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>C++</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">选手的提示：经测试，对最大的测试数据使用</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>fstream</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">进行输入有可能会比使用</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>stdio</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">慢约</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>1</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">秒，因此建议在可以的情况下使用后者。</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></B></P>
+<H2 style="MARGIN: auto 0cm; LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 18.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">【输出文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 21pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">输出文件</SPAN><SPAN lang=EN-US style="mso-bidi-font-family: Arial">editor.out</SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">的每行依次对应输入文件中每条</SPAN><SPAN class=charchar><SPAN lang=EN-US style="FONT-FAMILY: 'Courier New'">GET</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial">指令的输出。</SPAN><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></FONT></P>
+<H2 style="MARGIN: auto 0cm; LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 18.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">【样例输入】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>15<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert 26<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>abcdefghijklmnop<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>qrstuv wxy<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Move 15<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Delete 11<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Move 5<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert 1<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>^<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Next<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert 1<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>_<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Next<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Next<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert 4<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>.\/.<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Get 4<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Prev<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Insert 1<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>^<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Move 0<o:p></o:p></FONT></SPAN></P>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>Get 22<o:p></o:p></FONT></SPAN></P>
+<H2 style="MARGIN: auto 0cm; LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 18.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">【样例输出】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=char style="MARGIN: 0cm 0cm 2pt; LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><FONT face=Arial>.\/.<o:p></o:p></FONT></SPAN></P><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">abcde^_^f.\/.ghijklmno</SPAN> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有4542位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=508.htm" temptabs="http://www.mydrs.org/program/sendmail?id=508" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2003 Day1 文本编译器.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0508.htm" temptabs="http://www.mydrs.org/program/html/0508.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

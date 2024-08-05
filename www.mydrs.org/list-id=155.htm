@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>SGOI第四次竞赛成绩揭晓-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>SGOI第四次竞赛成绩揭晓
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>SGOI第四次竞赛成绩揭晓</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/2/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+                  此次竞赛有来自上海、北京、安徽、广东、湖南、江苏、四川、陕西、辽宁、贵州, 安徽及我省福州、厦门、龙岩、南平, 福清等二十几个城市近两百位同学的积极参加。此次竞赛模拟即将在9月份举行的NOI的形式,分两试进行, 每试4个小时, 3道试题。试题从命题风格，难度分布，数据设计等方面都尽量接近NOI的形式。试题涉及了人工智能、计算几何学、组合数学、图论、高精度计算等方面的知识内容。此次题目力求创新，具有较大的区分度，要想获得高分绝非易事。参赛的选手本着积极参与的精神，认真作答，不少选手在竞赛中获得很好的成绩。其中来自江苏的陶默雷同学和湖南的李锐同学分别获得第一试和第二试的第一名，来自上海的符文杰同学获得总分的第一名。 　 </P><P>　　SGOI组委会，向全国关心支持我们的老师和同学表示衷心的感谢! </P><P>总成绩排行榜</P><P>高中组</P><P>上海 符文杰 第1名 <BR>湖南 李　锐 第1名 <BR>江苏 陶默雷 第3名 <BR>福州 林　元 第3名 <BR>福州 陈　阳 第5名 <BR>上海 张家琳 第6名 <BR>上海 周文超 第7名 <BR>湖南 杨　敏 第8名 <BR>广西 陈　实 第8名 <BR>上海 张云亮 第10名 <BR>湖南 夏婧婧 第10名 <BR>贵州 段　乐 第12名 <BR>湖南 饶向荣 第13名 <BR>湖南 李佳文 第14名 <BR>江苏 潘震皓 第15名 <BR>江苏 孙方成 第16名 <BR>福州 方　润 第16名 <BR>福州 陈昊罡 第16名 <BR>安徽 杭　啸 第19名 <BR>上海 张　宁 第20名 </P><P><BR>初中组</P><P>湖南 金　恺 第1名 <BR>安徽 汪　汀 第2名 <BR>广东 王伟彦 第3名 <BR>湖南 李　甍 第4名 <BR>安徽 杨思雨 第4名 <BR>江苏 李　磊 第4名 </P><P><BR>第一试</P><P>高中组前20名同学名单 </P><P>江苏 陶默雷 第1名 <BR>上海 符文杰 第2名 <BR>江苏 潘震皓 第3名 <BR>江苏 孙广跃 第3名 <BR>广西 陈　实 第5名 <BR>上海 周文超 第6名 <BR>福州 林　元 第7名 <BR>上海 张家琳 第8名 <BR>福州 方　润 第8名 <BR>福州 陈　阳 第10名 <BR>上海 胡　渊 第10名 <BR>上海 张云亮 第10名 <BR>江苏 孙方成 第13名 <BR>福州 杨晨醒 第14名 <BR>湖南 李　锐 第15名 <BR>福州 林尔桢 第16名 <BR>福州 陈昊罡 第16名 <BR>湖南 杨　敏 第16名 <BR>湖南 夏　静 第16名 <BR>四川 章云樵 第20名 </P><P><BR>初中组前5名同学名单 </P><P>广西 蒋程皓 第1名 <BR>福州 陈　彬 第1名 <BR>广东 王伟彦 第3名 <BR>湖南 何　林 第4名 <BR>广东 徐金彪 第5名 </P><P> </P><P>第二试</P><P>高中组前20名同学名单 </P><P>湖南 李　锐 第1名 <BR>湖南 夏婧婧 第2名 <BR>上海 符文杰 第3名 <BR>福州 林　元 第3名 <BR>湖南 饶向荣 第5名 <BR>福州 陈　阳 第5名 <BR>湖南 杨　敏 第7名 <BR>江苏 陶默雷 第8名 <BR>上海 张家琳 第8名 <BR>湖南 李佳文 第10名 <BR>贵州 段　乐 第10名 <BR>安徽 杭　啸 第12名 <BR>上海 张云亮 第13名 <BR>上海 周文超 第13名 <BR>江苏 李　磊 第15名 <BR>上海 张　宁 第15名 <BR>广西 陈　实 第17名 <BR>福州 陈昊罡 第18名 <BR>湖南 谢　呈 第19名 <BR>河北 翟　可 第19名 </P><P><BR>初中组前5名同学名单 </P><P>湖南 金　恺 第1名 <BR>安徽 汪　汀 第2名 <BR>安徽 杨思雨 第3名 <BR>湖南 李　甍 第4名 <BR>福州 李　翼 第5名  <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：SGOI组委会 <br>
+                            
+                            来 源：曙光网<br>
+                            
+                            共有1949位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=154.htm" temptabs="http://www.mydrs.org/program/list?id=154">最短路径问题的求解</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=156.htm" temptabs="http://www.mydrs.org/program/list?id=156">竞赛丛书推荐</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=155.htm" temptabs="http://www.mydrs.org/program/sendmail?id=155" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\SGOI第四次竞赛成绩揭晓.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0155.htm" temptabs="http://www.mydrs.org/program/html/0155.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=398.htm" temptabs="http://www.mydrs.org/program/list?id=398">SGOI第14次友谊赛成绩</a><br>
+                  
+                  <a href="list-id=394.htm" temptabs="http://www.mydrs.org/program/list?id=394">SGOI-14友谊赛测试数据</a><br>
+                  
+                  <a href="list-id=393.htm" temptabs="http://www.mydrs.org/program/list?id=393">SGOI14友谊赛试题</a><br>
+                  
+                  <a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a><br>
+                  
+                  <a href="list-id=366.htm" temptabs="http://www.mydrs.org/program/list?id=366">SGOI第13次友谊赛成绩揭晓</a><br>
+                  
+                  <a href="list-id=365.htm" temptabs="http://www.mydrs.org/program/list?id=365">SGOI第十三次友谊赛试题</a><br>
+                  
+                  <a href="list-id=364.htm" temptabs="http://www.mydrs.org/program/list?id=364">SGOI第13次友谊赛竞赛规则</a><br>
+                  
+                  <a href="list-id=362.htm" temptabs="http://www.mydrs.org/program/list?id=362">Sgoi12之《黑白瓷砖》</a><br>
+                  
+                  <a href="list-id=360.htm" temptabs="http://www.mydrs.org/program/list?id=360">《哈利・波特与魔法石》</a><br>
+                  
+                  <a href="list-id=359.htm" temptabs="http://www.mydrs.org/program/list?id=359">Sgoi12之《网络传输》</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

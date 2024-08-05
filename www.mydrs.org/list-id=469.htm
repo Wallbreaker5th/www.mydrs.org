@@ -1,0 +1,305 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOIP2002提高组-字串变换-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>NOIP2002提高组-字串变换
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOIP2002提高组-字串变换</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/1/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>[问题描述]:</P>
+<P>　　已知有两个字串 A$, B$ 及一组字串变换的规则（至多6个规则）:<BR>　　　　　A1$ -> B1$<BR>　　　　　A2$ -> B2$<BR>　　规则的含义为：在 A$中的子串 A1$ 可以变换为 B1$、A2$ 可以变换为 B2$ …。<BR>　　　　例如：A$＝'abcd'　B$＝'xyz'<BR>　　变换规则为：<BR>　　　　‘abc’->‘xu’　‘ud’->‘y’　‘y’->‘yz’<BR>　　则此时，A$ 可以经过一系列的变换变为 B$，其变换的过程为：<BR>　　　‘abcd’->‘xud’->‘xy’->‘xyz’<BR>　　共进行了三次变换，使得 A$ 变换为B$。</P>
+<P>[输入]:</P>
+<P>　　键盘输人文件名。文件格式如下：<BR>　　　A$ B$<BR>　　　A1$ B1$ \<BR>　　　A2$ B2$&nbsp; |-> 变换规则<BR>　　　... ... / <BR>　　所有字符串长度的上限为 20。</P>
+<P>[输出]:</P>
+<P>　　输出至屏幕。格式如下：<BR>　　若在 10 步（包含 10步）以内能将 A$ 变换为 B$ ，则输出最少的变换步数；否则输出"NO ANSWER!"<BR>[输入输出样例]<BR>b.in:<BR>　abcd xyz<BR>　abc xu<BR>　ud y<BR>　y yz</P>
+<P>屏幕显示：<BR>　3</P>
+<P>分析：</P>
+<P>本题是典型的广度优先搜索的例子，但如果只采用正向搜索，某些情况下计算量过大，速度过慢，故采取双向搜索且判重并适当剪枝，效果较好。</P>
+<P>程序清单</P>
+<P>{$A-,B-,D-,E-,F-,G-,I-,L-,N-,O-,P-,Q-,R-,S-,T-,V-,X-,Y-}<BR>{$M 8192,0,655360}<BR>program NOIPG2;<BR>&nbsp; const maxn=2300;<BR>&nbsp; type<BR>&nbsp;&nbsp;&nbsp; node=record{定义节点数据类型}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; str:string[115];dep:byte;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end; {str表示字串，其长度不会超过115（长度超过115的字串<BR>&nbsp;&nbsp;&nbsp;&nbsp; 不可能通过变换成为目标字串，因为题目限定变换10次之内，且串长<BR>&nbsp;&nbsp;&nbsp;&nbsp; 不超过20，即起始串最多可经过5次变换时增长，中间串的最大长度<BR>&nbsp;&nbsp;&nbsp;&nbsp; 为20+5*19=115，否则经过余下的步数不可能变为长度不超过20的<BR>&nbsp;&nbsp;&nbsp;&nbsp; 目标串），dep表示深度}<BR>&nbsp;&nbsp;&nbsp; ctype=array[1..maxn]of ^node;<BR>&nbsp;&nbsp;&nbsp; bin=0..1;<BR>&nbsp; var<BR>&nbsp;&nbsp;&nbsp; maxk:byte;c:array [0..1]of ctype;<BR>&nbsp;&nbsp;&nbsp; x0:array[0..6,0..1]of string[20];<BR>&nbsp;&nbsp;&nbsp; filename:string;<BR>&nbsp;&nbsp;&nbsp; open,closed:array [0..1] of integer;<BR>&nbsp; procedure Init;{读取数据，初始化}<BR>&nbsp;&nbsp;&nbsp; var f:text;temp:string;i,j:integer;<BR>&nbsp;&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for i:=0 to 1 do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for j:=1 to maxn do new(c[i,j]);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write('Input filename:');readln(filename);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; assign(f,filename);reset(f);i:=0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while not eof(f) and (i<=6) do begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; readln(f,temp);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x0[i,0]:=copy(temp,1,pos(' ',temp)-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x0[i,1]:=copy(temp,pos(' ',temp)+1,length(temp));<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc(i);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxk:=i-1;close(f);<BR>&nbsp;&nbsp;&nbsp; end;<BR>&nbsp; procedure calc;<BR>&nbsp;&nbsp;&nbsp; var i,j,k:integer;st:bin;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d:string;f:text;<BR>&nbsp;&nbsp;&nbsp; procedure bool(st:bin);{判断是否到达目标状态或双向搜索相遇}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var i:integer;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if x0[0,1-st]=c[st,closed[st]]^.str then begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {如果到达目标状态，则输出结果，退出}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(c[st,closed[st]]^.dep);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; halt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to closed[1-st] do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if c[st,closed[st]]^.str=c[1-st,i]^.str then begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {如果双向搜索相遇（即得到同一节点），<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 则输出结果（2个方向搜索的步数之和），退出}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(c[st,closed[st]]^.dep+c[1-st,i]^.dep);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; halt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp; procedure checkup(st:bin);{判断节点是否与前面重复}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var i:integer;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to closed[st]-1 do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if c[st,i]^.str=c[st,closed[st]]^.str then begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dec(closed[st]);exit;{如果节点重复，则删除本节点}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool(st);{如果节点不重复，再判断是否到达目标状态}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp; procedure expand(st:bin);{扩展产生新节点}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var i,j,k,lx,ld:integer;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc(open[st]);d:=c[st,open[st]]^.str;{队首节点出队}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; k:=c[st,open[st]]^.dep;ld:=length(d);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to maxk do begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {从队首节点（父节点）出发产生新节点（子节点）}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lx:=length(x0[i,st]);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for j:=1 to ld do begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (copy(d,j,lx)=x0[i,st]) and (length(copy(d,1,j-1)+x0[i,1-st]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +copy(d,j+lx,ld))<=115) then begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {如果新节点的串长超过115，则不扩展！即剪掉此枝}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if closed[st]>=maxn then exit;{如果队列已满，只好退出}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc(closed[st]);{新节点入队}<BR>c[st,closed[st]]^.str:=copy(d,1,j-1)+x0[i,1-st]+copy(d,j+lx,ld);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c[st,closed[st]]^.dep:=k+1;{子节点深度=父节点深度+1}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkup(st);{检查新节点是否重复}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp; Begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for st:=0 to 1 do begin{正向(st=0)逆向(st=1)搜索节点队列初始化}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open[st]:=0;closed[st]:=1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c[st,closed[st]]^.str:=x0[0,st];c[st,closed[st]]^.dep:=0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool(st);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; repeat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {选择节点数较少且队列未空、未满、深度未达到10的方向先扩展}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (open[0]<=open[1]) and not ((open[0]>=closed[0]) or<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (closed[0]>=maxn) or (c[0,closed[0]]^.dep>10)) then expand(0);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (open[1]<=open[0]) and not ((open[1]>=closed[1]) or<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (closed[1]>=maxn) or (c[1,closed[1]]^.dep>10)) then expand(1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {如果一方搜索终止，继续另一方的搜索，直到两个方向都终止}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not ((open[0]>=closed[0]) or (closed[0]>=maxn) or<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (c[0,closed[0]]^.dep>10)) then expand(0);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not ((open[1]>=closed[1]) or (closed[1]>=maxn) or<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (c[1,closed[1]]^.dep>10)) then expand(1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; until (open[0]>=closed[0]) or (c[0,closed[0]]^.dep>10) or (closed[0]>=maxn)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and (closed[1]>=maxn) or (open[1]>=closed[1]) or (c[1,closed[1]]^.dep>10);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {终止条件：任一方队空（无解）或搜索深度超过10（10步内无解）<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 或双方均溢出（可能有解也可能无解，应尽量避免，要尽量把节<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 点数组开大一点，采用双向搜索，采取剪枝措施等）}<BR>&nbsp;&nbsp;&nbsp; End;<BR>&nbsp; BEGIN<BR>&nbsp;&nbsp;&nbsp; init; calc; writeln('NO ANSWER!')<BR>&nbsp; END.<BR>点评：基本题（较难） 考察队列、（双向）广度优先搜索算法及字符串的运算，基本上可以考察出参赛者的数据结构和算法水平。<BR></P>
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：湖北伍先军 <br>
+                            
+                            共有4701位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=468.htm" temptabs="http://www.mydrs.org/program/list?id=468">第八届分区联赛一等奖地区分布</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=470.htm" temptabs="http://www.mydrs.org/program/list?id=470">USACO三月竞赛橙色题目</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=469.htm" temptabs="http://www.mydrs.org/program/sendmail?id=469" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOIP2002提高组-字串变换.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0469.htm" temptabs="http://www.mydrs.org/program/html/0469.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

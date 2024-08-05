@@ -1,0 +1,294 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>SGOI7《音乐厅布置》-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>SGOI7《音乐厅布置》
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>SGOI7《音乐厅布置》</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/23/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              这一题作为这次SGOI的第一题，从算法上来说，使比较简单的，只要仔细看清题目的要求，编程细心且耐心，就不难解决问题。<BR><BR>　　首先，求凸包是整个问题的基础，因为题目没有给出哪些柱子是在外，哪些在内，而这将是解决问题必须的条件。<BR><BR>　　我们得到凸包之后，很明显可以看出来，第一小题就是求凸包的重心。由于房顶的密度厚度均匀，所以房顶的厚度就是一个不需要考虑的多余条件。求凸多边形重心的一个简单方法就是我们顺次把凸包分割成为n-3个三角心，根据三角形中心的计算公式<IMG height=46 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-01.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-01.gif" width=249 align=absMiddle> 就可以得到每个三角形的重心。然后计算三角形面积（如用公式<IMG height=31 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-02.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-02.gif" width=192 align=absMiddle>其中<IMG height=37 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-03.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-03.gif" width=88 align=absMiddle>）。这样我们就可以计算两个图形的重心<IMG height=26 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-04.gif" width=104 align=absMiddle>，如已知他们的面积（也正比于质量）S1，S2，有<IMG height=48 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-05.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-05.gif" width=51 align=absMiddle> ，再利用定比分点公式（<IMG height=45 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-06.gif" width=176 align=absMiddle> ）求出这两个图形整体的重心（x,y）。<BR><BR>　　第二个问题，因为物体是竖直落下，我们实际上要判断的就是物体的射影这个点是在圆内、线上、凸多边形内或者凸多边形外？判断一个点是否在圆内，可以通过计算这个点到圆心的距离，如果距离小于半径那么点就在圆内。判断一个点是否在线段上：<IMG height=168 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-07.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-07.gif" width=411><BR><BR>　　判断一个点是否在多边形内，只要从这个点向多边形外做一条射线（随机取极远处的一个点，以这两点为端点做一条线段即可），如果射线不经过多边形顶点，不和多边形边重合（随机取点出现这种情况的概率极小，可以不予考虑，或者发现问题马上重新取点），那么统计射线和多边形的边的交点个数，如果是交点是奇数个表明点在多边形内，否则在多边形外。另外本小题应该注意CLIO的输出顺序。<BR><BR>　　第三个问题，要判断一个点是否能够被照射到。我们应该看到，麦克风是没有大小的，而且它和灯都是放在地面上，所以皇宫的高度也是一个无用的条件，我们只要考虑平面问题。如果一个点可以防治麦克风，也就是说，它不能够被任何光线照射到，那么这个点和任何灯的连线都会被某一个柱子所遮挡。也就是说，如果一个点和一个光源的连线不被任何柱子遮挡，这个点才是可见的。一盏灯发出去的光线有无数条，根据物理学易知，我们只要考虑灯和麦克风连线上的这一条光线在灯和麦克风之间的线段就可以了。大致算法是我们依次考虑每个麦克风，看它和每根外柱的连线会不会被某根柱子遮挡。这样算法的时间复杂度为<IMG height=24 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-11.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-11.gif" width=54 align=absBottom>相当于 <IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0317-12.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0317-12.gif" width=39 align=absBottom>。关键就是如何判断线段和圆相交，其实有多种可行的方法。标程使用了最简单的一种方法，计算出线段所在直线和圆的交点，判断焦点是否在线段上。这种方法简单易懂容易想到，只要利用解析几何知识认真笔算一下直线和圆的交点就行了。另外一种做法实现判断圆和直线是否相交（也就是判断点到直线的距离），如果相交的话在判断线段的两个端点是否分列在圆心到直线的垂线的两侧。其他方法还有很多，而且复杂度基本上都是O(1)。<BR><BR>　　至此这样整道题目就解决了，当然计算几何的很多基本算法都可以有不同的实现方法。这道题没有复杂的思想，主要是套用常见的计算几何算法，功底扎实的选手应该可以完成。而这道题有三个小题，虽然分数较大，题目简单，但是可能要消耗较多的时间，是否选择先做这题，也考察了选手们竞赛的决策能力。总体上看，这次sgoi比赛时间是比较紧的，只有统筹兼顾才能做出正确决策，考出好成绩。 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：福州一中<br>
+                            
+                            共有2846位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=336.htm" temptabs="http://www.mydrs.org/program/list?id=336">SGOI7《最佳路线》</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=337.htm" temptabs="http://www.mydrs.org/program/sendmail?id=337" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\SGOI7《音乐厅布置》.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0337.htm" temptabs="http://www.mydrs.org/program/html/0337.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=398.htm" temptabs="http://www.mydrs.org/program/list?id=398">SGOI第14次友谊赛成绩</a><br>
+                  
+                  <a href="list-id=394.htm" temptabs="http://www.mydrs.org/program/list?id=394">SGOI-14友谊赛测试数据</a><br>
+                  
+                  <a href="list-id=393.htm" temptabs="http://www.mydrs.org/program/list?id=393">SGOI14友谊赛试题</a><br>
+                  
+                  <a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a><br>
+                  
+                  <a href="list-id=366.htm" temptabs="http://www.mydrs.org/program/list?id=366">SGOI第13次友谊赛成绩揭晓</a><br>
+                  
+                  <a href="list-id=365.htm" temptabs="http://www.mydrs.org/program/list?id=365">SGOI第十三次友谊赛试题</a><br>
+                  
+                  <a href="list-id=364.htm" temptabs="http://www.mydrs.org/program/list?id=364">SGOI第13次友谊赛竞赛规则</a><br>
+                  
+                  <a href="list-id=362.htm" temptabs="http://www.mydrs.org/program/list?id=362">Sgoi12之《黑白瓷砖》</a><br>
+                  
+                  <a href="list-id=360.htm" temptabs="http://www.mydrs.org/program/list?id=360">《哈利・波特与魔法石》</a><br>
+                  
+                  <a href="list-id=359.htm" temptabs="http://www.mydrs.org/program/list?id=359">Sgoi12之《网络传输》</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

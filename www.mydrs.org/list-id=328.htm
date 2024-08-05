@@ -1,0 +1,290 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>ctsc2000《丘比特的烦恼》2-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>ctsc2000《丘比特的烦恼》2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>ctsc2000《丘比特的烦恼》2</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/1/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B>[原题描述]</B><BR>　　给出一些男女之间的缘分值，按一定的规则对若干对男女射箭，求被射中的男女缘分和的最大值。 <BR><B>[问题分析]</B><BR>　　该题是典型的二部图匹配。<BR>　　设二部图G被划分成{X, Y}，X是男子的点集，Y是女子的点集。如果对于i∈ X和j∈ Y，按规则箭可以射中i和j，则连一条边(i, j)，边的权值是i和j的缘分值。<BR>　　最后，求G的最大权完全匹配。<BR><B>[关于射箭规则]</B><BR><BR>　　设两人的坐标<IMG height=18 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-01.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-01.gif" width=46 align=absMiddle>和<IMG height=18 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-02.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-02.gif" width=49 align=absMiddle> 。<BR>　　如果<IMG height=26 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-03.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-03.gif" width=164 align=absMiddle> ，意味着Cupid的箭射程不够。<BR>　　下面说一下判断两个人连线段上是否有第三者。<BR>　　设另一个人的坐标是<IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-04.gif" width=45 align=absMiddle> 。<BR>先考虑这三个是否共线，就是考察行列式<IMG height=72 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-05.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-05.gif" width=98 align=absMiddle>是否成立。如果三个人共线再考虑 <IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-04.gif" width=45 align=absMiddle>是否在<IMG height=26 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-06.gif" width=49 align=absMiddle>和<IMG height=23 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-07.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-07.gif" width=50 align=absMiddle>的连线段上，即考察<BR>　　(i) 如果<IMG height=21 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-08.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-08.gif" width=240 align=absMiddle>是否成立；<BR>　　(ii) 如果<IMG height=23 src="external/www.chinaschool.org/aosai/lwjl/images/02-0221-09.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0221-09.gif" width=230 align=absMiddle>是否成立。<BR><B>[小结]</B><BR>　　该题很容易看出图论模型。这是考察基本功和熟练度的题目。<BR><BR><B>[参考程序]</B><BR><BR>{$R-,Q-}<BR>const<BR>　MaxN = 29;<BR>　FileIn = 'cupid.in';<BR>　FileOut = 'cupid.out';<BR>var<BR>　G, Flow : array[1..Maxn, 1..Maxn]of Integer;<BR>　Value, Back : array[1..Maxn]of Integer;<BR>　Sum : Word;<BR>　N : Byte;<BR>procedure Initialize;<BR>type<BR>　people = record<BR>　　　Name : string[20];<BR>　　　X, Y : Longint;<BR>　　end;<BR>var<BR>　Lovers : array[1..MaxN, 1..2] of People;<BR>　sex, no : array[1..2]of byte;<BR>　Names : array[1..2]of string[20];<BR>　i, j, v : byte;<BR>　　code : integer;<BR>　x1, y1,<BR>x2, y2, k : longint;<BR>　　　　F : text;<BR>　　　　s : string;<BR>function Upcases(x : string) : string;<BR>var ss : string; i : byte;<BR>begin<BR>　ss := '';<BR>　for i := 1 to length(x) do ss := ss + upcase(x[i]);<BR>　upcases := ss;<BR>end;<BR>procedure GetInfo(z : byte);<BR>var i : byte;<BR>begin<BR>　for i := 1 to n do<BR>　　if lovers[i, 1].name = names[z] then<BR>　　begin<BR>　　　sex[z] := 1;<BR>　　　no[z] := i;<BR>　　　exit;<BR>　　end;<BR>　sex[z] := 2;<BR>　for i := 1 to n do<BR>　　if lovers[i, 2].name = names[z] then<BR>　　begin<BR>　　　no[z] := i;<BR>　　　exit;<BR>　　end;<BR>end;<BR>function Check : boolean;<BR>var j, i : byte;<BR>　x3, y3 : longint;<BR>begin<BR>　check := false;<BR>　for j := 1 to 2 do<BR>　　for i := 1 to n do<BR>　　　if ((j = sex[1]) and (i &lt;&gt; no[1])) or ((j = sex[2]) and (i &lt;&gt; no[2])) then<BR>　　　begin<BR>　　　　x3 := lovers[i, j].X;<BR>　　　　y3 := lovers[i, j].Y;<BR>　　　　if (Y3 - Y2) * (X1 - X2) = (Y1 - Y2) * (X3 - X2) then<BR>　　　　　if (Y1 = Y2)and(Y2 = Y3) then<BR>　　　　　　if (X1 &lt; X3)and(X3 &lt; X2)or(X2 &lt; X3)and(X3 &lt; X1) then exit else begin end<BR>　　　　　else<BR>　　　　　　if (Y1 &lt; Y3)and(Y3 &lt; Y2)or(Y2 &lt; Y3)and(Y3 &lt; Y1) then exit;<BR>　　　end;<BR>　　check := true;<BR>　end;<BR>begin<BR>　assign(f, filein); reset(f);<BR>　readln(f, k);<BR>　k := k * k;<BR>　readln(f, n);<BR>　for j := 1 to 2 do<BR>　　for i := 1 to n do<BR>　　begin<BR>　　　read(f, Lovers[i, j].X, Lovers[i, j].Y);<BR>　　　readln(f, s);<BR>　　　s := copy(s, 2, length(s));<BR>　　　s := Upcases(s);<BR>　　　Lovers[i, j].Name := s;<BR>　　end;<BR>sex[1] := 1; sex[2] := 2;<BR>for i := 1 to n do<BR>　for j := 1 to n do<BR>　begin<BR>　　x1 := lovers[i, 1].X; y1 := lovers[i, 1].Y;<BR>　　x2 := lovers[j, 2].X; y2 := lovers[j, 2].Y;<BR>　　no[1] := i; no[2] := j;<BR>　　if (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) &gt; k then<BR>　　　g[i, j] := 0<BR>　　else<BR>　　　if Check then<BR>　　　　g[i, j] := 1<BR>　　　else<BR>　　　　g[i, j] := 0<BR>　end;<BR>readln(f, s);<BR>while s &lt;&gt; 'End' do<BR>begin<BR>　i := pos(' ', s); names[1] := upcases(copy(s, 1, i - 1)); delete(s, 1, 　i);<BR>　i := pos(' ', s); names[2] := upcases(copy(s, 1, i - 1)); delete(s, 1, i);<BR>　val(s, v, code);<BR>　for i := 1 to 2 do GetInfo(i);<BR>　if sex[1] = 1 then<BR>　　if g[no[1], no[2]] &lt;&gt; 0 then g[no[1], no[2]] := v else begin end<BR>　　else<BR>　　　if g[no[2], no[1]] &lt;&gt; 0 then g[no[2], no[1]] := v;<BR>　　readln(f, s);<BR>　end;<BR>　close(f);<BR>end;<BR>procedure AddPath(x : byte);<BR>type Each = record<BR>　　　　father : byte;<BR>　　　　value : integer;<BR>　　　end;<BR>var L1, L2 : array[1..MaxN * 2]of Each;<BR>　　Tar : Each;<BR>　i, j, k : byte;<BR>　t : integer;<BR>　changed : boolean;<BR>begin<BR>　for i := 1 to n do<BR>　begin<BR>　　if Value[i] = 0 then L1[i].Value := 0 else L1[i].value := -MaxInt;<BR>　　L2[i].value := -MaxInt;<BR>　end;<BR>　tar.value := -Maxint;<BR>　repeat<BR>　　changed := false;<BR>　　for i := 1 to n do<BR>　　　if L1[i].value &lt;&gt; -Maxint then<BR>　　　　for j := 1 to n do<BR>　　　　　if (flow[i, j] = 0) and (G[i, j] &gt; 0) then<BR>　　　　　　if L1[i].value + G[i, j] &gt; L2[j].value then<BR>　　　　　　begin<BR>　　　　　　　L2[j].value := L1[i].value + G[i, j];<BR>　　　　　　　L2[j].father := i;<BR>　　　　　　　changed := true;<BR>　　　　　　end;<BR>　for j := 1 to n do<BR>　　if L2[j].value &lt;&gt; -Maxint then<BR>　　begin<BR>　　　for i := 1 to n do<BR>　　　　if flow[i, j] = 1 then<BR>　　　　　if L2[j].value - g[i, j] &gt; L1[i].value then<BR>　　　　　begin<BR>　　　　　　L1[i].value := L2[j].value - g[i, j];<BR>　　　　　　L1[i].father := j;<BR>　　　　　　changed := true;<BR>　　　　　end;<BR>　　　if back[j] = 0 then<BR>　　　　if L2[j].value &gt; tar.value then<BR>　　　　　begin<BR>　　　　　　tar.value := L2[j].value;<BR>　　　　　　tar.father := j;<BR>　　　　　end;<BR>　　end;<BR>until not changed;<BR>Sum := Sum + tar.value;<BR>i := tar.father;<BR>back[i] := 1;<BR>k := 2;<BR>while (k &lt;&gt; 1) or (value[i] &lt;&gt; 0) do<BR>begin<BR>　case k of<BR>　　　1 : begin j := L1[i].father; flow[i, j] := 0; end;<BR>　　　2 : begin j := L2[i].father; flow[j, i] := 1; end;<BR>　　end;<BR>　　k := 3 - k; i := j;<BR>　end;<BR>　value[i] := 1;<BR>end;<BR>procedure Coupling;<BR>var F : text; i : byte;<BR>begin<BR>　Sum := 0;<BR>　for i := 1 to n do AddPath(i);<BR>　assign(f, fileout); rewrite(f);<BR>　writeln(f, Sum);<BR>　close(f);<BR>end;<BR>begin<BR>　Initialize;<BR>　Coupling;<BR>end.<BR><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：李翼 <br>
+                            
+                            来 源：福建师大附中<br>
+                            
+                            共有2738位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=327.htm" temptabs="http://www.mydrs.org/program/list?id=327">ctsc2000《快乐的蜜月》</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=329.htm" temptabs="http://www.mydrs.org/program/list?id=329">SGOI第七次竞赛试题</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=328.htm" temptabs="http://www.mydrs.org/program/sendmail?id=328" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\ctsc2000《丘比特的烦恼》2.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0328.htm" temptabs="http://www.mydrs.org/program/html/0328.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=554.htm" temptabs="http://www.mydrs.org/program/list?id=554">CTSC2004结束IOI2004中国队产生</a><br>
+                  
+                  <a href="list-id=481.htm" temptabs="http://www.mydrs.org/program/list?id=481">CTSC2003因故取消</a><br>
+                  
+                  <a href="list-id=474.htm" temptabs="http://www.mydrs.org/program/list?id=474">CTSC2003将于5月中旬举行</a><br>
+                  
+                  <a href="list-id=328.htm" temptabs="http://www.mydrs.org/program/list?id=328">ctsc2000《丘比特的烦恼》2</a><br>
+                  
+                  <a href="list-id=327.htm" temptabs="http://www.mydrs.org/program/list?id=327">ctsc2000《快乐的蜜月》</a><br>
+                  
+                  <a href="list-id=326.htm" temptabs="http://www.mydrs.org/program/list?id=326">ctsc2000《丘比特的烦恼》</a><br>
+                  
+                  <a href="list-id=325.htm" temptabs="http://www.mydrs.org/program/list?id=325">ctsc2000《冰原探险》</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

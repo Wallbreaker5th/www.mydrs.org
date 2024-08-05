@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>SGOI7《积木搭建问题》-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>SGOI7《积木搭建问题》
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>SGOI7《积木搭建问题》</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/23/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <STRONG>〖摘要〗<BR></STRONG>　　本文主要利用<B>组合数学</B>的思想解计数问题，然后<B>递推</B>求特定序列。</P><P><B>〖前言〗</B><BR>　　本题改编自URAL题库的1148（<A href="http://acm.timus.ru/problem?id=1148">http://acm.timus.ru/problem?id=1148</A>），并且由我加以了简化。事实上，我是不会做英文原题的（-_-），即便是本题，任务二解决得也很不好，所以这里不详细写。希望有好算法的同学与我联系，让我的论文能抛砖引玉。大家共同探讨，然后共同进步。E-mail Address：<A href="mailto:Lymail@263.net">Lymail@263.net</A>。</P><P><B>〖题目描述〗</B><BR>　　用无限块积木搭h层的塔a[1..h]，相邻层的积木数差为1，即<IMG height=28 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-01.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-01.gif" width=156 align=absMiddle> 。塔的第一层必须有m块积木（<IMG height=25 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-02.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-02.gif" width=41 align=absMiddle>）关于塔的比较的定义这里不再累赘地叙述了。<BR>　　<B>任务1：</B>求不同的塔的种类数。<BR>　　<B>任务2：</B>把塔排序，根据塔的id，求塔的形状。</P><P><B>〖正文〗</B><BR>　　由于题目对塔的定义明显具有这样的性质：如果a[1..h]是一座合法的塔，那么a[1..h-1]必定也是合法的塔。换一个角度，高度为h，底层有m块积木的塔（以下记为"塔（h,m）"），去掉第一层以后，必定是以下两种塔之一：塔（h-1，m-1）或塔（h-1，m+1）。我们就可以把求塔（h，m）的种类数，转变为分别求塔（h-1，m-1）与塔（h-1，m+1）的种类数的子问题。同时我们可以知道，不可能存在塔（?，0）。经过这样的推理，任务一的一个最简单的递推关系式已经诞生了： </P><P><B>　　算法1.1，计算塔（h，m）的种类数</B></P><P>　　记f（h，m）为塔（h，m）的种类数。<BR>　　　f（h，m）= f（h-1，m+1）+ f（h-1，m-1）<BR>　　　f（x，0）= 0，x > 0<BR>　　　f（1，y）= 1，y > 0</P><P>　　现在让我们来分析一下这个算法的复杂度。我们要计算f（h，m），首先要知道f（h-1，m+1）与f（h-1，m-1），要算这两个又必须知道f（h-2，m-2），f（h-2，m-1）与f（h-2，m-3）……最后，在h <= m的情况下我们大约一共要算（h + 1）<IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle> h / 2个f函数，每次计算的复杂度为O（1），所以总的时间复杂度接近O（h^2）。问题是按照这样的计算，f（h，m）很容易在h很小的情况下就突破普通编程语言的数据范围，所以本题必须使用高精度。这样高精度的加法运算至少要在计算中再添加一个O（n）（n为常数）的内嵌过程，总复杂度达到O（h^2<IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle>n）。看一下题目中h的范围，失败的阴影在我们心头掠过……</P><P>　　怎么优化呢？要知道，我们还在做任务一啊！仔细研究发现，我们对时间的浪费主要在于f函数的计算。我们使用了复杂度为O（h^2）的算法，而面对题目要求的h，这明显是不可能实现的。事实上经验告诉我们，像这种看起来"经典"无比的递推计数题往往存在组合数的解法，这种解法往往是O（n）乃至更小的。本题能否利用组合计数呢？ </P><P>　　明确了关键，再经过一段思考，我发现本题可以转换成如下的模型：<BR>　　从层i到层i+1，积木数的变化不是加一就是减一。一座h层的塔，积木数就变化了h-1次。如果把积木数的加一记为0，减一记为1，由于塔的第一层a1已经确定，任何一种塔事实上都与一个长度为h-1的二进制字符串一一对应；例如塔（4，3，2，3），就代表了二进制串110，塔（4，3，2，1）代表111……至于出现塔的某层积木数为0的非法情况，则可以认为是二进制串b[1..h-1]中存在某位i，串b[1..h-1]中1的数量比0的数量多m，即 |1| - |0| = m。一座合法的塔就是不存在这种现象的二进制串。 </P><P>　　这样的模型有甚么用呢？如果一个长h-1的二进制串中间的1的数量是已知的，很容易利用组合分析获得符合以上条件的二进制串的数量。具体的计算方法如下：</P><P>　　<B>算法2.1：计算长度h-1，含x个1，且到任何位为止，| 1 | - | 0 | < m的二进制串的个数</B></P><P>　　记该函数为g（x，h-1，m），则有<BR>　　g(x,h-1,m)=<IMG height=29 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" width=36 align=absMiddle>-<IMG height=27 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-05.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-05.gif" width=39 align=absMiddle><BR>　　特别的<BR>　　若x >= (h - 1 + m) /2，有<BR>　　g(x,h-1,m)=0<BR>　　若x < m，有<BR>　　g(x,h-1,m)=<IMG height=29 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" width=36 align=absMiddle><BR>　　算法的证明如下。</P><P>　　如果不存在限制条件，符合要求的二进制串明显有<IMG height=29 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-04.gif" width=36 align=absMiddle>个。若x < m，即使加上限制条件符合要求的串也不会有丝毫的减少，这是显而易见的。<BR>　　加上限制条件以后，如果存在合法的串，那么1的个数x最多也不能比0的个数h-1-x多m，即x - m < h - 1 - x，整理得x < (h - 1 + m) / 2。</P><P>　　假使 x >= m，至少存在一个不符合条件的二进制串；且x < (h - 1 + m) / 2，至少存在一个合法的串。怎么计算不合法的串的总数呢？一般采用变换法，也就是某些类似模型里的非降路径翻转法。</P><P>　　设有一个不合法串b[1..h-1]，必定存在一个最小的正整数y，y < (h - 1 + m) / 2，在b[1..2y - m]里存在y个1，y-m个0。那么b [2y - m + 1..h-1]里就有x-y个1，h - 1 - x - y + m个0。如果把b [2y - m + 1..h-1]的串全部变换，0变1，1变0，就会将原串变成一个由 h-1-x+m个1，x-m个0组成的新串。容易证明，如果2个不合法的原串不同，新串也肯定不同。</P><P>　　设有一个串c[1..h-1]，有h-1-x+m个1，x-m个0。由于x < (h - 1 + m) / 2 ，有<BR>| 1 | - | 0 | = h-1-x+m-x+m = h-1 -2x +2m > h-1 - (h-1+m)+2m = m，所以一定会出现1的个数比0的个数多m的情况。取一个最小的正整数y，y < (h - 1 + m) / 2，在c[1..2y - m]里存在y个1，y-m个0，对c[2y-m+1..h-1]做对称变换，这样原串就变为一个新串b[1..h-1]，有x个1，h-1-x个0，且b[1..h-1]是不合法的。同样也容易证明，如果2个c串不同，b串也肯定不同。现在，根据上面两段推理，我们可以庄严地宣布：<BR>　　每一个不合法的子串b[1..h-1]，总与一个由h-1-x+m个1，x-m个0组成的串c[1..h-1]对应，从而不合法串b[1..h-1]的数量，等于对应的c[1..h-1]的数量，即<IMG height=27 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-05.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-05.gif" width=39 align=absMiddle> 。<BR>　　由此就推出了上面那个公式，同时任务一的第二种算法也成型了。</P><P>　　<B>算法2.2：计算f（h，m）的数量</B><BR>　　f（h，m）= sum [g（x，h-1，m），x = 0..h-1 ]<BR>　　具体实现上，分别用<B>算法2.1</B>求每个g（x，h-1，m），然后加起来。<BR>　　现在重新计算一下复杂度。Sum是O（h）的，<B>算法2.1</B>由2个O（h）的组合数运算与一个O（n）的高精度加法并排构成，内部有一个O（n）的高精度乘法过程。总的时间复杂度还是O（h^2<IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle>n）！但是，我们必须看到，组合数的运算这个O（h）的O是很小的，所以目前的算法对比<B>算法1.1</B>来，实际上已经好了很多。</P><P>　　可是，我们的努力难道只有这么一点效果吗？当然不是的。事实上上面<B>算法2.2</B>的实现方法存在着极大的浪费，这个浪费主要表现在2个方面：对组合数的计算的浪费与具体的组合数计算过程中的浪费上。<BR>　　首先，设m = 1。所以有<BR>　　f（h，1）= g（0，h-1，1）+ g（1，h-1，1）+ L + g（h-1，h-1，1）<BR>　　　　　　　= C（1，h-1） + <BR>　　　　　　　　C（2，h-1）- C（1，h-1）+<BR>　　　　　　　　C（3，h-1）- C（2，h-1）+<BR>　　　　　　　　L +<BR>　　　　　　　　C（h-1，h-1）- C（h-2，h-1）</P><P>　　可以看到，在计算的过程中出现了大量重复计算的组合数，以及一大堆事实上根本无需计算的组合数（<B>需要注意的是，不能光凭上面这个并不严密的等式断定f（h，1）= C（h-1，h-1），因为在计算的过程中许多函数g可能在算法2.1里被直接赋成0</B>）。事实上，我们可以建一个O（h）的byte型数组times[0..h-1]来纪录每个组合数最后的系数。在开始计算f（h，m）前先通过一个O（h）的循环确定times[0..h-1]，然后在计算过程里根据每个组合数计算的最终次数决定不计算或者仅进行简单的计算。<BR>　　其次，由于组合数本身的定义，有等式C（m，n）=C（m，n-1）<IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle> (m - n + 1) / n，所以事实上两个O（n）的高精度计算过程就足以计算从C（m，n-1）出C（m，n）了。i.e.算出全部组合数的复杂度也只有O（h，n）。<BR>　　那么我们就得到了以下算法</P><P>　　<B>算法2.3：算法2.2的优化</B></P><P>　　0， 简单赋值C（-1，h-1）（这里要当成是1，不能赋成0）；简单清空times；<BR>　　1， 按顺序计算每个组合数C（x，h-1），同时修改times[x]与times[x-m]：<BR>　　　　1.1， 若x >= (h-1+m) / 2，跳回到1计算下个x。<BR>　　　　1.2， inc（times[x]）；<BR>　　　　1.3， 若x >= m，dec（times[x-m]）；<BR>　　2， 综合计算出结果。<BR>　　以上算法的时间复杂度为O（h <IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle> n），空间复杂度为O（h + n）（n均为小的常数）用于解决任务一应该是足够的了。<BR>（松了一口气……）</P><P>　　开始解决任务二。与前面相似地，一座塔（h,m）去掉第一层以后必定是以下两种塔之一：塔（h-1，m-1）或塔（h-1，m+1）。且总有：<B>塔（h-1，m-1）<塔（h-1，m+1）</B>。这样若告诉我们的塔序号C <= f（h-1，m-1），我们就知道a[2] = m - 1，否则a[2] = m+1。这种递推的复杂度为O（h），内部是复杂度为O（h <IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle> n）的<B>算法2.3</B>，总复杂度O（h^2 <IMG height=22 src="external/www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0318-06.gif" width=9 align=absMiddle> n）。看起来复杂度很大啊！……没办法，我没想出更好的，否则1148就可以解决了。暂时只好先用这个算法吧，应付本题是够了的。^_^</P><P>　　<B>算法3.1：任务二</B></P><P>　　1， 获得塔序号C；<BR>　　2， 比较C与f（h-1，m-1）；<BR>　　　　2.1，若C > f（h-1，m-1），从C里减去f（h-1，m-1），a[2] = m+1，转到　　　　　2.3；<BR>　　　　2.2，否则 a[2] = m-1；<BR>　　　　2.3，跳回2，确定a[3]，如果推完了就打印；</P><P>　　更好的算法探求中……<BR>	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：林元 <br>
+                            
+                            来 源：福州第一中学<br>
+                            
+                            共有2864位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=334.htm" temptabs="http://www.mydrs.org/program/list?id=334">SGOI7《折线》</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=336.htm" temptabs="http://www.mydrs.org/program/list?id=336">SGOI7《最佳路线》</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=335.htm" temptabs="http://www.mydrs.org/program/sendmail?id=335" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\SGOI7《积木搭建问题》.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0335.htm" temptabs="http://www.mydrs.org/program/html/0335.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=398.htm" temptabs="http://www.mydrs.org/program/list?id=398">SGOI第14次友谊赛成绩</a><br>
+                  
+                  <a href="list-id=394.htm" temptabs="http://www.mydrs.org/program/list?id=394">SGOI-14友谊赛测试数据</a><br>
+                  
+                  <a href="list-id=393.htm" temptabs="http://www.mydrs.org/program/list?id=393">SGOI14友谊赛试题</a><br>
+                  
+                  <a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a><br>
+                  
+                  <a href="list-id=366.htm" temptabs="http://www.mydrs.org/program/list?id=366">SGOI第13次友谊赛成绩揭晓</a><br>
+                  
+                  <a href="list-id=365.htm" temptabs="http://www.mydrs.org/program/list?id=365">SGOI第十三次友谊赛试题</a><br>
+                  
+                  <a href="list-id=364.htm" temptabs="http://www.mydrs.org/program/list?id=364">SGOI第13次友谊赛竞赛规则</a><br>
+                  
+                  <a href="list-id=362.htm" temptabs="http://www.mydrs.org/program/list?id=362">Sgoi12之《黑白瓷砖》</a><br>
+                  
+                  <a href="list-id=360.htm" temptabs="http://www.mydrs.org/program/list?id=360">《哈利・波特与魔法石》</a><br>
+                  
+                  <a href="list-id=359.htm" temptabs="http://www.mydrs.org/program/list?id=359">Sgoi12之《网络传输》</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

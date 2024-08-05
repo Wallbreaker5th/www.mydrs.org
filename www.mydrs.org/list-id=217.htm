@@ -1,0 +1,274 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>选择结构程序设计-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>选择结构程序设计
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>选择结构程序设计</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;9/14/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <FONT color=#ff8000><STRONG>概述</STRONG></FONT><BR><BR>&nbsp;&nbsp;&nbsp; 通常，计算机按在程序中书写的顺序执行语句。如果一个程序只由赋值语句和输入输出过程组成，那么它们只能顺序地执行一次，而且必然执行一次。但一个程序仅有这类顺序执行的语句显然是不够的，经常需要的是根据某个变量或表达式的值作出判定，以决定执行哪些语句和跳过哪些语句不执行。我们称这种程序结构为选择结构。为了实现选择结构程序设计，在PASCAL中引入了IF语句和CASE语句。它们能从两个或多个语句中按一定的条件有选择的执行其中的一个。<BR><BR><FONT color=#0000ff><A href="http://www.hebtu.edu.cn/xi/dj/选择页.htm#port1">IF语句 <BR></A><A href="http://www.hebtu.edu.cn/xi/dj/选择页.htm#port2">CASE 语句</FONT><BR></A><BR><IMG height=14 alt="BALL.gif (1653 bytes)" src="external/www.hebtu.edu.cn/xi/dj/BALL.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/BALL.gif" width=14><A name=port1><FONT color=#ff8040>IF语句：</FONT><BR></A><BR>&nbsp;&nbsp;&nbsp; IF语句提供了根据不同条件选择不同通路的能力。简单IF语句可从两路语句中选择其一执行，从而实现<BR>双向分支。IF语句的一般形式为：<BR><FONT color=#808000>IF 布尔表达式<BR>THEN 语句1 <BR>ELSE 语句2；</FONT><BR>&nbsp;&nbsp;&nbsp; 其执行过程为：若布尔表达式的值为TRUE，执行跟在THEN后面的语句1；反之，则执行ELSE后面的语句2。其流程图如下：<BR>　<BR><BR><BR>&nbsp;&nbsp; IF语句的另一种常见形式为：<BR><FONT color=#808000>IF 布尔表达式 THEN 语句</FONT>；<BR>&nbsp;&nbsp;&nbsp; 其执行过程为：若布尔表达式的值为TRUE，执行跟在THEN后面的语句；反之，则执行一个空语句，即<BR>什么也不做。其流程图如下：<BR><BR><BR><FONT color=#ff0000><STRONG>注意</STRONG></FONT><BR><FONT color=#ff0000>&nbsp;&nbsp;&nbsp; &lt;1&gt;</FONT>在if-then-else结构中，位于else前的语句其最后不能有分号。否则编译器将认为这是if-then结构，下面再遇到else就会指示出错误信息。<BR><FONT color=#ff0000>&nbsp;&nbsp;&nbsp; &lt;2&gt;</FONT>在if语句中，跟在then或else后的语句可能不止一个，这时要用到复合语句。<BR><BR>&nbsp;&nbsp;&nbsp; 下面我们看看复合语句的概念：<BR><IMG height=14 alt="BALL.gif (1653 bytes)" src="external/www.hebtu.edu.cn/xi/dj/BALL.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/BALL.gif" width=14> <FONT color=#ff8000>复合语句</FONT>：复合语句是一个以BEGIN开始，以END结束的语句。在BEGIN和END之间可以包括若干个语句，每个语句之间以分号隔开。一般形式为：<BR><FONT color=#808000>BEGIN <BR>语句1；<BR>语句2；<BR>......<BR>语句N；<BR>END；</FONT><BR><STRONG><FONT color=#ff0000>注意</FONT></STRONG>：PASCAL把复合语句视作一个语句。复合语句可用在PASCAL允许使用普通语句的任何地方。下面让我们看几个例子：<BR><BR><IMG height=18 alt="STAR2.gif (219 bytes)" src="external/www.hebtu.edu.cn/xi/dj/STAR2.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/STAR2.gif" width=20><FONT color=#ff0080>例一</FONT>：读入三个整数，找出并输出其中最大数。<BR><FONT color=#808000>program exec1(input,output);<BR>var n1,n2,n3,max:real;<BR>begin <BR>read(n1,n2,n3);<BR>if n1&gt;n2 then max:=n1<BR>else max:=n2;<BR>if n3&gt;max then max:=n3;<BR>writeln('the largest number is ',max:8)<BR>end.</FONT><BR><IMG height=18 alt="STAR2.gif (219 bytes)" src="external/www.hebtu.edu.cn/xi/dj/STAR2.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/STAR2.gif" width=20><FONT color=#ff0080>例二</FONT>：给出三角形的三个边长A,B,C,求三角形面积.<BR><FONT color=#808000>program exec2(input,output);<BR>var a,b,c,s,area:real;<BR>begin readln(a,b,c); <BR>if (a+b&gt;c)and(b+c&gt;a)and(c+a&gt;b)<BR>then begin<BR>s:=(a+b+c)/2;<BR>area:=sqrt(s*(s-a)*(s-b)*(s-c));<BR>writeln('area=',area:6:2);<BR>end<BR>else begin<BR>writeln(a:6:2,b:6:2,c:6:2);<BR>writeln('input data error');<BR>end;<BR>end. </FONT><BR><IMG height=14 alt="BALL.gif (1653 bytes)" src="external/www.hebtu.edu.cn/xi/dj/BALL.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/BALL.gif" width=14><FONT color=#ff8000>IF语句的嵌套：</FONT><BR><BR>在一个IF语句中可以又出现另一个IF语句，这称为IF语句的嵌套。例如下面形式：<BR><FONT color=#808000>IF 条件1<BR>THEN 语句1<BR>ELSE IF 条件2<BR>THEN 语句2 <BR>ELSE 语句3；</FONT><BR><FONT color=#ff0000><STRONG>注意</STRONG></FONT>：<BR><FONT color=#ff0000>&lt;1&gt;</FONT>除了上面的形式外，还有许多其他形式。如then后面是一个if语句．<BR><FONT color=#ff0000>&lt;2&gt;</FONT>pascal规定：为了避免二义性，else总与离它最近的前面的那个尚未匹配的if--then相匹配．<BR><BR><IMG height=18 alt="STAR2.gif (219 bytes)" src="external/www.hebtu.edu.cn/xi/dj/STAR2.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/STAR2.gif" width=20><FONT color=#ff8000>例三</FONT>：计算Y=2*X 当X&lt;0时 <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =X/2 当X&gt;0时<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =0&nbsp;&nbsp; 当X=0时<BR><FONT color=#808000>program exec3(input,output);<BR>var x,y:real;<BR>begin readln(x);<BR>if x&gt;0<BR>then y:=x/2<BR>else if x&lt;0<BR>then y:=2*x<BR>else y:=0;<BR>writeln('y=',y);<BR>end.</FONT><BR><BR><IMG height=14 alt="BALL.gif (1653 bytes)" src="external/www.hebtu.edu.cn/xi/dj/BALL.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/BALL.gif" width=14><A name=port2><FONT color=#ff8000>case语句</FONT><FONT color=#0000ff>：</FONT><BR></A><BR>&nbsp;&nbsp;&nbsp; IF语句只能从两种方案中选择其中之一，而CASE语句能从多种可能中选择其中之一，因此其又称"情况语句"。它以清晰简洁的形式实现多路分支情况。　<BR>CASE语句的一般形式是：<BR><BR><FONT color=#808000>CASE 表达式 OF<BR>常量表1：语句1； <BR>常量表2：语句2；<BR>...... ......<BR>常量表n：语句n； <BR>END；</FONT><BR><BR>&nbsp;&nbsp;&nbsp; 某一个常量，则执行该常量后面的语句。在执行完该语句后，流程跳到CASE语句的末尾END处。<BR><FONT color=#ff0000>注意：</FONT><BR><FONT color=#ff0000>&lt;1&gt;</FONT>表达式可以是整型,字符型,布尔型,但不能是实型.<BR><FONT color=#ff0000>&lt;2&gt;</FONT>所有情况常量应互不相同,并且每个只允许出现一次,并且应与表达式具有相同类型．<BR><FONT color=#ff0000>&lt;3&gt;</FONT>表达式所有可能的值必须在情况常量之内，即若没有一个情况常量等于表达式的值是错误的．<BR><FONT color=#ff0000>&lt;4&gt;</FONT>每个语句的前面可附以一个或多个常量，用逗号分开，　 语句可以是复合语句．<BR><BR>下面看几个例子：<BR><IMG height=18 alt="STAR2.gif (219 bytes)" src="external/www.hebtu.edu.cn/xi/dj/STAR2.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/STAR2.gif" width=20><FONT color=#ff0080>例一</FONT>：输入年、月，输出该月有几天。<BR><BR><FONT color=#808000>program exec(input,output);<BR>var year,month,days:integer;<BR>begin read(year,month);<BR>case month of<BR>1,3,5,7,8,10,12:days:=31;<BR>4,6,9,11:days:=30;<BR>2:if (year mod 4=0)<BR>and(year mod 100&lt;&gt;0)or(year mod 400=0) <BR>then days:=29<BR>else days:=28;<BR>end;<BR>writeln(year,month,days); <BR>end.<BR></FONT><BR><IMG height=18 alt="STAR2.gif (219 bytes)" src="external/www.hebtu.edu.cn/xi/dj/STAR2.gif" temptabs="http://www.hebtu.edu.cn/xi/dj/STAR2.gif" width=20><FONT color=#ff0080>例二</FONT>：若已知X在1到5之间，按下公式计算Y<BR>Y=3*X+10 当1&lt;=X&lt;2<BR>=2*COS(X) 当2&lt;=X&lt;3<BR>=sin(X)/3 当3&lt;=X&lt;5<BR><BR><FONT color=#808000>program exec2(input,output);<BR>var x,y:real;<BR>begin read(x);<BR>case trunc(x) of<BR>1: y:=3*x+10;<BR>2: y:=2*cos(x);<BR>3,4: y:=sin(x)/3;<BR>end;<BR>writeln('y=',y);<BR>end.</FONT><BR><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有4147位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=216.htm" temptabs="http://www.mydrs.org/program/list?id=216">程序设计基本知识</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=217.htm" temptabs="http://www.mydrs.org/program/sendmail?id=217" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\选择结构程序设计.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0217.htm" temptabs="http://www.mydrs.org/program/html/0217.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=217.htm" temptabs="http://www.mydrs.org/program/list?id=217">选择结构程序设计</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

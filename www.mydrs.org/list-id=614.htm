@@ -1,0 +1,330 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>何林同学给吴文虎教授的一封信-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>何林同学给吴文虎教授的一封信
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>何林同学给吴文虎教授的一封信</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;1/27/2007&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>编者：何林同学是湖南省长沙市雅礼中学的应届毕业生，从小学开始学习计算机编程，初一进入NOI湖南省队，曾荣获NOI金牌4块，银牌1块，4次进入国家集训队，2003年在美国举行的第15届IOI上荣获金牌。</P>
+<P></P>
+<P>下面是中国计算机学会秘书长杜子德教授与NOI科学委员会主席、清华大学吴文虎教授针对这封信的对话。</P>
+<P></P>
+<P>吴老师：</P>
+<P>看了何林给您写的信，非常感动。</P>
+<P>不知道像何林这样的学生的成长和我们NOI以及您有多大关系，但敢肯定是有极大的关系的。像他这样的孩子刚入大学就如此懂事真是让人赞叹，他似乎已经悟出一些人生的真谛了。这些东西是他自己在实践中，经过自己思考得出的，不是谁灌输的，但和我们提供的环境有关。这样的孩子上哪个学校都不会太差，希望更多孩子像何林这样懂事。</P>
+<P>建议在一个范围内公开这封信，让其他老师和学生也读读。</P>
+<P>子德</P>
+<P>-------------------- </P>
+<P>子德，您好！</P>
+<P>赞成你的意见。NOI 是素质教育的大课堂，也是立志和形成健康人格的一个育人场所。正因为如此，学会所提供的环境才有意义，NOI 活动才有魅力，老师们才能体会投入这项工作的价值。您和我一样，盼望着 NOI 的孩子们快快长大，青出于兰而更胜于蓝。</P>
+<P>吴文虎</P>
+<P>下面何林同学给NOI科学委员会主席、清华大学吴文虎教授的信（全文）</P>
+<P></P>
+<P>尊敬的吴老师：</P>
+<P></P>
+<P>您好！我是湖南长沙雅礼中学的何林。不知道近来身体是否安好？</P>
+<P></P>
+<P>初一在澳门的NOI还历历在目：因为输入文件名的错误丢了一整道题目的分，12岁的我在测试现场哭了起来。五年过去了，何林已经不是那个为了一时得失动辄流泪的小男孩，而您依然还在为了信息学和计算机科学的普及孜孜不倦的工作。</P>
+<P></P>
+<P>我一直都很明白、也很感激您对我的关心。您对我的感情一方面是出于一个学者、师长对孩子的关心，另一方面则是出于对信息学这一门学科的关心――因为我是一个从初一就开始接受系统编程训练的学生；我的发展具有很强的典型性和可研究性。这也是我对您最尊敬的地方，您做任何事情给我的感觉都是：既质朴简单、又深刻；看起来都是细微的小事、其实都是从大处着眼、胸怀宇宙。这些从您在各种活动上的讲话就能窥见一斑。</P>
+<P></P>
+<P>如果有人问我，这五年的信息学生涯教会了我什么，我不会说“我会用平衡二叉树”、也不会说“我学懂了动态规划”。我不管学到多少，总还有很多没学到；即便是学会了的东西，长时间不用也会遗忘。我认为我真正学到的是习惯、态度和方法。我学会了批判性的看问题、我学会了用开阔的胸怀去接受所有不同的想法、我学会了分析问题、总结问题、乃至提出问题的一系列方法和经验。这些才是无价之宝，是一辈子在任何地方任何时候都不会丢的宝贝。</P>
+<P></P>
+<P>我认为信息学竞赛是很成功很有必要的。社会上、教育界有不少人偏激的反对信息学甚至是奥林匹克竞赛，说竞赛影响全面发展、竞赛培养出书呆子。其实我认为，一个不知道“碳碳双键”的人可以在一个小时之内学会这个知识点，但是一个没有良好学习习惯和态度的人无论掌握多少知识都会在长期竞争中被淘汰下去。高考培养出来的学生都是很全面很扎实的，但是我个人感觉这种“全面”是一种假象。虽然高考出来的人中有很多的确是出类拔萃的英才，但是更多的是抓了一船鱼却没有找到钓鱼勾的渔夫。</P>
+<P></P>
+<P>在我看来信息学竞赛的确还是有一些不太好的地方。比如竞赛的成绩很大程度还是取决于做题量；题海战术还是屡试不爽；真正思路新颖的选手经常无法胜出。从实际上来看，根据我的了解，比如石润婷、倪兆中这样到了大学表现杰出的选手都没有入选国家队。我作为一个学生没有什么好的解决方案，只是粗浅的说说自己的看法而已。</P>
+<P></P>
+<P>经过五年信息学竞赛的洗礼，我成熟了很多，也非常感谢吴老师和清华大学对我的这么多年的谆谆教诲。以上算是我的一个总结和感受吧。</P>
+<P><BR><BR>我即将进入人生一个新的阶段――大学。摆在我面前的有两个选择：清华和耶鲁。在这两所学校之间作出选择是痛苦的。我最后选择了后者，在此向吴老师汇报一下我的想法。</P>
+<P></P>
+<P>从本科的专业上来说，清华的计算机系综合是要强过耶鲁大学的。但是耶鲁大学有一个很大的优势：他们的学生能够、也必须选择除专业课外的大量其他学科。比如经济学、心理学、语言学都是对任何学生开放的；而且所有的学生都被要求在不同的领域选择足够的学分。我觉得在本科阶段能够接触尽量多的学科对于一个人长远的发展会更有好处；听说在后期的一些顶尖的科学研究中，心理学、语言学、甚至音乐等都起到决定性的作用。</P>
+<P></P>
+<P>耶鲁大学的这种做法和美国的大部分本科都类似。这种大而全的做法有一点牺牲专业课的时间；所以我感觉四年下来清华学生的专业课扎实程度肯定要强得多。但是美国的这种做法却铸就了不少的大师，所以很有可能较宽的知识面对于后期的研究发展更有好处。具体哪种方法更好还有争论，所以我也很难说我选择耶鲁就一定是正确的。</P>
+<P></P>
+<P>不过从信息学的角度来说，以前的学生大多进入了清华大学学习；这些学生毕业后有的去了美国、有的留在了清华。不同的人走不同的路子；有的路子培养出来的人出息更大。但是具体哪些路子更适合中国可能需要数十年的长期观察才能得出答案。得出答案之前，我认为国家应该鼓励多元化――各种不同的路子都有人去闯，全凭兴趣而言。最后总能有一拨人成就大事业、开创大场面。不管怎么样，多元化的受益者肯定是国家和这个整体。</P>
+<P></P>
+<P>另一方面，以前信息学竞赛选手中，高中毕业就出国的是少数。我作为“拓荒者”之一，也能够更全面的检验我们NOI培养出来的选手到底素质怎么样、到底有没有发展的潜力。</P>
+<P></P>
+<P>综合上面的考虑，我最后选择了耶鲁。对我个人，耶鲁可能是一个好的选择；对NOI、对我的祖国，耶鲁绝对不是一个坏的选择。</P>
+<P></P>
+<P>五年来我听着吴老师的谆谆教导长大，也为吴老师的人格和智慧所折服。清华的很多学生，比如周源、金恺都是我非常好的朋友；我的心是紧紧和清华系在一起的。虽然我没有机会进入清华的本科学习了，但是我仍然会努力去理解清华的精神、把它融入到我的灵魂之中，以清华为启明星引导我未来的学习和个人发展。</P>
+<P></P>
+<P>虽然当我说“对不起，我不能进入清华学习”的时候有一点伤心和犹豫，但是我还是感到开心和充满希望的。</P>
+<P></P>
+<P>人们都说教师的职责是言传；我觉得教师更重要的职责是身教。从这个意义上来说吴老师永远都是我的师长，是我人生轨迹中最闪亮的一颗明星。感谢您吴老师！</P>
+<P></P>
+<P>此致</P>
+<P></P>
+<P>敬礼</P>
+<P>2005年6月17日</P>
+<P>何林<BR></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：何林 <br>
+                            
+                            来 源：FLYMOUSE――OI无极限<br>
+                            
+                            共有760位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613">七类高中生具有保送资格</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=614.htm" temptabs="http://www.mydrs.org/program/sendmail?id=614" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\何林同学给吴文虎教授的一封信.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0614.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=614.htm" temptabs="http://www.mydrs.org/program/list?id=614">何林同学给吴文虎教授的一封信</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2001-陨石的秘密-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>NOI2001-陨石的秘密
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2001-陨石的秘密</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/27/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P align=left>　　公元11380年，一颗巨大的陨石坠落在南极。于是，灾难降临了，地球上出现了一系列反常的现象。当人们焦急万分的时候，一支中国科学家组成的南极考察队赶到了出事地点。经过一番侦察，科学家们发现陨石上刻有若干行密文，每一行都包含5个整数：<BR>　　1 1 1 1 6<BR>　　0 0 6 3 57<BR>　　8 0 11 3 2845<BR>　　著名的科学家SS发现，这些密文实际上是一种复杂运算的结果。为了便于大家理解这种运算，他定义了一种SS表达式：<BR>　　1． SS表达式是仅由'{'，'}'，'['，']'，'（'，'）'组成的字符串。<BR>　　2． 一个空串是SS表达式。<BR>　　3． 如果A是SS表达式，且A中不含字符'{'，'}'，'['，']'，则(A)是SS表达式。<BR>　　4． 如果A是SS表达式，且A中不含字符'{'，'}'，则[A]是SS表达式。<BR>　　5． 如果A是SS表达式，则{A}是SS表达式。<BR>　　6． 如果A和B都是SS表达式，则AB也是SS表达式。</P><BR><P>　　<B>例如</B><BR>　　()(())[]<BR>　　{()[()]}<BR>　　{{[[(())]]}}<BR>　　都是SS表达式。<BR>　　而<BR>　　()([])()<BR>　　[()<BR>　　不是SS表达式。</P><BR><P>　　一个SS表达式E的深度D(E)定义如下：<BR><BR>　　<IMG height=65 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-1.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-1.gif" width=461><BR>　　例如(){()}[]的深度为2。</P><BR><P>　　密文中的复杂运算是这样进行的：<BR>　　设密文中每行前4个数依次为L1，L2，L3，D，求出所有深度为D，含有L1对{}，L2对[]，L3对()的SS串的个数，并用这个数对当前的年份11380求余数，这个余数就是密文中每行的第5个数，我们称之为"神秘数"。<BR>　　密文中某些行的第五个数已经模糊不清，而这些数字正是揭开陨石秘密的钥匙。现在科学家们聘请你来计算这个神秘数。</P><BR><P><BR><B>输入文件（secret.in）</B><BR>　　共一行，4个整数L1，L2，L3，D。相邻两个数之间用一个空格分隔。<BR>　　（0≤L1≤10，0≤L2≤10，0≤L3≤10，0≤D≤30）</P><BR><P><B>输出文件（secret.out）</B><BR>　　共一行，包含一个整数，即神秘数。</P><BR><P><B>输入样例</B><BR>1 1 1 2</P><BR><P><B>输出样例</B><BR>8<BR></P><BR><P align=center><B>Noi2001之陨石的秘密（Secret）解题报告<BR><BR>福州第一中学 陈阳</B></P><BR><P><B>【题意分析】</B><BR>　　本题所谓的SS表达式，也就是一个通过{}、[]、()组成的，左右括号相对并且嵌套关系无误的一个式子。所谓的神秘数，也就是在给定三种括号的数量和最大的嵌套深度的情况下所有合法的SS表达式的数量除以11380的余数。因此，本题的实际意义就是，给定L1对{}、L2对[]、L3对()和最大深度D，求出符合以上条件的合法的SS表达式的数量除以11380的余数。</P><BR><P><B>【解题思路】<BR></B><BR>　　这道题的要求是统计个数，如果用搜索的方法构造出所有的SS表达式，复杂度显然太大，也没有强有力的剪枝，而且一个子问题在大问题中要搜索多次，也就是具有子问题重叠性质，搜索浪费很大。而明显，这一题可以按照D的去值划分阶段，按照L1、L2、L3来描述一个状态，加上子问题重叠，因此，这题可能利用动态规划或者递推这样的方法解决。所以，下面我们就往这方面尝试。<BR><BR>　　首先，我们可以对题目做适当的简化。我们暂时不考虑三种括号的区别，假设所有括号的总数为L，那么用D和L来表示状态。我们设F(D,L)表示一共有L对无区别的括号所能构成的最大嵌套深度不超过D的表达式的总数。我们来考虑F(D,L)和其他的状态之间有什么联系。我们称一个表达式中，用加号连接的部分叫做它的子表达式。如果一个表达式没有加号相连，我们也可以认为它本身就是自己的子表达式。由于表达式嵌套深度就是它的子表达式嵌套深度的最大值，我们可以知道F(D,L)中，它的子表达式的最大深度也不超过D。<BR><BR>　　 1、如果原表达式唯一的表达式就是自身，也就是说，它的最外一层括号包括了整个表达式，那么，我们可以把最外面的这一层括号脱去，里面就是一个由L-1对括号组成的深度为D-1的表达式。这种情况的方案数为F(D-1,L-1)。<BR>　　 2、如果表达式是由多个子表达式组成的，那么它的每一个子表达是的最大深度都不超过D。我们将原表达式按照加号人为分割成两块，一块含有t对括号，另一块就含有n-t对括号，两块的最大深度都不超过D。这样我们就知道这样用加号连接的表达式一共有<IMG height=46 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-2.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-2.gif" width=161 align=absMiddle>种。但是，这种计算方法重复了多余的情况，在一个表达式由两个或以上的深度为D的子表达式的情况下，一个最大深度为D的子表达式会在F(D,t)和F(D,L-t)中各出现了一次。为了避免重复，我们规定，深度为D的子表达式，只能在第一项也就是F(D)中间出现，而对于另外的几项，强制规定它们的最大深度必须小于D，如果他们的深度也是D，我们也强制把它们脱去一层括号，就变成F(D-1,L-t-1)。这样有加号连接的表达式的总数为<IMG height=44 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-3.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-3.gif" width=204 align=absMiddle>。加上第一种情况（最外层是括号的），这样就得到了关于F(D,L)的递归式<IMG height=44 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-4.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-4.gif" width=370 align=absMiddle> 。<BR><BR>　　现在我们可以考虑如果由三种不同的括号的情况了。三种括号的实质区别是一种优先级的区别，那么，如果由{}，最外层就一定为{}；而如果没有{}，最外层才可能为[]。如果{}、[]都没有，最外层才能为()。所以，我们在脱括号的时候，最先脱{}，没有{}才能脱[]，如果{}、[]都没有才能脱()。因此我们把上面的递归式的第二维L改换成三个参数L1、L2、L3。因此状态表示为F(D,L1,L2,L3)，表示一共有L1对{}、L2对[]、l3对()所能构成的最大嵌套深度不超过D的表达式的总数。仿照上面的递归式，我们可以类似得到<BR>　　<IMG height=367 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-5.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-5.gif" width=648><BR>。另外，我们认为，F(0,0,0,0)为1，这是递归式的初始条件。</P><BR><P><B>【算法完善和改进】</B><BR><BR>　　根据函数F的定义，我们的目标就是F(D,L1,L2,L3)-F(D-1，L1,L2,L3)。另外，题目要求我们求的不是最终的有多少种解，而是解数处以11380的余数。实际上我们知道，如果<IMG height=23 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-6.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-6.gif" width=95 align=absMiddle>的话，那么<IMG height=21 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-7.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-7.gif" width=173 align=absMiddle>也是t。因此，我们可以每求得一个F(D,L1,L2,L3)，就马上对它关于11380取模，这样可以避免使用高精度。而最终的结果就是（F(D,L1,L2,L3)-F(D-1，L1,L2,L3)+11380）mod 11380。<BR>　　上述算法已经大致上满足编程的需求。<BR><BR>　　我们再观察递归式，容易发现，按照D值的不同分层，则某一层的状态，都是由前一层的状态和当前层已知的状态计算而来的。由于我们是自下到上逐步求解，因此我们只要记录当前层和前一层的数据就可以了。<BR>　　另外，有一些特殊数据，如果L1+L2+L3&lt;D，那么解的组数就是0。如果L1+L2+L3=D，那么解的组数就是1，不必搜索。</P><BR><P><B>【算法分析】</B><BR><BR>　　经过以上分析和改进，算法已基本成行。算法的时间复杂度为<IMG height=22 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-8.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-8.gif" width=61 align=absMiddle>，但循环计算小于<IMG height=42 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-9.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-9.gif" width=140 align=absMiddle>次。空间复杂度为<IMG height=24 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-10.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-10.gif" width=42 align=absMiddle>，实际上占用空间为<IMG height=21 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-11.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-3-11.gif" width=173 align=absMiddle>实际测试表明，在Free Pascal 1.0.4环境下，能够通过所有测试数据。因此，算法是实际可行的。</P><BR><P><B>【解题总结】</B><BR><BR>　　这一题想到递推不难，但是写好递归式却是一件不容易的事情。在推导递归式的过程中，必须考虑很多特殊情况需要，包括初始值和约束条件等。特别时本题，对于不同的状态，由不同的约束条件。因此写程序之前必须认真分析好各种可能情况，而如果没有慎重考虑，在调试中要遇到很多状态的大量数据，往往难以发现错误，花费大量时间在改进程序上。我们几位同学在比赛的时候都没有很好的考虑到各种情况，在调试中不断对程序修修补补，耗时巨大。因此，拿到题目出略分析就写程序，然后调试程序大部定不断改进，倒不如深思熟虑，先打好程序的"腹稿"，写程序一气呵成，马到成功。<BR></P><BR><P>&nbsp;</P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：陈阳 <br>
+                            
+                            来 源：福州第一中学<br>
+                            
+                            共有1957位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=257.htm" temptabs="http://www.mydrs.org/program/list?id=257">NOI2001－食物链</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=259.htm" temptabs="http://www.mydrs.org/program/list?id=259">NOI2001-反正切函数</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=258.htm" temptabs="http://www.mydrs.org/program/sendmail?id=258" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2001-陨石的秘密.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0258.htm" temptabs="http://www.mydrs.org/program/html/0258.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

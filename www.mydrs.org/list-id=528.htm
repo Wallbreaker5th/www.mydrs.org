@@ -1,0 +1,300 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>信息学奥林匹克培训与素质教育-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>信息学奥林匹克培训与素质教育
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>信息学奥林匹克培训与素质教育</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/30/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>&nbsp;&nbsp;&nbsp;&nbsp;改革开放以来,我国一批优秀的中学生积极参与了国际各学科&nbsp;(数学,物理,化&nbsp;&nbsp;学,信息学,生物学等)&nbsp;的奥林匹克竞赛(以下简称"奥赛"),&nbsp;在各项比赛中,均获得优异成绩,令世人瞩目。&nbsp;仅以&nbsp;96&nbsp;年国际信息学(计算机)竞赛为例,&nbsp;虽然我国只派出&nbsp;4&nbsp;名选手(各国最多可派5名选手),&nbsp;但结果却以全获金牌的成绩夺得总分第一。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而,&nbsp;奥林匹克学科竞赛作为一种事业,&nbsp;展望其前景,&nbsp;并非一片光明。&nbsp;首先,&nbsp;在培训工作上,&nbsp;存在不少问题,&nbsp;不容乐观。&nbsp;其次,&nbsp;社会上不少人对奥赛了解甚少,&nbsp;特别是某些望子成龙过于心切的家长,盲目让孩子参加各类培训,&nbsp;其适得其反的做法,&nbsp;导致了一些人对奥赛的误解.&nbsp;至使一些报刊不时刊登非难奥赛的文章。&nbsp;此外,&nbsp;在国际上,一小股反华势力利用奥赛制造"两个中国"或"一中一台"的活动也始终没有停止。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;笔者过去曾从事过数学奥赛的培训,&nbsp;从&nbsp;95&nbsp;年起,开始进行信息学(计算机)奥赛的培训。&nbsp;本文将根据笔者的实践,&nbsp;以信息学(计算机)奥赛为主,探讨几个方面的关系,其目的是希望学科奥林匹克这项事业能沿着一条正确的健康的道路不断地发展,前进,&nbsp;并期望我校能为天津市,乃至为全国的奥林匹克竞赛做出更大的贡献。</P>
+<P><BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;一.&nbsp;信息学(计算机)奥林匹克概况</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为便于后面的讨论,&nbsp;在此,&nbsp;先对信息学(计算机)奥林匹克予与简要的介绍.&nbsp;当今,&nbsp;计算机已成为"人类通用的计算工具",&nbsp;计算机技术与通信技术,自动控制,网络技术等相结合构成的信息技术,&nbsp;已成为现代科学技术的基础与核心,&nbsp;成为社会第一大产业。&nbsp;进入&nbsp;90&nbsp;年代以来,信息化的程度已成为衡量一个国家综合技术水平和综合国力的主要标志。&nbsp;因此,&nbsp;在广大群众中,特别是在青少年中迅速普及信息技术已成为刻不容缓的一件工作[1][2]。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邓小平同志在&nbsp;84&nbsp;年初曾经指出:"计算机的普及要从娃娃抓起",&nbsp;为响应这一号召,&nbsp;1984&nbsp;年,&nbsp;我国举办了首届全国青少年计算机竞赛,&nbsp;至今已连续举办了十三届。目前,全国性的信息学奥赛可分为三个层次:&nbsp;先举办全国信息学(计算机)奥林匹克分区联赛,&nbsp;联赛分高中组,初中组进行,&nbsp;以普及为主。&nbsp;近两年我市每年都有上千人参赛。在分区联赛的基础上,各省市组成自己的代表队(一般为3名选手),参加第二个层次的比赛,&nbsp;即全国青少年信息学奥林匹克竞赛&nbsp;(简称&nbsp;NOI),&nbsp;第三个层次是从&nbsp;NOI&nbsp;中选拔优秀选手(一般为&nbsp;15&nbsp;人),&nbsp;经过培训,&nbsp;考试选拔,组成国家队(一般&nbsp;4-5&nbsp;人).&nbsp;参加国际信息学奥林匹克竞赛,&nbsp;即IOI,&nbsp;这是国际性的最高水平的竞赛。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于分区联赛与&nbsp;NOI&nbsp;在试题难度上相差较大,&nbsp;不少省市在分区联赛后,&nbsp;还要组织自己的选拔赛,&nbsp;以组成参加&nbsp;NOI&nbsp;的本省市代表队。<BR>&nbsp;&nbsp;&nbsp;&nbsp;94&nbsp;年以前,&nbsp;我市的&nbsp;NOI&nbsp;比赛成绩较差,&nbsp;最好的一年为第&nbsp;17&nbsp;名,有一名选手获铜牌。近两年来,&nbsp;参赛成绩逐步提高。&nbsp;95&nbsp;年,&nbsp;有两名选手获铜牌,总分为第&nbsp;14&nbsp;名,&nbsp;96&nbsp;年,有两名选手获银牌,&nbsp;总分为第&nbsp;10&nbsp;名。今年全国在&nbsp;NOI&nbsp;中获金牌,&nbsp;银牌的选手共&nbsp;15&nbsp;名,&nbsp;将在他们中间产生国家队,&nbsp;参加明年的IOI,&nbsp;在今年暂停高中毕业生保送上大学的情况下,他们仍被确定为毕业后直接保送到清华大学或复旦大学。&nbsp;由此可知,&nbsp;我市选手今年参赛成绩的提高,&nbsp;确实是突破性的,&nbsp;是令人振奋的。</P>
+<P><BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二.&nbsp;正确处理竞赛与普及的关系</STRONG>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各学科的奥赛,&nbsp;其内容都不同程度地超出了现行的中学教学大纲,其难度更是远远超出了中考和高考。&nbsp;&nbsp;因为举办这类竞赛的一个直接的目的是要在优秀学生中选拔最拔尖的人才。&nbsp;这样,&nbsp;参赛学生光靠课内听讲,课外自学是不够的,&nbsp;必须要参加课外的培训。而这种培训又不是一般教师能够胜任的,&nbsp;这一点,将在本文第四部分详细讨论。&nbsp;于是,有人会问:&nbsp;为了最后获胜的几个学生,&nbsp;让一大批学生耗费大量精力去准备竞赛,&nbsp;让一些高水平的教师放弃其它重要工作投入培训,是否值得?&nbsp;笔者以为,&nbsp;答案不言而喻是肯定的,&nbsp;我们不妨考虑以下一些因素:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;要鼓励青少年积极进取,&nbsp;勇于拼博&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与体育奥林匹克一样,&nbsp;学科奥林匹克也是一个拼博的战场,&nbsp;是智力&nbsp;,能力,品德与意志的较量。&nbsp;我们应鼓励青少年从小要立志作高水平的人才,&nbsp;要积极进取,勇于拼博,&nbsp;而不要安于现状。&nbsp;这一点,对于当前以独生子女为主的中小学生,&nbsp;尤为重要。&nbsp;另外,&nbsp;胜负也不仅仅是几个人的事情,&nbsp;一个足球队,&nbsp;不过一二十人,但一场比赛的胜负可以改变一个城市,甚至一个国家的人民的情绪。学科奥林匹克固然没有那么大的效应,&nbsp;但仍然与一个城市,一个国家的荣誉密切相连。&nbsp;具有强烈的现代大都市意识的上海市,&nbsp;具有同样强烈的争先意识,&nbsp;他们非常重视各学科奥赛,为此作了大量投入。&nbsp;特别是对优秀选手采取了一些特殊的措施,从而保证了上海市在全国多种学科奥赛的连续多年的领先地位。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;选拔只是竞赛的一个直接目的,竞赛的最终目的是普及<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参加&nbsp;NOI&nbsp;或&nbsp;IOI&nbsp;比赛的,&nbsp;&nbsp;都是高水平的选手,&nbsp;对他们自然要进行赛前的培训,&nbsp;但也不是随便找几个学生就可以培训成功的。准备参赛的学生,必须要有扎实的程序设计的基础,有较强的分析问题解决问题的能力。&nbsp;而这只有通过不同层次的普及工作,&nbsp;在青少年中大力推广计算机教育才能实现。&nbsp;目前,用于计算机教育的正式课时还比较少,&nbsp;因而,课外活动已成为一个主要的培训的渠道。&nbsp;对课外辅导处理得当,&nbsp;不仅不会影响正常教学,&nbsp;而且有利于学生的全面发展。<BR>&nbsp;&nbsp;&nbsp;&nbsp;在中学生中普及计算机教育,&nbsp;不仅是可能的,&nbsp;而且也是必要的。对此,我们应看到这样一个基本事实:&nbsp;学生从小学升到初中,尽管还有很大的可塑性,&nbsp;但总体上已划分成差别很大的多个层次。&nbsp;1993&nbsp;年,&nbsp;我们在研制初中代数题库时,&nbsp;曾用同一份试卷对市内某些区的全体初二学生进行测试,&nbsp;结果各校平均分差别很大,校平均分在&nbsp;40&nbsp;到&nbsp;90&nbsp;这个区间内几乎是均匀分布。&nbsp;新编的九年制义务教育教材,删去了旧教材的不少难点,不能说没有这方面的考虑。&nbsp;换句话说,&nbsp;有相当多的学生不会满足教学大纲规定的课堂教学的内容,&nbsp;渴望得到更多的知识。&nbsp;如何引导这些学生,开发他们的智力,&nbsp;使他们健康全面的发展,决不是一个小问题。我们这样讲,&nbsp;并不意味着可以放弃学习较差的学生。&nbsp;对青少年的全面教育是一个十分复杂的系统工程,&nbsp;有关的讨论已超出本文的宗旨。</P>
+<P><BR><STRONG>&nbsp;&nbsp;三.&nbsp;奥赛培训是素质教育,不是应试教育<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;"素质"一词具有很丰富的内涵,&nbsp;这里我们主要指心理素质与能力素质,后者包括获取和运用知识的能力,&nbsp;创造思维能力,&nbsp;科学研究能力等等。<BR>&nbsp;&nbsp;&nbsp;&nbsp;在培训工作中,&nbsp;笔者深深感触到,&nbsp;不少学生最缺乏的是刻苦钻研,拚博向上的精神。&nbsp;这些学生头脑都很聪明,&nbsp;接受新知识的能力很强,&nbsp;基础也不错,但遇到难题时,&nbsp;如果尝试几次不成功,便等待别人指点,&nbsp;其实某些难题按他们的能力是可以独立解决的。&nbsp;我们曾留过一些阅读程序的作业,&nbsp;读程序本来就很艰苦,所给的程序又比较难,&nbsp;结果多数学生都没有完成。&nbsp;显然,不解决这些问题,&nbsp;他们很难达到较高的层次。一个优秀的选手,&nbsp;必须具有良好的心理素质,这也是奥赛培训的一个重要内容。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有人在某报撰文指出:"奥赛培训无非就是题海战术",笔者以为,对此要作具体分析。&nbsp;学习任何一门知识,&nbsp;都要做适量的习题,奥赛培训当然也不例外。&nbsp;而且为了具有较宽的知识面和较强的能力,&nbsp;题量还不能太小。但不能笼统地认为,多作题就是"题海战术",&nbsp;所谓"题海战术",一般是指对同一知识点,作大量习题,&nbsp;靠多次重复,靠熟练来应付考试。目前一些学校还在采用这种方式应付高考,是不得已而为之,因为教师和学生的水平还都不尽人意。而奥赛培训,采用这种方式是绝对行不通的。以数学竞赛为例,难度在全国联赛之上的竞赛题,目前至少可找到上万道,如果一天做十个题(有些难题,即使一天做一个,也很不容易),也得用&nbsp;1000&nbsp;天,这对于中学生是无法承受的,计算机方面的赛题还没那么多,但每个题都要上机调试,其时间的耗费也是无法承受的。因而,奥赛培训只能设法让学生具有和提高解决难题的能力,&nbsp;这要靠学生对知识的深刻的理解和对知识的灵活运用。另外,每次的竞赛题大都是新创造的,靠"背题",靠"熟练"去应考也无济于事。既不搞"题海战术",又要让学生能作难题,&nbsp;这是对教师的能力的挑战。一个好的培训,应教会学生在学习知识时怎样抓住其精髓,&nbsp;遇到问题时怎样去分析研究。因为奥赛难题的求解过程,&nbsp;实际上也正是一种科学研究的过程。如果学生从小就能得到这种高素质的培训,以后即使得不到奖牌,&nbsp;也会受益终生。</P>
+<P><BR>&nbsp;&nbsp;&nbsp;<STRONG>&nbsp;四.&nbsp;良好的组织与培训是奥赛成功的关键</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;就中学生总体水平而言,我们天津市不比其它大城市相差多少,但历年来,在各学科奥赛进入全国前几名的选手中,天津选手并不多,&nbsp;而北京,上海等大城市,除了偶尔的空白,基本上年年都有,&nbsp;差距是很明显的.&nbsp;笔者以为,&nbsp;最主要的差距体现在对奥赛的组织与培训工作方面。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;众所周知,&nbsp;奥赛培训是一种高智力的活动,&nbsp;其难度不亚于某些科研工作,一个好的教练员,&nbsp;起码要具有能独立解出各种奥赛难题的能力,这不是件轻而易举的事情,&nbsp;因为不少奥赛难题就是某些专家的部分科研成果。&nbsp;在我市,一些教师在这方面已达到了相当高的水平,&nbsp;如南开大学李成章教授,&nbsp;除了他自己的微分方程专业,在数学竞赛方面也做出了许多出色的工作,&nbsp;已成为国内外知名的数学奥林匹克专家.&nbsp;实验中学副校长,&nbsp;特级教师王连笑,&nbsp;在数学竞赛方面也有很深的造诣,在今年全国数学联赛中,&nbsp;在天津市的前十名选手中,&nbsp;实验中学占了六名,&nbsp;在前六名中,实验中学占了四名.&nbsp;遗憾的是,&nbsp;象这样的高水平的教练,在我市太少了.&nbsp;尽快扭转这种局面,&nbsp;已成为当务之急.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;奥赛培训应主要依靠中学教师<BR>&nbsp;&nbsp;&nbsp;&nbsp;不容置疑,&nbsp;参加奥赛的选手必须要具有相当扎实的基础,&nbsp;基本功不扎实,只会作几道难题,&nbsp;毫无意义.&nbsp;以信息学奥赛为例,考核方式主要是直接测试计算机的输出结果,&nbsp;在比赛中,&nbsp;我们常看到一些选手对试题能归纳出算法,但不能在规定的时间内在计算机上实现,&nbsp;特别是当运行结果不正确时,&nbsp;不能准确地找出程序的错误,&nbsp;从而导致考试失败.&nbsp;任何高水平的发挥都建立在雄厚的基础之上,而打基础的工作应主要依靠中学校内的课外活动,其责任自然要落在中学教师的肩上.&nbsp;中学教师直接与中学生接触,了解每个学生的特点,&nbsp;因材施教,&nbsp;有的放矢,&nbsp;容易取得较好的培训效果.&nbsp;若进一步做到统筹安排,形成梯队,&nbsp;则必将提高整体水平.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据笔者了解,&nbsp;在信息学奥赛培训上,许多中学教师都做了大量的工作,&nbsp;一些教师已达到了较高的水平,&nbsp;但从总体上讲,&nbsp;还不能适应形势的需要.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里只谈一个积极性的问题.&nbsp;笔者在为本系本科生,研究生讲授《计算机竞赛培训》,《算法设计与分析》等课程时,&nbsp;曾邀请一些中学教师免费旁听,&nbsp;但响应者寥寥无几.原因是多方面的,&nbsp;笔者以为最主要的是缺乏一种鼓励教师在这方面进行投入的机制.&nbsp;作为学校,&nbsp;奥赛成绩突出,自然可以宣扬一番.&nbsp;成绩不好,&nbsp;也没什么了不起.&nbsp;作为教师,要想在奥赛培训的水平上有一个质的飞跃,&nbsp;谈何容易,&nbsp;投入大,&nbsp;收效慢,&nbsp;远不如做些其它"短平快"的工作,更有利于晋升.&nbsp;固然,&nbsp;在培训工作上,我们需要教师对事业的奉献精神,&nbsp;但这并不够,&nbsp;为了造就一批从事奥赛培训的高水平的教师,&nbsp;必须要有一个良好的环境,&nbsp;要有良好的组织工作,要有能鼓励教师不断进取的政策,&nbsp;这是我们的奥赛事业能不断前进的必要条件.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;高等学校应该为奥赛培训作出贡献<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不可否认,&nbsp;某些地区,在某些学科上,&nbsp;奥赛取得突出成绩,&nbsp;应主要归功于一些优秀的中学教师.&nbsp;但从总体上讲,&nbsp;高等学校教师的作用是难以替代的,它往往会影响到一个地区的总体水平.&nbsp;奥赛培训,&nbsp;就其本质而言,是研究能力的培训.&nbsp;大学教师与中学教师,&nbsp;作为两个群体(不是指某些个别成员),&nbsp;其重要差别之一,就是在科研能力上.&nbsp;一个好的培训,&nbsp;不仅仅是介绍知识,&nbsp;介绍试题解法,还必须介绍怎样去思考问题,解决问题.&nbsp;很难想象,&nbsp;如果没有大量的科研实践,&nbsp;一个教师能把科学研究的方法讲得深入,透彻,生动,具体.&nbsp;而这些正是学生们最需要的.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我校在奥赛培训上至少可在两个方面发挥作用:首先是培训高水平的从事奥赛的中学教师,&nbsp;对此,&nbsp;即可直接为在校学生开设有关课程,也可以为各校的中学教师办培训班.&nbsp;近两年来,&nbsp;笔者开设了《计算机竞赛培训》等选修课,已收到一定的效果,&nbsp;一些学生毕业任教后,&nbsp;已成为该校奥赛培训的骨干教师.&nbsp;其次,我们可直接参与对中学尖子学生的培训,这更能发挥我们的优势.&nbsp;近两年我市信息学(计算机)奥赛成绩的提高,&nbsp;就是一个很好的例证.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前,&nbsp;各学科奥赛都有自己的组织机构,&nbsp;我们介入奥赛培训,应注意协调与各方面的关系,&nbsp;既不能成为哪个部门的附属,&nbsp;也不能越俎代庖,&nbsp;我们的最终目的,是为天津市,为全国做出更大的贡献.&nbsp;此外,&nbsp;笔者衷心期望我校有关部门能重视这一工作,对从事这一工作的教师给予更多的支持.特别是在经费上给予必要的资助,使有关教师能做出更大的成绩.<BR>&nbsp;&nbsp;&nbsp;&nbsp;纵上所述,&nbsp;学科奥林匹克竞赛,&nbsp;作为中学生素质教育的一个组成部分,应受到各方面的重视,&nbsp;应认真解决在组织与培训工作中存在的种种问题,使这项事业能沿着正确的健康的道路不断前进.<BR>&nbsp;<BR>&nbsp;&nbsp;参考资料<BR>&nbsp;&nbsp;&nbsp;&nbsp;[1]&nbsp;陈树楷,吴文虎,潘懋德,&nbsp;信息学(计算机)奥林匹克与科学教育改革,&nbsp;中国电脑教育报,&nbsp;1996年1月31日.<BR>[2]&nbsp;周慕昌,&nbsp;计算机教育是信息化的社会基础工程,&nbsp;中国计算机报,&nbsp;1996年&nbsp;&nbsp;1月9日.<BR><BR>（记者 天津师范大学计算机系 李学武） </P>
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：天津师范大学计算机系 <br>
+                            
+                            来 源：走向新世纪―面向21世纪天津基础教育研讨会<br>
+                            
+                            共有7142位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF">  <p> 
+                    <li><font color=#0772B1>上篇文章</font>：已经没有了 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=529.htm" temptabs="http://www.mydrs.org/program/list?id=529">河南女生的上海故事</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=528.htm" temptabs="http://www.mydrs.org/program/sendmail?id=528" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\信息学奥林匹克培训与素质教育.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0528.htm" temptabs="http://www.mydrs.org/program/html/0528.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607">noip倒计时 by 枯叶蝴蝶</a><br>
+                  
+                  <a href="list-id=606.htm" temptabs="http://www.mydrs.org/program/list?id=606">仰起脸,天空依旧蔚蓝</a><br>
+                  
+                  <a href="list-id=577.htm" temptabs="http://www.mydrs.org/program/list?id=577">感悟OI之我心坦然(by gsn)</a><br>
+                  
+                  <a href="list-id=561.htm" temptabs="http://www.mydrs.org/program/list?id=561">命途的点缀(贵州男生的长沙故事)</a><br>
+                  
+                  <a href="list-id=548.htm" temptabs="http://www.mydrs.org/program/list?id=548">我的oi故事之挥别oi(jakrinchose)</a><br>
+                  
+                  <a href="list-id=529.htm" temptabs="http://www.mydrs.org/program/list?id=529">河南女生的上海故事</a><br>
+                  
+                  <a href="list-id=528.htm" temptabs="http://www.mydrs.org/program/list?id=528">信息学奥林匹克培训与素质教育</a><br>
+                  
+                  <a href="list-id=526.htm" temptabs="http://www.mydrs.org/program/list?id=526">评论：奥校不是“洗澡水”  </a><br>
+                  
+                  <a href="list-id=525.htm" temptabs="http://www.mydrs.org/program/list?id=525">奥赛凸现青少年人才培养规律</a><br>
+                  
+                  <a href="list-id=524.htm" temptabs="http://www.mydrs.org/program/list?id=524">计算机教育：锻造青少年创新翅膀  </a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

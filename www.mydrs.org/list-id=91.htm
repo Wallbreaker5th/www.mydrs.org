@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>趣谈数据结构（三）-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>趣谈数据结构（三）
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>趣谈数据结构（三）</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/4/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <font style="font-size:15pt;color:red"><b>在</b></font>趣谈数据结构（二）中，我们介绍了&quot;队&quot;及&quot;队&quot;的应用，在这一讲中，我们将再通过两道例题，进一步的了解的学习&quot;队&quot;的灵活使用。 <BR>      <p> <font color="#6666FF"><b>例2、</b></font><br><BR>        　　设有ｎ个人依次围成一圈，从第１个人开始报数，数到第ｍ个人出列，然后从出列的下一个人开始报数，数到第ｍ个人又出列，…，如此反复到所有的人全部出列为止。设ｎ个人的编号分别为1，2，…，n，打印出出列的顺序。<br><BR>        <br><BR>        <b>分析　</b><br><BR>        　　本题我们可以用数组建立标志位等方法求解，但如果用上数据结构中循环链的思想，则更贴切题意，解题效率更高。<br><BR>        　　ｎ人围成一圈，把一人看成一个结点，ｎ人之间的关系采用链接方式，即每一结点有一个前继结点和一个后继结点，每一个结点有一个指针指向下一个结点，最后一个结点指针指向第一个结点。这就是单循环链的数据结构。<br><BR>        　　当ｍ人出列时，将ｍ结点的前继结点指针指向ｍ结点的后继结点指针，即把ｍ结点驱出循环链。<br><BR>        <br><BR>        　　<font color="#FF9999"><b>1、</b></font>建立循环链表。<br><BR>        　　当用数组实现本题链式结构时，数组a[i]作为&quot;指针&quot;变量来使用，a[i]存放下一个结点的位置。设立指针j指向当前结点，则移动结点过程为j:=a[j]，当数到m时，m结点出链，则a[j]:=a[a[j]]。<br><BR>        　　当直接用链来实现时，则比较直观，每个结点有两个域：一个数值域，一个指针域，当数到m时，m出链，将m结点的前继结点指针指向其后继结点；<br><BR>        　　<font color="#FF9999"><b>2、</b></font>设立指针，指向当前结点，设立计数器，计数数到多少人；<br><BR>        　　<font color="#FF9999"><b>3、</b></font>沿链移动指针，每移动一个结点，计数器值加１，当计数器值为ｍ时，则ｍ结点出链。计数器值置为１；<br><BR>        　　<font color="#FF9999"><b>4、</b></font>重复３、直到n个结点均出链为止。<br><BR>        <br><BR>        <b><font color="#6666FF">源程序一：</font>用数组实现链式结构</b><br><BR>        program ex11-6a;<br><BR>        　const n=14;m=4;{设有10个人,报到4的人出列}<br><BR>        　var a:array[1..n] of integer;<br><BR>        　　i,j,k,p:integer;<br><BR>        　begin<br><BR>        　　for i:=1 to n-1 do a[i]:=i+1;{建立链表}<br><BR>        　　a[n]:=1;j:=n;k:=1;p:=0;{第n人指向第1人,并置初始}<br><BR>        　　repeat<br><BR>        　　　j:=a[j];k:=k+1;{报数,计数器加1}<br><BR>        　　　if k=m then {数到m,m人出队,计数器置1}<br><BR>        　　　　begin<br><BR>        　　　　　write(a[j]:4);p:=p+1;a[j]:=a[a[j]];k:=1;<br><BR>        　　　　end<br><BR>        　　　until p=n;{直到n个人均出队为止}<br><BR>        　end.<br><BR>        <br><BR>        <b><font color="#6666FF">源程序二：</font>单链环实现</b><br><BR>        program ex11-6b;<br><BR>        　type pointer=^node;<br><BR>        　　node=record<br><BR>        　　　val:integer;<br><BR>        　　　link:pointer<br><BR>        　　　end;<br><BR>        　var ptr,ptb:pointer;<br><BR>        　　i,j,n,m:integer;<br><BR>        　begin<br><BR>        　　readln(n,m);<br><BR>        　　new(ptb);ptb^.val:=1;ptr:=ptb;{申请第1个结点}<br><BR>        　　for i:=2 to n do <br><BR>        　　　begin<br><BR>        　　　　new(ptr^.link);ptr:=ptr^.link; {申请第2到n结点}<br><BR>        　　　　ptr^.val:=i;<br><BR>        　　　end;<br><BR>        　　ptr^.link:=ptb;j:=0;{第n结点指针指向第1个结点}<br><BR>        　　repeat<br><BR>        　　　i:=1;<br><BR>        　　　repeat {报数,报到m人出列}<br><BR>        　　　　ptr:=ptb;ptb:=ptb^.link;i:=i+1;<br><BR>        　　　until i=m;<br><BR>        　　　write(ptb^.val:2);<br><BR>        　　　ptb:=ptb^.link;ptr^.link:=ptb;j:=j+1;{将m结点驱出链表}<br><BR>        　　until j=n-1;{直到n个人均出队为止}<br><BR>        　　writeln(ptb^.val:4)<br><BR>        　end.</p><BR>      <p> <font color="#6666FF"><b>例3、</b></font><br><BR>        　　 一矩形阵列由数字0到9组成,数字1到9代表细胞,细胞的定义为沿细胞数字上下左右还是细胞数字则为同一细胞,求给定矩形阵列的细胞个数。<br><BR>        如:阵列 0234500067<br><BR>        1034560500<br><BR>        2045600671<br><BR>        0000000089<br><BR>        有4个细胞。<br><BR>        <br><BR>        <b>算法步骤：</b><br><BR>        <br><BR>        <font color="#FF9999"><b>1．</b></font> 从文件中读入m*n矩阵阵列，将其转换为boolean矩阵存入bz数组中；<br><BR>        <font color="#FF9999"><b>2．</b></font> 沿bz数组矩阵从上到下，从左到右，找到遇到的第一个细胞；<br><BR>        <font color="#FF9999"><b>3．</b></font> 将细胞的位置入队h，并沿其上、下、左、右四个方向上的细胞位置入队，入队后的位置bz数组置为FLASE；<br><BR>        <font color="#FF9999"><b>4．</b></font> 将h队的队头出队，沿其上、下、左、右四个方向上的细胞位置入队，入队后的位置bz数组置为FLASE；<br><BR>        <font color="#FF9999"><b>5．</b></font> 重复4，直至h队空为止，则此时找出了一个细胞；<br><BR>        <font color="#FF9999"><b>6．</b></font> 重复2，直至矩阵找不到细胞；<br><BR>        <font color="#FF9999"><b>7．</b></font> 输出找到的细胞数。<br><BR>        <br><BR>        program xibao;<br><BR>        const dx:array[1..4] of -1..1=(-1,0,1,0);<br><BR>        　　　dy:array[1..4] of -1..1=(0,1,0,-1);<br><BR>        var int:text;<br><BR>        　　name,s:string;<br><BR>        　　pic:array[1..50,1..79] of byte;<br><BR>        　　bz:array[1..50,1..79] of boolean;<br><BR>        　　m,n,i,j,num:integer;<br><BR>        　　h:array[1..4000,1..2] of byte;<br><BR>        procedure doing(p,q:integer);<br><BR>        　var i,t,w,x,y:integer;<br><BR>        　begin<br><BR>        　　inc(num);bz[p,q]:=false;<br><BR>        　　t:=1;w:=1;h[1,1]:=p;h[1,2]:=q;{遇到的第一个细胞入队}<br><BR>        　　repeat<br><BR>        　　　for i:=1 to 4 do{沿细胞的上下左右四个方向搜索细胞}<br><BR>        　　　　begin　<br><BR>        　　　　　x:=h[t,1]+dx[i];y:=h[t,2]+dy[i];<br><BR>        　　　　　if (x&gt;0) and (x&lt;=m) and (y&gt;0) and (y&lt;=n) and bz[x,y]<br><BR>        　　　　　　then begin inc(w);h[w,1]:=x;h[w,2]:=y;bz[x,y]:=false;end;{为细胞的入队}<br><BR>        　　　　　end;<br><BR>        　　　　inc(t);{队头指针加1}<br><BR>        　　　until t&gt;w;{直至队空为止}<br><BR>        　　end;<br><BR>        　begin<br><BR>        　　fillchar(bz,sizeof(bz),true);num:=0;<br><BR>        　　write('input file:');readln(name);<br><BR>        　　assign(int,name);reset(int);<br><BR>        　　readln(int,m,n);<br><BR>        　　for i:=1 to m do<br><BR>        　　　begin readln(int,s);<br><BR>        　　　for j:=1 to n do<br><BR>        　　　　begin pic[i,j]:=ord(s[j])-ord('0');<br><BR>        　　　　　if pic[i,j]=0 then bz[i,j]:=false;<br><BR>        　　　　end;<br><BR>        　　　end;<br><BR>        　　close(int);<br><BR>        　　for i:=1 to m do<br><BR>        　　　for j:=1 to n do if bz[i,j] then doing(i,j);{在矩阵中寻找细胞}<br><BR>        　　writeln('NUMBER of cells=',num);readln;<br><BR>        　end.</p> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：福州一中计算机组 陈颖 <br>
+                            
+                            来 源：曙光奥赛<br>
+                            
+                            共有5255位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=90.htm" temptabs="http://www.mydrs.org/program/list?id=90">趣谈数据结构（二）</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=92.htm" temptabs="http://www.mydrs.org/program/list?id=92">趣谈数据结构（四）</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=91.htm" temptabs="http://www.mydrs.org/program/sendmail?id=91" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\趣谈数据结构（三）.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0091.htm" temptabs="http://www.mydrs.org/program/html/0091.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=164.htm" temptabs="http://www.mydrs.org/program/list?id=164">谈谈数据结构</a><br>
+                  
+                  <a href="list-id=95.htm" temptabs="http://www.mydrs.org/program/list?id=95">趣谈数据结构（七）</a><br>
+                  
+                  <a href="list-id=94.htm" temptabs="http://www.mydrs.org/program/list?id=94">趣谈数据结构（六）</a><br>
+                  
+                  <a href="list-id=93.htm" temptabs="http://www.mydrs.org/program/list?id=93">趣谈数据结构（五）</a><br>
+                  
+                  <a href="list-id=92.htm" temptabs="http://www.mydrs.org/program/list?id=92">趣谈数据结构（四）</a><br>
+                  
+                  <a href="list-id=91.htm" temptabs="http://www.mydrs.org/program/list?id=91">趣谈数据结构（三）</a><br>
+                  
+                  <a href="list-id=90.htm" temptabs="http://www.mydrs.org/program/list?id=90">趣谈数据结构（二）</a><br>
+                  
+                  <a href="list-id=89.htm" temptabs="http://www.mydrs.org/program/list?id=89">趣谈数据结构（一）</a><br>
+                  
+                  <a href="list-id=39.htm" temptabs="http://www.mydrs.org/program/list?id=39">实数类型</a><br>
+                  
+                  <a href="list-id=31.htm" temptabs="http://www.mydrs.org/program/list?id=31">数据结构-线性表 （三）</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

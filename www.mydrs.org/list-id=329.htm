@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>SGOI第七次竞赛试题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>SGOI第七次竞赛试题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>SGOI第七次竞赛试题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/2/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              所有题目：<BR>输入文件名：input.txt<BR>输出文件名：output.txt<BR><BR><B class=unnamed4><FONT color=#dc7a0e><BR><FONT size=4>题一：音乐厅布置（Hall）</FONT></FONT></B><BR><B>【背景】</B><BR><BR>　　建成于1891年的纽约卡内基音乐厅（Carnegie Hall）音响效果绝佳，是世界最著名的音乐厅之一，它有很大的舞台，在这个音乐季，他们<IMG height=126 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_1.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_1.gif" width=162 align=right>正准备演出莫扎特（Mozart）的歌剧《后宫诱逃（Die Entfuehrung aus dem Serail）》。剧中某些场景需要搭建一座土耳其皇宫，正如我们所熟悉的阿拉伯建筑风格，"皇宫"由一些高度、直径都相同的圆柱支撑，其中一些柱子和外墙相接，另一些在皇宫内部；所有外墙上的柱子向皇宫内的一侧的地面上都放有灯（假设灯放在柱子的圆心这个点上），灯光可以照射到皇宫内的任何部分，除非被东西遮挡。"皇宫"外围是灰白色的"石壁"，就是两根柱子中间的部分，并且总在两根柱子圆心的连线上。墙壁都有一定的透光度，使得内部灯光散射出来，晶莹剔透。因为半透明，墙壁不太厚，相对于柱子的直径，我们忽略墙壁的厚度，如右图所示，灰色部分表示皇宫内部，蓝色部分表示柱子内部。皇宫的横截面总是凸多边形，上方有和横截面几何形状一模一样且厚度密度都均匀的平顶（图中线段围住的部分，即以各个外墙上的柱子的圆心为顶点的凸多边形）。演出时场景布置当然要富丽堂皇、尽善尽美，因此他们请天才的你来解决他们的一切问题。 <BR><BR><B>【问题】</B><BR><BR>　　1、 舞台上不能放置太重的东西，柱子、墙壁都是用塑料等轻的材料做的，不能承重。而皇宫的平顶面积大，还是挺重的，不能直接压在这些材料上，只能通过舞台顶部的架子悬挂。当然，悬挂用的绳子是越细越少越好。他们提出一个大胆的想法，让你只用一根非常坚固的绳子，悬挂起整个屋顶。你的任务就是，找到平顶上一个恰当的点，使得从这个点可以把平顶平稳的吊起来。 <BR><BR>　　2、 布景时，布景师们在顶部的架子上走动，时常不小心碰到一些工具，掉下去砸坏了道具。因此，他们观察了几个经常放工具的点，并告诉你这些点在舞台上投影的位置，请你判断一下这些东西竖直掉下会对"皇宫"造成什么影响。某物品从某个点落下，如果恰好砸在柱子上（内），输出C；砸到墙壁上，输出L；砸到皇宫内空地，输出I；落到皇宫外，输出O；如果砸到物体的交界处，只需按照CLIO的顺序输出第一个。<BR><BR>　　3、 演出时，录音师为演出制作环绕立体声录音。为了排除墙壁隔音的影响，他们在"皇宫"里的地面上也放置了几个麦克风。但为了不影响灯光照射，麦克风必须放在灯光照射不到的地方。出于声学的考虑，录音师建议了几个适合放置麦克风的位置，请你从光学的角度，分析一下其中那些位置可以放置，哪些不可以。如某个麦克风可以放置，那么输出1，否则输出0。<BR>　　我们用一个平面直角坐标系表示舞台地面，给你的数据包括：柱子总数、直径，"皇宫"高度，平顶厚度，每根柱子中心的坐标，以及问题2、问题3要判断点的坐标。<BR>　　如果你能圆满解决了音乐厅面临的三个难题，演出后，你将被授予"<B>最佳协作奖</B>"。<BR><BR><B>【输入】</B><BR><BR>　　第1行有四个整数，是柱子总数p、直径d、"皇宫"高度h1和平顶厚度h2，数据中间都用一个空格隔开。<BR>　　以下p行，每行有两个实数<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" width=10 align=baseline>,<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" width=11 align=baseline>，数据间用一个空格隔开，是第i根柱子的中心坐标。<BR>　　第p+2行是一个整数n，表示问题2要判定的顶点个数。<BR>　　以下n行，每行有两个实数<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" width=10 align=baseline>,<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" width=11 align=baseline>，是问题2要判定的第i个点的坐标，数据间用一个空格隔开。<BR>　　第p+n+3行是一个整数m，表示问题3要判定的顶点个数。<BR>　　以下m行，每行有两个实数<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_4.gif" width=10 align=baseline>,<IMG height=12 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_5.gif" width=11 align=baseline>，数据间用一个空格隔开，是问题3要判定的第i个点的坐标，并保证这些点都在"皇宫"的可用空间内。<BR>　　数据范围：1≤p≤1000，0≤n、m≤1000。输入数据不要判错。<BR><BR><B>【输出】</B><BR><BR>　　输入文件必须严格包含三行，分别是三个问题的结果，如果某个问题没有完成，也必须输出一个空行。<BR>　　第1行包含两个实数x,y，表示可以悬挂平顶的点的坐标，数据间用一个空格间隔，保留三位小数。<BR>　　第2行包括n个字母，是CLIO之一，表示问题2的结果，数据间用一个空格间隔。<BR>　　第3行，输出m个数，是0或者1，表示问题3的结果，数字间用一个空格间隔。<BR><BR><B>【样例输入】</B><BR><BR>　　7 1 110 10<BR>　　-3 3<BR>　　3 2<BR>　　-2 -2<BR>　　3 -1<BR>　　0 0<BR>　　1 1<BR>　　-1 1<BR>　　4<BR>　　-4 1<BR>　　-2 1<BR>　　0 0<BR>　　0 2.5<BR>　　2<BR>　　1 -1<BR>　　0 0.55<BR><B><BR>【样例输出】</B><BR><BR>　　0.015 0.545<BR>　　O I C L <BR>　　0 1 <BR><B class=unnamed4><BR><FONT color=#dc7a0e size=4>题二：折线（Line）</FONT></B><BR><B>【问题】</B><BR><BR>　　给定一个m行n列的方格阵，每个方格边长为1。要从方格阵左上方的顶点（0，0）走到右下方的顶点（m，n），中间有若干个格子是障碍物，无法通过。人可以从（x1，y1）走到（x2，y2），当且仅当（x1&lt;=x2）且（y1&lt;=y2）且线段（x1，y1）-（x2，y2）不穿过任意一个障碍方格。求最短路长度。<BR><BR><B>【输入】</B><BR><BR>　　文件的第一行包括3个用空格分开的正整数m，n。以下是一个邻接矩阵A，1表示表示障碍。<BR><BR><B>【输出】</B><BR><BR>　　文件只有一行。文件应只一个精确到小数点后面2位小数的实数，表示最短路径的长度。<BR><BR><B>【样例输入】</B><BR><BR>　　3 　4<BR>　　0 0 1 0<BR>　　0 1 0 0<BR>　　0 0 0 1<BR><BR><B>【样例输出】</B><BR><BR>　　5.47<BR><BR><B>【提示】</B><BR><BR><IMG height=134 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_2.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_2.gif" width=180 align=left>以下是示例数据的一种答案：<BR>　　注意：图中红色的部分告诉我们，尽管路线不能穿越障碍方格，但是可以沿着障碍方格行进。<BR>　　数据范围：<BR>　　　　　　1≤m，n≤80，输入数据无需判错。</P><P><B><BR><FONT color=#dc7a0e>题三：最佳路线（Bestline）</FONT></B><BR><B>【背景】</B><BR><BR>　　塞内加尔是非洲的一个小国家，你也许很难在世界地图上找到它，甚至你有可能从未听说过它--它实在是个太小、太贫穷的国家了。可是，就是这个人口不足900万、全国仅有2个标准足球场地的小国，在2002韩日世界杯的非洲区预选赛中脱颖而出，取得了世界杯决赛圈的入场券（幸好，去年中国队也进入了世界杯决赛圈，不然可就丢脸了）。<BR><BR>　　在塞内加尔全国球迷欣喜若狂，世界足球行家大跌眼镜的同时，塞内加尔足协却发现自己面临着一个颇为尴尬的问题--说起来令人不可思议，由于打非洲区预选赛时四处征战，加上足协经营不力，现在足协的预算以几近赤字--也就是说，塞内加尔足协支付不起从本国乘飞机到达韩国参加世界杯的费用！经过三思，塞内加尔足协向非洲足联递交了一份《关于减免球队旅行费用》的申请；可是--众所周知的，非洲足联也是惨淡经营，幸好非洲足联秘书长神通广大，弄来了M张优惠乘机券：每张优惠券可以作用于一条航线，使全队通过此航线的费用减半；多张优惠券用于同一条线路，其效果叠加--即在一条航线上用两张优惠券，其费用降为原费用的1/4，依此类推。 <BR><BR><B>【问题】</B><BR><BR>　　塞内加尔足球队要从塞内加尔国家机场出发，途经一些中转机场，最后要到达韩国釜山机场。为了合理地分配各张优惠券，使得所需费用最少，塞内加尔足协找到了你，请你编程解决这个问题。<BR><BR><B>【输入】</B><BR><BR>　　第1行有两个数N、M（0&lt;N&lt;=70，0&lt;=M&lt;=20）并用空格隔开，分别表示包括起点（塞内加尔国家机场）、终点（韩国釜山机场）的机场数，以及塞内加尔足协现有的优惠券数量。<BR>　　从第2行到第N+1行起，每行有N个数，其中第I行的第J个数代表从机场I到机场J所需费用；为零的数代表两机场无航线。<BR>　　假设起点标号为1，终点标号为N。<BR><BR><B>【输出】</B><BR><BR>　　第1行仅有一个数（保留两位小数），代表所求得的从机场1到机场N的最小费用；<BR>　　第2行打印航线，每两个机场间用"-&gt;"连接（参见样例输出）；<BR>　　输入数据保证从塞内加尔机场可达釜山机场。<BR><BR><B>【样例输入】</B><BR><BR>　　5 2<BR>　　0 0 80 96 0<BR>　　70 0 72 54 0<BR>　　18 0 0 99 82<BR>　　72 18 71 0 0<BR>　　69 0 0 70 0<BR><BR><B>【样例输出】</B><BR><BR>　　81.00<BR>　　1-&gt;3-&gt;5<BR><BR><BR><B class=unnamed4><BR><FONT color=#dc7a0e size=4>题四：仓库管理员的难题（Move）</FONT></B><BR><B>【背景】</B><BR><BR>　　沃尔玛公司是世界零售业的一大巨头。Sam是该公司在华盛顿某会员店的仓库管理员，他每天的工作就是监督搬运工们将一箱又一箱的货物堆放到仓库里指定的位置上。可以想象，这是一份多么轻松而高薪的工作，Sam非常珍惜和热爱这份工作，在他的管理下，仓库的各项工作都井井有条，Sam也因此多次受到上司的表扬。<BR>　　有一次，上司忽然安排Sam加班，原来是有一大批货物需要及时入库。Sam立即联系几位搬运工协助工作，然而不巧的是这些搬运工不是因为身体不适就是去度假了，都不能前来。这可急坏了Sam，因为按照公司的规定，如果不能按时完成上司的任务他就会被无条件解雇--这当然是Sam所不愿意的。于是，他只好自己做一回搬运工。<BR><B><BR>【问题描述】<BR></B><IMG height=226 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_3.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_3.gif" width=225 align=right><BR>　　右图为一个仓库的示意图，周围的黑色方块表示仓库围墙或者已经摆放好的货物（我们统称之为障碍）。蓝色圆点是Sam的初始位置，灰色方块就是要搬运的货物，左侧的小方块表示货物应堆放的位置。<BR>　　仅当以下条件成立时，货物才可被Sam从一个位置推动到相邻的另一个位置：<BR><BR>　　1、 目标位置没有障碍；<BR>　　2、 当前位置、目标位置、Sam所处位置在同一行或同一列；<BR>　　3、 Sam位于与货物相邻的方格上。<BR><BR>　　当然，货物被推动后，Sam就占据了货物原来的位置。同时，他在走动时也不得穿越障碍物和货物或者进入它们的内部。<BR>　　正如我们前面提到的，沃尔玛公司作为世界零售业的巨头，这整批货物的量相当巨大，于是，Sam不可能一次搬完，而只能将他们一件一件地搬运到指定的位置。可想而知，对于Sam这个白领来说，一个人搬运这么多货物，劳动强度多么巨大。为了节省体力，Sam希望能够为每件货物寻找一种方案，使得能够在推动货物移动的步数最少的前提下，将货物堆放到指定的位置。请你编程帮助他解决眼下这个难题。<BR><BR><B>【数据输入】</B><BR><BR>　　数据的第一行是两个正整数n、m (2≤m,n≤40)，代表这个仓库有n行m列。<BR>　　第二行到第n+1行，每行有m个值为0或1的数，分别代表仓库的空地和障碍，每两个数之间用一个空格隔开。<BR>　　第n+2行有6个正整数x0,y0、x1,y1、x2,y2，分别表示初始时货物所处位置、货物的指定堆放位置、初始时Sam所处位置。x0,y0,x1,y1,x2,y2一定不和障碍物重叠，输入数据无需判错。<BR><BR><B>【数据输出】</B><BR><BR>　　如果Sam无论如何也不可能完成任务，那么就输出"Sam will lose his job."<BR>　　如果有解，输出数据的第一行包括一个整数，表示Sam推动该货物移动的最小步数。<BR>　　第二行是一条满足条件的货物移动路径（格式参见示例输出，如果存在多条这样的路径，只要输出其中的一条）。<BR><BR><B>【样例输入】</B><BR><BR>　　7 7<BR>　　0 1 1 0 0 1 1<BR>　　0 1 0 0 0 0 1<BR>　　0 1 1 1 0 0 1<BR>　　0 0 0 1 0 0 1<BR>　　1 1 1 1 0 0 1<BR>　　1 0 0 0 0 0 1<BR>　　1 1 1 1 1 1 1<BR>　　2 4 6 2 2 3<BR><BR><B>【样例输出】</B><BR><BR>　　8<BR>　　(2,4)-&gt;(2,5)-&gt;(3,5)-&gt;(4,5)-&gt;(5,5)-&gt;(6,5)-&gt;(6,4)-&gt;(6,3)-&gt;(6,2)</P><P><B class=unnamed4><FONT color=#dc7a0e size=4>题五：简单的积木搭建问题(Tower)</FONT></B><BR><B>【背景】</B><BR><BR>　　有足够多的等大积木用于搭建高度（层数）为h的塔。塔的每层都是排列紧密的一列积木。将一座塔的各层的积木数连续写出组成的序列{<IMG height=18 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_6.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_6.gif" width=16 align=absBottom>}称为塔的表达式。一座塔不会倒塌的条件是：<BR><BR>　　（一）塔的每层至少有一块积木（<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" width=15 align=absMiddle>&gt;0，i=1..n）；<BR>　　（二）每层的积木块数均与相邻层相差1（<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" width=15 align=absBottom>-<IMG height=17 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_8.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_8.gif" width=24 align=absBottom>=±1，i=1..n-1）；<BR>　　（三）塔的底层必须有m块积木（<IMG height=18 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_9.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_9.gif" width=15 align=absBottom>=m）。两座塔<IMG height=17 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_10.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_10.gif" width=18 align=absMiddle>与<IMG height=23 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_11.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_11.gif" width=18 align=top>不同，当且仅当塔的层数不同（m&lt;&gt;n）或对于特定的层i（1&lt;= i &lt;=min{m，n}），有<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" width=15 align=absMiddle>&lt;&gt;<IMG height=19 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_12.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_12.gif" width=12 align=absMiddle>。与此类似的，两座塔<IMG height=17 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_10.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_10.gif" width=18 align=absMiddle>&lt;<IMG height=23 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_11.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_11.gif" width=18 align=top>不同，当且仅当塔的层数相同（m=n）且对于特定的层i（1&lt;= i &lt;= m），有<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_7.gif" width=15 align=absMiddle>&lt;<IMG height=19 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_12.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_12.gif" width=12 align=absMiddle>，且对于所有的j，1&lt;=j&lt;i，均有<IMG height=20 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_13.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_13.gif" width=38 align=absMiddle>。<BR><BR><B>【任务一】</B><BR><BR>　　给定m与h，求可能的塔的种类。<BR><BR><B>【任务二】</B><BR><BR>　　在任务一的基础上，把所有塔按照表达式大小排序（具体的序列排序定义略，参照等长字符串的大小比较方式），计算第k种塔的表达式。<BR><BR><B>【输入方式】</B><BR><BR>　　从文件Tower.in读入数据，文件的第一行是3个正整数m，h，c。随后的c行每行包括两个正整数<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_14.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_14.gif" width=17 align=absMiddle>，<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" width=17 align=absMiddle>（i=1..c），<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_14.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_14.gif" width=17 align=absMiddle>为<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" width=17 align=absMiddle>的长度，求第<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" width=17 align=absMiddle>种塔的表达式。<BR><BR><B>【输出方式】</B><BR><BR>　　结果打印到文件Tower.out中，输出文件的第一行是符合条件的塔的数量，以下c行，每个表达式占一行，表达式顺序按照读入命令的顺序，表达式里的数用空格隔开。<BR><BR><B>【样例输入】</B><BR><BR>　　4 4 5<BR>　　1 8<BR>　　1 6<BR>　　1 1<BR>　　1 2<BR>　　1 4<BR><BR><B>【样例输出】</B><BR><BR>　　8<BR>　　4 5 6 7<BR>　　4 5 4 5<BR>　　4 3 2 1<BR>　　4 3 2 3<BR>　　4 3 4 5<BR><BR><B>【提示】</B><BR><BR>　　1&lt;=m&lt;=10000，1&lt;=h&lt;=1600，1&lt;=c&lt;=100，1&lt;=<IMG height=16 src="external/www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" temptabs="http://www.chinaschool.org/aosai/zzcy/image/aosai7_15.gif" width=17 align=absMiddle>&lt;=10^100，输入数据无需判错。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：福州一中信息学小组 <br>
+                            
+                            来 源：曙光网<br>
+                            
+                            共有2470位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=328.htm" temptabs="http://www.mydrs.org/program/list?id=328">ctsc2000《丘比特的烦恼》2</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=330.htm" temptabs="http://www.mydrs.org/program/list?id=330">SGOI7成绩揭晓</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=329.htm" temptabs="http://www.mydrs.org/program/sendmail?id=329" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\SGOI第七次竞赛试题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0329.htm" temptabs="http://www.mydrs.org/program/html/0329.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=398.htm" temptabs="http://www.mydrs.org/program/list?id=398">SGOI第14次友谊赛成绩</a><br>
+                  
+                  <a href="list-id=394.htm" temptabs="http://www.mydrs.org/program/list?id=394">SGOI-14友谊赛测试数据</a><br>
+                  
+                  <a href="list-id=393.htm" temptabs="http://www.mydrs.org/program/list?id=393">SGOI14友谊赛试题</a><br>
+                  
+                  <a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a><br>
+                  
+                  <a href="list-id=366.htm" temptabs="http://www.mydrs.org/program/list?id=366">SGOI第13次友谊赛成绩揭晓</a><br>
+                  
+                  <a href="list-id=365.htm" temptabs="http://www.mydrs.org/program/list?id=365">SGOI第十三次友谊赛试题</a><br>
+                  
+                  <a href="list-id=364.htm" temptabs="http://www.mydrs.org/program/list?id=364">SGOI第13次友谊赛竞赛规则</a><br>
+                  
+                  <a href="list-id=362.htm" temptabs="http://www.mydrs.org/program/list?id=362">Sgoi12之《黑白瓷砖》</a><br>
+                  
+                  <a href="list-id=360.htm" temptabs="http://www.mydrs.org/program/list?id=360">《哈利・波特与魔法石》</a><br>
+                  
+                  <a href="list-id=359.htm" temptabs="http://www.mydrs.org/program/list?id=359">Sgoi12之《网络传输》</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

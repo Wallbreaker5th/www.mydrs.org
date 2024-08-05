@@ -1,0 +1,294 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>FOI2分区模拟赛试题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>FOI2分区模拟赛试题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>FOI2分区模拟赛试题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;11/6/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              1.银币问题。(t1.exe，30分，时限1s)有n(&lt;=10000)银币，C1，C2，...<BR>，Cn中有一块不合格，不合格的银币比较重。现用一天平找不出合格的<BR>来，要求在最坏的情况下，用的天平次数最少。<BR><BR>输入文件：input1.txt。文件仅一行，为N。<BR>输出文件：output1.txt。输出使用天平的最少次数M。<BR><BR>示例：input1.txt &nbsp; &nbsp;output1.txt<BR>&nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2<BR>---------------------------------------------------------------<BR>2.魔兽争霸。(t2.exe，30分，时限1s)史前的一个部落里，混居着三个种<BR>族：人族(man=M)，兽族(pig=P)和不死族(man&amp;pig=&amp;)。他们之间的称呼<BR>只有“人”和“兽”两种。<BR>&nbsp; &nbsp; 人很诚实的称呼人和兽本来的名称，但是人为了防御兽族的侵害，拉拢<BR>了不死族，称不死族为“人”。兽是很自大的动物，他称呼自己为“人”，<BR>称呼其他种族为“兽”。而不死族很虚伪，他们称自己为“兽”，称其他<BR>种族为“人”。<BR>&nbsp; &nbsp; 你的任务是根据他们之间的称呼确定每个个体所属的种族。<BR>&nbsp; &nbsp; 输入文件：input2.txt。给出了部落中任一个个体的对另一个个体的称<BR>呼。格式：第一行为个体的总数N(&lt;=100)，下面是一个N行N列的矩阵，第I<BR>行第J个字符表示个体I对个体J的称呼，用“M”表示人，用“P”表示兽，<BR>用“S”表示自己(I=J)。<BR>&nbsp; &nbsp; 输出文件：outpunt2.txt。部落中各族中所包含的个体个数，若有多种<BR>组成方式，要全部输出。格式：若无解，则输出0，否则第一行输出组成方式<BR>的总数为K，随后的K行，每行表示一种组成方式，第I行的格式为：<BR>&lt;i&gt;M=…P=…&amp;=…。<BR>&nbsp; &nbsp; 示例： input2.txt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;output2.txt<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SMMMM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;1&gt;M=5 P=0 &amp;=0<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MSMMM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;2&gt;M=4 P=0 &amp;=1<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MMSMM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;3&gt;M=0 P=5 &amp;=0<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MMMSM<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MMMMS<BR>--------------------------------------------------------------------<BR>3.分割多边形(t3.exe，40分，时限5s) (50分)<BR>&nbsp; &nbsp; 预备知识:平面上的点可用坐标(X,Y)表示,X,Y为绝对值不超过10000的整<BR>数.平面上的直线L可用A*X+B*Y+C=0表示,其中A,B,C为常数.点(X1,Y1)在直<BR>线L上的充分必要条件是 A*X1+B*Y1+C=0.两个点(X1,Y1),(X2,Y2)在直线L的<BR>同侧的充分必要条件是 (A*X1+B*Y1+C)与(A*X2+B*X2+C)同号.由三个点(X1,Y1)<BR>,(X2,Y2),(X3,Y3)构成的三角形的面积等于 0.5*│(X2-X1)*(Y3-Y1)-(Y2-Y1)<BR>*(X3-X1)│,这里│a│表示数a 的绝对值.一个多边形为凸多边形的充分必要<BR>条件是:对任意给定的一条边,其余各顶点都在该边所在的直线的同侧.<BR>&nbsp; &nbsp;编程要求:<BR>&nbsp; (1)(20分) 判断所给的多边形是否为凸多变形.<BR>&nbsp; (2)(30分) 对于凸多边形,则应求出一条对角线,它将凸多边形分割成两部<BR>分,这两部分的面积之差为最小.最后输出:① 该对角线对应的两顶点的编号<BR>及坐标.② 两部分的面积及面积之差.<BR>&nbsp; &nbsp;输入:由文本文件input3.txt按下述格式输入一个N边形的已知数据:<BR>&nbsp; &nbsp;第1行:整数N (200≥N≥4,N为多边形的边数)<BR>&nbsp; &nbsp;第 2--N+1 行: 每行两个整数,中间用空格隔开 (第i行为N边形第i-1个顶点<BR>坐标按逆时针方向排列,顶点号(1--N)不得改动).<BR>&nbsp; &nbsp;输出：第1行 如果是凸多边形，输出1，否则输出0<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;第2行 如果是凸多边形，输出对角线对应的两顶点的编号及坐标，格式<BR>为：(x1,y1)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;第3行 如果是凸多边形，输出两部分面积及面积之差，保留2位小数，用<BR>空格隔开。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：Fruit Ikari <br>
+                            
+                            共有4802位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=444.htm" temptabs="http://www.mydrs.org/program/list?id=444">第八届普及组初赛参考答案</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=446.htm" temptabs="http://www.mydrs.org/program/list?id=446">各地信息学分区初赛分数线</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=445.htm" temptabs="http://www.mydrs.org/program/sendmail?id=445" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\FOI2分区模拟赛试题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0445.htm" temptabs="http://www.mydrs.org/program/html/0445.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

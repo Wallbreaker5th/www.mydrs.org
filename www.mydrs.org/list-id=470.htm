@@ -1,0 +1,378 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>USACO三月竞赛橙色题目-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>USACO三月竞赛橙色题目
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>USACO三月竞赛橙色题目</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;3/14/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>问题 1: Cowvin Bacon 的六度 (分离) [Tom Widland, 2003]</P>
+<P>牛们最近一直在拍电影, 因此她们准备好来玩著名游戏 "Kevin Bacon 的<BR>六度 (分离)" 的一个变化版本.</P>
+<P>游戏是这样的: 每个牛被认为与她自己是零度分离. 如果两个不同的牛曾同在<BR>某个电影里, 每个就被认为与另一个是一 '度' 远.&nbsp; 如果某对牛从未共同合作<BR>过但都曾与第三头牛合作过, 她们将被认为彼此是二 '度' 远 (这样数: 一度到<BR>她们曾与之合作的牛那里, 再一度才到另一个牛那里). 这种度量方法适用于一<BR>般情况.</P>
+<P>N (2 &lt;= N &lt;= 300) 头牛有兴趣找出他们哪头与所有其他牛有最小的平均分离度, 当<BR>然不算她自己. 牛们已经拍了 M (1 &lt;= M &lt;= 10000) 部电影, 并保证每对牛之<BR>间都存在一些关系路径.</P>
+<P>问题名: bacon</P>
+<P>输入格式:</P>
+<P>* 行 1: 空格分开的两个整数: N 和 M</P>
+<P>* 行 2..M+1: 每个输入行包括一组空格分开的两个或更多个整数, 描述了在一<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 个电影中露面的牛们. 第一个整数是参与该部电影的牛的个数, <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (即, Mi); 其后的 Mi 个整数告诉我们都是哪些牛.</P>
+<P>输入样例 (文件 bacon.in):</P>
+<P>4 2<BR>3 1 2 3<BR>2 3 4</P>
+<P>输出格式:</P>
+<P>* 行 1: 唯一的整数: (任何牛的平均分离度中最小的)*100.</P>
+<P>输出样例 (文件 bacon.out):</P>
+<P>100</P>
+<P>[牛 3 曾与所有其他的牛合作过因此有分离度: 1, 1, 和 1 -- 平均 1.00 .]</P>
+<P>**********************************************************************</P>
+<P>问题 2: 牧群总数 [Don Piele, 2003]</P>
+<P>农场主 John 的牧群中的牛被以连续整数从 1 到 N (1 &lt;= N &lt;= 10000) 编号挂<BR>牌.&nbsp; 当这些牛来棚舍挤奶时, 总是连续有序地从 1 到 N 排队来.</P>
+<P>John, 在读大学时主修数学并非常喜欢数字, 他经常寻找数字模板.&nbsp; 他注意到<BR>当他的牧群有正好 15 头牛时, 有正好四种方式可以在一个或多个连续的牛上加<BR>出 15 (和牛的总数一样) 来.&nbsp; 他们是: 15, 7+8, 4+5+6, 和 1+2+3+4+5.</P>
+<P>当牧群中牛的数目为 10 时, 他能在连续的牛上加出 10 的办法降低到 2 种, <BR>即 1+2+3+4 和 10.</P>
+<P>写一个程序来计算 John 有几种办法能在连续的牛上加出等于 N 的数, <BR>N &lt;= 10,000,000.<BR>不要用预先计算来答这道题.</P>
+<P>问题名: hsums</P>
+<P>输入格式:</P>
+<P>* 行 1: 一个整数: N</P>
+<P>输入样例 (文件 hsums.in):</P>
+<P>15</P>
+<P>输出格式:</P>
+<P>* 行 1: 一个整数: 在连续的牛的标号上可以加出 N 这个数的办法个数.</P>
+<P>输出样例 (文件 hsums.out):</P>
+<P>4</P>
+<P>**********************************************************************</P>
+<P>问题 3: 消息解牛 (不是解码或解马) [传统类型, 2003]</P>
+<P>牛们激动得发抖, 因为他们刚刚学习到了如何加密消息. 他们想他们将能用密信<BR>密谋与其他农场上的牛们相汇.</P>
+<P>牛们的智利不为大家所周知. 他们的加密法可比不上 DES 或者 BlowFish 或任<BR>何那些真正好的加密方法. 比不上, 他们正使用一种简单的置换密码.</P>
+<P>牛们有一个密钥和一个密信. 请帮他们解密. 密钥就像这样:</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yrwhsoujgcxqbativndfezmlpk</P>
+<P>意思是密信中的一个 'a' 实际是 'y'; 一个输入消息里的 'b' 实际是 'r'; 一个<BR>'c' 解释成 'w'; ...<BR>空格不被加密, 他们简单地呆在原来的位置.</P>
+<P>输入文本是大写或小写的, 都以同样的密钥来解密, 当然也保持原来的大小写.</P>
+<P>问题名: decode</P>
+<P>输入格式:</P>
+<P>* 行 1: 26 个小写字符代表密钥</P>
+<P>* 行 2: 最多 80 个字符作为要被解密的消息</P>
+<P>输入样例 (文件 decode.in):</P>
+<P>eydbkmiqugjxlvtzpnwohracsf<BR>Kifq oua zarxa suar bti yaagrj fa xtfgrj</P>
+<P>输出格式:</P>
+<P>* 行 1: 简单的一行解密后的消息. 它应该与输入的第二行有同样的长度.</P>
+<P>输出样例 (文件 decode.out):</P>
+<P>Jump the fence when you seeing me coming</P>
+<P>**********************************************************************<BR>FT Institute (<A href="mailto:FTGroup@21cn.com">FTGroup@21cn.com</A>)</P>
+<P>**********************************************************************<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ORANGE PROBLEMS<BR>**********************************************************************<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Three problems numbered 6 through 8<BR>**********************************************************************</P>
+<P>PROBLEM 6: Six Degrees of Cowvin Bacon [Tom Widland, 2003]</P>
+<P>The cows have been making movies lately, so they are ready to play a<BR>variant of the famous game "Six Degrees of Kevin Bacon".</P>
+<P>The game works like this: each cow is considered to be zero degrees<BR>of separation (degrees) away from herself. If two distinct cows have<BR>been in a movie together, each is considered to be one 'degree' away<BR>from the other.&nbsp; If a two cows have never worked together but have<BR>both worked with a third cow, they are considered to be two 'degrees'<BR>away from each other (counted as: one degree to the cow they've worked<BR>with and one more to the other cow).&nbsp; This scales to the general case.</P>
+<P>The N (2 &lt;= N &lt;= 300) cows are interested in figuring out which cow<BR>has the smallest average degree of separation from all the other cows.<BR>excluding herself of course. The cows have made M (1 &lt;= M &lt;= 10000)<BR>movies and it is guaranteed that some relationship path exists between<BR>every pair of cows.</P>
+<P>PROBLEM NAME: bacon</P>
+<P>INPUT FORMAT:</P>
+<P>* Line 1: Two space-separated integers: N and M</P>
+<P>* Lines 2..M+1: Each input line contains a set of two or more<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; space-separated integers that describes the cows appearing in<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a single movie.&nbsp; The first integer is the number of cows<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; participating in the described movie, (e.g., Mi); the<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subsequent Mi integers tell which cows were.</P>
+<P>SAMPLE INPUT (file bacon.in):</P>
+<P>4 2<BR>3 1 2 3<BR>2 3 4</P>
+<P>OUTPUT FORMAT:</P>
+<P>* Line 1: A single integer that is 100 times the shortest mean degree<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of separation of any of the cows.</P>
+<P>SAMPLE OUTPUT (file bacon.out):</P>
+<P>100</P>
+<P>[Cow 3 has worked with all the other cows and thus has degrees of<BR>separation: 1, 1, and 1 -- a mean of 1.00 .]</P>
+<P>**********************************************************************</P>
+<P>PROBLEM 7: Herd Sums [Don Piele, 2003]</P>
+<P>The cows in farmer John's herd are numbered and branded with<BR>consecutive integers from 1 to N (1 &lt;= N &lt;= 10,000,000).&nbsp; When the<BR>cows come to the barn for milking, they always come in sequential<BR>order from 1 to N.</P>
+<P>Farmer John, who majored in mathematics in college and loves numbers,<BR>often looks for patterns.&nbsp; He has noticed that when he has exactly 15<BR>cows in his herd, there are precisely four ways that the numbers on<BR>any set of one or more consecutive cows can add up to 15 (the same as<BR>the total number of cows).&nbsp; They are: 15, 7+8, 4+5+6, and 1+2+3+4+5.</P>
+<P>When the number of cows in the herd is 10, the number of ways he can<BR>sum consecutive cows and get 10 drops to 2: namely 1+2+3+4 and 10.</P>
+<P>Write a program that will compute the number of ways farmer John can<BR>sum the numbers on consecutive cows to equal N.&nbsp; Do not use<BR>precomputation to solve this problem.</P>
+<P>PROBLEM NAME: hsums</P>
+<P>INPUT FORMAT:</P>
+<P>* Line 1: A single integer: N</P>
+<P>SAMPLE INPUT (file hsums.in):</P>
+<P>15</P>
+<P>OUTPUT FORMAT:</P>
+<P>* Line 1: A single integer that is the number of ways consecutive cow<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; brands can sum to N.</P>
+<P>SAMPLE OUTPUT (file hsums.out):</P>
+<P>4</P>
+<P>**********************************************************************</P>
+<P>PROBLEM 8: Message Decowding [Traditional, 2003]</P>
+<P>The cows are thrilled because they've just learned about encrypting<BR>messages.&nbsp; They think they will be able to use secret messages to<BR>plot meetings with cows on other farms.</P>
+<P>Cows are not known for their intelligence.&nbsp; Their encryption method<BR>is nothing like DES or BlowFish or any of those really good secret<BR>coding methods.&nbsp; No, they are using a simple substitution cipher.</P>
+<P>The cows have a decryption key and a secret message.&nbsp; Help them decode<BR>it.&nbsp; The key looks like this:</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yrwhsoujgcxqbativndfezmlpk</P>
+<P>Which means that an 'a' in the secret message really means 'y'; a 'b'<BR>in the secret message really means 'r'; a 'c' decrypts to 'w'; and so<BR>on.&nbsp; Blanks are not encrypted; they are simply kept in place.</P>
+<P>Input text is in upper or lower case, both decrypt using the same<BR>decryption key, keeping the appropriate case, of course.</P>
+<P>PROBLEM NAME: decode</P>
+<P>INPUT FORMAT:</P>
+<P>* Line 1: 26 lower case characters representing the decryption key</P>
+<P>* Line 2: As many as 80 characters that are the message to be decoded</P>
+<P>SAMPLE INPUT (file decode.in):</P>
+<P>eydbkmiqugjxlvtzpnwohracsf<BR>Kifq oua zarxa suar bti yaagrj fa xtfgrj</P>
+<P>OUTPUT FORMAT:</P>
+<P>* Line 1: A single line that is the decoded message.&nbsp; It should have<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the same length as the second line of input.</P>
+<P>SAMPLE OUTPUT (file decode.out):</P>
+<P>Jump the fence when you seeing me coming</P>
+<P>**********************************************************************<BR></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：USACO<br>
+                            
+                            共有3159位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=469.htm" temptabs="http://www.mydrs.org/program/list?id=469">NOIP2002提高组-字串变换</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=471.htm" temptabs="http://www.mydrs.org/program/list?id=471">USACO三月竞赛绿色题目</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=470.htm" temptabs="http://www.mydrs.org/program/sendmail?id=470" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\USACO三月竞赛橙色题目.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0470.htm" temptabs="http://www.mydrs.org/program/html/0470.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=471.htm" temptabs="http://www.mydrs.org/program/list?id=471">USACO三月竞赛绿色题目</a><br>
+                  
+                  <a href="list-id=470.htm" temptabs="http://www.mydrs.org/program/list?id=470">USACO三月竞赛橙色题目</a><br>
+                  
+                  <a href="list-id=465.htm" temptabs="http://www.mydrs.org/program/list?id=465">USACO二月初级竞赛中文试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

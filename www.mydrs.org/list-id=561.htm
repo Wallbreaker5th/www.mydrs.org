@@ -1,0 +1,294 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>命途的点缀(贵州男生的长沙故事)-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>命途的点缀(贵州男生的长沙故事)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>命途的点缀(贵州男生的长沙故事)</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/21/2004&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              &nbsp;&nbsp;&nbsp; 风吹起花瓣如同我破碎的流年，而你的笑容摇晃摇晃，成为我命途中最美的点缀。看天，看雪，看季节深深的暗影。<BR><BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------《幻城》<BR><BR>&nbsp; &nbsp; 脑海里浮想了很久很久的题目终于跃然于纸眉时，我释然了。我终于控制住自己的感情，不再让这页纸受到泪水的滋润了。没有了兴奋浮华，也没有大喜大悲。如我所愿的，我改变了很多很多。<BR><BR>&nbsp; &nbsp; 火热的七月，我怀着火热的心来到上海，这个既让我怀念，又让我伤感的城市。很快，上海那熟悉又陌生的气味扑鼻而来。高贵、浮华、宁静、忧伤，高楼林立的外滩，繁华的浦东，窄窄的小巷，低低的旧民房，一排排自由舒展的晒晾的衣服，聚在一起闲聊的阿婆，淘气的小娃娃用上海话念着我们听不懂的歌谣……<BR>在复旦训练的日子里，既紧张又忙碌。很多其他省的牛人们总是在机房里用很快的节奏敲打着键盘，而我却总是看着题目发呆，这就是差距。我想我是个骨子里很有自信甚至有些自负的人，从小到大，都是那么轰轰烈烈，小小的失败仿佛都是成功的前奏，天空总是湛蓝的。我很认真的训练，做题，我想自己成为牛人。非常感谢吴永辉老师给我参加训练的机会和在训练的时候给予我的鼓励和帮助，让我能够坚持不懈的努力训练。<BR><BR>&nbsp;&nbsp;&nbsp; 在上海，每天夜里都是做着同一个梦，梦中的主角是我的双手，它们是那样的忙碌。从拿着各式各样的画笔在雪白的纸上涂抹幼稚岁月的嬉戏模样，到在黑白相间的琴盘上按下一串流利的音符，再到现在指法如飞的击打键盘在屏幕上留下一行行的足迹。我曾经抱怨过很累很累，但我骨子里的自负告诉自己，我要让自己成为牛人。<BR><BR>&nbsp;&nbsp;&nbsp; 随着八月的来临，短暂的训练结束了。吴老师亲自送我和Lee.MaRS上了火车。火车上遇到了在复旦一起训练的内蒙古的选手，大家一起交流了很久很久，对他们那种不辞辛苦的千里求学的精神，我非常敬佩，也很羡慕。<BR><BR>&nbsp;&nbsp;&nbsp; 长沙，人杰地灵，在这里即将汇聚来自全国各地的信息学奥林匹克竞赛的高手，大家将在这里进行为期一周的比赛和交流。刚下火车，就感受到了湖南人的热情，专车接站，还有热情周到的接待，让我们感到非常舒适。不到半天，来自五湖四海的“OI高手”纷纷到来，有很多相识的朋友，也有一些新的面孔，大家打成一片，很开心的聊着，互相打着招呼，此刻仿佛身上的压力都瞬间消失了，感觉很轻松愉快。晚上跟队友和领队汇合之后，我怀着既兴奋又期待的心情进入梦乡。<BR>经过了第一天的开幕式和模拟竞赛，第二天，一试办开始，久侯在考场门外的众位牛人们一涌而入，纷纷找着自己的位置，我心情复杂的坐了下来，拿着试卷，拼命的敲击着键盘。题目做的比较顺利，但是我没有想到，在距离比赛还有十五分钟的时候，我的电脑死机了，也因为这一次死机，我四小时四十五分钟的辛苦劳动成果被删除了。由于自己临时应变能力不足，不够冷静，并没有向老师及时汇报自己的程序丢失，在接下来的三十分钟里补时里，我只能对着屏幕发呆，这一遭遇宣告了我的一试失败了。<BR><BR>&nbsp;&nbsp;&nbsp; 郁闷，因为郁闷，我没有参加下午的讲评和评测，从队友帮忙领回来的成绩单上，我看到了并不出乎意料的分数，心里充满悔恨和绝望。晚上跟好友唐悦和王牧通了电话，他们都安慰和鼓励我，让我好好抓住二试，不要放弃，不然就等于比赛输了。<BR><BR>&nbsp;&nbsp;&nbsp; 第二天，去韶山的行程里，好朋友创新猫一直陪着我，那一天玩得很开心，拍了很多照片，有好几个朋友给相片美其名曰“猫和老鼠在韶山”。在花明楼游览的时候，也很荣幸的听到了刘汝佳那美妙绝伦的歌声，果然是“此声只应天上有”啊！^_^!快乐总是短暂的，一天很快过去了，接下来将是二试，一个将决定我这次NOI成绩的关键。<BR><BR>&nbsp;&nbsp;&nbsp; 二试的题目很简单，但是我却背负着巨大的压力，做出了最后悔的一个决定，使用pascal而不使用自己最熟悉的C++，因为这一决策失误，二试的结果不出所料的挂了，最后这也宣告我的最后一次NOI以失败结束。<BR><BR>&nbsp;&nbsp;&nbsp; 傍晚，遇到了Lee.MaRS和peter他们，大家一起坐在操场上聊天聊了很久，发泄了很多不满，这样大家的心里都稍微好受了一些。至少让我的心情得以平静下来，可以去面对这个失败的现实。第二天早上做了几件比较开心的事情，心情好转，下午也非常感谢广西的领队请我们海吃了一顿湖南小吃，真是好吃！<BR>晚上，只能算是郁闷，看着别人领奖，心里很难过，晚会结束后含着悔恨的泪水跟很多朋友一一祝贺和告别，郁闷！从没想过“郁闷”这两个普普通通的字也能在OI界掀起如此之大的波澜，曾经也只是从学长那里听说过郁闷在清华的典故，他还笑称若是你会说郁闷了，就是半个清华人了。当时也只是笑笑而已，清华，应该是一个很遥远很神圣的地方吧。在后来的几天里，郁闷无处不在，寝室里，大巴车上，乃至任何一个有OIers的地方，我被“郁闷”包围着。直到自己也能脱口而出。回来之后，便把整个家里搅得“郁闷”成风。<BR><BR>&nbsp; &nbsp; 七天的时间既漫长又短暂，很快到了别离的日子，这一天也落下了小雨，仿佛是为了离别而烘托气氛一般。告别了一个又一个朋友，心中虽然有伤感，但也很高兴自己收获了这么多优秀的朋友。<BR><BR>&nbsp;&nbsp;&nbsp; 我相信近朱者赤，我想让自己成为更加出色的人！<BR><BR>&nbsp;&nbsp;&nbsp; 再见了，长沙！再见了，NOI！再见了，我的OI生活！<BR><BR>&nbsp;&nbsp;&nbsp; 再见了这个让我新鲜让我感伤让我……郁闷的城市，再见了这么多优秀的人，认识你们真是我的荣幸。我打点行囊，把厚厚的一摞没有用上的书塞进去，重新数了一下，行李增加了好几包。受伤的我，象一个战败的骑士，整装出发，回家。<BR><BR>&nbsp;&nbsp;&nbsp; 下火车后，没有鲜花，没有笑语，大家都沉默着。记得鲁讯先生的文章中有句话就叫做：“沉默，沉默，不在沉默中爆发，就在沉默中灭亡！”<BR>回到家里，拿起阔别已久的课本，用冰凉麻木的手翻着书页，一如翻着我的内心的书。是的，要想自己不再受伤，只应该把自己磨练得更坚强，无意义的痛楚的呻吟，只会把自己伤的更深。忘掉过去，从现在开始，一步一步……<BR><BR>&nbsp; &nbsp; 很快要开学了，又回到了我所熟悉的世界。每天花上大量的时间编程不再是我雷打不动的功课。经过各种打击洗礼的我已经很平静很平静。我知道起步晚对于信息学竞赛者意味着什么，知道我现在只有去面对高考，知道我的梦想、我的天地在哪里。因为爱OI而学它，即便我只是OI道路上的匆匆过客，只是平平凡凡的一路走过，我也满足了。我会把握这份打击和爱，只是让我和OI之间，不要被岁月，轻易惊飞。<BR><BR>&nbsp; &nbsp; 我想我还是那个骨子里很骄傲的男孩。我没有办法不让自己努力着更优秀。从长沙回来，我只是变得更稳重更沉默，但我仍想称自己为孩子。是的，各科书本在书桌上堆了很厚的一层，每日从其中起身，揉一揉酸痛的眼睛，继续埋身于参考书中，我想我累但是快乐着。<BR>感谢所有帮助过我的人，感谢王牧、唐悦，感谢你们对我的鼓励和帮助！感谢我的领队黄老师，感谢您对我教诲！感谢吴老师，感谢朱泽园，感谢许多安慰我，鼓励我的朋友，非常感谢你们！<BR><BR>&nbsp; &nbsp; 为自己泡一杯咖啡，品味着，回想着，我经历的岁月和我走过的路，还有那些久久不能忘怀的命途的点缀。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：创新鼠 <br>
+                            
+                            共有4997位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=560.htm" temptabs="http://www.mydrs.org/program/list?id=560">NOI2004竞赛活动日程安排</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=562.htm" temptabs="http://www.mydrs.org/program/list?id=562">专访吴文虎教授―创新教育势在必行</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=561.htm" temptabs="http://www.mydrs.org/program/sendmail?id=561" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\命途的点缀(贵州男生的长沙故事).htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0561.htm" temptabs="http://www.mydrs.org/program/html/0561.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607">noip倒计时 by 枯叶蝴蝶</a><br>
+                  
+                  <a href="list-id=606.htm" temptabs="http://www.mydrs.org/program/list?id=606">仰起脸,天空依旧蔚蓝</a><br>
+                  
+                  <a href="list-id=577.htm" temptabs="http://www.mydrs.org/program/list?id=577">感悟OI之我心坦然(by gsn)</a><br>
+                  
+                  <a href="list-id=561.htm" temptabs="http://www.mydrs.org/program/list?id=561">命途的点缀(贵州男生的长沙故事)</a><br>
+                  
+                  <a href="list-id=548.htm" temptabs="http://www.mydrs.org/program/list?id=548">我的oi故事之挥别oi(jakrinchose)</a><br>
+                  
+                  <a href="list-id=529.htm" temptabs="http://www.mydrs.org/program/list?id=529">河南女生的上海故事</a><br>
+                  
+                  <a href="list-id=528.htm" temptabs="http://www.mydrs.org/program/list?id=528">信息学奥林匹克培训与素质教育</a><br>
+                  
+                  <a href="list-id=526.htm" temptabs="http://www.mydrs.org/program/list?id=526">评论：奥校不是“洗澡水”  </a><br>
+                  
+                  <a href="list-id=525.htm" temptabs="http://www.mydrs.org/program/list?id=525">奥赛凸现青少年人才培养规律</a><br>
+                  
+                  <a href="list-id=524.htm" temptabs="http://www.mydrs.org/program/list?id=524">计算机教育：锻造青少年创新翅膀  </a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,276 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>程序设计的方法-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>程序设计的方法
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>程序设计的方法</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/9/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              1.模块化：<BR>(1) 把一个较大的程序划分为若干子程序，每一个子程序解决一个总是独立成为一个模块；<BR>(2) 每一个模块又可继续划分为更小的子模块；<BR>(3) 程序具有一种层次结构。<BR>注：运用这种编程方法，考虑问题必须先进行整体分析，避免边写边想。</P><P>2.自顶向下：<BR>(1) 先设计第一层(即：顶层)，然后步步深入，逐层细分，逐步求精，直到整个问题可用程序设计语言明确地描述出来为止。<BR>(2) 步骤： 首先对问题进行仔细分析，确定其输入、输出数据，写出程序运行的主要过程和任务； 然后从大的功能方面把一个问题的解决过程分成几个问题，每个子问题形成一个模块。 <BR>(3) 特点：先整体后局部，先抽象后具体。</P><P>3.自底向上：<BR>(1) 即先设计底层，最后设计顶层；<BR>(2) 优点：由表及里、由浅入深地解决问题； <BR>(3) 不足：在逐步细化的过程中可能发现原来的分解细化不够完善；<BR>(4) 注意：该方法主要用于修改、优化或扩充一个程序。</P><P>4.例子：求1到n之间的素数。<BR>解：要求1到n之间的素数，程序要做的事就是从1开始依次找，判断是否是素数，是则打印出来，否则继续往下找，直到n为止。于是初步设想成：</P><P><BR>  begin<BR>       read(n);<BR>       number:=2;<BR>       while number〈n do <BR>       begin<BR>             if number是一个素数 then write(number); <BR>             number取下一个值；<BR>       end<BR> end.</P><P>第二步：细化“number是一个素数”及“number取下一个值”。 <BR>(1) 细化“number是一个素数”：<BR>“number是一个素数”这是一个布尔值，当number是一个素数时为true，否则为false。细化如下：</P><P>  <BR>  k:=2;<BR>  lim:=number-1; <BR>  repeat <BR>          if nubmer能被k整除 then prim:=false<BR>                              else begink:=k+1;prim:=true;end;<BR>  until not(prim) or (k达到lim)；</P><P>(2) 细化“number取下一个值”：<BR>number:=number+1;<BR>第三步：细化“number能被k整除”及“k达到lim”。<BR>(1) 细化“number能被k整除”： <BR>number mod k=0;<BR>(2) 细化“k达到lim”：<BR>k&lt;=lim;<BR>第四步：补充完整程序。<BR>第五步：从所有的素数除了2之外都是奇数的角度出发优化程序。</P><P>程序设计步骤:</P><P>1.分析问题：<BR>对要解决的问题，首先必须分析清楚，明确题目的要求，列出所有已知量，找出题目的求解范围、解的精度等。例“第10周练习”第7题――兔子的繁殖问题，必须找出其繁殖规律。<BR>2.建立数学模型： <BR>对实际问题进行分析之后，找出它的内在规律，就可以建立数学模型。只有建立了模型的问题，才能可能利用计算机来解决。如上例，可推出递推公式u[n]=u[n-1]+u[n-2](这是菲波那契数列)<BR>3.选择算法：<BR>建立数学模型后，还不能着手编程序，必须根据数据结构，解决问题的算法。一般选择算法要注意：<BR>(1) 算法的逻辑结构尽可能简单；<BR>(2) 算法所要求的存贮量应尽可能少；<BR>(3) 避免不必要的循环，减少算法的执行时间；<BR>(4) 在满足题目条件要求下，使所需的计算量最小。<BR>4.编写程序： 把整个程序看作一个整体，先全局后局部，自顶向下，一层一层分解处理，如果某些子问题的算法相同而仅参数不同，可以用子程序来表示。<BR>5.调试运行；<BR>6.分析结果；<BR>7.写出程序的文档：<BR>主要是对程序中的变量、函数或过程作必要的说明，解释编程思路，画出框图，讨论运行结果等。<BR>8.例1：输入奇数n，计算并输出n位的魔方阵。(ppro2.pas)<BR>说明：<BR>(1) 魔方阵就是n*n个不同的正整数按方阵排列时，它的每一行，每一列以及沿对角线的几个数的和具有同一性质的方阵。<BR>(2) 由1到n*n个自然数数构成的魔方阵是最基本的，又称为“幻方”，这种方阵的每行、每列和每个对角线上的元素的和全部相等，亦即等于一个常数。该常数是n(n*n+1)/2。<BR>(3) 方法： 首先确定1的位置，通常放在第一行的中间位置； 然后当前自然数的右上方放下一个自然数； 如果当前自然数在第一行但不在最右侧，则下一个自然数在最后一行，列数右移一列； 如果当前自然数在第一行最右侧，则下一个自然数在当前自然数的下侧； 如果当前自然数在其它行的最右侧，则下一个自然数在上一行的最左侧。<BR>9.例2：任何一个整数的立方都可以写成一串奇数之和。<BR>说明：<BR>(1)这是著名的尼科梅切斯定理。即 1^3=1 2^3=3+5=8 3^3=7+9+11=27 …… <BR>(2)数据间关系的规律：<BR>・n^3是n个奇数之和，如2^3是2个奇数之和，3^3是3个奇数之和； <BR>・这n个奇数是相邻的，只要知道各式的第一个奇数也就知道所有的n个奇数：<BR>组成1^3的1个奇数是奇数序列中的第1个奇数； <BR>组成2^3的2个奇数中最大的奇数是奇数序列中的第3(3=1+2)个奇数(值为5)；<BR>组成3^3的3个奇数中最大的奇数是奇数序列中的第6(6=1+2+3)个奇数(值为11)；<BR>由此推出：<BR>组成n^3的n个奇数中最大的奇数是奇数序列中的第m(m=1+2+3+...+n)个奇数，即： m=n(n+1)/2<BR>・奇数序列中第m个奇数的值是：modd=2m-1 modd表示“第m个奇数”，是组成n^3的奇数序列中最大的一个奇数。<BR>例如，第2个奇数是3，第6个奇数是11。<BR>・n^3=modd+(modd-2)+(modd-4)+...(modd-2(n-1))</P><P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：NOI信息学竞赛<br>
+                            
+                            共有3102位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=103.htm" temptabs="http://www.mydrs.org/program/list?id=103">预备知识练习题</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=105.htm" temptabs="http://www.mydrs.org/program/list?id=105">[图示]程序的调试(一)</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=104.htm" temptabs="http://www.mydrs.org/program/sendmail?id=104" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\程序设计的方法.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0104.htm" temptabs="http://www.mydrs.org/program/html/0104.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=104.htm" temptabs="http://www.mydrs.org/program/list?id=104">程序设计的方法</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

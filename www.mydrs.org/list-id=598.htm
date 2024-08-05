@@ -1,0 +1,309 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>受邀参观微软总部的重庆OIer-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>受邀参观微软总部的重庆OIer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>受邀参观微软总部的重庆OIer</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;9/2/2006&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <IMG hspace=0 src="external/images.csdn.net/20060827/20060827063056.jpg" temptabs="http://images.csdn.net/20060827/20060827063056.jpg" align=baseline border=0> 
+<P>　　石桥铺，李骁登录“信息学奥林匹克官方网站”　记者欧阳祖兵摄</P>
+<P>　　读高一的他曾沉迷于网络游戏被老师激励戒脱“网瘾”专业计算机网被“黑”请他帮忙 </P>
+<P>　　15岁的高中生被破格录取为中国计算机学会会员，管理着两个注册会员数千人的计算机专业网站和学校校网，其卓越的计算机才能引起了美国微软公司注意，特邀其参观微软总部。26日，重庆市首位受邀参观美国微软总部的中学生李骁从美国归来。 </P>
+<P>　　<STRONG>少年受邀参观微软总部</STRONG></P>
+<P>　　8月中旬，美国微软总部给重庆市15岁的中学生李骁发来电子邀请函，邀他前往位于美国雷德蒙德市(Redmond)的微软公司总部参观，微软负责报销前往该公司的交通费，并提供食宿和返程交通费。李骁由此成为重庆市首位受邀参观微软公司总部的中学生。 </P>
+<P>　　在微软总部，李骁受到了微软网络基础架构主管史蒂文先生(Mr.STEVE)等几名高层官员接见。他们告诉李骁，邀他来参观的原因是微软正在全球寻找计算机天才，希望他们学成后加入微软。 </P>
+<P>　　<STRONG>天才少年曾中“网毒”</STRONG></P>
+<P>　　李骁从小学一年级便开始接触电脑。颇有天赋的他到三年级时，就给身为教师的母亲当老师，成功辅导母亲通过了教委组织的计算机技能考试。被周围的同学、老师、亲朋誉为电脑天才。但这个天才差点毁在网络游戏上。 </P>
+<P>　　李骁告诉记者，自己小学五六年级时，痴迷网络游戏到了极点。父母的苦劝根本听不进去。家中电脑被锁，他就乘晚上父母睡觉后溜出家门，到网吧通宵打网络游戏，然后清早溜回家假装睡觉。 </P>
+<P>　　<STRONG>老师一句话“点醒”少年</STRONG></P>
+<P>　　“如果不是老师一句话，我就毁了！”李骁感叹地说，初一的摸底考试，小学年级成绩名列前茅的李骁竟考了班上第42名！班主任得知他的情况后，对他说“你游戏打得再好，也是别人设计的，你设计得出吗？”就是这句话，让好强的李骁断然戒掉了网瘾，把业余时间投入到对程序编写和网络架构的研究中。 </P>
+<P>　　如今，他虽天天接触电脑，但已三年没打过网络游戏了。他劝沉迷于游戏的学生尽早走出网游。(记者 彭光灿采写) </P>
+<P>　　<STRONG>天才・故事 </STRONG></P>
+<P>　　<STRONG>故事一：十五岁管理三网站</STRONG></P>
+<P>　　26日中午，李骁在高新区的家中向记者展示了美国微软总部出入证及微软赠给他的正版软件和纪念品。李骁是重庆外语学校高一学生，从小酷爱电脑，曾多次在各种计算机竞赛中获奖。今年7月，他被中国计算机学会破格录取为会员，成为1962年中国计算机学会成立以来年龄最小的会员，负责管理“信息学奥林匹克官方网站”和“信息学初学者之家”两个注册会员达数千人的网站。此外，他还负责重庆外语学校校网的网络安全和管理工作。 </P>
+<P>　　微软在重庆市曾搞过几次交流活动，英语非常好的李骁直接与微软官员对话，他对计算机网络架构的独到见解给微软官员留下了深刻的印象。从此，一旦微软在全球有活动，都会发邮件通知李骁参加。 </P>
+<P>　　<STRONG>故事二：计算机网站请他“扫黑”</STRONG></P>
+<P>　　今年8月，李骁在登录某计算机权威网站――中国计算机学会网时，发现该网站遭黑客攻击，网站地址、电话、联系人等重要数据被黑客篡改。李骁通知该网站技术管理人员更正，但一天后，该网站给李骁打来电话，称经网站专业技术人员多次调试，问题仍无法解决，请李骁帮忙。热心的李骁很快查清了问题之所在，并为该网站指出了不少易遭黑客攻击的漏洞。按照李骁提供的解决方案，网站问题果然很快解决。 </P>
+<P>　　<STRONG>故事三：帮找“QQ”找出名声</STRONG></P>
+<P>　　“李骁电脑好，成绩好，为人也热心！”李骁的同学李俊峰告诉记者，李骁曾帮他弟弟成功找回了被盗的“QQ”号。 </P>
+<P>　　“李骁能找回QQ！”的消息越传越广，近一年来，李骁的“QQ”平均每天要收到7、8个要求加他，请他帮忙找“QQ”号或者干脆赤裸裸地提出“帮忙盗些‘QQ’发财”的消息，这些要求均被李骁拒绝。对于盗窃“QQ”号，李骁不屑地用了一句流行语“没有一点技术含量”。他告诉记者，其实朋友们丢失的“QQ”都是他通过腾讯公司用正当手段找回的。 </P>
+<P>　　<STRONG>天才・梦想 </STRONG></P>
+<P>　　<STRONG>想办公司超微软</STRONG></P>
+<P>　　15岁的李骁身高1.86米，体重70公斤，身体素质非常好。他告诉记者，自己爱好运动，每天早上都在早起晨跑，经常参加各种球类体育运动。对于学习，他亦感觉十分轻松。“他最不喜欢我们管他，不过他还算自觉！”李骁的母亲陈伦琼女士也是李骁目前的班主任，她告诉记者，作为老师和家长，她十分关心孩子的学习。但像李骁这种学生最不喜欢老被管着，容易起逆反心理。所以作为家长、老师，他们也就因势利导，让李骁在关键时刻自觉学习。目前，李骁的成绩在全年级七百余名同学中排在十几名左右。 </P>
+<P>　　“我最大梦想是办一个超过微软的世界上最大的计算机公司，为中国人争气！”李骁说，他曾经想过当飞行员、科学家，而现在，他希望能到微软工作，系统地学习微软的计算机专业知识和管理模式，最终回国自己创业。 </P>
+<P>　　此外，李骁还在积极备战，力争代表中国参加明年6月举行的国际信息学奥林匹克大赛。</P>
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：重庆日报 <br>
+                            
+                            来 源：新浪科技<br>
+                            
+                            共有1347位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=597.htm" temptabs="http://www.mydrs.org/program/list?id=597">华裔菲尔兹奖得主的奥赛故事</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=599.htm" temptabs="http://www.mydrs.org/program/list?id=599">南外学子朱泽园两度IOI夺金</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=598.htm" temptabs="http://www.mydrs.org/program/sendmail?id=598" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\受邀参观微软总部的重庆OIer.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0598.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600">朱泽园：思想上的金牌更重要</a><br>
+                  
+                  <a href="list-id=599.htm" temptabs="http://www.mydrs.org/program/list?id=599">南外学子朱泽园两度IOI夺金</a><br>
+                  
+                  <a href="list-id=598.htm" temptabs="http://www.mydrs.org/program/list?id=598">受邀参观微软总部的重庆OIer</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

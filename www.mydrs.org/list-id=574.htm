@@ -1,0 +1,450 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOIP2004竞赛有关问题及解答-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>NOIP2004竞赛有关问题及解答
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOIP2004竞赛有关问题及解答</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;12/10/2004&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　<STRONG>说明</STRONG>：联赛（NOIP）之前及之中，CCF NOI科学委员会收到各地关于竞赛的问题反映及建议，NOI科学委员会于11月23日专门召开会议，研究这些问题，并提出解决这些问题的办法。下面是根据各地的问题由科学委员会给予的回答。如果各省特派员、教师和选手还有问题，也可以通过Email（<A href="mailto:noi@ict.ac.cn">noi@ict.ac.cn</A>）反映。注意，应注明个人姓名和所在单位，以便联系。匿名的投诉不会得到受理。关于NOI的消息，请随时上网查阅。</P>
+<P><STRONG>1、关于输入文件名和扩展名</STRONG></P>
+<P>问：</P>
+<P>在今年的信息学奥林匹克联赛复赛中，学生由于担心测试数据找不到路径，在程序中要求输入文件名，这与本次测试要求不附，我想，出这样问题的学生不会只有一个，对于这种情况，如果都以零分计算，是否与普及素质教育，选拔人才的初衷相违背。在不违背公平、公正的大原则下，能否考虑更具人性化的处理。并且，这种测试方法本身也有一定的缺陷，今年又是第一次在北京统一测评，问题一定很多，希望能解决好这些问题，而不要搞一刀切，这对于工作在第一线的老师也是一种支持。</P>
+<P>答：科学委员会将使用一个专门的工具，对源代码进行过滤，将选手代码中不正确的路径名改正确。</P>
+<P>问：</P>
+<P>我们是吉林的，参加了这次信息学奥赛复赛（普及组），但我们有位选手在保存文件的时候，由于系统默认不显示已知扩展名。pas，学生在保存文件后，重命名又加了一个。pas，结果文件就变成了unhappy。pas。pas，我们这位选手答了4道题，有3道题几乎是敢保证是完全正确的，学生回来后很伤心，仅仅是因为系统默认不显示已知扩展名，而重命名导致文件保存失误，NOI科学委员会的老师们，请求你们能不能对这样的考生进行一下特殊的处理，评测时，多加一个。pas，学生很伤心，哭了好几天，希望你们多体谅一下一个初中生，而且是一位女学生，真的不想因为这件事而悔了学生的前途，她的ID是JL-1030，我代表学生谢谢你们了！</P>
+<P>问：</P>
+<P>我省今年完全按国家要求，没有对程序进行评测，我查了一下JL-1030(我省通钢的一名考生)，通钢的老师反映的情况属实，unhappy。pas文件多了一个扩展名，望在评测时给处理一下。</P>
+<P>答：科学委员会在评测前将使用专门工具将错误的文件名改正。&nbsp;</P>
+<P><STRONG>2、申诉问题</STRONG></P>
+<P>问：</P>
+<P>1．哪些问题是属于可以申诉的问题?</P>
+<P>2．如何申诉?</P>
+<P>3．处理申诉的办法?</P>
+<P>&nbsp;答： </P>
+<P>1. 凡竞赛组织、实施过程中违背NOI规则及涉及违背“公平，公正，公开”原则的人和事，均可作为申诉的内容。如：题目、数据、竞赛环境、语言、竞赛时间、时长、特派员、监考老师、组织单位（学校）、其他选手未按照规定考试以及其他凡与考试有关的问题等。</P>
+<P>凡申诉问题均须写成书面报告形式。报告中应包括：</P>
+<P>（1）事件内容；</P>
+<P>（2）发生日期，时间；</P>
+<P>（3）当事人；</P>
+<P>（4）见证人；</P>
+<P>（5）证据；</P>
+<P>（6）是否已构成侵权行为或造成危害；</P>
+<P>（7）申诉人的真实姓名，身份，联系方式。不具真实姓名的申诉学会将不予受理。</P>
+<P>2. 申诉报告必须在赛后15天之内投寄/Email至中国计算机学会办公室：</P>
+<P>北京2704信箱中国计算机学会NOI，100080，<A href="mailto:noi@ict.ac.cn">noi@ict.ac.cn</A></P>
+<P>3. 学会接到申诉报告后会将授权给科学委员会研究讨论，经调查核实后，给出对申诉报告的答复意见。对于共性问题，科学委员会将会在<A href="http://www.noi.cn/">www.noi.cn</A>网站上公布解答。</P>
+<P>申诉人有责任帮助核实，或为核实提供线索和建议。申诉人如对答复意见不满意，有权进一步上诉。NOI最终裁决机构是中国科协青少年部。</P>
+<P><b>3、语言环境问题</b></P>
+<P>问：</P>
+<P>　　据网络上的信息，今年测试环境有所改变。往年一直用的是TURBO PASCAL，今年公布的是FREE PASCAL。本省90%以上没有接触过FREE PASCAL，只能用TURBO PASCAL，不知对测试有没有影响。</P>
+<P>　　改变考试环境，没有收到任何正式的通知，是不是认为今年的考试环境没有任何改变，应该按往年的考试环境准备。如果没有正式和提早的通知就改变环境，学生如何去准备?这样也太不规范了!</P>
+<P>　　我们建议仍然用TURBO PASCAL来测试，否则我们选手如何应付?包括用FREE PASCAL去验证。选手从来就没有接触过FREE PASCAL。</P>
+<P>答：</P>
+<P>FREE PASCAL与TURBO PASCAL在语言方面没有很大的差别，选手只要遵守编程规定，不使用TURBO PASCAL编译选项和特殊函数（NOIP竞赛网站上都有说明），则使用TURBO PASCAL编写的程序在FREE PASCAL环境下都可以编译和运行，且运行结果与TURBO PASCAL是一致的。为了避免少数选手由于时间仓促未能改变过去的习惯用法，我们在评测前会对选手的程序进行检测，对由于使用了TURBO PASCAL编译选项和特殊函数而导致无法编译的程序，会进行必要的更正，以保证编译的正常进行。&nbsp;</P>
+<P><STRONG>4、编程语言切换问题</STRONG></P>
+<P>问：</P>
+<P>在今年的NOIP初赛中，我省的很多选手使用Basic语言，进入了复赛，因为大纲要求复赛语言只可以用Pascal语言和C语言，这部分考生就放弃了复赛，也有相当一部分选手是Basic语言临时换成Pascal语言和C语言，所以实际竞赛人数比上报人数少。同时也考虑到江西省大部分选手不会用Free Pascal语言，竞赛时我省主任评委已经与北航的张老师联系过，经同意，我省大部分选手同时建了一个f带头的根目录（如fsave），以便在Pascal中能测评通过。因此，我们觉得对于中学生竞赛，应该以人为本，不能就工作方便而使很多选手丧失了获奖机会和影响了这个学科的普及工作。</P>
+<P>答：科学委员会将会对江西省的特殊情况单独进行处理。&nbsp;</P>
+<P>问：</P>
+<P>一、中学在学生培训期间，使用的是Turbo C和Turbo Pascal，现在的新环境学生不能适应，建议新环境推后使用，可在明年NOIP的通知中事先告诉大家。我从网上下载以后，程序就运行不了。</P>
+<P>二、试卷可早点寄来，按时收不到时特别急人。以初赛题为例，具说是9月30日寄出，我们收到的日期是在10月14日，因为为涉及到全省其它考场，全省南北千余公里，最后没有办法，只有专车专人去送，搞得人团团转。</P>
+<P>三、今年似乎不下发测试数据，这样，我们可以不用测试了，但随之而来的问题就来了，一是考生急于知道自己的结果；二是教师、考生不放心；三是为了加大普及面，我们在规定的15%以外，又追加了一部分考生，这些程序就没有办法测试了。另外，考试期间的各种问题不清楚，就难以对考生回答和负责了，不然，北京方面可给我省派出3―5人指导。</P>
+<P>我个人意见，竞赛要出人才，也要考虑到普及面，往年的试题、测试数据的下发时间和办法就很好，不妨将测试程序和数据事前寄到各省，各省自己先测，，之后按要求再刻盘寄给你们。要充分相信各省的竞赛委员会是兢兢业业、尽职尽责的。&nbsp;</P>
+<P>答：</P>
+<P>一、科学委员会将会明确并且很快宣布，以后将仅使用Free Pascal，而不用Turbo了。</P>
+<P>二、试卷争取早寄，我们是直接寄送到你们的考场的。</P>
+<P>三、测试数据已经提供了。&nbsp;</P>
+<P><STRONG>5、NOIP规则问题和参加复赛资格</STRONG></P>
+<P>问：</P>
+<P>初赛和复赛是分离的，也就是说不存在初赛的选拔问题了？那么没有参加初赛的学生只要他认为自己行也就可以直接进入复赛了？那我建议您的NOIP就不应该称为初赛、复赛两个阶段，而应该分别叫NOIP初级水平赛和NOIP高级水平赛，这样不是更贴切一些，对吧？不知是我们下面水平低理解有误还是您们上面的解释发生更变，这么多年来NOIP初、复赛的关系我们都是这样理解的，是应该有联系的。</P>
+<P>意见归意见，反映归反映，您的上述指示我省今年肯定执行，不能政令不通嘛，要全国一盘棋嘛，要维护NOI活动多年来取得的成果嘛。</P>
+<P>至于下面地区的许许多多的令人头疼的意见，我们只好硬着头皮做好解释工作啦。</P>
+<P>初赛和复赛是分离的，也就是说不存在初赛的选拔问题了？那么没有参加初赛的学生只要他认为自己行也就可以直接进入复赛了？那我建议您的NOIP就不应该称为初赛、复赛两个阶段，而应该分别叫NOIP初级水平赛和NOIP高级水平赛，这样不是更贴切一些，对吧？</P>
+<P>不知是我们下面水平低理解有误还是您们上面的解释发生更变，这么多年来NOIP初、复赛的关系我们都是这样理解的，是应该有联系的。</P>
+<P>意见归意见，反映归反映，您的上述指示我省今年肯定执行，不能政令不通嘛，要全国一盘棋嘛，要维护NOI活动多年来取得的成果嘛。至于下面地区的许许多多的令人头疼的意见，我们只好硬着头皮做好解释工作啦。杜秘书长您倒不会直接面对最基层的老师和学生们，而我们可就惨了。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>关于是否参加了初赛才能参加复赛，在NOI的条例中没有明确说明。但是，根据过去的做法和中国计算机学会对NOI条例的解释，只有参加了初赛的选手并从中选拔出来的选手才有资格参加复赛，不参加初赛的选手或者在初赛中成绩较差的选手不能参加复赛。这一问题可以在将来修订条例时进一步明确。 </P>
+<P>&nbsp;</P>
+<P><STRONG>6、关于试题问题</STRONG></P>
+<P>问：</P>
+<P>今年全国信息学奥赛分区联赛（NOIP），第四题（虫食算）“输出文件”，题目要求“相邻的两个数字用一个空格隔开，不能有多余的空格。”应理解为：相邻两数之间只能用一个空格隔开，不能用两个、三个或更多的空格隔开。</P>
+<P>如果要求相邻两个数之外也不许有多余空格，则应明确写出：“任何地方不能有多余空格”或者写出“相邻的两个数字用一个空格隔开；不能有多余的空格。”一个分号说明两层意思，而一个逗号只表达一个意思。</P>
+<P>这道题我全部作对了，我在输出文件最后面打个一个空格，这不影响程序正常的运行，我觉得没有违背题目输出的要求，应该正常得分。</P>
+<P>我联系了很多参赛的选手，都是在结尾处打个空格。全国有一大批选手出现这种情况。</P>
+<P>奥赛的目的是培养和发现一大批创新能力强，分析问题、解决问题能力强的学生。如果因为空格问题，使很多作对题的人得0分、真正的人才被埋没。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>理解正确，两个数字之间只能有一个空格。本次评测对于行末空格及文件最后空格都做了过滤，也就是说允许行末空格及文件末尾多余的空格，但是我们提倡严格按照题目说明给出答案，不要擅自增加减少空格或者回车，在以后的比赛评测中，可能会越来越严格。</P>
+<P>&nbsp;</P>
+<P>问：</P>
+<P>1）普及组第二题“采摘花生”，没有明确限制采摘过程中不能回到路边，有时中间回到路边会采得更多。</P>
+<P>答： 此题本意是过程中不能回到路边，不过题目确实没有强调过程中不能回到路边，所以我们会修改测试数据，使得两种理解得到的解相同。</P>
+<P>&nbsp;</P>
+<P>2）提高组第三题“合唱队形”，存在一处打印错误：</P>
+<P>【输入文件】</P>
+<P>输入文件chorus.in的第一行是一个整数N（2 <= N <= 100），表示同学的总数。第一行有n个整数，用空格分隔，第i个整数Ti（130 <= Ti <= 230）是第i位同学的身高（厘米）。&nbsp;</P>
+<P>应改为：</P>
+<P>【输入文件】</P>
+<P>输入文件chorus.in的第一行是一个整数N（2 <= N <= 100），表示同学的总数。第二行有n个整数，用空格分隔，第i个整数Ti（130 <= Ti <= 230）是第i位同学的身高（厘米）。</P>
+<P>&nbsp;</P>
+<P>答：此处确实是打印错误，不过可以通过样例数据正确理解题意，不影响评测。</P>
+<P>&nbsp;</P>
+<P>3）提高组第四题“虫蚀算”，没有明确说明输出十进制的数，因此在超过十进制时，有人用a,b,c,…表示10，11，12，13，…。</P>
+<P>&nbsp;</P>
+<P>答：此处虽没有明确说出用十进制输出结果，但也没有说大于十进制的数用a,b,c,…这样的字母序列表示两位数。输出字母还是有一定的不合理性的。但是经过科学委员会讨论，认定如果用a,b,c,…表示两位数并且结果正确，表明学生具备了题目要考察的能力，所以本次比赛也判正确。因为人们对自然语言的理解方式非常不同，虽然我们尽力将题目描述得没有二义性，但考试中还是可能出现题意不清的现象，在今后的考试中，请考场负责老师及时将存在的疑意反馈到学会，以便在考试当场纠正可能的偏差。&nbsp;</P>
+<P><STRONG>7、安装编译器</STRONG></P>
+<P>问：</P>
+<P>我们安装fp 1.0.6版本行吗？</P>
+<P>学生只上交原程序不进行编译行吗？</P>
+<P>&nbsp;</P>
+<P>答：可以使用fp 1.0.6；选手只需要提交源程序即可。</P>
+<P>&nbsp;</P>
+<P><STRONG>8、语言版本</STRONG></P>
+<P>问：</P>
+<P>我想问一下：在复赛中对C语言的运行环境要求是什么？如用turbo C什么版本的、还是其他语C语言。网上没有具体写，你能尽快答复一下吗？</P>
+<P>&nbsp;</P>
+<P>答：复赛中使用GCC作为C的编译器。</P>
+<P>&nbsp;</P>
+<P><STRONG>9、系统不稳定</STRONG></P>
+<P>问：</P>
+<P>总是出错，2分钟就自动退出，让我们怎么做啊！拜托换个稳定的IDE好不好！BloodShed，VC都行啊！</P>
+<P>&nbsp;</P>
+<P>答：对于集成开发环境的选择，是从编译器和选手习惯考虑出发的。如果选手觉得不方便，可以使用别的集成开发环境，只要保证自己的程序能够被NOIP指定的编译器编译通过、正确执行即可。</P>
+<P>&nbsp;</P>
+<P><STRONG>10．关于竞赛的时间问题</STRONG></P>
+<P>问：</P>
+<P>清华、北大、复旦等学校已经开始招收保送生了，比去年提前了一个多月，而参加NOIP2004的学生即使成绩很好也不可能上这些学校了，在这个等待结果出来的20多天时间里，恐怕有更多的学校会启动保送工作，这对参加NOIP2004的学生不公平。我有两个建议：一是今年NOIP的成绩能否在12月5日公布初评结果，同时接受申诉，申诉截止时间为12月8日，最后公布复评成绩时间为12月12日，并立即报送科协，上网备查，以免耽误学生的保送。二是NOIP2005的时间需要在冬令营期间讨论，是否可以都提前半个月，由于有了今年评测的经验，最后评测、上报时间也可相应缩短。仅是个人意见。</P>
+<P>还有是今年有部分初中生参加提高组NOIP2004的竞赛，不知道怎么处理这个得奖问题？若得了一等奖，不就浪费了高考优惠的名额了（绝大多数省都有高考优惠政策，对推动信息学科有好处），是否由学会发一个荣誉奖项而不参加提高组的正式评奖。仅是个人意见。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>科学委员会将会讨论，明年是否可以提前2周，但是可能会和中考冲突。另外，其他学科的奥赛也不都是有结果的，不能因为有些大学提前操作就改变我们的日程。今年12月5日不会出结果，因为整理和评测需要时间。还是按照我们宣布的时间表进行。</P>
+<P>初中生不能被保送上大学，但是不能限制人家参加复赛。如果初中的选手也参加并获奖，那就可能占了当地省的名额。所以，这件事由省组织单位把握。科学委员会将来也会研究此事的。</P>
+<P>&nbsp;</P>
+<P><STRONG>11．关于竞赛的环境问题</STRONG></P>
+<P>问：</P>
+<P>我上网看到了关于NOIP2004竞赛环境的通知，感觉到有以下几个方面的问题：</P>
+<P>1、NOIP是整个信息学竞赛的基层部分，也就是OI这个金字塔的底，现在刚开展了2年，发展形式较好，有了推广和普及的作用，现在一些地方和学校刚熟悉了Turbo Pascal 7。0系统，也刚学会使用文件，准备在今年取得好成绩时，却在快要竞赛的前几天说要用FP，这使他们难以接受，一下子又培训不了，这个底有可能不牢了。</P>
+<P>2、现在改为TP和FP可以选用，这样竞赛的平台就不公平了，打击了决大多数人的积极性，因为至少这两个运行环境它对内存的要求是完全不一样的，何况还有一些数据类型和过程与函数也不一样，这样就形成了不公平竞争平台。我想熟练使用FP到推广应用至少要一年功夫才行。</P>
+<P>3、NOIP2004竞赛环境实际上对我校是有利的，但我想根据今年的情况，宜大家统一使用TP为好，同时，从中学教学这方面出发，我想学会组织开发一套简易的在WINDOWS下评测TP的程序的软件反而有利于NOIP的开展，这个软件其实不难，好多省都有自己开发的这样的评测软件，并且用得还不错，把他们的交上来，专家评选一下，再完善一下，然后推广到每一个省。NOIP由每个省自己评测好再上报人数，学会再组织复评不就很好吗？</P>
+<P>时间不多了，由于NOIP2004竞赛环境的修改，已经严重影响了各省竞赛工作的开展，需要尽快决定，以使此次竞赛顺利进行。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>使用Free Pascal是大势所趋。IOI已经做出了这样的决定，中国的NOI也应该跟上这一发展趋势。从TP转到FP并不难，因为在语言的基本部分两者是一样的，差别仅在于少数编译选项以及个别特殊函数，而这更多的是一种使用习惯问题。由于FP运行在32位平台，而TP运行在16位平台，TP对程序的一些限制在某种程度上限制了选手的发挥空间，并且要求初学者了解和考虑一些与程序的实现无关的问题，不利于学生的学习。作为OI这个金字塔基础的NOIP，应该为学生提供更好的发展平台。其实这一问题更多的是教师的问题。可能需要对教师进行适当的培训，使教师们愿意花一点时间掌握新的工具，为学生的发展提供更大的空间。这一情况有些类似于前几年从DOS平台转移到Windows平台，但所需的工作量和难度要小得多。</P>
+<P>Windows与Linux平台选型的问题不完全是一个技术问题。回想一下微软在2003年对上海所采取的行动，以及NOI2003的选择就可以明白这一点。NOI科学委员会现在有在Windows下进行评测的工具的客户端，但是基于上述考虑，NOI科学委员会不拟研制在Windows下的评测服务器。</P>
+<P>&nbsp;</P>
+<P><STRONG>12．竞赛环境和题目</STRONG></P>
+<P>问：</P>
+<P>2004年分区联赛测试已经结束，下面就是评测评奖阶段了，现在我在下面将这次联赛出现的一些情况向科学委员会汇报，希望引起重视。</P>
+<P>1)下面基本上是采用WINDOWS环境下的编成环境，许多选手对FREE PASCAL语言不熟悉，因此，他们都是采用TURBO PASCAL的编成环境进行，这样，引起了文件名自动存盘出现首字母大写和文件名全为大写的情况。</P>
+<P>2)由于TURBO PASCAL语言在程序退出后文件自动关闭，因此，出现有些学生没有关文件，这样，测试的结果为0分。</P>
+<P>3)由于突然改变环境，并且通知较迟，有些地方对这种做法有些看法，建议以后如果要改变某项决定，最好提前一年或半年通知，以让下面的老师和学生有所准备。</P>
+<P>4)由于此次题目比较简单，高分特别多，特别是200--300分之间的人员非常集中，特别是送分题目过于简单，希望以后出题更大一点区分度。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>1）评测前会使用工具将选手的源代码文件名改为正确的名字。</P>
+<P>2）程序退出时，系统会自动关闭打开的文件。</P>
+<P>3）目前使用的软件环境是为了与IOI接轨，鉴于出现的问题，我们会尽快提出一个新的环境，届时希望各省能够尽快适应，并提出问题所在，是软件环境能够在正式比赛前稳定下来。</P>
+<P>4）200-300分相当于百分制的50-75分，这一分数段选手集中属于正常，不过我们可能会在下一次的考试中适当增加一题的难度，使得优秀的选手有更大的发挥余地。</P>
+<P>&nbsp;</P>
+<P><b>13．竞赛环境、时长和监考</b></P>
+<P>问:</P>
+<P>一年一度的分区联赛快到了.为了更加规范地搞好分区联赛工作，特提出以下建议:</P>
+<P>1. 试题出来后，科学委员会要提供建议使用的语种和编成环境，对每道试题规定使用的空间和最高测试时限.可统一采用在WINDOWS下的FREE PASCAL 和 VC， 便于科学委员会统一评测。</P>
+<P>2. 测试可采用4小时，这样试题可以做到更有区分度，规定统一时间8:00-12:00，便于选手充分地发挥。</P>
+<P>3. 监考可采取特派员交叉形式，这样既可保证考试的严密，又可带动全国水平的普遍提高(高水平和比较规范的省市的成员可以将他省的优秀做法带到底水平和不很规范的省市).费用处理可采取路途费用由各省自己承担，而接待费用由接待省承担的办法。</P>
+<P>4.至于特派员走后的组织工作，可以由特派员指定一个人负责，如果特派员走不开，交叉监考的人可由特派员指定。</P>
+<P>以上建议提请科学委员会讨论。</P>
+<P>&nbsp;</P>
+<P>答：</P>
+<P>1：编程环境应提前半年以上公布，对试题使用资源的限制应在题面上说明。具体编程环境待讨论，但不倾向于VC，不拟以微软的系统做为基准，至少在公开的条件下。</P>
+<P>2：估计问题中的“测试”应为考试时间。这个问题科学委员会将会开会讨论研究。</P>
+<P>3.4.：非常好的建议，明年可以考虑在某些省试点，科学委员会也应该下去观摩一下，以便发现问题。<BR></P>
+	
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：中国计算机学会NOI科学委员会 <br>
+                            
+                            共有12251位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=574.htm" temptabs="http://www.mydrs.org/program/sendmail?id=574" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOIP2004竞赛有关问题及解答.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0574.htm" temptabs="http://www.mydrs.org/program/html/0574.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

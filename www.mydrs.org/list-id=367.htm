@@ -1,0 +1,276 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>信息学奥林匹克竞赛条例-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>信息学奥林匹克竞赛条例
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>信息学奥林匹克竞赛条例</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/14/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <BR>（2001年11月7日起草）</P><P>第一章    总则</P><P>1.       全国青少年信息学奥林匹克竞赛(National Olympiad in Informatics, 简称NOI)是面向全国青少年的一项竞赛和普及活动，旨在给那些学有余力的青少年提供机会，学习和掌握计算机科学知识；给学校的信息技术教育课程提供动力和新的思路，并给那些有才华的学生提供相互交流和学习的机会；通过竞赛和相关的活动培养和选拔优秀的计算机人才，普及计算机知识。</P><P>竞赛的目的是为了普及，因此该竞赛及其相关的活动遵循开放式原则，任何有条件和有兴趣的学校和个人，都可以在业余时间自愿参加该活动。该活动不和现行的学校教学相冲突，也不列入教学计划。参加者可为初高中学生或在此年龄段（不超过19周岁）的青少年。</P><P>2.       NOI系列活动包括：</P><P>1)      全国青少年信息学奥林匹克竞赛(National Olympiad in Informatics, 简称NOI)；</P><P>2)      全国青少年信息学奥林匹克联赛(National Olympiad in Informatics in Provinces, NOIp，简称联赛)；</P><P>3)      全国青少年信息学奥林匹克竞赛冬令营(NOI冬令营，或简称冬令营)；</P><P>4)      国际信息学奥林匹克竞赛中国队选拔赛(IOI选拔赛，或简称选拔赛)；</P><P>5)      各省组织的培训和竞赛活动。</P><P>3.       为明确概念，对有些名词定义如下：</P><P>1)    科学委员会(Scientific Committee)：中国计算机学会下设的负责竞赛技术工作的机构，负责竞赛的命题、评测、选拔、培训、带领选手出国参赛等技术工作。科学委员会是NOI的最高学术机构。科学委员会由来自高校的资深的计算机专家组成，专家由中国计算机学会聘任，以自愿者的身份参加工作。各省培训教师如条件合适，可被聘为通信委员，参加过奥赛的大学生也可被聘为学生委员。承办单位每次派2人任科学委员会委员，协助科学委员会完成部分工作。</P><P>2)    技术委员会(Technical Committee)：负责有关竞赛的技术工作，包括竞赛设备、网络、支持环境等。技术委员会由承办单位派员构成。</P><P>3)    领队(Delegation Leader)：各参赛队的负责人，并在竞赛期间担任其参赛队员的监护人。</P><P>4)    选手(Contestant)：规定选手和鼓励选手。规定选手是指按照法定名额分配的选手；鼓励选手是指其所在参赛队因为上次NOI成绩在前8名或其所在省联赛人数在前6名而获得奖励名额的选手。</P><P>5)    观察员(Observer)：随队参赛的人员。观察员的付费和人数根据成本由承办单位核定。</P><P>6)    特别观察员(Special Observer)：未来NOI承办单位派出的观摩人员。特别观察员的付费与领队的付费相同，人数不超过2。</P><P>7)    竞赛委员会(Competition Committee)：主席，委员。竞赛期间组成的竞赛机构。主席由主办单位担任，委员由各参赛队领队担任。</P><P>8)    组织委员会(Organizing Committee)：为组织联赛设立的组织机构，其工作对主办单位负责。</P><P>9)    国际信息学奥林匹克竞赛(International Olympiad in Informatics, 简称IOI)：国际竞赛。</P><P>第二章   竞赛的组织</P><P>1.       NOI及其系列活动由中国科学技术协会主管，中国计算机学会主办。活动可由主办单位委托各省或与有关单位共同承办。</P><P>2.       承办单位负责经费的筹措、竞赛用设备的准备，以及与活动相关的组织工作。任何参赛的省都有义务和权利承办NOI、联赛及其冬令营。</P><P>3.      参加竞赛的各组队单位负责组织当地的联赛、组队参加NOI、参加冬令营和选拔赛，负责当地青少年的普及和培训。</P><P>第三章   竞赛类型</P><P>竞赛有如下几种类型。</P><P>1.    NOI。以省为单位组织参加全国比赛，每队4名选手。每一位参赛选手必须是经选拔产生的。没有组织选拔的省，没有资格参加NOI。</P><P>2.    联赛。联赛分初赛和复赛两个阶段。初赛以通用和实用的计算机知识为考试内容，重在考察基础的有用的知识，以笔试为主。复赛为程序设计。参加初赛者达到一定分数线后采有资格参加复赛。各省都应组织联赛，参加联赛是参加NOI的必要条件。</P><P>3.    冬令营。在每年的冬季开展的为期一周的培训活动。</P><P>4.    选拔赛。选拔参加当年IOI的4名中国选手。获NOI前20名选手可获得参加下次国际信息学奥林匹克竞赛(IOI)选拔赛的资格，其中4名优胜者将代表中国参加当年的IOI。选拔分两试，均为程序设计，每次3题。选手总得分为冬令营的成绩、平常成绩、论文成绩和选拔赛得分加权之和。得分前6名者可参加面试。面试成绩占上述四项成绩满分的5%。</P><P>第四章  全国青少年信息学奥林匹克竞赛</P><P>1.      全国青少年信息学奥林匹克竞赛简称NOI。</P><P>2.      NOI是全国青少年信息学奥林匹克最高水平的比赛，以省为单位派队参加。这一竞赛既是选手个人之间的比赛，也是各代表队之间的较量。</P><P>3.      NOI各参赛队确认和领队、选手报名表寄送的截止日期分别为每年的4月30日和竞赛前40天（以邮戳为准）。报名后14天内每队可更换一次选手。参赛确认和选手报名表（包括更换选手）须有组队单位盖章和特派员签字方为有效。</P><P>4.      NOI一般安排在暑期，可根据气候和其他情况适当调整。竞赛日期须经主办单位确认。</P><P>5.      每队由一名领队和4名选手组成，其中至少有1名是女选手。这些选手成为规定选手。</P><P>6.      选手必须为当年在校学生（不含当年暑假高三毕业生，港澳可参照当地学制自定），年龄上限为19岁（以6月30日为截至日期计算）。注册时领队必须向组委会交付选手身份证或户口簿复印件，并在上面签名。不符合竞赛条件的，取消竞赛资格。竞赛委员会负责资格的确认。</P><P>7.      参赛选手必须经过省内选拔产生。不经选拔而指定某选手参加竞赛属无效。</P><P>8.      上届团体总分前三名、联赛参赛人数最多的前五名奖励一名参赛选手，该选手称为奖励选手。当团体前三名与联赛人数前五名重选时，不重复计名，即每队奖励至多一名。奖励选手为正式选手，但其成绩不计入团体总分。</P><P>8.   竞赛的题目由NOI科学委员会确定。正式比赛开始后一小时，科学委员会可向领队讲解分析题目。</P><P>9.   奖项的设定：</P><P>1)  获一等奖的人数占总参加人数的10%，二等奖为20%，三等奖为30%，其余为优秀奖。</P><P>2)  竞赛设最佳女选手奖。</P><P>3)  对参赛队团体总分前8名颁发证书。</P><P>10.  竞赛实行七天赛制，即：到达日、开幕日、第一次比赛日、交流参观日、第二次比赛日、闭幕日、返回日。</P><P>11.  竞赛的时间为竞赛日的8:00-13:00；评测为13:30-15:00；自我复评和投诉为15:00-16:30。</P><P>12.  每次竞赛3个题，每题100分，另奖励100分，故满分为700分。</P><P>13.  交流和参观是NOI的不可分割的部分，交流项目可安排在交流参观日、开幕日和闭幕日。每一位NOI参加者必须参加由承办单位安排交流项目。</P><P>14.  第二次竞赛结束后，由科学委员会安排讲评节目。</P><P>15.  规定选手参加竞赛注册费为每人400元，领队为600元，奖励选手的注册费与观察员相同。选手的注册费由其所在学校或自筹解决，领队的注册费由组队单位承担。</P><P>16.  有困难者可以按照程序向主办单位申请减或免，该费用由主办单位承担。</P><P>17.  网上同步赛（NOI by Internet)。</P><P>1)  NOI竞赛的同时，组织网上同步比赛，旨在给那些不能参加竞赛的选手提供机会。任何符合年龄的青少年都可以报名参加同步赛。同步赛不是正式的比赛。</P><P>2)  同步赛在NOI比赛开始后半小时后开始，时间5个小时。</P><P>3)  参加同步赛的选手必须交纳一定的费用。</P><P>4)  同步赛的评分标准同NOI。获奖的同步赛选手由主办单位颁发证书。</P><P>第五章   全国青少年信息学奥林匹克联赛</P><P>1.     全国青少年信息学奥林匹克竞赛简称NOI联赛或联赛，以缩写NOIp表示。联赛是全国性竞赛的基础。</P><P>2.     NOIp在每年NOIn结束后举行，当年年底前结束。称之为NOIn联赛，以NOIpn表示，其中n为年份。如NOIp01为2001年联赛。</P><P>3.     初中或以上学生可报名参加联赛。参赛者须交一定的费用，费用的数额由承办单位根据竞赛组织的成本而定，但应经主办单位批准。</P><P>4.     联赛以省为单位组织，称为赛区。每个赛区可设若干考场。联赛分初赛和复赛。</P><P>5.     竞赛的题目应以推动信息学在青少年中的普及为出发点。复赛的题目和NOI竞赛的题目接轨。竞赛的题目由NOI科学委员会审定。</P><P>6.     各赛区必须由组织单位推荐一名特派员全面负责联赛的组织工作，该特派员应由主办单位批准，并由主办单位为其颁发证书。该特派员的名称为：中国计算机学会XX省赛区特派员，其工作对主办单位负责，</P><P>7.     各省联赛获得一等奖的人数由下面的公式确定：</P><P>NoA=min(Lno+2*NumNOI+NumP,Hno)</P><P>其中：NoA为联赛省获一等奖人数，Lno，Hno为下、上限，Lno＝3，Hno＝20；</P><P>NumNOI：上次NOI中获得一、二、三等奖的人数。NumP：联赛参加复赛人数的10％。</P><P>所有一等奖选手必须满足科学委员会给定的统一的最低分数线。</P><P>8.     联赛上报的成绩必须由组织单位盖章并有特派员签字。</P><P>9.     联赛承办单位必须在竞赛结束后20天内将所以参加复赛的名单和成绩上报主办单位。</P><P>第六章    NOI冬令营</P><P>1.  每年的冬季假期举办NOI冬令营。冬令营共7天，其中5天为培训和交流。</P><P>2.  冬令营培训包括授课、讨论、测试等。参加IOI中国队选拔赛的队员的成绩将作为选拔赛成绩的一部分记入档案。</P><P>3.  NOI冬令营的承办机构即为上次NOI的承办机构。如该承办机构放弃承办权，可另选其他机构。</P><P>4.  获NOI一、二等奖的选手可参加函授培训和冬令营，其指导教师有资格作为正式营员参加冬令营，承办单位可另外派6名教师或学生作为正式营员。边远不发达或成绩较差的省可得到适当照顾，每队派不超过1名正式营员。</P><P>5.  非正式营员。在保证教学质量的前提下，如条件许可，可适度增加非正式营员，其收费比正式营员高，数额根据每年不同情况报名时确定。非正式营员参加冬令营属自愿。上述可浮动名额，其资格和数量由主办单位确定。</P><P>6.  参加冬令营的正式营员和非正式营员都必须交注册费。该注册费包括听课费、资料费、食宿费。交通费自理。</P><P>7.  冬令营的技术工作由NOI科学委员会负责，报名和联络工作由主办单位负责，后勤和组织工作由承办单位负责。</P><P>8.  财务收支由承办单位负责，科学委员会的工作费用应列入预算。</P><P>第七章    IOI中国队选拔赛</P><P>1.  IOI中国队队员的选拔在NOI科学委员会的主持下进行。</P><P>2.  当年IOI举办前3个月进行IOI中国队队员的选拔。上届NOI前20名选手可获得参加选拔赛的资格，选拔后的4名优胜者将代表中国参加当年的IOI。</P><P>3.  参加选拔的选手及其指导教师的食宿行均由本人承担，并视情况交纳一定的参赛费。</P><P>4.  选拔分两试，均为程序设计，每次3题。选手总得分为冬令营的成绩（A%）、平常成绩（B%）、论文成绩（C%）和选拔赛（D%）得分加权之和。得分前6名者可参加口试。口试成绩占上述四项成绩满分的E%。</P><P>5.  选中的4名选手将在出国参赛前进行约十天的集中训练。训练过程的费用由主办单位承担，往返费用由选手所在单位承担。</P><P>第八章    命题与保密</P><P>1.  NOI的命题工作并不一定和中学的计算机教学课程相衔接。</P><P>2.  NOI的命题工作由科学委员会承担，竞赛前两个月启动该工作，竞赛前一个月，完成所有工作，并开始全面审定。科学委员会应在竞赛前一周完成下述工作，并在比赛结束后，将3、、4、5、6、7所列内容发给每一位注册参加者。</P><P>3.  题目描述。对题目的完整描述，并附有输入输出样例。</P><P>4.  测试数据。对选手编制程序进行正确性检测的数据。每个题目的测试数据不应少于10个。</P><P>5.  标准答案。对应于测试数据的正确答案。</P><P>6.  题目背景介绍和算法提示。不属于命题基本部分，但对于选手理解题目背景和了解各种不同的算法有很大的帮助。该项内容在NOI结束前给出。</P><P>7.  正确解答程序示例。同上。示例由科学委员会做出，或选定某些选手的程序作为示例。示例程序仅作为参考，且不唯一。</P><P>8.  科学委员会任何一个成员都有义务对题目进行赛前保密。</P><P>9.  联赛的题目由承办单位负责拟定，也可由科学委员会拟定。如为前者，则最后由科学委员会审定，然后发放。承办单位必须保证在到达联赛组织单位前的一切保密工作。</P><P>10.     联赛的赛题由承办单位以保密方式寄送各赛区，可采用邮局邮寄，也可以在网上加密传送。赛题的签收人必须是赛区的特派员。</P><P>11.     联赛题目的分发在特派员的主持下进行，参与人（包括特派员）不超过2人且必须对题目保密。如有泄密，当事人和特派员均负有责任。在联赛开始前，除参与人外任何人不得拆分试卷。</P><P>12.     冬令营和选拔赛的题目都由科学委员会负责。</P><P>13.     题目的著作权属出题者本人和科学委员会。</P><P>第九章    成绩评定和认定</P><P>1.    NOI评测由科学委员会负责，并由主席签发最终成绩。</P><P>2.    NOI评测只管按照要求输出的结果，不管过程和算法。</P><P>3.    NOI获奖人数的比例由NOI一章给出。</P><P>4.    NOI联赛各赛区一等奖获奖人数由NOI联赛一章给出的公式得出。二等奖根据复赛人数由各赛区确定。</P><P>5.    NOI联赛各赛区一等奖获奖人名单由赛区组织单位盖章，并同时由该赛区特派员签字。如缺其一，其成绩将不予认定。</P><P>6.    获NOI一、二、三等奖以及NOI联赛一等奖获得者名单将由中国计算机学会报送中国科协，然后由中国科协送教育部备案。</P><P>7.    NOI的获奖证书由主管单位中国科协青少年部和主办单位中国计算机学会共同颁发，NOI联赛一等奖由中国计算机学会颁发，上述证书由中国科协统一制作。联赛证书需收核印刷成本费。联赛二等奖及其他奖项由联赛承办单位或由省组织单位颁发。</P><P>8.    主办单位接受某些机构对上述成绩的查询。</P><P>第十章    监督与罚则</P><P>1.   中国计算机学会的工作由中国科协监督。</P><P>2.   NOI联赛的工作由中国计算机学会监督。</P><P>3.   联赛特派员对联赛的事务负责并全权监督所负责赛区的各分赛区。</P><P>4.   如发现某个人获组织单位有违规行为，任何与竞赛有关的人都有权向该人或该单位的上一级机关投诉。</P><P>5.   对竞赛中选手的舞弊行为、实施监考的工作人员和特派员的失职行为，要视情形给以惩罚。</P><P>6.      选手舞弊行为是指，在选手独立解题竞赛时：</P><P>1)      将不允许夹带的物品带入考场并经指出后不予改正；</P><P>2)      在考场从其他人那里获得与竞赛有关的信息或为其他选手提供与竞赛有关的信息；</P><P>3)      用各种途径和介质将答案带入考场；</P><P>4)      提前得到竞赛的题目。</P><P>7.    赛场工作人员的失职行为是指，在选手独立解题竞赛时：</P><P>1)        发现选手有舞弊行为而不予制止；</P><P>2)        为选手提供信息；</P><P>3)        不按工作程序而将竞赛题目提前泄漏给选手；</P><P>4)        有意提前将竞赛题目泄漏给选手；</P><P>5)        更改选手的竞赛结果。</P><P>8.    特派员的失职行为是指，在选手独立解题竞赛时：</P><P>1)        发现选手有舞弊行而不按规定惩罚；</P><P>2)        发现赛场工作人员有不规范行为而继续聘用；</P><P>3)        没有按规定上报竞赛结果。</P><P>4)        不按工作程序而将竞赛题目泄漏；</P><P>5)        有意提前将竞赛题目泄漏给选手；</P><P>6)        更改选手的竞赛结果。</P><P>9.   在联赛初赛中发现选手有舞弊行为，取消从当年算起两年的成绩。</P><P>10.   在联赛复赛中发现选手有舞弊行为，立刻取消参加联赛及其NOI的资格。</P><P>11.   在联赛初赛和复赛中监考教师纵容舞弊行为或发现舞弊行为不予制止，视为失职。从当年算起三年内不得从事与NOI相关的工作。</P><P>12.   在联赛初赛和复赛中特派员已发现舞弊行为但不予处罚，视为失职，立刻失去特派员资格。</P><P>13.   在NOI中选手有舞弊行为，取消从当年算起参加NOI任何竞赛的资格。</P><P>14.   上述舞弊行为均由主办单位记录在案。</P><P>15.   受理投诉的单位必须保护投诉人，并给予保密。</P><P>16.   对主办单位的处罚由主管单位制定。</P><P>第十一章  竞赛的申办</P><P>1.     任何一个参赛队都有资格申请承办NOI。</P><P>2.     申办须在举办年的三年前向主办单位以书面方式提出，即n年申请n+3年的承办权，如2001年申请2004年的承办权。</P><P>3.     申办报告包括申请报告和承办方案。</P><P>4.     主办单位在收到正式的申请报告后，由NOI科学委员会讨论决定。决定应在NOIn举办前做出，以便在NOIn上宣布。</P><P>5.     承办单位的选定考虑组织能力和财政支持，此外还要考虑承办地的分布。在同等条件下，没有承办过NOI的省比承办过NOI的省有更大的优先权。</P><P>6.     获得NOI的承办权即自动获得当年NOI冬令营的承办权。</P><P>第十二章  经费和赞助</P><P>1.     主办单位的部分资金来自中国科协和国家自然科学基金委，这些经费主要用于竞赛的组织和联络、培训、宣传、出国选拔、出国参赛、资助经济条件差的组队单位和参赛选手等。</P><P>2.     主办单位的其他经费主要通过市场由赞助单位赞助以及通过选手的报名费获得。</P><P>3.     NOI承办单位的经费来源有：承办单位的投入、赞助费、参赛代表及观察员的报名费等。</P><P>4.     联赛承办单位的经费来源于承办单位的投入、赞助费、参赛选手的报名费等。</P><P>5.     NOI冬令营的经费全部来源于营员的培训费。</P><P>6.     省级联赛组织单位的经费来源于组织单位和选手的报名费。如有可能，争取从市场获得赞助费。</P><P>7.     参赛选手要交纳一定的参赛费用，这些费用用于组织机构竞赛的组织、赛场、竞赛设备、试卷、证书等。组织机构向选手收费要适当，不以营利为目的，以能覆盖竞赛成本为准。收费的数额不应与当地行政部门的有关收费规定相抵触，并且要经过主办单位批准。</P><P>8.     NOI、联赛、冬令营、中国队选拔赛以及出国参赛均可以某赞助机构名称冠名。前三项的赞助经费75%归承办单位所有，其余25%归主办单位。后两项的赞助经费归主办单位。以省为单位组织的有关活动的赞助经费归该组织单位。</P><P>第十三章  附则</P><P>1.      本条例由主办单位主持制定，并根据情况的变化进行适时的修改。</P><P>2.      本条例的制定或修改应征求各省赛区组织及相关单位的意见。</P><P>3.      本条例须经中国科协青少年部批准后方能生效。</P><P>4.      本条例修改后并获批准后的下次活动即付实施。</P><P>5.      主办单位负责解释本条例。 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：BlueSky提供<br>
+                            
+                            共有3101位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=366.htm" temptabs="http://www.mydrs.org/program/list?id=366">SGOI第13次友谊赛成绩揭晓</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=368.htm" temptabs="http://www.mydrs.org/program/list?id=368">最短路径算法及应用</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=367.htm" temptabs="http://www.mydrs.org/program/sendmail?id=367" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\信息学奥林匹克竞赛条例.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0367.htm" temptabs="http://www.mydrs.org/program/html/0367.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=367.htm" temptabs="http://www.mydrs.org/program/list?id=367">信息学奥林匹克竞赛条例</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

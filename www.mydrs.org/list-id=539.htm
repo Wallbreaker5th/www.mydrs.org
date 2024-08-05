@@ -1,0 +1,306 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>第八届普及组复赛解题报告-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>第八届普及组复赛解题报告
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>第八届普及组复赛解题报告</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;12/4/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <STRONG>题一：级数求和</STRONG> 
+<P>[问题描述]： 
+<P>　　已知：Sn=1+1/2+1/3+…+1/n。显然对于任意一个整数K，当n足够大的时候，Sn大于K。现给出一个整数K（1&lt;=K&lt;=15），要求计算出一个最小的n，使得Sn&gt;K 
+<P>　　[问题分析]：<BR>　　这道题目非常简单，题目的意思已经把该题的算法描述得再清楚不过了，初始时Sn=0,n=0,然后每次循环n n+1,Sn Sn+1/n,，直到Sn大于K，最后输出K。另外实型(Real是最慢的，建议用Extended)的运算速度不是很快，而K为1 15之间的整数，所以最后可以交一张表（常量数组），以达到最好的效果<BR>　　[参考程序]： <BR>　　{$N+}<BR>　　program c1;<BR>　　var<BR>　　　K: Byte;<BR>　　　n: Longint;<BR>　　　Sn: Extended;<BR>　　begin<BR>　　　Readln(K);<BR>　　　Sn := 0; n := 0;<BR>　　　Repeat<BR>　　　　Inc(n);<BR>　　　　Sn := Sn + 1 / n;<BR>　　　Until Sn &gt; k;<BR>　　　Writeln(n);<BR>　　end.</P>
+<P><B>题二：选数</B> </P>
+<P>　　[问题描述]：<BR>　　已知n（1&lt;=n&lt;=20）个整数x1,x2,…,xn（1&lt;=xi&lt;=5000000），以及一个整数k（k&lt;n）。从n个整数中任选k个整数相加，可分别得到一系列的和。现在，要求你计算出和为素数共有多少种。<BR>　　[问题分析]：<BR>　　本题动态规划无从下手，也无数学公式可寻，看来只能搜索（组合的生成算法），其实1&lt;=n&lt;=20这个约束条件也暗示我们本题搜索是有希望的，组合的生成可用简单的DFS来实现，既搜索这k个整数在原数列中的位置，由于组合不同于排列，与这k个数的排列顺序无关，所以我们可以令a[I]&lt;a[I+1]（a[I]表示第I个数在原数列中的位置），这个组合生成算法的复杂度大约为C(n,k)，下面给出递归搜索算法的框架：<BR>　　　　　　　　　Proc Search(dep) <BR>　　　　　　　　　Begin<BR>　　　　　　　　　　for i &lt;- a[dep - 1] + 1 to N - (M - dep) do<BR>　　　　　　　　　　　1：a[dep] &lt;- i<BR>　　　　　　　　　　　2：S &lt;- S + x[i]<BR>　　　　　　　　　　　3：if dep &lt; k then Search(dep + 1) else 判断素数<BR>　　　　　　　　　　　4：S &lt;- S - x[i]<BR>　　　　　　　　　 End</P>
+<P>　　接下来的问题就是判断素数，判断一个整数P(P&gt;1)是否为素数最简单的方法就是看是否存在一个素数a(a&lt;=sqrt(P))是P的约数，如果不存在，该数就为素数，由于在此题中1&lt;=xi&lt;=5000000,n&lt;=20,所以要判断的数P不会超过100000000，sqrt(p)&lt;=10000，因此，为了加快速度，我们可以用筛选法将2…10000之间的素数保存到一个数组里（共1229个），这样速度估计将提5 6倍。<BR>　　特别注意：本题是要求使和为素数的情况有多少种，并不是求有多少种素数，比赛时就有很多同学胡乱判重而丢了12分；还有1不是素数，在判素数时要对1做特殊处理。<BR>　　[参考程序]<BR>　　　{$R-,S-,I-,Q-}<BR>　　　program c2;<BR>　　　const<BR>　　　　MaxN = 20;<BR>　　　var<BR>　　　　N, M, i: Byte;<BR>　　　　ans, s: Longint;<BR>　　　　x: array[1 .. MaxN] of Longint;<BR>　　　　f: array[1 .. 10000] of Byte; <BR>　　　　p: array[1 .. 1229] of Integer;<BR>　　　procedure Get_Prime; {筛选法求素数}<BR>　　　var<BR>　　　　i, j, s: Integer;<BR>　　　begin<BR>　　　　s := 0;<BR>　　　　f[1] := 0;<BR>　　　　for i := 2 to 10000 do f[i] := 1;<BR>　　　　for i := 2 to 10000 do<BR>　　　　　if f[i] = 1 then<BR>　　　　　　begin<BR>　　　　　　　Inc(s); p[s] := i;<BR>　　　　　　　j := 2 * i;<BR>　　　　　　　while j &lt;= 10000 do begin f[j] := 0; Inc(j, i) end;<BR>　　　　　　end<BR>　　　end;<BR>　　　procedure Work(S: Longint); {判断素数}<BR>　　　var<BR>　　　　i: Integer;<BR>　　　begin<BR>　　　　if S &lt;= 10000 then Inc(ans, f[S])<BR>　　　　else<BR>　　　　　begin<BR>　　　　　　i := 1;<BR>　　　　　　while sqr(longint(p[i])) &lt;= S do<BR>　　　　　　　begin<BR>　　　　　　　　if S mod p[i] = 0 then Exit;<BR>　　　　　　　　Inc(i)<BR>　　　　　　　end;<BR>　　　　　　Inc(ans)<BR>　　　　　end<BR>　　　end;<BR>　　　procedure Search(d, pre: Byte);<BR>　　　var<BR>　　　　i: Byte;<BR>　　　begin<BR>　　　　for i := pre + 1 to N - (M - d) do<BR>　　　　　begin<BR>　　　　　　Inc(S, x[i]);<BR>　　　　　　if d = M then Work(S)<BR>　　　　　　　else Search(d + 1, i);<BR>　　　　　　Dec(S, x[i])<BR>　　　　　end<BR>　　　end;<BR>　　　begin<BR>　　　　Readln(N, M);<BR>　　　　for i := 1 to N do Read(x[i]);<BR>　　　　ans := 0; S := 0;<BR>　　　　Get_Prime;<BR>　　　　Search(1, 0);<BR>　　　　Writeln(ans)<BR>　　　end.</P>
+<P><B>题三：产生数</B></P>
+<P>　　[问题描述]：<BR>　　　　给出一个整数n(n&lt;10^30)和k个变换规则（k&lt;=15）。<BR>　　规则：<BR>　　　　1个数字可以变换成另一个数字<BR>　　　　规则的右部不能为零。<BR>　　问题：<BR>　　　　给出一个整数n和k个规则<BR>　　求出：<BR>　　　　经过任意次的变换（0次或多次），能产生出多少个不同的整数。<BR>　　[问题分析]：<BR>　　　　认真分析题目之后发现，本题搜索显然是不行的，而且对于只需计数而不需求具体方案的题目，一般都不会用搜索解决，其实本题不难看出，可以用乘法原理直接进行计数，用Fi表示数字i包括本身可以变成的数字总个数（这里的变成可以是直接变成也可以是间接变成，比如3-&gt;5,5-&gt;7,那么3-&gt;7），那么对于一个数a（用数组存,长度为n），根据乘法原理它能产生出F[a[1]] F[a[2]] F[a[3]] …F[a[n]]个不同整数，相信这一点大家不难理解。那么现在的关键就是如何求Fi，由于这些变换规则都是反应的数字与数字之间的关系，这很容易让我们想到用图来表示这种关系：</P>
+<P>　　1： 建立一个有向图G，初始化g[i, j] False<BR>　　2： 如果数字i能直接变成数字j，那么g[i, j]　 　True<BR>　　容易知如果数字i能变成数字j，那么i到j必须存在路径，否则i是不可能变成j的，这样一来，Fi的求解就显得非常简单了，求一个顶点v包括本身能到达的顶点数的方法相当多，可以用BFS,DFS,Dijkstra,Floyd，这里介绍一种类似Floyd的有向图的传递闭包算法，该算法实现简单 ，在解决这类问题时比Floyd效率更高，所谓有向图的传递闭包就是指可达性矩阵A=[a[i, j]],其中<BR>　　a[i, j] = True 从i到j存在通路 <BR>　　a[i, j] = False 从i到j不存在通路<BR>所以有向图传递闭包算法只需将floyd算法中的算术运算符操作'+'用相应的逻辑运算符'and'和'or'代替就可以了，其算法如下：<BR>　　　　　for k 1 to n do<BR>　　　　　　for i 1 to n do<BR>　　　　　　　for j 1 to n do<BR>　　　　　　　　a[i, j] = a[i, j] or (a[i, k] and a[k, j])<BR>　　最后值得注意的是当n很大时输出可能会超过Comp类型的范围，所以要使用高精度乘法，由于高精度算法是信息学竞赛中的基础，这里就不在详述。<BR>　　[参考程序]<BR>　　{$R-,S-,I-,Q-}<BR>　　program c3;<BR>　　const<BR>　　　MaxLen = 30;<BR>　　var<BR>　　　Len, M: Byte;<BR>　　　a: array[1 .. MaxLen] of Byte;<BR>　　　f: array[0 .. 9] of Byte;<BR>　　　g: array[0 .. 9, 0 .. 9] of Boolean;<BR>　　procedure Init;<BR>　　var<BR>　　　i: Byte;<BR>　　　St: String;<BR>　　begin<BR>　　　Readln(st);<BR>　　　Len := 0; M := 0;<BR>　　　i := 1;<BR>　　　while st[i] in ['0' .. '9'] do<BR>　　　　begin Inc(Len); a[Len] := Ord(st[i]) - 48; Inc(i) end;<BR>　　　Repeat<BR>　　　　if st[i] in ['0' .. '9'] then M := M * 10 + Ord(st[i]) - 48;<BR>　　　　Inc(i)<BR>　　　Until i &gt; Length(st)<BR>　　end;<BR>　　procedure Main;<BR>　　var<BR>　　　i, j, k: Byte;<BR>　　begin<BR>　　　Fillchar(g, Sizeof(g), False);<BR>　　　for k := 1 to M do<BR>　　　　begin<BR>　　　　　Readln(i, j);<BR>　　　　　g[i, j] := True<BR>　　　　end;<BR>　　　for k := 0 to 9 do<BR>　　　　for i := 0 to 9 do<BR>　　　　　for j := 0 to 9 do<BR>　　　　　　g[i, j] := g[i, j] or (g[i, k] and g[k, j]);<BR>　　　Fillchar(f, Sizeof(f), 0);<BR>　　　for i := 0 to 9 do g[i, i] := True;<BR>　　　for i := 0 to 9 do<BR>　　　　for j := 0 to 9 do<BR>　　　　　Inc(f[i], Ord(g[i, j]))<BR>　　end;<BR>　　procedure Show;<BR>　　var<BR>　　　i, j, k, g: Byte;<BR>　　　ans: Array[1 .. MaxLen] of Byte;<BR>　　begin<BR>　　　Fillchar(ans, Sizeof(ans), 0);<BR>　　　ans[1] := 1;<BR>　　　for k := 1 to Len do<BR>　　　　begin<BR>　　　　　g := 0;<BR>　　　　　for i := 1 to MaxLen do<BR>　　　　　　begin<BR>　　　　　　　ans[i] := ans[i] * f[a[k]] + g;<BR>　　　　　　　g := ans[i] div 10;<BR>　　　　　　　ans[i] := ans[i] mod 10<BR>　　　　　　end<BR>　　　　end;<BR>　　　j := MaxLen;<BR>　　　While ans[j] = 0 do Dec(j);<BR>　　　for i := j downto 1 do Write(ans[i]);<BR>　　　Writeln<BR>　　end;<BR>　　begin<BR>　　　Init;<BR>　　　Main;<BR>　　　Show<BR>　　end.</P>
+<P><B>题四：过河卒</B></P>
+<P>　　[问题描述]：<BR>　　棋盘上A点有一个过河卒，需要走到目标B点。卒行走的规则：可以向下、或者向右。<BR>同时在棋盘上C点有一个对方的马，该马所在的点和所有跳跃一步可达的点称为对方马的控制点。<BR>　　棋盘用坐标表示，A点(0,0)、B点(n, m) (n,m为不超过20的整数),同样马的位置坐标是需要给出的。现在要求你计算出卒从A点能够到达B点的路径的条数<BR>　　[问题分析]：<BR>　　这是一道老得不能再老的题目了，很多书上都有类似的题目，NOIp97普及组的最后一题就和本题几乎一模一样。有些同学由于没见过与之类似的题目，在比赛时用了搜索，当n到14，15左右就会超时，其实，本题稍加分析，就能发现：要到达棋盘上的一个点，只能从左边过来或是从上面下来，所以根据加法原理，到达某一点的路径数目，等于到达其相邻上，左两点的路径数目之和，因此我们可以使用逐列（或逐行）递推的方法来求出从起始顶点到重点的路径数目，即使有障碍（我们将马的控制点称为障碍），这一方法也完全适用，只要将到达该点的路径数目置为0即可，用F[i,j]表示到达点(i,j)的路径数目，g[i,j]表示点(i, j)有无障碍，递推方程如下：<BR>　　　　　　　　F[0,0] = 1<BR>　　　　　　　　F[i,j] = 0 　　　　　　　　　　 { g[x,y] = 1 }<BR>　　　　　　　　F[i,0] = F[i-1,0] 　　　　　　　{i &gt; 0, g[x,y] = 0}<BR>　　　　　　　　F[0,j] = F[0,j-1] 　　　　　　　{j &gt; 0, g[x,y] = 0}<BR>　　　　　　　　F[i,j] = F[i-1,j] + F[i,j-1]　 {i &gt; 0, j &gt; 0, g[x, y] = 0}<BR>　　本题与第三题一样，也要考虑精度问题，当n,m都很大时，可能会超过MaxLongInt,所以要使用Comp类型计数(Comp类型已经足够了，即使n=20,m=20，没有任何障碍的情况下的结果也只有14，5位的样子)。<BR>　　[参考程序]<BR>　　{$R-,S-,I-,Q-,N+}<BR>　　program c4;<BR>　　const<BR>　　　dx: array[1 .. 8] of Shortint = (-2, -1, 1, 2, 2, 1, -1, -2);<BR>　　　dy: array[1 .. 8] of Shortint = (1, 2, 2, 1, -1, -2, -2, -1);<BR>　　var<BR>　　　n, m, x, y, i, j: Byte;<BR>　　　g: array[0 .. 20, 0 .. 20] of Byte;<BR>　　　f: array[0 .. 20, 0 .. 20] of Comp;<BR>　　begin<BR>　　　Readln(n, m, x, y);<BR>　　　Fillchar(g, Sizeof(g), 0);<BR>　　　g[x, y] := 1;<BR>　　　for i := 1 to 8 do<BR>　　　　if (x + dx[i] &gt;= 0) and (x + dx[i] &lt;= n) and<BR>　　　　　(y + dy[i] &gt;= 0) and (y + dy[i] &lt;= m) then<BR>　　　　　　g[x + dx[i], y + dy[i]] := 1;<BR>　　　f[0, 0] := 1;<BR>　　　for i := 1 to n do<BR>　　　　if g[i, 0] = 0 then f[i, 0] := f[i - 1, 0];<BR>　　　for i := 1 to m do<BR>　　　　if g[0, i] = 0 then f[0, i] := f[0, i - 1];<BR>　　　for i := 1 to n do<BR>　　　　for j := 1 to m do<BR>　　　　　if g[i, j] = 0 then f[i, j] := f[i - 1, j] + f[i, j - 1];<BR>　　　Writeln(f[n, m]: 0: 0)<BR>　　end.</P>
+<P>　　总结:<BR>　　四道题目其实都很容易,要想到正确可行的方法并不难,考察的是大家的编程基础,一些基本算法的简单应用,并不需要什么优化技巧,关键是看大家对这些基本算法是否已熟练掌握,只有熟练掌握这些算法,在考试中才能在较短的时间内做好每道题,我们一定要重视基础!</P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：学生科技网<br>
+                            
+                            共有5906位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=538.htm" temptabs="http://www.mydrs.org/program/list?id=538">第九届分区普及组初赛参考答案</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=540.htm" temptabs="http://www.mydrs.org/program/list?id=540">NOI2004福建省选手选拔赛试卷</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=539.htm" temptabs="http://www.mydrs.org/program/sendmail?id=539" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\第八届普及组复赛解题报告.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0539.htm" temptabs="http://www.mydrs.org/program/html/0539.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605">关于举办NOIP2006模拟赛的通告</a><br>
+                  
+                  <a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603">NOIP2006竞赛大纲</a><br>
+                  
+                  <a href="list-id=582.htm" temptabs="http://www.mydrs.org/program/list?id=582">NOIP2004提高组一等奖名单[推荐]</a><br>
+                  
+                  <a href="list-id=580.htm" temptabs="http://www.mydrs.org/program/list?id=580">NOIP2004提高组普及组分数线</a><br>
+                  
+                  <a href="list-id=578.htm" temptabs="http://www.mydrs.org/program/list?id=578">NOIP2004提高组复赛解题报告</a><br>
+                  
+                  <a href="list-id=576.htm" temptabs="http://www.mydrs.org/program/list?id=576">NOI各省特派员联系表</a><br>
+                  
+                  <a href="list-id=575.htm" temptabs="http://www.mydrs.org/program/list?id=575">NOIP 2004复赛评测工作结束</a><br>
+                  
+                  <a href="list-id=574.htm" temptabs="http://www.mydrs.org/program/list?id=574">NOIP2004竞赛有关问题及解答</a><br>
+                  
+                  <a href="list-id=573.htm" temptabs="http://www.mydrs.org/program/list?id=573">NOIP复赛测评工作紧张有序进行</a><br>
+                  
+                  <a href="list-id=571.htm" temptabs="http://www.mydrs.org/program/list?id=571">NOIP2004提高组复赛试题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

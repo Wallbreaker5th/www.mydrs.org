@@ -1,0 +1,284 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>递归算法及其应用-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>递归算法及其应用
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>递归算法及其应用</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/4/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">[</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归的描述</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　由上面的例子可以看出，一般来说，递归需要有边界条件、递归前进段和递归返回段。当边界条件不满足时，递归前进；当边界条件满足时，递归返回。因此，在考虑使用递归算法编写程序时，应满足两点：</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">1</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">）该问题能够被递归形式描述；</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">2</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">）存在递归结束的边界条件。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　递归的能力在于用有限的语句来定义对象的无限集合。用递归思想写出的程序往往十分简洁易懂。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR><B>[</B></SPAN><B><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">例</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">2]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">给出一棵二叉树的中序与后序排列。求出它的先序排列。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><B>[</B></SPAN><B><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">分析</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">通过对比二叉树的中序与后序排列，我们可以找出根节点及左右子树。同样的，有可以通过对比左子树的中序与后序排列，找出左子树的根节点</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">……</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">可见，该问题能够被递归描述。当找到最后一个根节点时，递归无法再进行下去，这就是递归结束的边界条件。由此可见，递归算法中常常隐含了分治思想。程序如下：</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR>program chu01_3; <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">var z,h: string; <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">procedure find(a,b:string); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">var <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">s,l : integer; <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">begin <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">l:=length(b); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if l=1 then Write(b) {</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">边界条件及递归返回段</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">}<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">begin {</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归前进段</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">}<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Write(b[l]); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">s:=pos(b[l],a); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if s-1&gt;0 then find(copy(a,1,s-1),copy(b,1,s-1)); {</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归左子树</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">}<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if l-s&gt;0 then find(copy(a,s+1,l-s),copy(b,s,l-s)); {</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归右子树</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">}</SPAN><BR><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">end; <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">end; <BR>begin <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Readln(z); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Readln(h); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Find(z,h); <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Readln; <BR>end.</SPAN><BR><B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">[</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归的应用</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>1.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">经典递归</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　例如</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">hanoi</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">塔问题：经典的递归，原问题包含子问题。有些问题或者数据结构本来就是递归描述的，用递归做很自然。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>2.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">递归与递推</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　利用递归的思想建立递推关系，如由兔子生崽而来的</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">fibonacci</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">数列。但递推由于没有返回段，因此更为简单，有时可以直接用循环实现。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>3.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">分治</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　不少分治方法是源于递归思想，或是递归分解</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">+</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">合并处理。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>4.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">回溯</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　规模较小的问题用回溯解决比较自然。注意递归前后要保证现场的保存和恢复，即正确的转化问题。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>5.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">动态规划</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　动态规划的子问题重叠性质与递归有某种相似之处。递归</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">+</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">动态修改查表是一种不错的建立动态规划模型的方法。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR>6.</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">其他</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　其他么，就是不好归类。例如表达式处理，排列组合等。附带说一下，用递归来处理打印方案的问题还是很方便的。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> <BR><BR><B>[</B></SPAN><B><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">例</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">3]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">求把一个整数</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">n</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">无序划分成</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">k</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">份互不相同的正整数之和的方法总数。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><B>[</B></SPAN><B><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">分析</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">这是一道动态规划题，动态方程如下：</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">f[i-1,j]+f[i,j-i]+1 </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">（</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">(j mod i=0) and (j div i=1)</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">）</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">f[i,j]:= f[i-1,j] (i&gt;=j) <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">f[i-1,j]+f[i,j-i] </SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">（</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">）</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">s:=f(k,n-k)<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">本题可以用循环来实现递推</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">,</SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">也可以考虑用递归求解。主过程如下：</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR></SPAN><FONT face=Verdana><B><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">方案一：</SPAN></B></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR>Procedure work(I,j:longint; var s:longint);<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Var t:longint;<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Begin<BR>If (i=1) or (j=1) then s:=1<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Else if (i=0) or (j=0) then s:=0<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">Else begin<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if (j mod i=0) and (j div i=1) then <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">begin<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">work(i-1,j,s);<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">t:=s;<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">work(i,j-1,s);<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">s:=s+t+1;<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">end<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else if (i&gt;=j) then <BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">work(i-1,j)<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else begin<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">work(i-1,j,s);<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">t:=s;<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">work(I,j-1,s);<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">s:=s+t;<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　　　　　　　　　　　　　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">end; </SPAN><BR><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">End;<BR><BR></SPAN><FONT face=Verdana><B><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">方案二：</SPAN></B></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">procedure search(v,w,last:byte);<BR>var i:byte;<BR>begin<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if w=0 then inc(count)<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if w=1 then<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">if v&gt;=last then search(0,0,0) else<BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">else for i:=last to v-1 do search(v-i,w-1,i);<BR>end;<BR><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　可以看出，方案一的程序较为冗长，消耗栈空间较大；而方案二较为简洁明了，所用的栈空间也较小，效率较高。因此，使用递归算法也有一个优化问题。算法的简洁与否直接制约了程序的可行性和效率。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR><BR><B>[</B></SPAN><B><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">总结</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%">]</SPAN></B><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"><BR></SPAN><FONT face=Verdana><SPAN style="FONT-SIZE: 9pt; LINE-HEIGHT: 150%">　　递归使一些复杂的问题处理起来简单明了，尤其在学习算法设计、数据结构时更能体会到这一点。但是，递归在每一次执行时都要为局部变量、返回地址分配栈空间，这就降低了运行效率，也限制了递归的深度。因此，在必要的时候可以只使用递归的思想来求解，而程序则转用非递归的方式书写。</SPAN></FONT><SPAN lang=EN-US style="FONT-FAMILY: Verdana; FONT-SIZE: 9pt; LINE-HEIGHT: 150%"> </SPAN><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：郑颖 <br>
+                            
+                            来 源：福州一中<br>
+                            
+                            共有11850位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=373.htm" temptabs="http://www.mydrs.org/program/list?id=373">程序设计中的数学方法</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=372.htm" temptabs="http://www.mydrs.org/program/sendmail?id=372" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\递归算法及其应用.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0372.htm" temptabs="http://www.mydrs.org/program/html/0372.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=372.htm" temptabs="http://www.mydrs.org/program/list?id=372">递归算法及其应用</a><br>
+                  
+                  <a href="list-id=63.htm" temptabs="http://www.mydrs.org/program/list?id=63">汉诺塔</a><br>
+                  
+                  <a href="list-id=58.htm" temptabs="http://www.mydrs.org/program/list?id=58">简单背包问题</a><br>
+                  
+                  <a href="list-id=37.htm" temptabs="http://www.mydrs.org/program/list?id=37">介绍递归</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>开关编译指示表-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>开关编译指示表
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>开关编译指示表</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/11/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <table width="740" border="0"><tr> <td nowrap> <div align="center">字母</div></td><td nowrap> <div align="center">缺省值</div></td><td nowrap> <div align="center">类型</div></td><td nowrap> <div align="center">实模式</div></td><td nowrap> <div align="center">保护模式</div></td><td nowrap> <div align="center">Windows</div></td><td nowrap> <div align="center">含义</div></td><td nowrap colspan="2"> <div align="center">具体含义</div></td></tr><tr> <td nowrap rowspan="2"> <div align="center">A</div></td><td nowrap rowspan="2"> <div align="center">A+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">按字地址对齐</div></td><td width="0"> <p>+</p></td><td width="100%">所有大于1字节的变量或类型常数均从偶地址开始存放。</td></tr><tr> <td width="0">-</td><td width="100%">变量或类型常数均简单地放在下一可用地址。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">B</div></td><td nowrap rowspan="2"> <div align="center">B-</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">布尔计值控制</div></td><td width="0"> <p>+</p></td><td width="100%">执行完全布尔计值。</td></tr><tr> <td width="0">-</td><td width="100%">执行短路布尔计值。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">D</div></td><td nowrap rowspan="2"> <div align="center">D+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">调试信息开关</div></td><td width="0">+</td><td width="100%">将调试信息保存在一个行号表中，以供当运行出错时指示错处。</td></tr><tr> <td width="0">-</td><td width="100%">不产生调试信息行号表。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">E</div></td><td nowrap rowspan="2"> <div align="center">E+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">浮点运算仿真</div></td><td width="0">+</td><td width="100%">不出现8087数字协处理器时运算允许用运行库仿真。</td></tr><tr> <td width="0">-</td><td width="100%">必须有8087数字协处理器才能进行浮点运算。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">F</div></td><td nowrap rowspan="2"> <div align="center">F-</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">强制远程调用</div></td><td width="0">+</td><td width="100%">对子程序的调用总是远程调用。</td></tr><tr> <td width="0">-</td><td width="100%">由Pascal自动选择对子程序的调用方式――远程调用或近程调用。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">G</div></td><td nowrap rowspan="2"> <div align="center">G-</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">产生286代码</div></td><td width="0">+</td><td width="100%">编译器使用80286的附加指令以改善代码生成，但所编译的代码不能在8088或8086上运行。</td></tr><tr> <td width="0">-</td><td width="100%">编译器只产生通常的8086指令。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">I</div></td><td nowrap rowspan="2"> <div align="center">I+</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">I/O出错检查</div></td><td width="0">+</td><td width="100%">由系统执行I/O出错检查。</td></tr><tr> <td width="0">-</td><td width="100%">系统不执行I/O出错检查。</td></tr><tr> <td nowrap> <div align="center">K</div></td><td nowrap> <div align="center">K+</div></td><td nowrap> <div align="center">全程</div></td><td nowrap> <div align="center"></div></td><td nowrap> <div align="center"></div></td><td nowrap> <div align="center">√</div></td><td nowrap> <div align="center"> </div></td><td colspan="2"> </td></tr><tr> <td nowrap rowspan="2"> <div align="center">L</div></td><td nowrap rowspan="2"> <div align="center">L+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center"> 局部符号开关</div></td><td width="0">+</td><td width="100%">产生某一模块的局部符号信息，使IDE可检查和修改模块的局部变量。如果调试信息开关置为{$D-}，则忽略{$L+}编译指示。</td></tr><tr> <td width="0">-</td><td width="100%">不产生某一模块的局部符号信息。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">N</div></td><td nowrap rowspan="2"> <div align="center">N-</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">数字协处理器</div></td><td width="0">+</td><td width="100%">使用数字协处理器，以硬件实现各类实型数运算。</td></tr><tr> <td width="0">-</td><td width="100%">不使用数字协处理器，实型数运算以软件实现。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">O</div></td><td nowrap rowspan="2"> <div align="center">O-</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center"></div></td><td nowrap rowspan="2"> <div align="center"></div></td><td nowrap rowspan="2"> <div align="center">产生覆盖代码</div></td><td width="0">+</td><td width="100%">控制产生覆盖代码。经常与强制远调用编译指示{$F+}连用，以满足覆盖管理程序远程调用的要求。</td></tr><tr> <td width="0">-</td><td width="100%">不产生覆盖代码。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">P</div></td><td nowrap rowspan="2"> <div align="center">P-</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">不定长字串参</div></td><td width="0">+</td><td width="100%">string类型的字符串实参不预先确定最大长度，调用子程序时自动设为与实际参数类型一致。</td></tr><tr> <td width="0">-</td><td width="100%">不使用不定长字符串参数，与旧版本兼容。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">Q</div></td><td nowrap rowspan="2"> <div align="center">Q-</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">整数溢出检查</div></td><td width="0">+</td><td width="100%">整数运算检查溢出错误。</td></tr><tr> <td width="0">-</td><td width="100%">整数运算不检查溢出。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">R</div></td><td nowrap rowspan="2"> <div align="center">R-</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">下标范围检查</div></td><td width="0">+</td><td width="100%">对运行时所有数组和字符串的下标表达式检查其值是否越界，并对标量和子界的测试值检查是否在指定范围内。</td></tr><tr> <td width="0">-</td><td width="100%">不执行上述检查。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">S</div></td><td nowrap rowspan="2"> <div align="center">S+</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">栈空间域检查</div></td><td width="0">+</td><td width="100%">在每次子程序调用前检查是否有足够的栈空间。</td></tr><tr> <td width="0">-</td><td width="100%">不执行上述检查。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">T</div></td><td nowrap rowspan="2"> <div align="center">T-</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">指针类型检查</div></td><td width="0">+</td><td width="100%">@操作返回结果类型为类型指针。</td></tr><tr> <td width="0">-</td><td width="100%">@操作返回结果类型为无类型指针。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">V</div></td><td nowrap rowspan="2"> <div align="center">V+</div></td><td nowrap rowspan="2"> <div align="center">局部</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">串长匹配检查</div></td><td width="0">+</td><td width="100%">对于在子程序中作为变量参数传递的字符串类型进行严格检查，要求实在参数与形式参数属于同一命名类型，即字符串长度必须一致。</td></tr><tr> <td width="0">-</td><td width="100%">不进行串长匹配检查，即允许实在参数与形式参数类型中的字符串长度不匹配。</td></tr><tr> <td nowrap> <div align="center">W</div></td><td nowrap> <div align="center">W+</div></td><td nowrap> <div align="center">局部</div></td><td nowrap> <div align="center"></div></td><td nowrap> <div align="center"></div></td><td nowrap> <div align="center">√</div></td><td nowrap> <div align="center"></div></td><td colspan="2"> </td></tr><tr> <td nowrap rowspan="2"> <div align="center">X</div></td><td nowrap rowspan="2"> <div align="center">X+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">扩充词法开关</div></td><td width="0">+</td><td width="100%">函数调用可用语句形式表示，此时函数结果值可予抛弃。</td></tr><tr> <td width="0">-</td><td width="100%">函数调用按通常形式，只能出现在表达式中。</td></tr><tr> <td nowrap rowspan="2"> <div align="center">Y</div></td><td nowrap rowspan="2"> <div align="center">Y+</div></td><td nowrap rowspan="2"> <div align="center">全程</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">√</div></td><td nowrap rowspan="2"> <div align="center">符号索引信息</div></td><td width="0">+</td><td width="100%">把单元中的符号信息记录在单元编译文件中，供IDE浏览器使用。</td></tr><tr> <td width="0">-</td><td width="100%">不记录单元中的符号信息。</td></tr></table></P><P>	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：陈世熹 <br>
+                            
+                            来 源：http://xpascal.yeah.net/<br>
+                            
+                            共有2774位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=42.htm" temptabs="http://www.mydrs.org/program/list?id=42">编译指示</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=44.htm" temptabs="http://www.mydrs.org/program/list?id=44">从一题多解看解题方法</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=43.htm" temptabs="http://www.mydrs.org/program/sendmail?id=43" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\开关编译指示表.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0043.htm" temptabs="http://www.mydrs.org/program/html/0043.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=572.htm" temptabs="http://www.mydrs.org/program/list?id=572">常见编译参数和编译指示及优化</a><br>
+                  
+                  <a href="list-id=464.htm" temptabs="http://www.mydrs.org/program/list?id=464">关于fillchar的使用和讨论</a><br>
+                  
+                  <a href="list-id=375.htm" temptabs="http://www.mydrs.org/program/list?id=375">Turbo Pascal 7 安装版</a><br>
+                  
+                  <a href="list-id=374.htm" temptabs="http://www.mydrs.org/program/list?id=374">编译开关的使用介绍</a><br>
+                  
+                  <a href="list-id=344.htm" temptabs="http://www.mydrs.org/program/list?id=344">Pascal运行错误对照表</a><br>
+                  
+                  <a href="list-id=343.htm" temptabs="http://www.mydrs.org/program/list?id=343">Pascal编译错误对照表</a><br>
+                  
+                  <a href="list-id=200.htm" temptabs="http://www.mydrs.org/program/list?id=200">条件编译指示表</a><br>
+                  
+                  <a href="list-id=199.htm" temptabs="http://www.mydrs.org/program/list?id=199">常用参数编译指示表</a><br>
+                  
+                  <a href="list-id=136.htm" temptabs="http://www.mydrs.org/program/list?id=136">[推荐]TP7crt单元补丁</a><br>
+                  
+                  <a href="list-id=135.htm" temptabs="http://www.mydrs.org/program/list?id=135">Turbo Pascal 7.0</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

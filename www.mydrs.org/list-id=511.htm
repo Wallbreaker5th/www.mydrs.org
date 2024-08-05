@@ -1,0 +1,351 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2003 Day2 草莓-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>NOI2003 Day2 草莓
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2003 Day2 草莓</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/8/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <H1 style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: center" align=center><SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 15pt; FONT-FAMILY: 黑体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: Arial; mso-bidi-font-size: 24.0pt; mso-bidi-font-family: Arial">草</SPAN><SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 15pt; FONT-FAMILY: 'Times New Roman'; mso-hansi-font-family: Arial; mso-bidi-font-size: 24.0pt; mso-fareast-font-family: 黑体; mso-bidi-font-family: Arial"> </SPAN><SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 15pt; FONT-FAMILY: 黑体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: Arial; mso-bidi-font-size: 24.0pt; mso-bidi-font-family: Arial">莓</SPAN><SPAN lang=EN-US style="FONT-WEIGHT: normal; FONT-SIZE: 15pt; FONT-FAMILY: Arial; mso-bidi-font-size: 24.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></H1>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【题目背景】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">尽管不少人都吃过鲜美的草莓，却很少有人真正观察过野草莓的生长。它们从自己的枝上伸出一根根长长的触须，遇到合适的地方就会扎根发芽，长出一株新的草莓。所以，当你在森林中遇到一株草莓的时候，通常就意味着你会在它的周围找到一片草莓田。但这些草莓并非能够无忧无虑地生长，树林中穿梭的鸟儿和偶尔路过的鹿群都喜欢吃这种美味的浆果。不过，草莓最大的威胁却是来自那些贪吃的棕熊。他们不但可以吃掉整整一片草莓，而且还会粗鲁地把一片草莓田搞得乱七八糟。于是每当一块草莓田越长越大之后，森林中的精灵们就会把这片草莓田分成</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">块种到</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个空地中去，以免被粗鲁的棕熊搞乱。她们希望每块空地上恰好放上一块用触须连接在一起的草莓田。不过，如果一块空地里的草莓太少，它们就会感到孤单，所以精灵们希望无论哪块空地含有草莓的总重量都不要太小。可是天真的精灵并不知道怎样来做这件事情，你可以帮助她们吗？</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt; TEXT-ALIGN: center" align=center><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t75 stroked="f" filled="f" path=" m@4@5 l@4@11@9@11@9@5 xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn="sum @0 1 0 "></v:f><v:f eqn="sum 0 0 @1 "></v:f><v:f eqn="prod @2 1 2 "></v:f><v:f eqn="prod @3 21600 pixelWidth "></v:f><v:f eqn="prod @3 21600 pixelHeight "></v:f><v:f eqn="sum @0 0 1 "></v:f><v:f eqn="prod @6 1 2 "></v:f><v:f eqn="prod @7 21600 pixelWidth "></v:f><v:f eqn="sum @8 21600 0 "></v:f><v:f eqn="prod @7 21600 pixelHeight "></v:f><v:f eqn="sum @10 21600 0 "></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape id=_x0000_i1025 style="WIDTH: 183pt; HEIGHT: 158.25pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image002" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image001.gif"></v:imagedata></v:shape><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN class=2char2><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【任务描述】</SPAN></SPAN><SPAN class=2char2><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">定义：</SPAN></B><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">sum<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">块草莓田中所有草莓重量的和（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">i</I></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">k</I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">）。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 31.5pt; mso-char-indent-count: 3.0; mso-char-indent-size: 10.5pt"><SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><v:shape id=_x0000_i1026 style="WIDTH: 117.75pt; HEIGHT: 20.25pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image004" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image002.gif"></v:imagedata></v:shape></SPAN></SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">你的任务就是要把一片草莓田分割成</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">块，且分割方案需要满足如下的条件：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">每一块中的草莓必然是通过触须直接或者间接和其他草莓相连接的；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">这种分割方案所对应的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">尽可能的大。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">最后输出你的分割方案和结果。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN class=2char2><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">输入说明<SPAN class=2char2>】</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">第一行为三个整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">m</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">及</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">表示草莓的株数，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">m</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">表示触须的数目，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为空地的数目。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">接下来的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行每行两个整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">及</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">b<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">株草莓的重量是</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">b<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">克。顺序下来的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">m</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行每行两个整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">p</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">和</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">q</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">p</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">株草莓和第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">q</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">株草莓之间有一根触须相连接。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">另外，在所有这些数据的最后还有单独的一行包括一个整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">d</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">用作评分系数，有关</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">d</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">的说明，可以参看下面的评分方法。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN class=2char2><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">输出说明<SPAN class=2char2>】</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">你一共要输出</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k+1</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行。第一行为一个整数，表示你的分割方案中的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">。接下来的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行，每行表示一块草莓田。每行的第一个整数为</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">块田中的草莓株数。第二个到第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n<SUB>i</SUB>+1</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个整数为这些草莓的编号。请注意，这些草莓必然是通过触须相连接的。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN class=2char2><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【</SPAN></SPAN><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">输入样例<SPAN class=2char2>】</SPAN></SPAN><SPAN class=2char2><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></SPAN></H2>
+<P class=MsoNormal style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto" align=center><SPAN lang=EN-US style="mso-bidi-font-family: Arial"><v:shape id=_x0000_i1027 style="WIDTH: 222pt; HEIGHT: 148.5pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image005" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image003.gif"></v:imagedata></v:shape><o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">7 9 3<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 4<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 4<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">3 3<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">4 1<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5 5<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">6 7<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">7 2<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 2<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 3<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 5<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">4 5<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">4 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">4 7<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">6 7<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2000000000<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">&nbsp;<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【输出样例】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">7<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 1 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 2 3<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">3 4 5 7<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【评分方法】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">本题是一道提交答案式题目，你需要针对给定的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">10</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个输入文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2/berry1.in~2/berry10.in</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">提交你的输出文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">berry1.out~berry10.out</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（放在你的选手目录下）。我们将根据你提交的输出文件评分。对于某一确定的测试点来说，如果你的输出文件中第一行的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">和下面的分割方案不符合，或者是输出文件本身就有错误，那么你将得不到该测试点的分数。这里输出文件的错误可以使用我们提供的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2/berry_check</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">检查工具进行检查。只有当这个程序输出</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Yes</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">的时候，你的输出才可以确认是可接受的。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">对于可接受的输出，评分公式如下：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt; TEXT-ALIGN: center" align=center><SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><v:shape id=_x0000_i1028 style="WIDTH: 172.5pt; HEIGHT: 47.25pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image007" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image004.gif"></v:imagedata></v:shape></SPAN></SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">这里</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">d</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为评分系数（输入数据中最后一行的整数），</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">best</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为我们的最优结果。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">注意：可接受的输出不一定能够得分。</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></B></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【你如何测试自己的输出】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">我们提供</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2/berry_check</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">这个工具来测试你的输出文件是否是可接受的。使用这个工具的方法是：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">2/berry_check &lt;</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Courier New'">输入文件名</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">&gt; &lt;</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Courier New'">输出文件名</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Courier New'; mso-bidi-font-size: 10.0pt">&gt;<o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">在你调用这个程序后，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2/berry_check</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">将根据你给出的输入和输出文件给出测试的结果，其中包括：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">非法退出：未知错误；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">not connect</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：你程序输出的行中含有不连通的分量；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">duplicate</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：同一点输出了两次；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">extra</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：输出文件中包括多余数据；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">lack</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：输出的总点数不对；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">answer not match</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：输出中第一行的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">和实际结果不符；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN-LEFT: 45pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -21pt; tab-stops: list 45.0pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Wingdings; mso-bidi-font-size: 10.0pt">l</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Yes</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">：输出可接受，将进行下一步的评分。</SPAN></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有3801位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=511.htm" temptabs="http://www.mydrs.org/program/sendmail?id=511" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2003 Day2 草莓.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0511.htm" temptabs="http://www.mydrs.org/program/html/0511.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

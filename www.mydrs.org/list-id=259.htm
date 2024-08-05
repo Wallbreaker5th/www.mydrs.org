@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2001-反正切函数-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>NOI2001-反正切函数
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2001-反正切函数</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/27/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　反正切函数可展开成无穷级数，有如下公式<BR>　　　　　　　　　<IMG height=42 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-1.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-1.gif" width=251 align=absMiddle>　　　　　　　　　公式(1)<BR>　　使用反正切函数计算<IMG height=13 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-11..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-11..gif" width=13>是一种常用的方法。例如，最简单的计算<IMG height=13 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-11..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-11..gif" width=13>的方法：<BR>　　　　　　　　　<IMG height=61 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-2.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-2.gif" width=198>　　　　　　　　　　　　 公式(2)<BR>　　然而，这种方法的效率很低，但我们可以根据角度和的正切函数公式：<BR>　　　　　　　　　　<IMG height=38 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-3.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-3.gif" width=187>　　　　　　　　　　　 　公式(3)<BR>　　通过简单的变换得到：<BR>　　　　　　　　　　<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" width=227>　　　　　　　　　　公式(4)<BR>　　利用这个公式，令<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-5.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-5.gif" width=159 align=absMiddle> ，有<BR>　　　　　　　　　　<IMG height=73 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-6.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-6.gif" width=307><BR>　　使用<IMG height=35 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-7.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-7.gif" width=39 align=absMiddle>的反正切来计算<IMG height=20 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-8.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-8.gif" width=54 align=absMiddle>，速度就快多了。<BR>　　我们将公式(4)写成如下形式<BR>　　　　　　　　　　<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" width=201><BR>　　其中a 、b 和c 均为正整数。<BR>　　我们的问题是：对于每一个给定的a（<IMG height=19 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-10.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-10.gif" width=80 align=absMiddle> ），求b＋c的值。我们保证对于任意的a都存在整数解。如果有多个解，要求你给出b+c最小的解。 </P><BR><P><B>输入文件（arctan.in）</B><BR>　　输入文件中只有一个正整数a，其中<IMG height=19 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-10.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-10.gif" width=80 align=absMiddle> 。</P><BR><P><B>输出文件（arctan.out）</B><BR>　　输出文件中只有一个整数，为b+c的值。</P><BR><P><BR><B>输入样例</B><BR>1</P><BR><P><B>输出样例</B><BR>5</P><BR><P align=center><B>Noi2001之反正切函数的应用（Arctan）解题报告<BR><BR>福州第一中学 陈阳</B></P><BR><P><B>【题目大意】</B><BR>　　题目给出了两个公式：<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" width=227 align=absMiddle>和<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" width=201 align=absMiddle> ，要求我们在知道a的情况下求出b+c的最小值，并且a、b、c都是正整数。</P><BR><P><B>【算法分析】</B><BR>　　看到这个题目，我们往往会考虑是否可以通过某种数学方法算出答案。但是我们都对arctan的性质了解不够，因此我们先试考虑a、b、c之间的代数关系。我们现根据题目给出的公式做以下一些计算：<BR>　　　　　<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-4.gif" width=227 align=absMiddle> ，<BR>　　　　　<IMG height=36 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-9.gif" width=201> <BR>　　　　 <IMG height=124 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-12..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-12..gif" width=144><BR><BR>　　根据以上的推导，由于a、b、c都是正整数，a是定值，我们就得到一种算法：枚举b的值，如果在当前b的取值下，算出的c值是正整数的话，那么现在的b+c就是一个可行值。我们从a+1开始枚举b（如果b&lt;a，那么c&lt;0），直到b=当前求得的最小值为止。这种算法简单，但是耗时太大，往往再得到最优解以后，不能及时停止算法（因为根据下面的分析大致可知，b+c的值可以接近b2，所以在枚举到最优解的b之后，还要算大约b2次才能停止算法），而且取整运算有精度问题，算ab的时候也很容易超界，所以这不是一种有效的算法。<BR><BR>　　我们根据上面关于c的公式，把两边都加上b，就得到：<BR>　　<IMG height=45 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-13..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-13..gif" width=97><BR><BR>　　如果按照这个公式去枚举b，虽然可以直接算出b+c的值，但是算<IMG height=20 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-17..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-17..gif" width=20 align=absMiddle>比算ab更容易超界（因为b&gt;a），这也没有解决怎么停止算法的问题，所以也不行。但是，从这个公式我们发现，所求的b+c，实际上可以表示成一个关于b的函数，设<IMG height=41 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-14..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-14..gif" width=138 align=absMiddle>（b是正整数），那么这个函数由什么性质呢？我们利用求最值的方法作以下计算：<BR>　　<IMG height=75 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-15..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-15..gif" width=520><BR>　　（当<IMG height=26 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-16..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-16..gif" width=120 align=absMiddle>时取等号）<BR>　　（以上b&gt;a,当a足够大的时候，这个值<IMG height=17 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-18..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-18..gif" width=36 align=absMiddle>） <BR><BR>　　 这样是得到了b&gt;a时b+c的最小值，但是这个最小值是在b为实数的条件下得到的，并不能作为本题的解。不过通过这个最小值，我们可以猜测，在b&gt;a时函数很可能由一个单调递减区间和一个单调递增区间，而当b、c为整数的时候，这个点的函数值一定是最靠近函数的最小值。我们来看下面一幅图：<BR>　　　　　<IMG height=222 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-19..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-19..gif" width=266><BR><BR>　　这幅图是当a=10时函数的部分近似图像。我们看到，在b&lt;=a的时候，函数对我们解题是没有意义的。而在b&gt;a时，函数先是单调递减，然后开始缓慢单调递增（当然，通过数学分析也可以得到这个结论）。因此，这也就是说，函数值由一个最小值，当我们没有找到最小值的时候，扩大b的值，b+c的值会减小，而如果找到最小值了，那么b+c的值会扩大，这也就说明了最小值已经找到，算法可以停止。这样，我们的算法就是我们记录遍历b的过程中每一个可取（也就是说b+c为整数时）的b+c的值，如果当前可取的b+c的值比上一个可取值大，那么程序就可以结束，上一个可取的b+c的值就是我们要的解。这样所遍历b的值就很少，大约是a。实际上我们再仔细观察图像，就会知道：若b为实数，<IMG height=26 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-20..gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-20..gif" width=127 align=absMiddle>时有最小值。而<IMG height=27 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-21.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-21.gif" width=64 align=absMiddle>又略大于2a。因此，当<IMG height=23 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-22.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-2-22.gif" width=63 align=absMiddle>时，整数b离取最小值的实数b最接近，再根据图像。发现到达最小值以后，函数值增长缓慢，因此可以认为b=2*a+1就是本题的搜索上限。而搜索下限从a+1开始，这样搜索个数大约为a。既复杂度为O(a)，是可以接受俄。</P><BR><P><B>【解题总结】</B><BR>　　当时我和同学参加同步赛，用搜索法，开了数台机器跑了几个小时，大约跑出了一半的数据（其中还有一部分是错误的）记录在程序里面。如果一看到这样的题目，发现没有简便的方法，就用搜索等方法解决，倒不如认真的分析题目，往往会得到事半功倍的便捷方法。</P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：陈阳 <br>
+                            
+                            来 源：福州第一中学<br>
+                            
+                            共有2361位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=258.htm" temptabs="http://www.mydrs.org/program/list?id=258">NOI2001-陨石的秘密</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：已经没有了 </li>
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=259.htm" temptabs="http://www.mydrs.org/program/sendmail?id=259" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2001-反正切函数.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0259.htm" temptabs="http://www.mydrs.org/program/html/0259.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,292 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>PascalFAQ编译指示专题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>PascalFAQ编译指示专题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>PascalFAQ编译指示专题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/29/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <BLOCKQUOTE><BR><P><A name=什么是编译指示></A><B>什么是编译指示？</B></P><BR><BLOCKQUOTE><BR><P>编译指示是一种用来控制编译器特性的特殊语法的注释，它可以出现在普通注释允许出现的任何地方。编译指示从“{$”或“(*$”开始，紧接着是一个指示名，然后你可以添上必要的参数和注释，最后以“}”或“*)”结束。除了在程序的源代码中直接插入编译指示外，你也可以在IDE的菜单Options或命令行编译器中改变默认的指示。当你在IDE中编写程序时，你可以通过按下Ctrl+OO来让IDE在你的程序源代码开头插入当前的指示设置。编译指示分为开关编译指示、参数编译指示和条件编译指示三种。</P><BR><P>开关编译指示用来打开或关闭某个编译器特性，你可以在指示字母后面加上“+”或“-”来控制编译器特性的开关，你还可以把多个开关指示以无空格的逗号分隔来组合成一个单独的编译指示注释，例如：{$B+}、{$R- Turn off range checking}、{$B+,R-,S-}。</P><BR><P>开关编译指示分为全局指示和局部指示两种。全局指示影响到整个编译过程，它必须出现在程序或被编译单元的声明部分之前，通常紧跟在程序首部或单元首部之后。局部指示只对由指示开始到下一个相同的指示之前的编译过程有影响，它可以出现在源代码中的任何地方。</P><BR><P>参数编译指示用来指定对编译过程有影响的参数，例如文件名和内存尺寸等。你可以在指示名后面加上空格和一个或多个以无空格的逗号分隔的参数，例如：{$I TYPES.INC}、{$M 16384,0,655360}。</P><BR><P>条件编译指示通过定义和指定条件来控制是否编译某段源代码，例如：{$DEFINE Debug}、{$IFDEF Debug}、{$ENDIF}。</P></BLOCKQUOTE><BR><P><A name=有哪些编译指示></A><B>有哪些编译指示？</B></P><BR><BLOCKQUOTE><BR><P>Borland Pascal 7.0提供下面的开关编译指示：</P><BR><TABLE border=1><BR><TBODY><BR><TR><BR><TD noWrap align=middle>指示</TD><BR><TD noWrap align=middle>类型</TD><BR><TD noWrap align=middle>适用环境</TD><BR><TD noWrap align=middle>含义</TD><BR><TD noWrap align=middle>说明</TD></TR><BR><TR><BR><TD noWrap align=middle>$A</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>对<BR>齐<BR>数<BR>据</TD><BR><TD><B>$A+（默认值）</B><BR>所有大于1字节的变量（不包括记录字段和数组元素）均强制从偶地址开始存放，以获得更快的访问速度。<BR><B>$A-</B><BR>不对齐数据，变量将简单地存放在下一可用地址。<BR><B>附注</B><BR>在任何情况下，每个全局变量声明部分均从偶地址开始。编译器将一直保持栈指针（SP）位于偶地址上，并在必要时分配一个不用的额外字节。</TD></TR><BR><TR><BR><TD noWrap align=middle>$B</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>布<BR>尔<BR>求<BR>值</TD><BR><TD><BR><P><B>$B+</B><BR>编译器将生成完全的布尔表达式求值代码，因此即使整个表达式的结果已经可以确定，所有执行and和or运算的布尔表达式都将被完整求值。<BR><B>$B-（默认值）</B><BR>编译器将生成短路布尔表达式求值代码，因此在整个表达式的结果可以确定时将立即停止表达式求值。</P></TD></TR><BR><TR><BR><TD noWrap align=middle>$D</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>调<BR>试<BR>信<BR>息</TD><BR><TD><BR><P><B>$D+（默认值）</B><BR>编译器将为程序或单元的每个子程序生成相应的行号表，以便IDE可以调试程序和查找引发运行时错误的位置。<BR><B>$D-</B> <BR>编译器将不生成任何调试信息。</P></TD></TR><BR><TR><BR><TD noWrap align=middle>$E</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>仿<BR>真</TD><BR><TD><B>$E+（默认值）</B><BR>编译器将生成80x87数字协处理器仿真库代码，程序在没有80x87的机器上运行时可以仿真80x87，进行浮点运算。<BR><B>$E-</B><BR>编译器只生成更小的只在80x87存在时可用的浮点运算库，程序不能在没有80x87的机器上运行。<BR><B>附注</B><BR>在单元中使用$E开关没有任何效果，它只应用在程序的编译上。在$N-时将忽略$E开关。</TD></TR><BR><TR><BR><TD noWrap align=middle>$F</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle><BR><P>强<BR>制<BR>远<BR>调<BR>用</P></TD><BR><TD><B>$F+</B><BR>在$F+后实现的子程序将强制使用远调用。<BR><B>$F-（默认值）</B><BR>编译器将自动选择在$F-后实现的子程序的调用模式。</TD></TR><BR><TR><BR><TD noWrap align=middle>$G</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>生<BR>成<BR>2<BR>8<BR>6<BR>指<BR>令</TD><BR><TD><B>$G+</B><BR>编译器将使用80286附加指令来改进代码生成，程序不能在8088或8086处理器上运行。<BR><B>$G-（默认值）</B><BR>编译器只生成8086指令，程序可以在所有的8086系列的处理器上运行。</TD></TR><BR><TR><BR><TD noWrap align=middle>$I</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>输<BR>入<BR>输<BR>出<BR>检<BR>查</TD><BR><TD><B>$I+（默认值）</B><BR>自动生成代码，在每次调用输入输出子程序后检查I/O返回值，当I/O返回值为非零值时终止程序并显示运行时错误讯息。<BR><B>$I-</B><BR>不生成检查I/O返回值的代码，你必须使用IOResult函数来检查I/O错误。</TD></TR><BR><TR><BR><TD noWrap align=middle>$K</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>Windows</TD><BR><TD noWrap align=middle>快<BR>速<BR>回<BR>调</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$L</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>局<BR>部<BR>符<BR>号<BR>信<BR>息</TD><BR><TD><B>$L+（默认值）</B><BR>生成局部符号信息，在调试程序时可以观察、修改局部变量的值和在调用栈窗口中察看子程序。<BR><B>$L-</B><BR>不生成局部符号信息。<BR><B>附注</B><BR>在$D-时将忽略$L指示。</TD></TR><BR><TR><BR><TD noWrap align=middle>$N</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>数<BR>字<BR>协<BR>处<BR>理<BR>器</TD><BR><TD><B>$N+</B><BR>编译器生成的代码将通过使用80x87数字协处理器来执行所有的实数类型计算，并可以访问四种附加的实数类型：Single、Double、Extended和Comp。<BR><B>$N-（默认值）</B><BR>编译器生成的代码将调用运行时库程序来以软件方式执行所有的实数类型计算。<BR><B>附注</B><BR>可以使用$E+指示来仿真80x87，这样就能够在没有80x87芯片的时候访问IEEE浮点类型。</TD></TR><BR><TR><BR><TD noWrap align=middle>$O</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式</TD><BR><TD noWrap align=middle>覆<BR>盖<BR>代<BR>码<BR>生<BR>成</TD><BR><TD><B>$O+</B><BR>代码生成器将为从一个覆盖子程序中传递字符串和集合常参到另一个覆盖子程序中的情况准备预防措施。<BR><B>$O-（默认值）</B><BR>不生成相应的覆盖代码。<BR><B>附注</B><BR>$O+指示一般与$F+指示共同使用，以满足覆盖管理器的远程调用需要。</TD></TR><BR><TR><BR><TD noWrap align=middle>$P</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>开<BR>放<BR>字<BR>符<BR>串<BR>参<BR>数</TD><BR><TD><B>$P+</B><BR>使用保留字string声明的变参将被视为开放字符串参数。开放字符串参数的实际参数可以是任何字符串类型的变量，在其子程序中，形式参数的最大长度属性将与实际参数相同。<BR><B>$P-（默认值）</B><BR>使用保留字string声明的变参将被视为正常的变参，这样可以保持与早期版本的Turbo Pascal的兼容性。<BR><B>附注</B><BR>不管$P指示如何设置，使用OpenString标识符声明的变参都将始终视为开放字符串参数。</TD></TR><BR><TR><BR><TD noWrap align=middle>$Q</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>溢<BR>出<BR>检<BR>查</TD><BR><TD><B>$Q+</B><BR>生成代码为某些整数运算检查溢出错误，例如：+、-、*、Abs、Sqr、Succ和Pred。如果这些运算的结果超出了可支持的范围，将终止程序并显示运行时错误讯息。<BR><B>$Q-（默认值）</B><BR>不检查溢出错误。<BR><B>附注</B><BR>$Q指示对Inc和Dec标准子程序没有影响，它们不会检查溢出错误。</TD></TR><BR><TR><BR><TD noWrap align=middle>$R</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>范<BR>围<BR>检<BR>查</TD><BR><TD><B>$R+</B><BR>对所有的数组、字符串索引号表达式和所有的对标量、子界类型变量的赋值操作进行范围检查。如果范围检查失败，将结束程序并显示运行时错误讯息。<BR><B>$R-（默认值）</B><BR>不进行范围检查。</TD></TR><BR><TR><BR><TD noWrap align=middle>$S</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>栈<BR>溢<BR>出<BR>检<BR>查</TD><BR><TD><B>$S+（默认值）</B><BR>编译器将在每个子程序的开头生成代码检查是否有足够的栈空间用以存放局部变量和其它临时数据。当栈空间不足时，将结束程序并显示运行时错误讯息。<BR><B>$S-</B><BR>不进行栈溢出检查，在没有足够的栈空间时，对子程序的调用很可能会引起系统崩溃。</TD></TR><BR><TR><BR><TD noWrap align=middle>$T</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>指<BR>定<BR>类<BR>型<BR>指<BR>针</TD><BR><TD><B>$T+</B><BR>@运算符的返回值类型将是类型指针，类型指针与指向不同类型的其它类型指针不相容。<BR><B>$T-（默认值）</B><BR>@运算符的返回值类型将是无类型指针。</TD></TR><BR><TR><BR><TD noWrap align=middle>$V</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>字<BR>符<BR>串<BR>变<BR>参<BR>检<BR>查</TD><BR><TD><B>$V+（默认值）</B><BR>进行严格的类型检查，要求形式参数和实际参数必须为相同的字符串类型。<BR><B>$V-</B><BR>实际参数可以是任何的字符串类型，即使它的最大长度与形式参数不相同。尽管$V-仍然被支持，但应该使用开放字符串参数。</TD></TR><BR><TR><BR><TD noWrap align=middle>$W</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>Windows</TD><BR><TD noWrap align=middle>堆<BR>栈<BR>结<BR>构</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$X</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>扩<BR>展<BR>语<BR>法</TD><BR><TD><B>$X+（默认值）</B><BR>可以像子程序一样调用函数，并抛弃函数的返回值，但这不能用于内置的函数（在System单元里声明的函数）。同时，通过激活用于内置的PChar类型和基于零的字符数组的特殊语法来支持空结束字符串。<BR><B>$X-</B><BR>屏蔽扩展语法。</TD></TR><BR><TR><BR><TD noWrap align=middle>$Y</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>符<BR>号<BR>索<BR>引<BR>信<BR>息</TD><BR><TD><B>$Y+（默认值）</B><BR>生成符号索引信息，供IDE的程序浏览器使用。<BR><B>$Y-</B><BR>不生成符号索引信息。<BR><B>附注</B><BR>$Y指示只在单元中使用，它只在$D和$L同时打开时有效。TPC和Turbo不支持$Y指示。</TD></TR></TBODY></TABLE><BR><P>Borland Pascal 7.0提供下面的参数编译指示：</P><BR><TABLE border=1><BR><TBODY><BR><TR><BR><TD noWrap align=middle>指示</TD><BR><TD noWrap align=middle>类型</TD><BR><TD noWrap align=middle>适用环境</TD><BR><TD noWrap align=middle>含义</TD><BR><TD noWrap align=middle>说明</TD></TR><BR><TR><BR><TD noWrap align=middle>$C 属性</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>代<BR>码<BR>段<BR>属<BR>性</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$D 文本</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>描<BR>述</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$I 文件名</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>插<BR>入<BR>文<BR>件</TD><BR><TD>编译时在$I指示的当前位置插入另一个文本文件的内容。最多可以嵌套插入文件15层。<BR><B>附注</B><BR>不能在语句部分中插入文件，整个语句部分必须位于同一个源文件中。默认的文件扩展名为.pas。</TD></TR><BR><TR><BR><TD noWrap align=middle>$G 单元名, 单元名...</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>组<BR>合<BR>单<BR>元<BR>片<BR>断</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$L 文件名</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>连<BR>接<BR>对<BR>象<BR>文<BR>件</TD><BR><TD>指示编译器连接一个Intel可再定位对象文件（.obj文件）。<BR><B>附注</B><BR>默认的文件扩展名为.obj。</TD></TR><BR><TR><BR><TD noWrap align=middle><B>实模式</B><BR>$M 栈尺寸, 堆下限, 堆上限<BR><B>保护模式</B><BR>$M 栈尺寸<BR><B>Windows</B><BR>$M 栈尺寸, 堆尺寸</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>实模式<BR>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>内<BR>存<BR>分<BR>配<BR>尺<BR>寸</TD><BR><TD><B>实模式（默认：$M 16384, 0, 655360）</B><BR>指定程序的栈尺寸（1024~65520）、最小堆尺寸（0~655360）和最大堆尺寸（0~655360）。<BR><B>保护模式（默认：$M 16384）</B><BR>指定程序的栈尺寸（1024~65520）。<BR><B>Windows（默认：$M 8192, 8192）</B><BR>指定程序的栈尺寸（1024~65520）和数据段中的局部堆域尺寸（0~65520）。</TD></TR><BR><TR><BR><TD noWrap align=middle>$O 单元名</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>实模式</TD><BR><TD noWrap align=middle>覆<BR>盖<BR>单<BR>元<BR>名<BR>称</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$R 文件名</TD><BR><TD noWrap align=middle>局部</TD><BR><TD noWrap align=middle>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>资<BR>源<BR>文<BR>件</TD><BR><TD>&nbsp;</TD></TR><BR><TR><BR><TD noWrap align=middle>$S 段尺寸</TD><BR><TD noWrap align=middle>全局</TD><BR><TD noWrap align=middle>保护模式<BR>Windows</TD><BR><TD noWrap align=middle>段<BR>尺<BR>寸<BR>优<BR>先<BR>值</TD><BR><TD>&nbsp;</TD></TR></TBODY></TABLE><BR><P>Borland Pascal 7.0提供下面的条件编译指示：</P><BR><TABLE border=1><BR><TBODY><BR><TR><BR><TD noWrap align=middle>指示</TD><BR><TD align=middle>含义</TD><BR><TD noWrap align=middle>示例</TD></TR><BR><TR><BR><TD noWrap align=middle>$DEFINE 名称</TD><BR><TD>定义一个条件符号。</TD><BR><TD noWrap rowSpan=7>{$DEFINE Debug}<BR>{$IFNDEF Debug}<BR>Here won't be compiled.<BR>{$ELSE}<BR>{$IFOPT X+}<BR>If $X+ is specified, <BR>here will be compiled. <BR>{$ENDIF}<BR>{$ENDIF}<BR>{$UNDEF Debug}</TD></TR><BR><TR><BR><TD noWrap align=middle>$ELSE</TD><BR><TD>编译或忽略接下来的源代码。</TD></TR><BR><TR><BR><TD noWrap align=middle>$ENDIF</TD><BR><TD>结束条件编译。</TD></TR><BR><TR><BR><TD noWrap align=middle>$IFDEF 名称</TD><BR><TD>如果指定名称被定义就编译接下来的源代码。</TD></TR><BR><TR><BR><TD noWrap align=middle>$IFNDEF 名称</TD><BR><TD>如果指定名称没有被定义就编译接下来的源代码。</TD></TR><BR><TR><BR><TD noWrap align=middle>$IFOPT 开关</TD><BR><TD>如果指定开关为当前状态就编译接下来的源代码。</TD></TR><BR><TR><BR><TD noWrap align=middle>$UNDEF 名称</TD><BR><TD>取消定义一个指定名称的已定义条件符号。</TD></TR></TBODY></TABLE><BR><P>Borland Pascal 7.0提供下面的预定义条件符号：</P><BR><TABLE border=1><BR><TBODY><BR><TR><BR><TD noWrap align=middle>符号</TD><BR><TD align=middle>含义</TD><BR><TD noWrap align=middle>示例</TD></TR><BR><TR><BR><TD noWrap align=middle>CPU86</TD><BR><TD>CPU属于80x86处理器系列。</TD><BR><TD noWrap rowSpan=6>{$IFDEF DPMI}<BR>HeapBlock := 65528;<BR>HeapLimit := 16382;<BR>{$ELSE}<BR>Set to Protected mode please.<BR>{$ENDIF} <BR>{$IFNDEF VER70}<BR>Use Turbo Pascal 7.0 please.<BR>{$ENDIF}</TD></TR><BR><TR><BR><TD noWrap align=middle>CPU87</TD><BR><TD>存在80x87数字协处理器。</TD></TR><BR><TR><BR><TD noWrap align=middle>DPMI</TD><BR><TD>操作环境为DOS保护模式。</TD></TR><BR><TR><BR><TD noWrap align=middle>MSDOS</TD><BR><TD>操作系统为实模式MS-DOS或PC-DOS。</TD></TR><BR><TR><BR><TD noWrap align=middle>VER70</TD><BR><TD>Turbo Pascal版本号为7.0。</TD></TR><BR><TR><BR><TD noWrap align=middle>WINDOWS</TD><BR><TD>操作环境为MS-Windows。</TD></TR></TBODY></TABLE><BR><P>Free Pascal也提供了大量的编译指示，但很多都用不上，这里就不给出了。</P></BLOCKQUOTE><BR><P><A name=如何设置默认的编译指示></A><B>如何设置默认的编译指示？</B></P><BR><BLOCKQUOTE><BR><P>在IDE的菜单Options -&gt; Compiler中，你可以设置所有的开关编译指示默认值，在其中的Conditional defines编辑框中可以输入默认的条件符号，以分号分隔每个条件符号。另外，你还可以在菜单Options -&gt; Memory sizes中设置参数编译指示$M的默认值。</P><BR><P>默认的编译指示在编译时对所有的程序和单元都有效，因此它的作用域是全局的，当然，你可以在源代码中添加新的编译指示来覆盖默认的编译指示设置。</P></BLOCKQUOTE><BR><P><A name=如何设置最优的编译指示></A><B>如何设置最优的编译指示？</B></P><BR><BLOCKQUOTE><BR><P>在Borland Pascal 7.0中，要使程序的可执行文件最小、可用功能最多并且运行速度最高，可使用开关编译指示：{$A+,B-,D-,E-,F-,G+,I-,L-,N+,O-,P+,Q-,R-,S-,T-,V-,X+,Y-}。在这种设置下，程序在编译和运行时不进行任何可选的错误检查，也不能进行调试。要使程序进行运行时错误检查，可以使用编译指示：{$I+,Q+,R+,S+}。要使程序能够调试，可以使用编译指示：{$D+,L+,Y+}。另外，为了使程序的栈尺寸和可用堆尺寸最大，还应在主程序中添加编译指示：{$M 65520, 0, 655360}。下面是一个简单的样例：</P><PRE>program Noname;</P><P>{$A+,B-,E-,F-,G+,N+,O-,P+,T-,V-,X+}<BR>{$I-,Q-,R-,S-}<BR>{$D-,L-,Y-}<BR>{$M 65520, 0, 655360}</P><P>begin<BR>end.</PRE><BR><P>在Free Pascal中，最优的编译指示是：{$I-,Q-,R-,S-,V-,X+}。要使程序进行运行时错误检查，可以使用编译指示：{$I+,Q+,R+,S+,V-,X+}。但应该注意，Free Pascal有许多编译选项是不能在源代码中以编译指示的方式设置的。你可以在IDE的菜单Options -&gt; Mode中选择编译方式：Normal、Debug和Release。在程序最后完成时，应使用Release方式编译程序。另外，Free Pascal提供了参数编译指示{$MODE 兼容模式}用以设置编译时的兼容模式，即所用的语法，你可以根据你熟悉的语法进行选择：Default、Delphi、TP、FPC、OBJFPC和GPC。如果你只会Turbo Pascal语法，那么你应该选择TP，如果你熟悉Delphi的Object Pascal语法，那么你也可以选择Delphi。下面是一个简单的样例：</P><PRE>program Noname;</P><P>{$I-,Q-,R-,S-,V-,X+}<BR>{$MODE Delphi}</P><P>begin<BR>end.</PRE><BR><P>如果你不能把全部的编译指示记住，或者你使用的是编译指示不完全的较低版本的Turbo Pascal，那么你可以在IDE中按下Ctrl+OO，IDE会在当前编辑文件的开头插入默认编译指示设置，你可以在其基础上进行修改。虽然大部分的最优编译指示与默认的指示相同，但在源代码中使用编译指示显得更加安全，因为它不会受默认编译指示改变的影响。</P></BLOCKQUOTE></BLOCKQUOTE> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：陈世熹 <br>
+                            
+                            共有5975位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=440.htm" temptabs="http://www.mydrs.org/program/list?id=440">PascalFAQ编译模式专题</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=442.htm" temptabs="http://www.mydrs.org/program/list?id=442">第八届分区提高组初赛试题</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=441.htm" temptabs="http://www.mydrs.org/program/sendmail?id=441" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\PascalFAQ编译指示专题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0441.htm" temptabs="http://www.mydrs.org/program/html/0441.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=459.htm" temptabs="http://www.mydrs.org/program/list?id=459">PascalFAQ之特殊技术</a><br>
+                  
+                  <a href="list-id=458.htm" temptabs="http://www.mydrs.org/program/list?id=458">PascalFAQ之基本技巧</a><br>
+                  
+                  <a href="list-id=457.htm" temptabs="http://www.mydrs.org/program/list?id=457">PascalFAQ之数据类型</a><br>
+                  
+                  <a href="list-id=456.htm" temptabs="http://www.mydrs.org/program/list?id=456">PascalFAQ之语法专题</a><br>
+                  
+                  <a href="list-id=455.htm" temptabs="http://www.mydrs.org/program/list?id=455">PascalFAQ之输入输出</a><br>
+                  
+                  <a href="list-id=454.htm" temptabs="http://www.mydrs.org/program/list?id=454">PascalFAQ之内存分配</a><br>
+                  
+                  <a href="list-id=441.htm" temptabs="http://www.mydrs.org/program/list?id=441">PascalFAQ编译指示专题</a><br>
+                  
+                  <a href="list-id=440.htm" temptabs="http://www.mydrs.org/program/list?id=440">PascalFAQ编译模式专题</a><br>
+                  
+                  <a href="list-id=439.htm" temptabs="http://www.mydrs.org/program/list?id=439">PascalFAQ编程工具专题</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

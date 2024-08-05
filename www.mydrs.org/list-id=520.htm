@@ -1,0 +1,371 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI，上海，碎片-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>NOI，上海，碎片
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI，上海，碎片</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/23/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 116.25pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21.75pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">花败了，给我流沙，我要看着时间从手指的缝隙间，慢慢渗下。</SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21.75pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>一个月过去了，<SPAN lang=EN-US>120ml隐形眼镜护理液挤出了最后一滴，我终于安静下来，可以对着我熟悉的电脑，静静地坐在这里写字。已经不再流泪。虽然我看不到未来，可是过去一遍遍在眼前放映，任何一个时刻，眼泪都会悄无声息地访问，又是一年NOI，我想，也许我真的需要写下一些东西来纪念与NOI有关的那些日日夜夜。在这个主意形成的那一刻，那些碎片一点一点聚集起来，尽管细节已经不再清晰与繁复。积压许久的感情终于能够渐渐舒展开来，这一刻，我已经勇敢……<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">长大是一件最不好的事情。一年前的我，即使没有把握，还是会平静地走进赛场，会在拿到不好结果的那一刻微笑，还会在明知每个省队只有一个女生的情况下自称“队花”，耍宝来逗我的队友开心。那似乎是很早以前的事情了。现在，</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体">我高三了，文学社社长的位子两个月前给了学妹，校刊也不得再插手。我不能再投稿，再发帖子，我不能再随性写字了，之后的每一秒，都很珍贵，写字对于我来说，是再奢侈不过的事情。因为<SPAN lang=EN-US>NOI2003，我是失败者。前途渺茫，我必须放弃我最后一项爱好――写字。我很难过。所以不必再追求形式上的创新和美感，不必追求思想境界的高度，不必对自己吹毛求疵。或者写字不是爱好，是习惯。我又开始怀疑了。是不是我该学文科啊。可是我一样热爱化学实验。NOI结束，我对很多决定都怀疑起来，是不是我真的错了。写作是心灵的疼痛，我这个失败者，不必矫情地讲什么失败是成功之母。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>我感到心底的那道伤口，一点一点渗出血来。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">痛过才会记得，不痛只有忘记。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-weight: bold">《我的<SPAN lang=EN-US>OI故事》，我忽然想起年幼的我写下的那些令人发笑的文字，我想，这一刻，我才真正有资格写我的OI故事。不可以慵懒。</SPAN></SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">眼眶不自觉地湿润了起来，眼里那些影影绰绰的画面，就很合适追忆的温度，配合那些遗憾的美丽。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体">这一次，不写这两年，我只写离开家的这<SPAN lang=EN-US>29天（7.17――8.14）前后。或者只是我如何变得勇敢，或者只是我的一些自作多情，与NOI有关。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; tab-stops: center 218.3pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>现在，我开始放释……<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; tab-stops: center 218.3pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>7月7日，期末考试，班主任不许我不参加补课，怎么解释都没用，僵持。爸妈终于站在我这一边，我在绝望中观望。几日后，我在ioiforum求助，得到大家的帮助。又几日，爸说服了老师，我如愿在家中准备NOI。又几日，云开雾散好运来，收拾行囊，背上沉重的书本和笔记本电脑，准备奔赴上海。只是没想到，能去那里集训的原因竟然是我在大榕树上面发的那篇文章。也因为那些善良的老师看完了我写的字。看来写字也不是什么坏事。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>7月17日，没有对我的同学们道别，甘肃省队仅有的两个队员坐上开往上海的特快，我的生活就此改变……这一次没有老师带我们，这一次我们要自己照顾自己。来的路上，我们下五子棋，我们讨论题目，我们满心希望。我看着窗外，我对自己说，你要努力。离开了兰州，山也绿了很多。途中远远看到绿色中的点点蓝色，我最爱的颜色，微笑，再看，上面印着白色的字：“救灾专用”。一瞬间，潸然泪下。也许我们所不能预料的才是真正的生活。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>下车之前队友帮我梳了两只小辫子。我对着镜子微笑。充满希望地，我踏上了陌生的土地。我说，我是去学习，去找我的未来的。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>我一直梦想在上海念大学。总是这么想，似乎就变成不可更改的事实了，于是便有些偏执狂的味道了。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>闷热的天气迎接了我们，不太适应。坐在拥挤的公交车里，有一种迷失的感觉。<SPAN lang=EN-US>18年来我最喜欢的城市，就在一片混乱中，我开始了和上海的亲密接触。我看到低矮的房屋，穿着睡衣坐在街边打麻将的养尊处优的上海男人，空气里是古老都市骄傲的气息。上海给我的第一印象，是失望。我对自己说，我是来学习的，是来找未来的，其他的，都不重要。于是我继续微笑。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>见到了传说中的吴老师，很好的一个人，认真负责。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">“当我还是个小孩子的时候，曾经在下午三时那一片白晃晃的阳光中迷了路。听到从辽远的地方传来蝉单调的鸣声，如此宽阔的柏油路面却空无一人。呼吸间野草疯长。本以为用手遮挡日光便可以抓住太阳，但透过指缝，仍只能看见城市苍白无边的天空。”</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体">前三天，我迷路了<SPAN lang=EN-US>7次。买了两张不同版本的上海市地图，还有我超强的地理成绩，想不通地，我依然迷路。我才发现，书本远不如生活来的真实可靠。住宿费每天160，台灯三个坏两个，床单上有烟烧过的洞。妈妈说要坚强，寥寥几句就挂断电话。我也许真的得靠自己。晚上抱着传说中的黑书睡觉。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>几日后实在招架不住，终于搬去表姐家。乘公车，竟然坐到相反方向，于是看地图，转车，用<SPAN lang=EN-US>1个多小时回去。骑姐姐的脚踏车，她说要25分钟，我用了两倍的时间。先是找不到路，看了很久路牌，后来被交警拦住，说牌照是2002年的，于是我交了8块钱换新的牌照，叔叔帮我换下牌子，贴上标签，放行。后来转错了方向，问了很多次路。下课回去，努力想着早晨看到的建筑物，还是骑错了方向。问路，回来。40分钟，进步。衣服全部湿掉了，我看见自己的汗珠滴在胳膊上，有些晕。看到红绿灯有点不知所措，快要晒化了。不断地问路，转向。想起写过的关于迷宫的题目，很无助的感觉。在迷路的那些时间里，很想妈妈，想在兰州牵着我的手过马路的同学。我不知道明天，后天，再往后，我该怎么办。我不知道，这么迷糊，怎样独自去找未来。那时候，我的心也快要迷失掉。我拿着上海市地图，提着笔记本电脑，很茫然地独自一人在这个城市漂浮。气温很高，心里却很冷。我的印象中，上海是一个美丽繁华的城市，一个容易让人意乱情迷的城市，可是，这里的喧闹和浮华令我越来越清醒地认识到我的现状。一个看不懂地图的孩子，会迷路的孩子，看不好自己的孩子。所以学习OI的时候，才安全。为了节省时间，我开始打车。在我的城市，不论牌子型号，不论所属公司，所有的出租车都是一种颜色，柔和的绿色，行驶在宽阔的路上，很美。像做游戏地，我坐过了所有颜色的出租。上海的司机和兰州的司机不一样，他们会用上海话讲笑话，想起来，每次走的路线都不一样，可是我不用再担心迷路。有时路上堵车很厉害，我睁大眼睛看着外面，这里，是我喜欢的城市，我还不能放开去感受它，因为NOI即将到来。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>集训非常枯燥。而且，那里的人都比我水平要高。非常安静，敲键盘的声音令人窒息。所以一直很紧张，做梦都会梦到写程序，所以我用努力吃东西来缓解压力，喘不过气来。我是爸爸妈妈放手不管的孩子，他们只会对我说要做个善良的人，要好好学习，要快乐。所以我不能告诉他们我很紧张。慌乱中，我啃掉了很多厚书。我的队友认识我五年，跟我一起学<SPAN lang=EN-US>OI两年，他对我很鄙视，我们会吵架。我是普通班的孩子。我已经不是最好的。可是我想成为更好的人，我努力成为更好的人。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>某天早下课，姐姐家没人。我坐在克莉丝汀里面，每种蛋糕点了一块。因为紧张，我吃东西。一直吃到胃痛。一直到收留我的蛋糕点打烊，我无处可去。坐在小区的秋千上，我晃啊晃，找不到一点飞起来的感觉，心就那么往下沉，下沉，在浮华潮湿的空气中，我在这么一个高楼中间的空档里，看头顶被高楼围起来的黯蓝的天空。一辆一辆豪华的私家车从身旁开过进入地下停车场，穿着睡衣的上海男人到处游荡。我敲了几行程序，最后抱着笔记本电脑，不可抑制地痛哭。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>这城市到底为了什么而深沦？故事若注定悲情，我为何而生？想起一些与上海密不可分的女子，我曾经喜欢过的安妮宝贝，我一直喜欢的张爱玲，那些对上海的描述。想起看过的那些书，那些老照片，那些电影，那些纪录片。突然间觉得苍凉。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>黯蓝弥漫的天空。我站在<SPAN lang=EN-US>21层，窗户外面是陌生的城市。我已经适应了。上海的确很美，就是太过吵闹反而令人觉得孤独。开始熟悉这里众多的街道名称了。地图也刻在我心里了。当司机问我路线的时候，我会明确的说出来，而不是最初的“随便”。我爱上这个城市。湿润炎热的天气，快速难懂的语言，骨架窄小的本地人，讲笑话给我听的出租车司机。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">有天我似乎生病了，很累，没有力气，外甥说我的脸色非常可怕，头很晕，于是我没有去上课，继续睡觉。连续噩梦。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">四周一片黑暗，我从很高的地方掉下来，而后又被无形的力量上抛去，然后再次落下。开始带着一身冷汗惊醒。重复的梦境。后来就没感到有什么了，反正在这一片黑暗中什么也看不见。只是想起那些失重的感觉仍然很难受。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">也常常梦到<SPAN lang=EN-US>NOI我失败了。现在看来，会不会是预兆呢。一点半我醒来，头还是痛，可是不能再睡了，我还得学习，我很难受，还有三天就要报到了。我恐怕会有障碍，很没有把握。姐姐说我也许中暑了，也许水土不服，其实我只是紧张。我不想吃东西，身体和心灵一样困倦。于是15岁的外甥和她的朋友带我去外面。到处都是人，我觉得很落寞。过马路的时候，外甥不做声响地牵起了我的手，很温柔的把我拉到一边，就像很多次的，我的同学们所做的一样。突然产生一种错觉。然后想起我写的文章。看看她牵着我的手，我感动得哭了，不想让她们看到，于是我走得很快。跟她们在一起我很尴尬，好像她们18岁而我15岁，是她们照顾我，也许我心理的确不成熟。她们买那些很可爱的发夹，我站在一边发呆。我静静地看着身边走来走去的女孩子，她们都比我快乐。所以看上去很漂亮。她们是彩色的，我是灰色的。我小学的时候对爸爸妈妈说我要保送上大学。他们笑着说好。在同学们的眼里，我是没有烦恼的孩子。每天在学校里看到橱窗里自己拿着各种奖状的相片，我微笑的模样，都会觉得那是一个梦。为什么那个孩子是我！所以一直没有放弃自己的理由。可是我太累了，我怕我会让别人失望。那时候我想，我回去以后要重新做人。我要对每一个人都好一点，再好一点。因为在这陌生的城市，我一再地想起我的老师，我的同学，我的朋友。我觉得，即使有时候我对他们态度不好，可是我是爱他们的。我来了上海，他们在补课，别班的同学天天都有去找我的，知道我来了这里，我的qq每天几十条留言，督促我吃饭的，让我注意高温的，甚至会问我要不要钱。我一条留言都没有回，也没打电话过去。我情绪不好啊。我不能告诉他们我很紧张，我很难过。可是不感动是假的。体育课跑步鞋带都会开，然后好朋友就会出列，蹲下来为我系鞋带。春天刮沙尘暴的时候我总能借到男生宽大的外套顶在头上。而他们却要穿着短袖衫回家。冬天户外活动的时候，班里的女生会帮我捂手，一个冷了就把我交给下一个。哭泣的时候都会有人送我回家。我就是这么不知感恩的孩子，我总觉得他们都对我太糟糕，在这个陌生的城市想起这些片断，忍不住泪流满面。我现在知道，每个人都会有不开心的时候，所以他们有时候会忘了我，会忘了照顾我，会不想跟我说话。可是他们为我做那么多琐碎的事情，其实我已经是大孩子了，所以回家后我要把鞋带系紧，要记得带外套带雨伞。我很想他们，很想有人再帮我捂手。是的，在上海开着空调的屋子里，我不觉得凉爽，而是彻骨的寒冷。我要珍惜剩下不足一年的高中生活，我要对我的同学们好一点。即使以后不再见面，不管会不会形同陌路，我希望他们不会想起我就不开心。如果竞赛完蛋了，我回来准备高考。这是我所剩下的最后希望了。不然我会没有目标，我会绝望的。在一家店里看到一只特别的拨片，来自韩国，非常贵，可是没有犹豫就买下来。摸上去很有质感，黑色，白色，还有灰度18，拼成的特殊图案，正反不一样，形状也不规则。我已经不会弹吉他了，我要把它穿一根蓝色的丝线挂在脖子上。我只是有点不安，有点寂寞。灰度18，最舒服的颜色，最合适的暧昧。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">我突然很想因为<SPAN lang=EN-US>NOI而结识的高姐姐，LC姐姐，我有点混乱了。</SPAN></SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">我所记得的是，下午三时的阳光突然闪过一抹刺眼的亮时，我留下眼泪。很多东西不是我们可以拯救的，因为很多东西不是我们可以感受的。白鸽剪破天空，鸽哨留下一道悠悠的裂痕。我们从未被给予解答，比如那些敏感，忧虑，彷徨来自什么地方。我们想看到美丽如鲜花般月月盛开，我们想知道宇宙的尽头是什么模样。我们的这些意识不输给任何人，哪怕到头来所有关乎真理的解读又是闹剧一场。总会有一个上位者在发笑。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">期间看上海申花和北京现代汽车的比赛，我的座位是<SPAN lang=EN-US>13号，票是连号的，我猜没有人喜欢13号。队友说会被球蒙的。所以我主动的大声说，吴老师我要13号有么，队友惊异的抬头看我。老师很高兴地递给我，说，有时候这种看似不好的号码是最幸运的。随便好了，只希望我所做的能让身边的人开心一点，也许大家都不在乎。呵呵。晚上去看，上海的球迷果然厉害，很佩服，老妈妈也是一样的狂热，我们的看台是下层，中场旁边，视野最好，都是一起集训的人，所以不会害怕陌生，第一次现场看甲A，我就是进入不了角色，笛声和呐喊的声音令我感到烦躁。我坐在那里，我觉得我在这个世界一点一点沉沦，深陷。他们欢呼，他们骂裁判，敲鼓的声音很沉闷，也很奇怪。我的心脏不很适应，于是喘不过气来。难受。NOI就要到来。我看不到未来。我觉得彻骨寒冷。老师说跟着胡喊一通，发泄一下，状态就会好了，拿奖就没问题了。我苦笑哦。我好像丧失了语言能力，怎么喊出来？我抬起头来，体育场的上空一片黯蓝，灯光衬着，显得色彩凝重，压得我无法呼吸。比赛结束，他们走一个方向，我一个人走相反的方向。打不到车，我问路去乘公交车，天黑了，很黑，但是路上人很多，陌生人，我问了四次路，穿过两次十字路口，没有迷路，没有走冤枉路，我再也不会丢掉了。我已经习惯了上海味的普通话，沟通不成问题了，在这一点上，我也许不算傻。</SPAN></SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>想起我写的《左手，右手，左走，右走》，我突然觉得，自己不会走路了。我怕找不到方向，我怕迷路。可是下一个时刻，我又会对自己说“只要用力呼吸，就能看见奇迹”。我很矛盾。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>结果非常简单，简单到令人猝不及防。我失败了，所有的门好像都关上了。在我发呆的间隙，我身后的一切背景都变幻了颜色。深邃的眸子里，我看到天空闪过的金色，一瞬即逝。我没有机会参加<SPAN lang=EN-US>NOI了，所以不可能像吉林队的那位猛士一样说什么来年再战，也没有魄力像tony wu那样留级一年来参加NOI，我是循规蹈矩的孩子，所以我不得不接受现实。可是我很崇拜他们，很羡慕他们。我现在只能说，我要努力成为更好的人。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>所有人生的记忆碎片，不过是为了填补平凡本身的不完整。找不到出口。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>其间感冒两次。牙疼胃疼各一次，竟然都是有史以来最严重的，说不话来的那种，从家带来的一瓶止疼片全部耗尽。发烧一次，这令我非常紧张。今年比较特殊嘛。还好<SPAN lang=EN-US>8月2日体温正常了。要不我就参加不了NOI了。真幸运哪。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">8月3日，报到。见到了一些朋友，不再那么紧张了。4日，合影我拍得非常难看，遗憾。试机的时候喜欢上对面的女生，ysy。队友总是不和我一起吃饭，和海南队的在一起。这令我非常尴尬，一个人坐在角落里吃饭，吃得郁闷至极。7日晚认识了河南队的队员和tony wu他们。吃苦耐劳的杨迪抱着我们这N个队懒孩子老厚的一叠笔记本去各队房间请人家写联系方式，以至于最后分不清楚是谁的本子。混乱啊。但是感觉非常好。管理员最后疏散了我们，人多太闹啦。后来和徐奕，cici聊了很晚。8月8日，闭幕式令我俩非常难过。而且，领队迟到被堵在了外面。要领我们省优秀参赛学校的牌子，而且是我所不知道的一所学校，不是我们的学校。我和队友都觉得非常难为情，不肯上去丢人现眼。协商了很久，他去领合影照片，我上去领那个优秀参赛学校的牌子。都要难过死了，太丢人了。可是我没办法。如坐针毡。那个下午是那样的漫长，仿佛一个世纪。帮老师领了相聚湖南的光盘，我俩都不愿意拿着，就那么协商再协商。之后还有演奏。本来这是我非常喜欢的东西，可是因为情绪的缘故，我觉得异常痛苦。队友就跟我说，看美女啊，看着心情就好。吴老师跑来安慰我俩。我说不出话来，咬着嘴唇不让眼泪滴下来。结束时看到难过的东方之猪和眼睛湿润的abcsea，一起学习的好伙伴，我们竟然都不同程度地失败了，只是失败的定义不一样。这一天，我和队友没有发生摩擦。我们回去在领队的屋里待了很久，一直坐到我没有知觉。晚上和传说中的小小，同屋的女生合影。我和严老师一道去要女生的联络方式，认识了澳门的MM，相见恨晚哪。在走廊，迎面走来的香港的女生突然问我：“你是不是甘肃队的？”受宠若惊啊，飞奔着取来了联络本。嗯嗯，那些女生都非常可爱，只是最后一夜，我才认识了她们。很可惜，说不定会是很好的朋友呢。奇怪的很，蚊子似乎非常喜欢我，四个人哪，几日下来，就我身上被叮了不下40个包，小腿上还特密集，吓人得很。那床也非常硬，领队把她的被子抱过来被我当褥子，现在想想，真是辜负了她对我这么好。没有镜子，我又笨，梳头发非常困难。同屋的严老师让我去阳台上，这样屋子里面比较暗，外面很亮，窗玻璃就起到了镜子的功用，效果不错。很长见识啊。这几天中还认识了复旦附中的三个非常可爱的女生，大家相处得特别好。最后一晚有点不舍。嗯，上海的早晨非常舒服。晚上也很美，这几天一直失眠嘛，所以印象深刻。</SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>8月9日，返程日。因为没预料到失败，我没有订返程票。领队和队友先回去。我自己解决问题。随大队人马参观上海交大。听交大悠久的历史和对人才的培养，真的非常喜欢和羡慕。校史博物馆也非常令人震撼。因为我也有博物馆情结啊。很小的时候，外公喝昂利一号，所以知道交大。极好的一间学校。空气里有上进的味道。午餐时间跟Bluesky发短信，结果他竟然来了。我所羡慕的交大学生。后来去闵行校区参观，人数锐减啊，他们都要回家啦。领队问我一个人可以么，我点点头。于是和山东队，吉林队的选手随俞老师去闵行。一个非常和蔼亲切的老师。车窗外面的田地绿绿的，视野开阔。下雨了，空气里突然有了诡异的味道，我的感觉开始不对劲。很漂亮的校区，宿舍，机房，所有的一切干净整洁，是我所喜欢的风格，可是奇怪地，感觉差到了极点，我想跟领队回家了。我一个人，感觉也尴尬了许多。大概是知道来这里念书无望吧，想起高考心生畏惧吧，前所未有的挫败感涌上心头。和NOI失败的感觉不一样。是啊，高考，有些专业，在我们省是不招收学生的，我垂死挣扎有什么用？突然间，好像天黑了。我想成为更好的人，可是那一刻，我突然不想争取什么，就这样吧，我对自己失望了。一分钟，年华老去。他们去学生宿舍找师兄合影来着，而我所认识的杨剑似乎不在，我站在雨里面等他们下来。他们的家长和俞老师他们那些大人有一搭没一搭地聊着。我站了很久，有点困了，雨也大了一些。于是我这个来自西部的可怜小孩就在南方的雨水里面独自走过来走过去，时间过得很慢很慢，我不争气地流泪了，还好在下雨，所以不那么丢人。不停地看表，雨水模糊了表盘，我晃一晃胳膊，都觉得乏力。猜想老师和队友到了哪里。我希望他们回来把我带回去。整个人有种虚脱的感觉。雨令人窒息。在诡异的空气里，时间漫长。临别跟俞老师握手，我竟然在发抖。挫败感。回到复旦附中，我逃似的跳下车，一秒钟都不肯耽搁地打了车回姐姐家。晚上吵着要回家，爸妈叫我别太难过了，怕我想不开，非让我多玩几天再回去。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>8月10日，虚脱的我昏睡至下午一点半。糟糕的感觉还是没有摆脱。和外甥去环艺看了《霹雳天使2》，开心许多。晚上队友已经到家，问我交大如何。情绪又一次陷入谷底。情结。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>8月11日，发生了最奇奇怪怪的事。先独自去买了火车票，笨笨的我居然没迷路。开心得不行。我本来想惩罚自己，坐软座的，妈妈骂了我一顿，所以改硬卧了。票很紧张，上铺。妈妈打电话督促我带些礼物给同学，我去了人民广场。我在那里用了很长时间来发呆。偶尔神游，想跟NOI有关的人和事。很晚了，匆匆忙忙地买东西。我，黑帽子，黑T-shirt，长裤，跑鞋。整个人黑乎乎的，跟我的心情一样阴暗，魂不守舍地走在店堂里面，突然被两个没我高的女孩子拉到一边，吓得我半死。原来是某摄影工作室号称找什么平面模特，要找人拍照。狂夸我漂亮，有气质。简直太奇怪了，是讽刺我么？用了半个小时才摆脱了她们。谁叫我形单影只呢。走出没两百米，又被一比我高的男生拍肩膀，我前面都已经半死了，那还禁得住这一吓，差点没栽地上。这个更绝。号称是新秀选拔，看我漂亮，有气质云云。我狂笑啊。滔滔不绝啊，不过他说再多，我也不会飘飘然。呵，我还不了解自己啊，一无是处的小孩。初二拍一广告还没被采用，从此一心向学，终日蓬头垢面，不顾形象。我特想问他：“跟你们公司签约有什么好的？能让我再参加一次NOI吗？！”算了，料他也不知道何为NOI，于是我说一特好笑的话：“老师说我们必须好好学习天天向上。”我以为他没招了。结果这人还说什么对新人文化方面的培养，我就快晕过去了：“您可真能说，骗子的招数啊啊……”这人可急了，说不是骗子啦（事后得知竟然不是骗子，只是我对此不感兴趣，所以不会惋惜错失机会），还让我爸妈一道陪我去选拔会云云。真有趣啊，我笑得肚子都痛了。好不容易拿了他的新秀号码牌要逃，他还不忘叮嘱：“小妹妹要对自己有信心啊，机会难得啊……”有信心？呵，绝了，谁都叫我有信心。有哪门子信心啊，我NOI都失败了。天黑了，我开始不安。我想回家了。可是老大一个广场，我找不到车站在哪里了。于是我绕着广场的边走着找着。晚上8点的上海，灯火点亮，空气里面是热闹的味道，周围的人走来走去，我一个人，放慢了脚步，我抬起头，望着黯蓝的夜空，舒了一口气。这世界真是讽刺，你要的他不给，漂亮不漂亮是我最不在乎的事，我只想成为更好的人，我很想再参加一次NOI。我又有点偏执狂的味道了。夜色将我包围，我在慌乱中，寻找迷失的自己。终于镇定地，在人流涌动的上海，微笑。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体">8月12日，在外面和小外甥一起，淋了雨。感冒了。跑回家。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">我站在<SPAN lang=EN-US>21层，窗外是大雨。我伸出左臂，用手指钩住选手牌的带子，bamboo所谓的“狗牌”，呵呵。它在外面飘着，雨滴砸在上面。我看到美丽的上海的天空。那一刻，我有种冲动，想要纵身跳下，像烟花一样，绽放在傍晚的天空，舒展而自由，绝望的美丽。可是我没有力气。而且多少还是希望自己成为更好的人。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>8月13日，独自乘火车回家。在火车站外面，我抬起头，看看这个我所喜欢的城市，要离开了，而且是以失败者的身份。我说，我还会回来。因为，刻在心里面的地图，我不想浪费。我背着提着大大小小7个包，像逃难者一样。13号车厢，于是我沿着站台走了很远。本车厢最后一个上车的人，我不断地说着“谢谢”，缓缓地移动到最里面的铺位。书是很沉的，我有点支持不住了。一路流泪回到了兰州，只吃了一顿饭。27个小时啊，我一个人。真是勇敢。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>爸妈说经历就是财富。一向对我严厉至极的班主任出乎意料地对我说，别太难过，去就有收获。受宠若惊。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>回到我的城市，我解开禁锢已久的头发，因为紧张而脱落之后，所剩无几。在风中我干涩细弱的的头发和随风扬起的黄土沙尘一起，遮住我湿润的双眼<SPAN lang=EN-US>,保全我的尊严。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">回到我生活的城市，一个东西狭长的西部城市，黄河从中一切两半，露出廉价而浮躁的面孔。我说不清我是否爱这个我成长的城市，它四面环山，空气因此不见天日，春天的风一刮，脆弱的黄土便欲盖弥彰，纷扬着那些现代科学所带来的不洁。但有时我却会在某个有雨的日子近近凝视这条穿越了城市的河，这条在中华的历史上近乎神话的河。我是风沙里长大的孩子，神经多少不会那么水灵。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">岁月咬成黯蓝的齿轮，各自的灰尘纷扬而下，沉淀一杯波澜不起的愤怒。青春做酿。我居然高三了。真不可思议，然而我到现在才有感觉。</SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>回来之后看到<SPAN lang=EN-US>ioiforum上的帖子，关于保送上海交大，大概是因为那难忘的一天，明知没希望却还是忍不住看了：<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>“……凡获得全国青少年信息学奥林匹克联赛一等奖、又获得全国青少年数学、物理或生物学联赛一等奖，平时学习成绩优秀的学生。……”<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>唯一与我能扯上联系的一条。呵呵。正如大家所说，<SPAN lang=EN-US>NOIP果然不值钱。就在这一天，同学送课本和作业过来，同时交给我的，还有我用60块钱换来的生物竞赛准考证。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我别过脸去，我觉得难过。想起来一些事。我考奥班失败了，于是我没有了竞赛的便利条件。于是我只选择了信息学和生物。它们是我的左手和右手。乘公交车回家的时候，我站在拥挤而气味难闻的车厢里面，一手握住横杆，一手翻着我的竞赛书，摇摇晃晃。那样的日子单调而甜美，就像夏日午后的甜筒，简单但是充满了喜悦。可是时间竟然会冲突！这是我做梦都没想到的事情。但是，这是现实。<SPAN lang=EN-US>7月27日，我人就已经在上海了，生物的初赛。8月7日是生物的实验考试（就是复赛），也是NOI的第二试。我进入了一个残酷的游戏，前提是断掉右手，于是我放弃了生物竞赛。可是我自己不争气，游戏也是残酷的，NOI失败了，我的左手也废了。呵呵，也许惯用手是左手的缘故，我选择了来到上海。就是这样。那一天我非常疑惑。是不是我高一的时候选错了科目？是不是这个夏天我做了错误的决定？如果选择参加生物竞赛，结果会不会好很多？我学了两年的OI和生物啊，是不是我真的选错了？两年，11本生物竞赛书，牺牲掉的自习课，活动课，周六休息，两大本密密麻麻的笔记，我画的那些精美的图。我是不是错了啊？我看不到未来，所以没有对错之分。时光永远不可能倒退，选择了就不能后悔。参加不了和参加了却失败了，那是不一样的感情，假使没有选择NOI，我会不会更加难受？呵呵，我不知道。现实是，生物被我放弃了，NOI我失败了。我失去了我的双手。我开始责怪自己。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我跪在地板上，将与<SPAN lang=EN-US>OI有关的书理一理好。我得把它们放在书架最底层，释放空间嘛，给有用的书。不知道以后还会不会看它们，难过。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我高三了啊，来得太突然，梦也醒了。我想起不久前自己在高考前布置考场，贴字；高考期间为来学校考试的全区的考生念通知，放音乐，说祝愿的话，我隐约听见自己柔和的声音：各位考生请注意，……呵呵，我也高三了，明年，我不做广播员。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>学弟说我是一只没有脚的鸟，不停地飞，永远也停不下来的样子。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我说我是一只没有翅膀的鸟，想飞却无能为力，只能靠跑的，不停地跑，看见同伴飞翔，我只能在下面紧追不舍。所以处处碰壁，注定了失败。可是我曾经努力。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我不好给别人交待。我不希望明年的省队还是两个人或者更少。于是我对学弟学妹说：“不是甘肃消息闭塞，不是甘肃的孩子学不好信息学，是学姐太笨了，自己不好好努力，没有把握住机会，才会失败。你们要努力，要加油，……”可是我看见他们茫然地摇摇头，就像不认识我一样。我还以为自己一点也不重要。我辜负了别人的期望。我很惭愧。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>如果没有人知道我的存在，我会不会好过一些？<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我把网名从满怀希望的“微曦”改成了“微曦弥黯”，我告诉充满疑惑的同学，这是前途渺茫的意思。除了<SPAN lang=EN-US>LC姐姐，没有人了解我的绝望。嗯，我曾经绝望。因为年幼无知。没有经历NOI的失败，就不会有那样痛苦的感情。师兄师姐们要去上大学了，他们知道我回来特别来看了我，把竞赛书都给了我，对我说“一切都会好起来”，只要我肯放释。一个师兄送给我一张《命运》，我哭笑不得。我扬起脸来笑，你们真的以为我悲观厌世么？放心吧，我要成为更好的人。学校那个最厉害的保送清华的家伙，什么竞赛都过得奖的奇人，他说“小姑娘，你要自信，要相信自己是最出色的。”是啊，NOIP他省第三，他受的刺激更大，那么骄傲的孩子。我想一想，我参加了三次NOI，真的很幸运。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我很羡慕在<SPAN lang=EN-US>NOI上看到的一些队员，那样落拓的气质。大概是水平高底气就会足一些吧。那样的沉着，是学不来的。我想成为一个落拓的孩子。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>人是有感情的动物。所以……感谢一些因为<SPAN lang=EN-US>NOI而相识的朋友。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-hansi-font-family: 'Times New Roman'">感谢</SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">frish和你的21du.com，NOI前后我在你的版上写下很多废话，借你的空间记录我的心情。我的那些紧张变成飞扬的文字，你没有删除它们，因为你也参加过NOI，所以惺惺相惜吧。失败之后的日子，你跟我说了很多话，算是对我的拯救吧。<o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">感谢高姐姐，感谢你对我讲的那些安慰的话。你说“</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">好妹妹，相信你自己一定有片美好的天空，你看，老天给了你那么美丽的面孔，婀娜的身材，非凡的才智，你还有什么理由怀疑自己呢？等到上了大学以后，你就会明白，什么noi，什么金牌银牌，都是不值一提的小事情，什么都说明不了。”虽然我知道自己没那么好，但总算是种安慰吧。 </SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">感谢<SPAN lang=EN-US>LC姐姐，感谢你跟我讲的那么多感受，感谢你对我说“</SPAN></SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">不能以结果来断定一切”，</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">你让我看到了希望。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.5pt; mso-hansi-font-family: 'Times New Roman'">感谢</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">徐星篁，虽然你也不再参加NOI了，但那时你碰巧在上海，为伤心的我安排了丰富而精彩的行程，准备带我去玩，虽然难过的我最后还是浪费了那么好的计划，可是我依然充满感激。<o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>感谢<SPAN lang=EN-US>ZYJ，你竟然来上海看我。我跟你道歉，不陪你，很冷酷。因为NOI我情绪紧张，不想说话。队友说我铁石心肠。我要准备NOI，我想成为更好的人，我不想后悔。我知道，就是因为这样，我才把好朋友一个一个全都推得好远好远。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN"><FONT size=3>感谢LiuCL，感谢你对我讲文件的使用，库的调用，感谢你对我说要相信自己，感谢你在我一个人乘火车的时候发短信给我，让我觉得不那么孤单。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">感谢superzn，感谢你在这一个月里对我的帮助，感谢你告诉我在这短暂的时间里读哪些</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">书哪些</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">重点的章节，感谢你深夜里对我的不厌其烦的教导，还有感谢你跟我聊天，这使我不那么紧张了。<o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN"><FONT size=3>感谢PengZ,感谢你把我当作自己的姐姐，感谢你的安慰。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; TEXT-ALIGN: left; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt; mso-layout-grid-align: none" align=left><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">感谢tony wu，感谢你鼓励我写完这些文字，感谢你坚持通宵陪我写</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">完</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN">这些字，感谢你肯第一个看我的初稿。</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 9.0pt; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">同样感谢鼓励我并看初稿的<SPAN lang=EN-US>zsdfe。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>同学说我杂念太多，定力也差，容易流泪，容易感动，所以没办法成为那种标准的好孩子，所以注定失败。可是我说人活着就要面对很多人很多事，我已经放弃了很多我所喜欢的东西。我漂亮的加菲猫画板和一大袋子画笔躺在门后，我蓝色的吉他立在墙角，舞鞋也罩上灰尘，我已经很久没有唱过歌。我甚至体育课和活动课都在操场的阴暗角落里琢磨算法。我已经努力过了，为了<SPAN lang=EN-US>OI。我不可以后悔。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>NOI2002认识的《少年电脑报》的记者郭茜姐姐突然打电话来问我过得好不好，我呆立在那里。为什么啊，为什么这么多人都和NOI能扯上关系啊。看来我真的无法刻意忘记NOI，它在我的生活里生根了。<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>回来之后在朋友的网站上看到这首《相信未来》：<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>当蜘蛛网无情地查封了我的炉台<SPAN lang=EN-US>/当灰烬的余烟叹息着贫困的悲哀/我依然固执地铺平失望的灰烬/用美丽的雪花写下/相信未来/当紫葡萄化为深秋的露水/当我的鲜花偎依在别人的情怀/我依然固执地用凝露的枯藤/在凄凉的大地上写下/相信未来/我要用手掌那涌向天边的排浪/我要用手掌那托住太阳的大海/摇曳着曙光那支温暖漂亮的笔杆/用孩子的笔体写下/相信未来/我之所以坚定地相信未来/是我相信未来人们的眼睛/她有拨开历史风尘的睫毛/她有看透岁月篇章的瞳孔/不管人们对于我们腐烂的皮肉/那些迷途的惆怅/失败的苦痛/是寄予感动的热泪/深切的同情/还是给以轻蔑的微笑/辛辣的嘲讽/我坚信人们对于我们的脊背/那无数次的探索、迷途、失败和成功/一定会给予热情客观、公正的评定/是的/我焦急地等待着他们的评定/朋友，坚定地相信未来吧/相信不屈不挠的努力/相信战胜死亡的年青/相信未来/热爱生命。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>这是从前我不屑一顾的文字，可是我突然间觉得感动。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-bidi-font-weight: bold"><FONT size=3>在回来的火车上一直听《假面的告白》：<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>好像缺了一块<SPAN lang=EN-US>/再拼不回来/再不存在/比空白更空白/每一次我想起来/其实你都还在/蓝色悲哀/流过我的静脉/我不要爱/我不要爱/可是我离不开/假面的告白/不坦白的坦白/你不会爱/你不会爱/你只爱接受爱/眼睛睁不开/看不到未来/也哭不出来/好像碎了一块/再补不回来/再不存在/比空白更空白/每一次我想起来/其实你都还在/蓝色悲哀/流过我的静脉/我不要爱/我不要爱/可是我离不开/假面的告白/不坦白的坦白/你不会爱/你不会爱/你只爱接受爱/眼睛睁不开/看不到未来/也哭不出来/被时间活埋/从盛开到腐坏/然后爱/从洁白到苍白/从苍白到尘埃/我想离开/我想离开/可是我还期待/假面的告白/对自己不坦白/你不会爱/你不会爱/你害怕接受爱/把两手张开/抓不到未来/抓不到未来/有你的未来/好像碎了一块/再补不回来/再不存在/比空白更空白/每一次我想起来/其实你都还在/浓的悲哀/化不开。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我对<SPAN lang=EN-US>NOI的感情就是歌里面的这个样子，呵呵，像失恋了一样，我不知道失恋是什么样子，可是我觉得我能听懂这首歌。大概是这个样子：我爱NOI，结果我失败了，呜呜呜，NOI让我失恋。呵呵。我现在觉得很可笑。那是我一闪而过的想法，带着些单纯幼稚的味道。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我伸出手去，只抓住一个微笑着的尾音。我喜欢这句话。<SPAN lang=EN-US>NOI留给我的不只是一个尾音这么简单。所以我应该感恩。我想，这是解不开的情结了吧。<o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>有人说，心病真的会让你生病。双手在键盘上粘着，像是弹钢琴。我是不会弹钢琴的，充其量对着电子琴来一段。而我也不再是那个乐队的键盘手了。但是我打字，还算得上灵敏。魂魄残缺，精神飞散，灵感泛滥。在这个季节里有很多人离开，还有很多人回来。我不知还要在这片思维的森林中迷路多久，也许早已走出，也许要跋涉至年华的尽头。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>对不起爸爸妈妈，对不起老师们，对不起同学朋友，对不起我自己。可是请你们相信我，我努力过了，我还会继续努力，我会好好的。请你们相信我，我真的很想，很想成为更好的人。我想成为更好的人啊。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>整整半个月啊，你们帮我找了这么久的自信。都这么久了，我怎么敢不好起来，怎么敢再给你们添麻烦啊！为什么，你们为什么不责怪我呢？那样也许我会好受些。我不哭了，我会很乖。乖小璇不哭。你们不都这么说么。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>心情好坏是自己思维所致，一味想怎样怎样失败心情自然不会好起来，说不定我的未来真的没我想象的那么糟糕呢。心情坏到极致，痛楚，麻木，其实不过尔尔。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>空缺，发烧，泛白，一切只是神话。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体"><FONT size=3>挣扎在错误的时空。放逐。<SPAN lang=EN-US><o:p></o:p></SPAN></FONT></SPAN></P>
+<P class=MsoBodyTextIndent style="MARGIN: 0cm 0cm 0pt"><FONT face=宋体><FONT size=3>还是认识了一些人，做了一些决定，相信了一些真实，接受了一些现实，曲曲折折走了一条长长的路。只是没料到自己最后可以笑的那么豁然开朗或是哭的那么追悔莫及，讲故事的人却一笔带过：成长。<SPAN lang=EN-US style="mso-font-kerning: 0pt; mso-hansi-font-family: 宋体"><o:p></o:p></SPAN></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'">一个星期的通宵作业，我终于要写完了，</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">我高三阶段最后一篇为自己而写的文字，用尽我所有的力气和感情。我不知道这是不是自作多情，本来打算写<SPAN lang=EN-US>NOI，结果写成了这样。一些碎片。可是我爱这些文字。年少的纯真和孤注一掷的感情。回头想想，得到的比失去的，或者只是不该属于我的那些，即使是很少的一些，可是他们要有意义得多，分量也沉得多。如果我没有失败，我对NOI的感情将是另外的一种吧，我写出来的文字，便也不会是这个样子。我应该感恩。<o:p></o:p></SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; LINE-HEIGHT: 13.5pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><FONT size=3><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'">回头看看这些字，我已经冷静了好多，勇敢了好多。只是有些不舍，我真的要和<SPAN lang=EN-US>NOI说再见了，逃避了这么久，拖延了这么久，我还是写完了，终于到了结束关系的这一刻，NOI，我想好好跟你说再见。再见的意思，就是不再相见。不是不想，是不能。</SPAN></SPAN><SPAN lang=EN-US style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>我在兰州干燥的夜晚，在干燥的凉风中放声朗读这些文字，声音慢慢地不再哽咽。我终于可以像头顶安详的夜空那样，用平和悠长的嗓音为我的过去念悼词。微笑着，等待明天的晨曦。</FONT></SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: ZH-CN"><o:p></o:p></SPAN></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：赵瑞璇 <br>
+                            
+                            来 源：投稿<br>
+                            
+                            共有5374位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=519.htm" temptabs="http://www.mydrs.org/program/list?id=519">IOI2003中国队及港台代表队均获佳绩</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=521.htm" temptabs="http://www.mydrs.org/program/list?id=521">第九届分区提高组官方参考解答</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=520.htm" temptabs="http://www.mydrs.org/program/sendmail?id=520" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI，上海，碎片.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0520.htm" temptabs="http://www.mydrs.org/program/html/0520.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607">noip倒计时 by 枯叶蝴蝶</a><br>
+                  
+                  <a href="list-id=606.htm" temptabs="http://www.mydrs.org/program/list?id=606">仰起脸,天空依旧蔚蓝</a><br>
+                  
+                  <a href="list-id=577.htm" temptabs="http://www.mydrs.org/program/list?id=577">感悟OI之我心坦然(by gsn)</a><br>
+                  
+                  <a href="list-id=561.htm" temptabs="http://www.mydrs.org/program/list?id=561">命途的点缀(贵州男生的长沙故事)</a><br>
+                  
+                  <a href="list-id=548.htm" temptabs="http://www.mydrs.org/program/list?id=548">我的oi故事之挥别oi(jakrinchose)</a><br>
+                  
+                  <a href="list-id=529.htm" temptabs="http://www.mydrs.org/program/list?id=529">河南女生的上海故事</a><br>
+                  
+                  <a href="list-id=528.htm" temptabs="http://www.mydrs.org/program/list?id=528">信息学奥林匹克培训与素质教育</a><br>
+                  
+                  <a href="list-id=526.htm" temptabs="http://www.mydrs.org/program/list?id=526">评论：奥校不是“洗澡水”  </a><br>
+                  
+                  <a href="list-id=525.htm" temptabs="http://www.mydrs.org/program/list?id=525">奥赛凸现青少年人才培养规律</a><br>
+                  
+                  <a href="list-id=524.htm" temptabs="http://www.mydrs.org/program/list?id=524">计算机教育：锻造青少年创新翅膀  </a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

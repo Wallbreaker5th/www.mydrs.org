@@ -1,0 +1,347 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2003 Day2 智破连环阵-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>NOI2003 Day2 智破连环阵
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2003 Day2 智破连环阵</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/8/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【问题描述】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">B</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国在耗资百亿元之后终于研制出了新式武器――连环阵（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">Zenith Protected Linked Hybrid Zone</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">），并声称这是一种无敌的自发性智能武器。但</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">A</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国经侦察发现，连环阵其实是由</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个独立武器组成的。这</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个武器编号为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">…</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">。每件武器有两种状态：无敌自卫状态和攻击状态。最初，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号武器处于攻击状态，其他武器都处在<B style="mso-bidi-font-weight: normal">无敌</B>自卫状态。以后，一旦第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: Arial"> </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">i</I>&lt;<I style="mso-bidi-font-style: normal">M</I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">）号武器被消灭，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">秒钟以后第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i+1</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号武器就自动从无敌自卫状态变成攻击状态。当第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号武器被消灭以后，这个造价昂贵的连环阵就被彻底摧毁了。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为了打败</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">B</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">A</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国军事部长打算用最廉价的武器――炸弹来消灭连环阵。经过长时间的精密探测，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">A</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国的军事家们掌握了连环阵中</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个武器的平面坐标，然后依此选择了</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个点，并在这些点上安放了特殊的定时炸弹。这</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个炸弹编号为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">…</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">。每个炸弹的作用半径均为</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，且会持续爆炸</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">分钟。在这</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">分钟内，每枚炸弹都可以在<B style="mso-bidi-font-weight: normal">瞬间</B>消灭离它直线距离不超过</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">的、<B style="mso-bidi-font-weight: normal">处在攻击状态</B>的</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">B</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国武器。和连环阵类似，最初</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>1</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号炸弹持续引爆</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">分钟时间，然后</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>2</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号炸弹持续引爆</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">分钟时间，接着</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>3</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号炸弹引爆……以此类推，直到连环阵被摧毁。在每个炸弹爆炸的时候，其它尚未引爆的炸弹都处于地下隐蔽处，不会被己方的炸弹摧毁。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">显然，选好</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>1</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>2</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>3</SUB></SPAN></I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">...</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">十分重要。好的序列可以在仅使用较少炸弹的情况下就能将连环阵摧毁；坏的序列可能在使用完所有炸弹后仍无法将连环阵摧毁。现在，请你决定一个序列</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>1</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>2</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>3</SUB></SPAN></I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">…</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">使得在第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>x</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">号炸弹引爆的时间内连环阵被摧毁。这里的</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">应当尽量小。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【输入文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">输入文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">zplhz.in</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">第一行包含三个整数：</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">和</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">M</I>, <I style="mso-bidi-font-style: normal">n</I></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> 100</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> k</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> 1000</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">），分别表示</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">B</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国连环阵由</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个武器组成，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">A</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">国有</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个炸弹可以使用，炸弹攻击范围为</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">k</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">。以下</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">M</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行，每行由一对整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">y<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">0</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">x<SUB>i</SUB></I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">y<SUB>i</SUB></SPAN></I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> 10000</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">）组成，表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">i</I></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">M</I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">）号武器的平面坐标。再接下来</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">n</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">行，每行由一对整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">u<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">v<SUB>i</SUB></SPAN></I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">(0 </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">u<SUB>i</SUB></I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">v<SUB>i</SUB></SPAN></I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> 10000)</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">组成，表示第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">i</I></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN style="mso-char-type: symbol; mso-symbol-font-family: Symbol">&pound;</SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"> <I style="mso-bidi-font-style: normal">n</I></SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">）号炸弹的平面坐标。输入数据保证无误和有解。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">测试数据中的</SPAN><B style="mso-bidi-font-weight: normal"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x<SUB>i</SUB></SPAN></I></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN></B><B style="mso-bidi-font-weight: normal"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">y<SUB>i</SUB></SPAN></I></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN></B><B style="mso-bidi-font-weight: normal"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">u<SUB>i</SUB></SPAN></I></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">、</SPAN></B><B style="mso-bidi-font-weight: normal"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">v<SUB>i</SUB></SPAN></I></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">是随机生成的。</SPAN></B><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【输出文件】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">输出文件</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">zplhz.out</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">的第一行包含一个整数</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，表示实际使用的炸弹数。第二行包括</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">x</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个整数，依次表示</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>1</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>2</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">…</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">a<SUB>x</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【样例输入</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">4 3 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">0 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">6 6<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">6 0<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">0 0<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 5<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">0 3<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 1<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt; mso-fareast-font-family: 黑体">&nbsp;<o:p></o:p></SPAN></H2>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【样例输出</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt">1</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1 3<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【样例输入</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt">2</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">10 10 45<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">41 67<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">34 0<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">69 24<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">78 58<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">62 64<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5 45<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">81 27<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">61 91<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">95 42<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">27 36<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">91 4<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2 53<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">92 82<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">21 16<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">18 95<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">47 26<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">71 38<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">69 12<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">67 99<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">35 94<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【样例输出</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt">2</SPAN><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">5<o:p></o:p></SPAN></P>
+<P class=a style="LAYOUT-GRID-MODE: char"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">6 2 1 3 4<o:p></o:p></SPAN></P>
+<H2 style="LAYOUT-GRID-MODE: char"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-size: 18.0pt; mso-bidi-font-family: Arial">【评分标准】</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; mso-bidi-font-size: 18.0pt"><o:p></o:p></SPAN></H2>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">对每个测试点，如果你的输出合法，评分公式如下：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto" align=center><SUB><SPAN lang=EN-US style="mso-bidi-font-family: Arial"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shape id=_x0000_i1029 style="WIDTH: 185.25pt; HEIGHT: 236.25pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image003" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image005.gif"></v:imagedata></v:shape></SPAN></SUB><SPAN lang=EN-US style="FONT-FAMILY: 宋体; mso-bidi-font-family: Arial"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">其中</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">good</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为我们的参考解，</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">ans</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为你的答案。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">如果你的输出不合法，则该测试点只能得</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">0</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">分。</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></B></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24.1pt"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">&nbsp;<o:p></o:p></SPAN></B></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">总分的计算公式：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt; TEXT-ALIGN: center" align=center><SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><v:shape id=_x0000_i1030 style="WIDTH: 233.25pt; HEIGHT: 40.5pt" coordsize="21600,21600" type="#_x0000_t75"><v:imagedata o:title="image006" src="index.htm" temptabs="http://www.mydrs.org/program/pic/day2.files/image006.gif"></v:imagedata></v:shape></SPAN></SUB><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 24pt"><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">其中</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">score<SUB>i</SUB></SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为你第</SPAN><I style="mso-bidi-font-style: normal"><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">i</SPAN></I><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">个测试点的得分。</SPAN></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有5146位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=512.htm" temptabs="http://www.mydrs.org/program/sendmail?id=512" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2003 Day2 智破连环阵.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0512.htm" temptabs="http://www.mydrs.org/program/html/0512.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

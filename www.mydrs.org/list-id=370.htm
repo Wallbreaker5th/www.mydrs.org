@@ -1,0 +1,278 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>初探队与广度优先搜索-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>初探队与广度优先搜索
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>初探队与广度优先搜索</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/25/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B>一、 队</B><BR><BR>　　<B>1、队的定义：</B><BR>　　队是特殊的线性表之一，它只允许在队的一端插入，在队的另一端删除。插入一端叫队尾（T），删除一端叫队首（H），没有任何元素的队叫做空队。队列遵循"先进先出"原则，排队购物、买票等，就是最常见的队。 <BR>　　　　　　　　　<IMG height=369 src="external/www.chinaschool.org/aosai/lwjl/images/02-0314-01.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0314-01.gif" width=306><BR><BR><B>　　2、队的基本操作：</B><BR><BR>　　（1）队的描述：<BR>　　　　type queue=array[1..100] of integer;<BR>　　　　var a:queue;　　　　{定义数组}<BR>　　　　　　h,d:integer; 　{队首、队尾指针}<BR><BR>　　（2） 初始化（图1）：<BR>　　　　procedure start；<BR>　　　　　begin<BR>　　　　　　h：=1； d：=1；<BR>　　　　　end；<BR><BR>　　（3） 入队操作（图2）：<BR>　　　　　procedure enter；<BR>　　　　　　begin<BR>　　　　　　　read(s); {读入数据}<BR>　　　　　　　inc（d）； {队尾加一}<BR>　　　　　　　a[d]：=s；<BR>　　　　　　end；<BR><BR>　　（4） 出队操作（图3）：<BR>　　　　　procedure out；<BR>　　　　　　begin<BR>　　　　　　　　inc（h）； {队首加一}<BR>　　　　　　　a[h]：=0；<BR>　　　　　　end； <BR><BR><B>二、 广度优先搜索</B><BR>　　广度优先搜索类似于树的按层次遍历的过程。它和队有很多相似之处，运用了队的许多思想，其实就是对队的深入一步研究，它的基本操作和队列几乎一样。<BR><BR><B>三、 队和广度优先搜索的运用</B><BR>　　图4表示的是从城市A到城市H的交通图。从图中可以看出，从城市A到城市H要经过若干个城市。现要找出一条经过城市最少的一条路线。<BR>　　　<IMG height=238 src="external/www.chinaschool.org/aosai/lwjl/images/02-0314-02.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0314-02.gif" width=465><BR>　　　　　　　　　　　　　　　　　　图4<BR><BR>　　<B>分析</B>：看到这图很容易想到用邻接距阵来表示，0表示能走，1表示不能走。如图5。<BR><BR>　　　　　　<IMG height=218 src="external/www.chinaschool.org/aosai/lwjl/images/02-0314-03.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/02-0314-03.gif" width=353><BR>　　　　　　　　　　　　　　　　　　图5</P><P></P><P>　　首先想到的是用队的思想。我们可以a记录搜索过程，a.city记录经过的城市,a.pre记录前趋元素，这样就可以倒推出最短线路。具体过程如下：<BR><BR>　　（1） 将城市A入队，队首、队尾都为1。<BR>　　（2） 将队首所指的城市所有可直通的城市入队（如果这个城市在队中出现过就不入队，可用一个集合来判断），将入队城市的pre指向队首的位置。然后将队首加1，得到新的队首城市。重复以上步骤，直到城市H入队为止。当搜到城市H时，搜索结束。利用pre可倒推出最少城市线路。<BR>　　以下为<B>参考程序：</B><BR><BR>　　const ju:array[1..8,1..8] of 0..1=((1,0,0,0,1,0,1,1),<BR>　　　　　　　　　　　　　　　　　　　　　(0,1,1,1,1,0,1,1),<BR>　　　　　　　　　　　　　　　　　　　　　(0,1,1,0,0,1,1,1),<BR>　　　　　　　　　　　　　　　　　　　　　(0,1,0,1,1,1,0,1),<BR>　　　　　　　　　　　　　　　　　　　　　(1,1,0,1,1,1,0,0),<BR>　　　　　　　　　　　　　　　　　　　　　(0,0,1,1,1,1,1,0),<BR>　　　　　　　　　　　　　　　　　　　　　(1,1,1,0,0,1,1,0),<BR>　　　　　　　　　　　　　　　　　　　　　(1,1,1,1,0,0,0,1));<BR>　　type r=record {记录定义}<BR>　　　　　　city:array[1..100] of char;<BR>　　　　　　pre:array[1..100] of integer;<BR>　　　　　end;<BR>　　var h,d,i:integer;<BR>　　　　a:r;<BR>　　　　s:set of 'A'..'H';<BR>　　procedure out; {输出过程}<BR>　　begin<BR>　　　write(a.city[d]);<BR>　　　　repeat<BR>　　　　　d:=a.pre[d];<BR>　　　　　write('--',a.city[d]);<BR>　　　　until a.pre[d]=0;<BR>　　　writeln;<BR>　　　halt;<BR>　　end;<BR>　　procedure doit;<BR>　　begin<BR>　　　h:=0; d:=1;<BR>　　　a.city[1]:='A';<BR>　　　a.pre[1]:=0;<BR>　　　s:=['A'];<BR>　　　repeat {步骤2}<BR>　　　　inc(h); {队首加一，出队}<BR>　　　　for i:=1 to 8 do {搜索可直通的城市}<BR>　　　　　if （ju[ord(a.city[h])-64,i]=0）and <BR>　　　　　　（not（chr（i+64） in s））then {判断城市是否走过}<BR>　　　　　　　begin<BR>　　　　　　　　inc(d); {队尾加一，入队}<BR>　　　　<BR>　　　　　　　a.city[d]:=chr(64+i);<BR>　　　　　　　a.pre[d]:=h;<BR>　　　　　　　s:=s+[a.city[d]];<BR>　　　　　　　if a.city[d]='H' then out;<BR>　　　　　　end;<BR>　　　until h=d;<BR>　　end;<BR>　　begin {主程序}<BR>　　　doit;<BR>　　end.<BR><BR>　　<B>输出：</B><BR>　　　H-F--A<BR><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：张中亮 <br>
+                            
+                            来 源：福州一中<br>
+                            
+                            共有5591位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=369.htm" temptabs="http://www.mydrs.org/program/list?id=369">数的划分的研究</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=371.htm" temptabs="http://www.mydrs.org/program/list?id=371">SGOI第十三次友谊赛数据</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=370.htm" temptabs="http://www.mydrs.org/program/sendmail?id=370" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\初探队与广度优先搜索.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0370.htm" temptabs="http://www.mydrs.org/program/html/0370.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=370.htm" temptabs="http://www.mydrs.org/program/list?id=370">初探队与广度优先搜索</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

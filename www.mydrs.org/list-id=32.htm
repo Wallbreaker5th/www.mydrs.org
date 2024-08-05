@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>Pascal基本教程 第二章-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>Pascal基本教程 第二章
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>Pascal基本教程 第二章</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/6/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              Pascal语言基础知识 </P><P>2.1 Pascal程序基本组成</P><P>例1.1计算半径为R的圆面积S</P><P>program Area; {程序首部}</P><P>{已知半径求圆的面积}</P><P>const pi=3.14159; 　{说明部分――数据描述}</P><P>var s,r:real;</P><P>begin　　　　　　　　　　　{执行部分}</P><P>readln(r);</P><P>s:=pi*sqr(r);</P><P>writeln('s=',s);</P><P>end.　</P><P>　　上述程序第一行称为程序首部。其中用花括号(注释可以用{ }或（* *）来表示）括起来的内容是注释，程序第二行就是一个注释，注释除了给人看，增加程序的可读性外，对程序编译和运行不起作用。一个程序可以包含多个出现在不同处注释，亦可无注释。程序第三行是常量说明，程序第四行是变量说明。程序从begin到end都是执行（语句）部分</P><P>(1)程序首部</P><P>　　例1.1的第一行称为程序首部。program是保留字，接着是程序名（由你依据“标示符”规则自行定义），最后以分号表示程序首部结束，下面是程序主体的开始。程序首部在一个Turbo Pascal（仅在Turbo Pascal中有效）程序中并非必须出现，它是可选的。写上它仅起了文档作用。因此，在时间有限的情况下，如果用Turbo Pascal编程完全可以省略程序首部。</P><P>(2)程序体</P><P>a.说明部分</P><P>说明部分用于定义和说明程序中用到的数据，由单元说明、标号说明、常量说明、类型说明、变量说明、函数或过程说明组成，并且这些数据的说明次序必须按照以上次序。但是一个简单的Turbo Pascal程序也可以不包含说明部分，也就是说说明部分是可选的。</P><P>b.执行部分</P><P>执行部分描述了程序要执行的操作。它必须以一个Turbo Pascal保留字begin开始，以保留字end后跟句点结束，其间是一些执行具体操作的语句，并且以分号作为语句之间的分隔符。begin 和end必须成对出现，这是一个Turbo Pascal程序所必须有的。紧跟end之后的句号表示执行部分的结束，也表示整个程序的结束。此后的任何语句都无效。Turbo Pascal规定紧随end之前出现的分号允许省略。</P><P>(3)一个完全的Pascal程序结构</P><P>program 程序名；</P><P>　uses</P><P>　　　已知单元说明；</P><P>　label</P><P>　　　标号说明；</P><P>　const</P><P>　　常量说明；</P><P>　type</P><P>　　　类型说明；</P><P>　var</P><P>　　变量说明；</P><P>　function</P><P>　　函数说明；</P><P>　procedure</P><P>　　过程说明；</P><P>begin</P><P>　语句；</P><P>　语句；</P><P>　……</P><P>　语句</P><P>end. <BR> <BR>2.2 Pascal字符与符号 <BR>1.保留字(关键字)</P><P>　　所谓保留字是指在Pascal语言中具有特定的含义，你必须了解它的含义，以便于正确的使用，否则会造成错误。标准Pascal语言中的保留字一共有35个，Turbo Pascal语言一共有51个。下面是Pascal语言的保留字(斜体是Turbo Pascal特有的保留字):</P><P>AND，ARRAY，BEGIN，CASE，CONST，DIV，DO，DOWNTO，ELSE，END，FILE，FOR，FUNTION，GOTO，IF，IN，LABEL，MOD，NIL，NOT，OF，OR，PACKED，PROCEDURE，PROGRAM，RECORD，REPEAT，SET，THEN，TO，TYPE，UNTIL，VAR，WHILE，WITH，EXPORTS，SHR，STRING，ASM，OBJECT，UNIT，CONSTRUCTOR，IMPLEMENTATION，DESTRUCTOR，USES，INHERITED，INLINE，INTERFACE，LIBRARY，XOR，SHL</P><P>２.标识符</P><P>　　(1)表识符的定义：标识符就是以字母开头的字母数字序列，有效长度为63个字符，并且大小写等效。可以用来标示常量、变量、程序、函数等。例如例1.1中的Area(程序名)，pi(符号常量)，s、r(变量名)都是标识符。</P><P>(2)表识符的分类：</P><P>　　　　a.标准标识符：指Pascal语言预先定义的表识符，具有特殊含义。</P><P>        以下列举了Turbo Pascal语言部分常用的标准表识符：</P><P>标准常量 False Maxint True 　 　 　 　 <BR>标准类型 Boolean Char Real Integer 　 　 　 <BR>标准函数 Abs Arctan Chr Cos Eof Eoln Exp <BR>　 Ln Odd Ord Pred Round Sin Sqr <BR>　 Sqrt Succ Trunc 　 　 　 　 <BR>标准过程 Dispose Get New Pack Page Put Read <BR>　 Readln Reset Rewrite Unpack Write Writeln 　 <BR>标准文件 Input Output 　 　 　 　 　 </P><P>        b.用户字定义表识符：由你来根据需要定义。</P><P>      （1）选用的表识符不能和保留字相同。</P><P>      （2）语法上允许预定义的标准标识符作为你定义的的表识符使用，但最好还是不要用。</P><P>       以下列举了你在定义表识符时可以用的字符：     <BR>     A――Z；a――z；0――9；+，-，*，/，=，&lt;&gt;，&lt;=，&gt;=，&lt;，&gt;，(，)，[，]，{，}，:=，，，；，.，：，..，'，^</P><P>2.3　Pascal数据类型 <BR>　　数据是程序设计的一个重要内容，其重要特征----数据类型，确定了该数据的形、取值范围以及所能参与的运算。<BR>　　Turbo Pascal 提供了丰富的数据类型，这些数据类型可以分为三大类：简单类型、构造类型和指针类型，其中简单类型可以分为标准类型（整型、实型、字符型和布尔型）和自定义类型（枚举型和子界型），构造类型可以分为数组类型、集合类型、记录类型和文件类型。这些数据类型中除了指针类型是动态数据类型外，其他的都是静态数据类型。在这些数据类型中简单类型都是有序类型，除了实型以外的简单类型都是顺序类型，所谓顺序类型就是他们的值不仅是有序的而且是有顺序号。<BR>　　在这里主要介绍整型、实型、字符型和布尔型四种常用的数据类型。</P><P>1.整型<BR>　　一个整型数据用来存放整数。Turbo Pascal支持五种预定义整型，它们是shortint（短整型）、 integer（整型）、 longint（长整型）、 byte（字节型）和 word（字类型），Turbo Pascal分别用相同的名字作为他们的表识符。每一种类型规定了相应的整数取值范围以及所占用的内存字节数。</P><P>类型 数值范围 占字节数 格式 <BR>shortint -128..128 1 带符号8位 <BR>inteter -32768..32767 2 带符号16位 <BR>longint -2147483648..2147483647 4 带符号32位 <BR>byte 0..255 1 带符号8位 <BR>word 0..65535 2 带符号16位 </P><P>　　Turbo Pascal规定了两个预定义整型常量表识符maxint和maxlonint，他们各表示确定的常数值，maxint为32767， longint为2147483647，他们的类型分别是integer 和longint。</P><P>2.实型<BR>　　一个实型数据用类存放实数。Turbo Pascal支持五种预定义实型，它们是real（基本实型）、 single（但精度实型）、double（双精度实型）、extended（扩展实型）、comp（装配实型），Turbo Pascal分别用相同的名字作为他们的表识符。每一种类型规定了相应的实数取值范围、所占用的内存字节数以及它们所能达到的精度。</P><P>类型 数值范围 占字节数 有效位数 <BR>real 2.9e-39..1.7e38 6 11..12 <BR>single 1.5e-45..3.4e38 4 7..8 <BR>double 5.0e-324..1.7e308 8 15..16 <BR>extended 3.4e-4932..1.1e4932 10 19..20 <BR>comp -2**63+1..2**63-1 8 19..20 </P><P>　　Turbo Pascal支持两种用于执行实型运算的代码生成模式：软件仿真模式和80x87浮点模式。除了real可以在软件仿真模式下直接运行以外，其他类型必须在80x87浮点模式下运行。</P><P>3.布尔型<BR>　　一个布尔型数据用来存放逻辑值（布尔值）。布尔型的值只有两个：false和true，并且false的序号是0，true的序号是1。false 和true都是预定义常数表识符，分别表示逻辑假和逻辑真。并且true&lt;false。boolean是布尔型的表识符。</P><P>4.字符型<BR>　　字符型用char作为表识符。字符型必须用单引号括起来，字母作为字符型时，大小写是不等价的，并且字符型只允许单引号中有一个字符，否则就是字符串。<BR>2.4 常量与变量<BR>1.常量<BR>(1)常量：在某个程序的整个过程中其值不变的量。<BR>(2)常量定义：常量定义出现在说明部分。它的语法格式是：<BR>const<BR>&lt;常量标识符&gt;=&lt;常量&gt;;<BR>...<BR>&lt;常量标识符&gt;=&lt;常量&gt;;<BR>常量表识符的类型由定义它的常量的类型决定。例如：const a=12 隐含说明a是整型；const r=3.21 隐含说明r是实型......<BR>(3)常量定义部分必须以保留字const开头，可以包含一个或几个常量定义，而且每个常量均以分号结束。<BR>(4)Turbo Pascal类型常量<BR>类型常量，又称变量常数，它是Turbo Pascal的一个扩充特性。类型常量的定义与标准Pascal规定的常数定义和变量说明有所区别。类型常量定义的语法格式：<BR>const<BR>&lt;简单类型常量标识符&gt;:简单类型=常数；<BR>例如：<BR>const<BR>counter:integer=0;<BR>flag:boolean=true;<BR>index:0..100=0;<BR>2.变量<BR>(1)变量：在某个程序中的运行过程中其值可以发生改变的量<BR>(2)变量说明：变脸说明出现在说明部分。它的语法格式是：<BR>var<BR>&lt;变量标识符列表&gt;:&lt;类型&gt;;<BR>...<BR>&lt;变量标识符列表&gt;:&lt;类型&gt;;<BR>其中，保留字var表示开始一个变量说明部分。变量标识符列表是一个用逗号隔开的标识符序列，冒号后面的类型是类型标识符。每个变量说明均以分号结束。<BR>例如：<BR>var<BR>a,b,c:integer;<BR>m,n:real;<BR>2.5　标准函数 <BR>1.算术函数</P><P>函数标识符 <BR> 自变量类型 <BR> 意义 <BR> 结果类型 <BR> <BR>abs <BR> 整型、实型 <BR> 绝对值 <BR> 同自变量 <BR> <BR>arctan <BR> 整型、实型 <BR> 反正切 <BR> 实型 <BR> <BR>cos <BR> 整型、实型 <BR> 余弦 <BR> 实型 <BR> <BR>exp <BR> 整型、实型 <BR> 指数 <BR> 实型 <BR> <BR>frac <BR> 整型、实型 <BR> 小数部分 <BR> 实型 <BR> <BR>int <BR> 整型、实型 <BR> 整数部分 <BR> 实型 <BR> <BR>ln <BR> 整型、实型 <BR> 自然对数 <BR> 实型 <BR> <BR>pi <BR> 无自变量 <BR> 圆周率 <BR> 实型 <BR> <BR>sin <BR> 整型、实型 <BR> 正弦 <BR> 实型 <BR> <BR>sqr <BR> 整型、实型 <BR> 平方 <BR> 同自变量 <BR> <BR>sqrt <BR> 整型、实型 <BR> 平方根 <BR> 实型 <BR> </P><P>例：</P><P>abs(-4)=4 <BR>  abs(-7.49)=7.49 <BR>  <BR>arctan(0)=0.0 <BR> sin(pi)=0.0 <BR> cos(pi)=-1.0 <BR> <BR>frac(-3.71)=-0.71 <BR> int(-3.71)=-3.0 <BR>  <BR>sqr(4)=16 <BR>  sqrt(4)=2 <BR>   </P><P>2.标量函数</P><P>函数标识符 <BR> 自变量类型 <BR> 意义 <BR> 结果类型 <BR> <BR>odd <BR> 整型 <BR> 判断奇数 <BR> 布尔型 <BR> <BR>pred <BR> 离散类型 <BR> 求前趋 <BR> 同自变量 <BR> <BR>succ <BR> 离散类型 <BR> 求后继 <BR> 同自变量 <BR> </P><P>例：</P><P>odd(1000)=false <BR> odd(3)true <BR> <BR>pred(2000)=1999 <BR> succ(2000)=2001 <BR> <BR>pred('x')='w' <BR> succ('x')='y' <BR> </P><P>3.转换函数</P><P>函数标识符 <BR> 自变量类型 <BR> 意义 <BR> 结果类型 <BR> <BR>chr <BR> byte型 <BR> 自量对应的字符 <BR> 字符型 <BR> <BR>ord <BR> 离散类型 <BR> 自量对应的序号 <BR> longint <BR> <BR>round <BR> 实型 <BR> 四舍五入 <BR> longint <BR> <BR>trunc <BR> 实型 <BR> 截断取整 <BR> longint <BR> </P><P>4.杂类函数</P><P>函数标识符 <BR> 自变量类型 <BR> 意义 <BR> 结果类型 <BR> <BR>random <BR> 无自变量 <BR> [0,1)之间的随机实数 <BR> real <BR> <BR>random <BR> word <BR> [0,自变量)之间的随机整数 <BR> wird <BR> <BR>randomize <BR> 无自变量 <BR> 用一随机值初始化内部随机数产生器 <BR> longint <BR> <BR>upcase <BR> 字符型 <BR> 使小写英文字母变为大写 <BR> 字符型 <BR> </P><P>2.6　运算符和表达式<BR>1.运算符和优先级<BR>(1)运算符<BR>a.算术运算符 运算符 <BR> 运算 <BR> 运算对象 <BR> 结果类型 <BR> <BR>+ <BR> 加 <BR> 整型、实型 <BR> 只要有一个运算对象是实型，结果就是实型，如果全部的运算对象都是整型并且运算不是除法，则结果为整型，若运算是除法，则结果是实型 <BR> <BR>- <BR> 减 <BR> 整型、实型 <BR> <BR>* <BR> 乘 <BR> 整型、实型 <BR> <BR>/ <BR> 除 <BR> 整型、实型 <BR> <BR>div <BR> 整除 <BR> 整型 <BR> 整型 <BR> <BR>mod <BR> 取余 <BR> 整型 <BR> 整型 <BR> </P><P>b.逻辑运算符</P><P>运算符 <BR> 运算 <BR> 运算对象 <BR> 结果类型 <BR> <BR>not <BR> 逻辑非 <BR> 布尔型 <BR> 布尔型 <BR> <BR>and <BR> 逻辑与 <BR> 布尔型 <BR> 布尔型 <BR> <BR>or <BR> 逻辑或 <BR> 布尔型 <BR> 布尔型 <BR> <BR>xor <BR> 逻辑异或 <BR> 布尔型 <BR> 布尔型 <BR> </P><P>c.关系运算符</P><P>运算符 <BR> 运算 <BR> 运算对象 <BR> 结果类型 <BR> <BR>= <BR> 等于 <BR> 简单类型 <BR> 布尔型 <BR> <BR>&lt;&gt; <BR> 不等于 <BR> 简单类型 <BR> 布尔型 <BR> <BR>&lt; <BR> 小于 <BR> 简单类型 <BR> 布尔型 <BR> <BR>&gt; <BR> 大于 <BR> 简单类型 <BR> 布尔型 <BR> <BR>&lt;= <BR> 小于等于 <BR> 简单类型 <BR> 布尔型 <BR> <BR>&gt;= <BR> 大于等于 <BR> 简单类型 <BR> 布尔型 <BR> </P><P>(2)优先级</P><P>运算符 <BR> 优先级 <BR> <BR>not <BR> 1(高） <BR> <BR>*,/,div,mod,and <BR> 2 <BR> <BR>xor,+,-,or <BR> 3 <BR> <BR>in,=,&lt;&gt;,&gt;=,&lt;=,&lt;&gt; <BR> 4（低） <BR> </P><P>2.表达式<BR>(1)算术表达式：算术表达式是由算术运算符连接常量、变量、函数的式子。算术表达式中各个运算符的次序为： ( )--&gt;函数--&gt;*,/,div,mod--&gt;+,1<BR>(2)布尔表达式：Turbo Pascal提供给布尔表达式以下基本操作：逻辑运算和关系运算。 <BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：联合空间网络工作室 <br>
+                            
+                            来 源：cpascal.com<br>
+                            
+                            共有42838位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=31.htm" temptabs="http://www.mydrs.org/program/list?id=31">数据结构-线性表 （三）</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=33.htm" temptabs="http://www.mydrs.org/program/list?id=33">Pascal基本教程 第三章</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=32.htm" temptabs="http://www.mydrs.org/program/sendmail?id=32" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\Pascal基本教程 第二章.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0032.htm" temptabs="http://www.mydrs.org/program/html/0032.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=127.htm" temptabs="http://www.mydrs.org/program/list?id=127">[专题] Pascal基本教程</a><br>
+                  
+                  <a href="list-id=52.htm" temptabs="http://www.mydrs.org/program/list?id=52">Pascal基本教程 第11章</a><br>
+                  
+                  <a href="list-id=51.htm" temptabs="http://www.mydrs.org/program/list?id=51">Pascal基本教程 第十章</a><br>
+                  
+                  <a href="list-id=50.htm" temptabs="http://www.mydrs.org/program/list?id=50">Pascal基本教程 第九章</a><br>
+                  
+                  <a href="list-id=49.htm" temptabs="http://www.mydrs.org/program/list?id=49">Pascal基本教程 第八章</a><br>
+                  
+                  <a href="list-id=48.htm" temptabs="http://www.mydrs.org/program/list?id=48">Pascal基本教程 第七章</a><br>
+                  
+                  <a href="list-id=47.htm" temptabs="http://www.mydrs.org/program/list?id=47">Pascal基本教程 第六章</a><br>
+                  
+                  <a href="list-id=35.htm" temptabs="http://www.mydrs.org/program/list?id=35">Pascal基本教程 第五章</a><br>
+                  
+                  <a href="list-id=34.htm" temptabs="http://www.mydrs.org/program/list?id=34">Pascal基本教程 第四章</a><br>
+                  
+                  <a href="list-id=33.htm" temptabs="http://www.mydrs.org/program/list?id=33">Pascal基本教程 第三章</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

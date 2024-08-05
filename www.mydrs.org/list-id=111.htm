@@ -1,0 +1,278 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI92登山问题分析-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=14.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=14">竞赛题库</a>>>NOI92登山问题分析
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI92登山问题分析</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/13/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <p  align=left><b>问题</b><br><BR>              　　攀登某高山，假定上下山速度相等。从山脚到顶峰有N天的路程（N<10）。某登山队有P名队员，每人可负载最大给养量和每天消耗的给养量各不相同，只要在N天内全队有一个队员登上顶峰，并且在2N天内所有参加登山的队员安全返 <BR>              回山脚，就算此次登山成功。登山规则：参加登山的队员同时同地出发，在山上不许停留；给养可以相互补给，但必须由登山队员随身携带。编程要求：用键盘输入天数N，队员数P，队员按1，2，…，P编号。然后按编号输入每个队员的可 <BR>              负载最大给养量和每天的消耗的给养量（给养单位为公斤）。输出两个登山计划。 其一是，在参加登山的队员数最少的情况下消耗总给养量尽可能少的计划；其二是，消耗给养最少时的计划。登山计划的内容是：有多少队员参加登山，在出发时每人各带多少天的给养，每人各在出发几天后返回。 <BR>              　　　　　　　　　　　 <BR>            <p  align=left><b>题义分析</b> <br><BR>              　　本题给出了P个登山队员每人的最大给养负重和每天的消耗，要求在保证至少一人登顶且所有人员安全返回的情况下，确定两个登山方案，使得：<br><BR>              　　1． 参加登山人数最少，消耗给养尽可能少<br><BR>              　　2． 消耗给养最少。注意每个队员的"能力"是不同的，包括负重和消耗。显然，负重越大，消耗越少的队员，越有利于登山。　　　　　　　　　　　　　　 <BR>            <p  align=left><b>算法分析 </b>　<br><BR>              　 　之所以要从P个队员中选择若干人登山，是因为每个队员的负重能力有限，不可能背负2N天所需的所有给养，所以在登顶过程中，不但要吃自己的给养，也要吃他人的给养，才能保证登顶并安全返回。<br><BR>              　　 所以我们确定一个方案时关心以下内容：　　　　　　　　　　　　　　　　　　　<br><BR>              　　 1． 由谁完成登顶任务。根据题意，只要一个人登顶即可，我们假设是编号为Final的登山队员。那么除了Final之外，其他人都不必登顶（否则就"浪费"了）。通常，Final的最大负重无法满足自身2N天的要求，在登山过程中要吃他人的给养。　　<br><BR>              　　 2． 队员之间的如何相互支持。　　　　　　　　　　　　　　　　　　　　　　<br><BR>              　　 3． 除Final以外的队员如何在合适的时间返回。 　　　　　　　　　　　　　　　　 <br><BR>              　　 4． 各队员分别在出发时带多少给养。 　　　　　　　　　　　　　　　　　　　　　 <BR>            <p  align=left><b>登山过程</b> 　　<br><BR>              　　 登山的过程比较复杂，牵涉到队员携带的给养、返程时间、互相支援等方方面面， 这些都是不确定的因素，如果从起始点开始考虑，有千头万绪无从下手的感觉。例如确定各队员返程日期，若某队员返程早，可以节省给养，但余下的队员可能因得不到支持而无法登顶；反之，如果该队员太迟返程，则可能导致总给养耗费过大或无给养下山等问题。<br><BR>              　　 因此，我们考虑用倒推的方法，从"登顶"这一目的出发，逐一确定登山的过程。 　　<br><BR>              　　 由于只有Final一人登顶，所以在登顶以后他必须吃自己的给养下山。同时，在此以 前他也应当尽量先吃他人的给养--这样意味着他人可以尽早下山，减少花在他人身上的给养。如图1，假设Final在登山开始后第X1天开始吃自己的给养，则至少一名队员要"陪"Final到第 <BR>              X1-1天，以供给Final。那么需要多少名队员到X1-1天开始返程呢？一名队员就够了，因为除Final之外的队员越早返程，所消耗的总给养越少。假设这名队员是T1。图1是T1支持Final的情况。　　<br>　　　　　　　　　　　　　　　　　　 <BR><img src="pic/0001.gif" temptabs="http://www.mydrs.org/program/pic/0001.gif" width="513" height="137"> <BR>            <img src="pic/0002.gif" temptabs="http://www.mydrs.org/program/pic/0002.gif" width="513" height="154"><BR><br>　　其中X2至X1一段T1和Final的给养由T1单独提供。所以T1的给养用在X2X1至起点一段， Final的给养用在X1至终点一段。图1中粗线部分，T1和Final的给养"尚无着落"。我们考虑让别的登山队员来保证他们能顺利到达X2（实际上，从X2以后，其他队员都可以回山脚， <BR>            T1与Final继续前进）。假设由T2来提供一部分的给养。图2表示了T2的给养分配状况。 由于起点至X3一段3人的给养还需要他人支援（如果这一段>0）。那么我们继续引入T3、T4… <BR>            直到不需要额外的支援，即某一个XK和起点重合。 　　<br><BR>            　　 以上的分析是通过倒推的形式确定登山的过程，现在我们来看看从登山的开始到结束的全过程： （图2）　　<br><BR>            　　 假设共由M+1人参加登山。 <br><BR>            　　 在起点至XM段，TM负责全队的给养，然后在XM处，返程过程中吃自己的给养。 　　<br><BR>            　　 在XM至XM-1段，TM-1负责继续登山的队员（全队除去TM）的给养，然后在XM-1处返程，返程过程中吃自己的给养。 　　 <br><BR>            　　 在XI+1至XI段，TI负责继续登山队员的给养，然后在XI处返程，返程过程中吃自己的给养。<br><BR>            　　 从X1处开始，只有Final一人继续登山，登顶后返程。这一过程Final吃自己的给养。<br><BR>            　　 登山成功。 <BR>            <p  align=left><b>确定人选</b><br><BR>              　　如图3示，登山过程中的Final、T1、T2等队员需要从已知的P个登山队员中选择。由于登山的过程已经确定，那么只要确定具体人选和担负的"职责"，就可以确定所需给养总量。 <BR>img src="pic/0003.gif" width="235" height="201"border="0"><br> 　　确定人选的过程可以用枚举的方法实现，比如用深度优先搜索。在搜索过程中，可以将两个任务分开搜索。因为任务一的最优解生成趋势是人数逐渐变少，费用逐渐增多，而任务二的最优解生成趋势是人数逐渐变多，费用逐渐减少（见图3）。分别编写两个搜索两种任务的子程序，可以有效地进行较为有效的截枝。 <BR>            <p  align=left><b>总结 </b>　　<br><BR>              　　本题解题的过程是一个倒推的过程。确定登山的过程是解题的关键，这一过程紧紧抓住"登顶"这一目的，使得目标明确，思路比较清晰。 <BR>	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：羌云云 <br>
+                            
+                            来 源：曙光奥赛<br>
+                            
+                            共有2646位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=110.htm" temptabs="http://www.mydrs.org/program/list?id=110">NOI'2001分区联赛竞赛大纲</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=112.htm" temptabs="http://www.mydrs.org/program/list?id=112">正方形围成六边形</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=111.htm" temptabs="http://www.mydrs.org/program/sendmail?id=111" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI92登山问题分析.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0111.htm" temptabs="http://www.mydrs.org/program/html/0111.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=111.htm" temptabs="http://www.mydrs.org/program/list?id=111">NOI92登山问题分析</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

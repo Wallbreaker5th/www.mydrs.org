@@ -1,0 +1,340 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>河南女生的上海故事-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>河南女生的上海故事
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>河南女生的上海故事</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;11/1/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">风吹起花瓣如同我破碎的流年，而你的笑容摇晃摇晃，成为我命途中最美的点缀。看天，看雪，看季节深深的暗影。<SPAN lang=EN-US><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="FONT-FAMILY: 宋体"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>----------《幻城》<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="FONT-FAMILY: 宋体"><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>当这个在脑海里浮想了很久很久的题目终于跃然纸眉时，我释然了。我想我成熟了，长大了，我可以控制自己的感情不再让这页纸受到泪水的滋润了。没有了《我的OI之路》的兴奋浮华，也没有了《花开不败》的大喜大悲。我承认，我改变了很多，而这种改变，正是我所希望的。<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="FONT-FAMILY: 宋体">&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent>我想我是个骨子里很自信甚至有些自负的人。从小学到高中，都是那样轰轰烈烈走过来的，小小的失败仿佛都是成功的前奏，天空总是湛蓝的。我很认真的生活、学习，我想要自己成为更好的人。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">以初学者的身份来到了上海，参加<SPAN lang=EN-US>NOI2003，一个信息学竞赛高手的盛会，我无知所以我快乐着。没有沉重的心理负担， 没有夺金拿银的强烈愿望，我只是想着要走出去，看看家外有个怎样的世界。我想我闭着眼睛也可以分辨出上海的气味，那种熟悉又陌生的气味。高贵、浮华、宁静、忧伤，窄窄的小巷，低低的旧民房，一排排自由舒展的晒晾的衣服，聚在一起闲聊的阿婆，淘气的小娃娃用上海话念着我们听不懂的歌谣……<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">站在住所前不知所措的看着一群人为我这个河南来的孩子操劳着满满的两包行李。我喜欢称自己为孩子，尽管花季雨季的我可以让小孩子仰着脸叫阿姨<SPAN lang=EN-US>,也可以让奶奶总觉得我还是襁褓中的婴儿，或是一本正经的在学校里做五讲四美的青少年。但我习惯把自己称作孩子。孩子总是天真美好的，我这样想。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">无事可做的我望着天，对比着这里和郑州的不同。一样的。我得出结论。天空飘着一样纯净的云朵，潮湿的空气中都浮动着不安分的小水珠，化学上把它称作“雾”。人也是一样的，郑州的我和上海的我没有什么区别，一样的对汽油味过敏的要命，晕车后都会吐的天昏地暗，要不然我怎么总会觉得这天在绕着我转呢。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">头还没挨到枕上，就立刻进入了梦乡。仿佛又回到了初三时我发奋备战中招考试的年代。也不知郑州和上海之间隔了多少个经度，难道我还不适应这短短的时差？原谅我的糟糕的地理成绩。总觉得一切都在旋转，在翻腾，直到沉淀好久的记忆一层层在梦中被掀开。醒来后，我满头大汗。沉睡的两三个小时仿佛又度过了一个十年。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">梦中的主角是我的双手，它们是那样的忙碌。从拿着各式各样的画笔在雪白的纸上涂抹幼稚岁月的嬉戏模样，到在黑白相间的琴盘上按下一串流利的音符，再到现在指法生疏的击打键盘在屏幕上留下一行行初学者的足迹。我曾经抱怨过很累很累，也想到过在角落里张大民的过我平庸我快乐的生活。但我骨子里的自负告诉自己，我要让自己成为更好的人。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">七天的比赛日程中，比赛只占了很少的时间，组委会安排了很是丰富的活动。用干净宽敞的大巴载着我们，载着满车的欢笑。一样的青春年少，来自五湖四海的“<SPAN lang=EN-US>OI高手”们用各地的方言讲着全国流行的笑话，七嘴八舌，好不热闹。有时会很幼稚的一起玩游戏，看着那些男孩子眉间透出的天真的笑，我几乎忘了此行的目的。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">当然，是男孩子。学信息学竞赛的人少，而女生更少。国家规定了一个省队是要有一名女生组成的，可像我这样无知无畏的女生更是少之又少，全国三十多个省队只来了十几个女生。所以无论是在复旦附中的寝食楼里，还是在饭堂，或是在车上，放眼望去，嘻嘻，不枉来此一趟。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">但我是不敢说话的，初学者想要装高手，一开口就会露出破绽的。<SPAN lang=EN-US>WM告诉我来参加NOI其实也是在打心里战，即使你再没有把握，也要在气势上压倒对方。于是我总是露出一种高深莫测的笑，直到笑的自己一身冷汗。我沉默着，不是我不想说，在火车上的口若悬河也是让WM他们目瞪口呆的。哎，总之……郁闷。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">来参加<SPAN lang=EN-US>NOI2003没有学会多少数据结构、算法之类的东西，只学了会两样，而且运用娴熟。一个是“郁闷”，另一个就是打牌。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">从没想过这两个普普通通的字也能在<SPAN lang=EN-US>OI界掀起如此之大的波澜，曾经也只是从学姐那里听说过郁闷在清华的典故，她还笑称若是你会说郁闷了，就是半个清华人了。当时也只是笑笑而已，清华，应该是一个很遥远很神圣的地方吧。在上海的七天里，郁闷无处不在，寝室里，考场上，乃至任何一个有OIers的地方，我被“郁闷”包围着。直到自己也能脱口而出。回来之后，便把偌大的一中搅得“郁闷”成风。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我是不是很牛？<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">在上海的最后两夜，几乎没有睡觉。十几个人挤在一间寝室里打牌。把中山大学送来的招生简章铺在地上，把交大的参观邀请函用口香糖粘在房门的玻璃上，把毛巾被披在身上，灯光暗下来，又开始了另一场战斗。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">开始当然是很尽兴的，十几个人玩着两幅牌，嚷着叫着。然而不幸的事终于发生了。寝室楼的管理员，一个老太太，敲打着让我们开门。于是以超音速收拾了满地的狼籍，房门在最后一刻被打开。借着走廊上的灯光，老太太没有进来，<SPAN lang=EN-US>WM堵在门口和她海阔天空。“你们四个以后注意点！！”谢天谢地，终于走了。回味着她的话，四个，怎么可能会只有四个呢？一秒钟前房间里还有……终于恢复了平静。看着大家从各个角落里冒了出来，才知道我们刚刚上演了一出“大变活人”的惊险与刺激。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我，情急之下，躲在了最里面的一张床上装死尸，旁边的男孩很配合的往我头上砸了一个枕头和一床毛巾被，后来才知道他就是大名鼎鼎的<SPAN lang=EN-US>tony wu,其他的人纷纷躲在了门后、床下和其他地方。于是我们又坐回了一起，回味刚刚的乐事，大骂交大不够意思，那么薄的邀请函，一点也挡不住亮光，远不及中山大学的实惠厚重。又说那个上海老太太果然厉害，能把十个人活活得看跑了六个，眼力了得。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">突然<SPAN lang=EN-US>WM对我说，回去吧。他盯着我。好的，我说。尽管大家强烈挽留，我还是顺从的跟他上楼来到了女生寝室。走时，他塞给我一罐雀巢咖啡，说是看我下午没有吃饭，这时已经是夜里2点了，会饿的。我接过，目送他下楼。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">饿，我没有感觉。但晚上没有吃饭，确实是不争的事实。我想我再大度再释然也无法面对我那低的可怜的的分数微笑吧。下午拿到了第一试重测的成绩和第二试的成绩，我笑了。看着一脸担忧的领队老师和考了好成绩的却不敢在我面前很快乐的<SPAN lang=EN-US>WM，我笑了。你们不用管我，没事的，我说。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我继续笑着。妈妈说女孩子笑的样子最美。我不愿意在这里留下一个丑丑的分数和一个丑丑的样子。我知道自己并不漂亮，可我相信在这里我是美丽的，美丽的足以成为一个公主。尽管公主眼角笑出了泪，尽管公主心里笑出了泪。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">打开了那罐咖啡。我不是习惯咖啡的人，因为我以为它浮华不实，远没有绿茶来的传统清新苦涩自然。在家里，我常为自己泡一杯清茶洗涤一日的喧嚣，难道我在这里，是要用咖啡找回一点点残存的自信？<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我品味着，告诉自己没事的没事的，没有付出自然没有回报。然而我却不能使自己平静下来。我说过，我是一个要强的人，我不甘心失败。很小的时候我就会疯狂的练一段曲子直到把细嫩的手磨出茧子。现在怎能让我挂着初学者的头衔面对高高在上的同龄人继续白天没心没肺的“无知无畏”？又怎能让我在溃败不堪的内心涂上薄薄一层保护膜继续清高的“我不在乎”？我不能，我不能。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我终于品味到了咖啡那浓浓的苦味，我努力着让自己成为更好的人。我没有理由让自己失败，尽管我已经失败。楼下那一群男孩子的笑声再我心头回荡。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我羡慕他们，他们是阳光的，而我不是。也许有时自己给自己的压力是连自己也无法解脱了。我没有令人羡慕的家庭条件，爸爸妈妈都是普通的人，生活的简单快乐。我曾经觉得自己成熟的足以理解他们，不需要他们的任何帮助我一样可以做得很好。但是我错了，在这时，在这里，我需要他们，因为我觉得我哭得还像个孩子。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">也许大家都觉得我是个孩子。<SPAN lang=EN-US>WM可能也这样想。他帮我背了一路的包，我的杂七杂八的小零碎塞满了他的口袋，在我一次次眩晕的时候他握着我的手说没事的没事的，看到我郁闷了对我说这就是离家的感觉，他也一样。<o:p></o:p></SPAN></SPAN></P>
+<!--<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">他考得很好，二等奖。早早列入了复旦、交大的人才“黑名单”之列。但他说他想要上清华的。自信、沉稳。我透过镜片盯着他，你一定可以的。我由衷为他高兴。我说，我也要去的。他笑了说好哇，这样我们就可以当校友了。看着他兴奋的样子，我觉得他也是个孩子。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>-->
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">是的，他才刚刚<SPAN lang=EN-US>18岁，我还未到17岁，我们都还是孩子。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">七天的时间漫长又短暂，很快就到了离开的日子。我们捧着发的本子到处找人要签名，留下了<SPAN lang=EN-US>QQ和E-mail，又开了几场小型的欢送会，因为一些OI界的牛人就要退役了，而我才刚来。牛人和我一样的青春年少，尽管我的小半年的学龄还比不上人家六七年的一个零头。但我们都有着共同的一点，我们都爱极了这门竞赛，尽管人家牛人是从小青梅竹马而我只是情窦初开。竞赛之外，我收获了更多优秀的朋友。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我相信近朱者赤，我想让自己成为更好的人。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">再见了，上海。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">再见了这个让我新鲜让我感伤让我……郁闷的城市，再见了这么多优秀的人，认识你们真是我的荣幸。我打点行囊，把那个“优胜奖”的证书赛进去，把在上海唯一买的《萌芽》塞进去，把厚厚的一摞没有用上的书塞进去。受伤的公主，整装出发，回家。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN lang=EN-US style="FONT-FAMILY: 宋体">&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">回到郑州的那天，正是我的十七岁生日。打开阔别以久的邮箱，里面满满的<SPAN lang=EN-US>E-mail,附件里是各种各样的生日礼物。WM很实惠的送了一堆题，他说我明年还要参加NOI2004，到时就不要再郁闷的叫自己初学者了。我苦笑，我不知道我那些自信是不是还深入骨髓。明年，应该是很遥远的事吧。看到一张张电子贺卡上祝福的话语，我被深深的打动了。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">相信我吧，朋友们。我会让自己成为更好的人的。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">打开书本，启动电脑，从最基本的一点点开始作起。递推、递归、模拟、分治、深度、广度，我知道我还是那个初学者的我。看到牛人，才知道自己的差距之大。回到大榕树，查到了<SPAN lang=EN-US>NOI2003的最终排名。把那个长长的网页拖动到最后。河南，徐奕，121名，倒数第十，也是个吉祥的数字。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">呵呵。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">还是在八月份，我的手脚都已是彻骨的冰凉了。刚刚平静下的心又开始郁闷浮躁了。我发了封<SPAN lang=EN-US>E-mail给WM，“我知道山外有山，天上有天，可我不知道何时自己能成为山外的那座山，天上的那片天？！”WM的回信出奇的简短“你应该用发这封信的时间再做一道搜索的题目。”<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我怔住了。捡回刚刚扔开的书，用冰凉麻木的手指敲击键盘，一如叩击我的内心。是的，要想自己不再受伤，只应该把自己磨练得更坚强，无意义的痛楚的呻吟，只会把自己伤的更深。忘掉过去，从现在开始，一步一步……<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">谢谢你，<SPAN lang=EN-US>WM.<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">很快开学了，又回到了我所熟悉的世界。每天花上两三个小时编程成了我雷打不动的功课。经过各种打击洗礼的我已经很平静很平静。我知道起步晚对于信息学竞赛者意味着什么，知道我两年后还要高考我不能想保送，知道明年河南省没有女生学信息学竞赛我也许还要去湖南，知道我的梦想、我的天地在哪里。因为爱她而学她，即便我只是<SPAN lang=EN-US>OI道路上的匆匆过客，只是平平凡凡的一路走过，我也满足了。我想我会把握着这份打击和爱，只是让我和OI之间，不要被岁月，轻易惊飞。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">我想我还是那个骨子里很骄傲的女孩。我没有办法不让自己努力着更优秀。从上海回来，我只是变得更稳重更沉默，但我仍想称自己为孩子。是的，各科书本在桌子上堆了很厚的一层，每日从其中起身，揉一揉酸痛的眼睛，转而坐到电脑前看那远不及各大网站丰富多彩的编译系统，我想我累但是快乐着。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0; mso-char-indent-size: 10.5pt"><SPAN style="FONT-FAMILY: 宋体">继续为自己泡一杯绿茶，品味着，回想着，我经历的岁月和我走过的路，还有那个久久不能忘怀的上海故事。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：徐奕 <br>
+                            
+                            来 源：投稿<br>
+                            
+                            共有6537位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=528.htm" temptabs="http://www.mydrs.org/program/list?id=528">信息学奥林匹克培训与素质教育</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=530.htm" temptabs="http://www.mydrs.org/program/list?id=530">第九届分区联赛各地初赛分数线</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=529.htm" temptabs="http://www.mydrs.org/program/sendmail?id=529" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\河南女生的上海故事.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0529.htm" temptabs="http://www.mydrs.org/program/html/0529.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607">noip倒计时 by 枯叶蝴蝶</a><br>
+                  
+                  <a href="list-id=606.htm" temptabs="http://www.mydrs.org/program/list?id=606">仰起脸,天空依旧蔚蓝</a><br>
+                  
+                  <a href="list-id=577.htm" temptabs="http://www.mydrs.org/program/list?id=577">感悟OI之我心坦然(by gsn)</a><br>
+                  
+                  <a href="list-id=561.htm" temptabs="http://www.mydrs.org/program/list?id=561">命途的点缀(贵州男生的长沙故事)</a><br>
+                  
+                  <a href="list-id=548.htm" temptabs="http://www.mydrs.org/program/list?id=548">我的oi故事之挥别oi(jakrinchose)</a><br>
+                  
+                  <a href="list-id=529.htm" temptabs="http://www.mydrs.org/program/list?id=529">河南女生的上海故事</a><br>
+                  
+                  <a href="list-id=528.htm" temptabs="http://www.mydrs.org/program/list?id=528">信息学奥林匹克培训与素质教育</a><br>
+                  
+                  <a href="list-id=526.htm" temptabs="http://www.mydrs.org/program/list?id=526">评论：奥校不是“洗澡水”  </a><br>
+                  
+                  <a href="list-id=525.htm" temptabs="http://www.mydrs.org/program/list?id=525">奥赛凸现青少年人才培养规律</a><br>
+                  
+                  <a href="list-id=524.htm" temptabs="http://www.mydrs.org/program/list?id=524">计算机教育：锻造青少年创新翅膀  </a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

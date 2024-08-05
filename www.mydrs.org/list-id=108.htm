@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI分区联赛简介-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>NOI分区联赛简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI分区联赛简介</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/11/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              本文全称：全国青少年信息学计算机奥林匹克分区联赛简介</P><P>　　经中国科协、国家教育部批准，由中国计算机学会主办的全国青少年信息学计算机奥林匹克及其分区联赛（简称NOI），是一项全国性的青少年学科竞赛活动，是计算机知识在青少年中普及的产物。</P><P>　　我国的青少年计算机普及教育起步于80年代初的青少年课外科技活动。随着科学技术 的发展，计算机技术已成为继自然语言和数学语言之后人类必须掌握的第三种通用智力工具。计算机技术与基础教育的结合，已成为我国教育面向现代化、面向世界、面向未来的一大趋势。邓小平同志以老一辈革命家的远见卓识，高度赞扬了在青少年中开展计算机普及活动的做法；发出了“计算机的普及要从娃娃做起”的伟大号召。从此，有成千上万的青少年加入到学习计算机、使用计算机的行列中来，使我国的计算机普及教育掀起了一个高潮。</P><P>　　在邓小平同志发出号召以后，由中国科协和教育部联合委托中国计算机学会兴办了首届全国青少年计算机程序设计竞赛活动。这个新的活动形式一出现，就受到了党和政府的关怀和支持。王震同志在颁奖大会上发言，代表党中央肯定了"教育部和中国科协又为青少年办了一件很有意义、很有远见的好事"。党和政府的支持、老一辈革命家的关心更加激励了广大青少年投身于 NOI活动之中，使这项活动从一开始就有了相当的地位和影响，成为我国青少年计算机普及教育活动中最有代表性的形式。</P><P>　　最近于北京举办的第12届国际信息学奥林匹克竞赛，江泽民主席致了贺信。贺信中说：“在人类即将进入新世纪之际以信息科技和生命科技为核心的科技进步与创新正在深刻地改变着人类的生产和生活方式，推动着世界文明的发展。青年是人类的未来，也是世界科技发展的未来。国际信息学奥林匹克竞赛活动，对年轻一代了解和掌握现代科学技术，养成创新精神具有重要作用”。作为与国际奥林匹克学科竞赛接轨的全国信息学奥林匹克竞赛，举办NOI活动的宗旨就是在青少年中普及计算机科学，通过组织信息学奥林匹克竞赛使学生开阔眼界、扩大知识面；了解计算机在现代化社会中的战略地位培养并促其能力得以发展；通过竞赛发现人才，对有才华的青少年起到激励作用。同时 NOI的举办其内容的变化与发展给学校相应课程增加了动力并启发新的思路对各地计算机普及教育的兴盛及教育内容的丰富和发展也一直起着良性的导向和指导作用。</P><P>　　通过竞赛活动不断涌现出了许多优秀的、出类拔萃的人才，他们在历年的国际IOI竞赛中均取得辉煌成绩，从而使我国青少年学习计算机、使用计算机的水平进入了国际先进行列。事实证明， NOI活动激发了广大青少年对计算机知识及其应用的广泛兴趣，开阔了学生的眼界、扩大了知识面，培养了他们的逻辑思维、创造思维以及利用计算机解决实际问题的能力。既能推动普及的深入又能促进普及层次不断得以提高，同时对于国际上了解中国的计算机知识普及教育、加强国际间青少年的交流也起到了良好的效果。</P><P>　　作为计算机学科普及教育成功的标志，NOI竞赛活动至今已连续成功地举办了十六届。为了进一步扩大普及的面，更进一步地在广大青少年中推动信息学知识的普及，鼓励更多的青少年参加到学习、应用计算机的行列中来，增加他们对于学习信息学知识的兴趣和参与意识，从一九九五年起NOI竞赛活动又予以延伸，组织开展了首届全国分区联赛的活动，至今已是第六届。这项活动受到了学生、家长、学校与社会各界的普遍欢迎。在成功地举办前六届分区联赛活动的基础上，二00一年的第六届全国分区联赛活动仍由江苏省科协青少年部承办。</P><P>　　竞赛分为初赛、复赛两个阶段。初赛全国各赛区采用统一时间、统一试卷的方法进行。通过卷面答题，主要考核学生的计算机基础知识与基本能力。各赛区根据全国竞赛委员会提供的统一评分标准，组织有关专家与教师进行评判，并按照一定的比例挑选出本赛区参加复赛的人员。</P><P>　　复赛则采用上机编程解题的形式。主要考察参赛选手的智力与利用计算机解决问题的能力。对于选手除了要求具有扎实的基础知识、掌握计算机的程序设计语言、了解数据结构与算法外，还需要有较强的上机编程、调试程序的能力，侧重于算法的设计与上机调试程序的能力方面。复赛也采用由全国竞赛委员会统一出题、统一测试数据、统一评分标准的方式进行。根据分区联赛竞赛大纲的规定，参加复赛的选手交卷存盘后，由各赛区根据组委会统一提供的测试数据进行评测打分，然后根据比例评出若干名本赛区提高、普及组的忧秀选手，将他们的程序软盘及现场测试记录寄交全国组委会复核，以确定最后的获奖选手。届时将对参加本届分区联赛竞赛活动的青少年选手，根据其在竞赛中的成绩颁发相应的全国青少年信息学计算机奥林匹克等级选手证书，对参加分区联赛复赛各赛区上报全国评奖的人员，由组委会颁发分区联赛全国一、二等奖获奖证书；对参加分区联赛活动，组织开展活动成绩显著的前六名的赛区以及若干学校将给予表彰。</P><P>　　经过广泛的宣传发动，每届活动均有数万名青少年积极涌跃参与。综观分区联赛的活动有以下几个主要特点：</P><P>　　<1>活动影响大、覆盖范围广。全国绝大多数省、市都组织报名参加；</P><P>　　<2>参赛人数多。至今已有数十万青少年接收这一形式的计算机普及教育；</P><P>　　<3>社会效益显著。通过竞赛活动涌现出一大批优秀的、出类拔萃的人才，许多人已被有关院校优先录取；他们中的代表在历年的国际10I竞赛均取得辉煌成绩，多人分获金、 银、铜奖，受到党和国家领导人的亲切接见并对这一活动予以充分的肯定：电视台、电台、各大新闻机构都曾作过专门报道。</P><P>　　21世纪到处都充满了信息技术，以计算机和网络为核心的信息技术的发展和广泛应用 已形成了人类的一种新文化。这种新文化可以同人类社会发展史上的有了语言、文字出现、活字印刷术的产主相比，是文化发展历程中的第四个里程碑。有了语言，人们交流想法的深度和广度发生了突破性变化；文字出现，可以把想法记录下来，交流不受时间、地理的限制；活字印刷术的产主就可把人们的想法实现大量的复制传播。计算机和网络科学技术的发展和广泛应用形成的人类一种新文化，则使人类思想信息交流就完全不受时空限制。而且会使千百年来的人们已经习惯了的学习、工作以至教育的方法都会引起结构性变革，引起教和学的模式质变，教育基础产生的结构性的变更，会引发基础教育的结构性变更，会极大地促进应试教育转变到素质教育上来。信息学奥赛是智力与应用计算机能力的比赛，程序设计的生命在于创新，是培养逻辑思维的重要手段，开发脑智力的好方法，也是素质教育的重要内容。程序设计竞赛活动同素质教育没有矛盾，与通常的“考试”不同既要动脑又要动手，显然光有书本知识是不行的。要在竞赛中取得好成绩，必须具备综合能力，包括审题、构思模型与算法、编写程序、上机调试、自行测试攻分析答案等，此外还要有胜不骄、败不馁的良好心理素质。通过活动培养学生在现代信息环境下的良好的价值观、道德观、法律意识；提高学生学习的兴趣，培养学生自主学习的意识和能力，培养学生的创新精神和动手能力；促进教育思想和教育观念的转变和更新，促进学习方式与教育方式的变革，为学生生动、活泼、自主学习创造新的空间与条件。正如天津和平外国语学校的师生所表示的那样“培养跨世纪人才是历史赋予我们的使命'参与、展示、竞争、成功'意识的培养是人才素质教育中至关重要的方面，而分区联赛这样的活动形式给学生创造了极好的氛围与平台。通过联赛活动学生们得到的锻炼，在精神与才干上的收获是无法用语言来描述的。”<BR>	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：王晓敏 <br>
+                            
+                            来 源：江苏<br>
+                            
+                            共有1985位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=107.htm" temptabs="http://www.mydrs.org/program/list?id=107">国际信息学奥林匹克竞赛概述</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=109.htm" temptabs="http://www.mydrs.org/program/list?id=109">NOI'2001分区联赛通知</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=108.htm" temptabs="http://www.mydrs.org/program/sendmail?id=108" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI分区联赛简介.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0108.htm" temptabs="http://www.mydrs.org/program/html/0108.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=467.htm" temptabs="http://www.mydrs.org/program/list?id=467">第八届分区联赛复测消息</a><br>
+                  
+                  <a href="list-id=418.htm" temptabs="http://www.mydrs.org/program/list?id=418">第六届分区联赛提高组初赛答案</a><br>
+                  
+                  <a href="list-id=417.htm" temptabs="http://www.mydrs.org/program/list?id=417">第六届分区联赛提高组初赛</a><br>
+                  
+                  <a href="list-id=416.htm" temptabs="http://www.mydrs.org/program/list?id=416">第七届分区联赛提高组复赛</a><br>
+                  
+                  <a href="list-id=401.htm" temptabs="http://www.mydrs.org/program/list?id=401">分区联赛指南</a><br>
+                  
+                  <a href="list-id=309.htm" temptabs="http://www.mydrs.org/program/list?id=309">第七届分区提高组初赛答案</a><br>
+                  
+                  <a href="list-id=308.htm" temptabs="http://www.mydrs.org/program/list?id=308">第七届分区联赛提高组初赛</a><br>
+                  
+                  <a href="list-id=307.htm" temptabs="http://www.mydrs.org/program/list?id=307">第七届分区普及组初赛答案</a><br>
+                  
+                  <a href="list-id=306.htm" temptabs="http://www.mydrs.org/program/list?id=306">第七届分区联赛普及组初赛</a><br>
+                  
+                  <a href="list-id=304.htm" temptabs="http://www.mydrs.org/program/list?id=304">全国分区联赛复赛评奖消息</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

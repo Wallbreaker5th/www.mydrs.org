@@ -1,0 +1,276 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>ASCⅡ码字符串输出-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>ASCⅡ码字符串输出
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>ASCⅡ码字符串输出</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;1/25/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              一、问题描述<BR>&nbsp;&nbsp;&nbsp; 已知两个字符串及其长度，要求将这两个字符串按ASCⅡ码顺序排列输出。<BR>二、算法设计<BR>&nbsp;&nbsp;&nbsp; 输入：字符串的长度可以设为 m , n ；存储的两个字符串可高为数组 A[1..m], B[1..n]。<BR>&nbsp;&nbsp;&nbsp; 判断方法：<BR>&nbsp;&nbsp;&nbsp; i 从 1 开始，比较 A[i] 和 B[i]：<BR>&nbsp;&nbsp;&nbsp; A[i] &gt; B[i]&nbsp;&nbsp;&nbsp;&nbsp; 则 B 在前，A 在后；<BR>&nbsp;&nbsp;&nbsp; A[i] &lt; B[i]&nbsp;&nbsp;&nbsp;&nbsp; 则 A 在前，B 在后；<BR>&nbsp;&nbsp;&nbsp; A[i] = B[i]&nbsp;&nbsp;&nbsp;&nbsp; 继续对 A[i+1] 和 B[i+1] 比较。<BR>&nbsp;&nbsp;&nbsp; 可能发生的情况是逐个字符比较时都相等，这时短的字符串便排在前面；如果两个字符相同而且长度相同，那么它们的排列顺序也无所谓谁在前，谁在后。<BR>&nbsp;&nbsp;&nbsp; 特殊情况是字符串长度( m 或 n )<FONT face=宋体>≤0 ，这种情况可以作为出错处理。</FONT><BR>三、程序设计<BR>&nbsp;&nbsp;&nbsp; 比较两个字符串的顺序可以用一个过程 comp 来实现，比较结果可借助于一个变量参数 k 来存储。<BR>&nbsp;&nbsp;&nbsp; 例如：可以约定：<BR>&nbsp;&nbsp;&nbsp; K=2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 用于控制比较进行(循环控制变量)<BR>&nbsp;&nbsp;&nbsp; K=-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 表示 A 在 B 前，比较结束<BR>&nbsp;&nbsp;&nbsp; K=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 表示 B 在 A 前，比较结束<BR>四、程序清单<BR>Pascal:<BR>PROGRAM e101;<BR>&nbsp; CONST maxlen=20;<BR>&nbsp; TYPE a=ARRAY[1..maxlen] OF CHAR;<BR>&nbsp; VAR<BR>&nbsp;&nbsp;&nbsp; m, n, i, j, k: integer;<BR>&nbsp;&nbsp;&nbsp; a, b: s;<BR>PROCEDURE comp (A, B: s; m, n: integer; VAR k: integer);<BR>&nbsp; VAR i: integer;<BR>&nbsp; BEGIN<BR>&nbsp;&nbsp;&nbsp; i:=1;k:=2;<BR>&nbsp;&nbsp;&nbsp; WHILE K=2 DO<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BEGIN<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF i=m+1 THEN K:=-1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSE<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF i=n+1 THEN k:=1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSE BEGIN<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF A[i] &lt; B[i] THEN k:=-1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF A[i] &gt; B[i] THEN k;=1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END<BR>&nbsp; END;<BR>BEGIN<BR>&nbsp; REPEAT<BR>&nbsp;&nbsp;&nbsp; writeln ('Input length two string:');<BR>&nbsp;&nbsp;&nbsp; readln(m ,n);<BR>&nbsp;&nbsp;&nbsp; IF (m&lt;=0) or (n&lt;=0) THEN writeln('Length &gt;0!!')<BR>&nbsp; UNTIL (m&gt;0) and (n&gt;0);<BR>&nbsp;&nbsp;&nbsp; writeln('Input first string:');<BR>&nbsp;&nbsp;&nbsp; FOR j:=1 to m DO read(A[j]); readln;<BR>&nbsp;&nbsp;&nbsp; writeln('Input second string:');<BR>&nbsp;&nbsp;&nbsp; FOR j:=1 to n DO read(B[j]); readln;<BR>&nbsp;&nbsp;&nbsp; comp (A, B, m, n, k);<BR>&nbsp;&nbsp; IF k=-1 THEN BEGIN<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR i:=1 TO m DO write(A[i]); write(',');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR i:=1 TO n DO write(B[j]);writeln;<BR>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END<BR>&nbsp;&nbsp; IF k=1 THEN BEGIN<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR i:=1 TO m DO write(B[i]); write(',');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR i:=1 TO n DO write(A[j]);writeln;<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END<BR>&nbsp;&nbsp; readln<BR>END.<BR>　<BR>&nbsp;&nbsp;&nbsp; 由于在两个字符串的比较中，比较容易发现哪一个大，哪一个小，所以其算法可以简单地表示为：<BR>QBASIC程序：<BR>CLS<BR>DO<BR>&nbsp; INPUT "M="; m<BR>&nbsp; INPUT "n="; n<BR>&nbsp; IF m &gt; 0 AND n &gt; 0 THEN EXIT DO<BR>LOOP<BR>DO<BR>&nbsp; INPUT "a$=", a$<BR>&nbsp; INPUT "b$=", b$<BR>&nbsp; IF m = LEN(a$) AND n = LEN(b$) THEN EXIT DO<BR>LOOP<BR>IF m &lt; n THEN SWAP m, n：SWAP a$, b$<BR>FOR i = 1 TO n<BR>&nbsp; c$ = MID$(a$, i, 1)<BR>&nbsp; d$ = MID$(b$, i, 1)<BR>&nbsp; IF c$ &lt; d$ THEN<BR>&nbsp;&nbsp;&nbsp; PRINT a$; " "; b$<BR>&nbsp; &nbsp; EXIT FOR<BR>&nbsp; ELSE<BR>&nbsp;&nbsp;&nbsp; IF c$ &gt; d$ THEN<BR>&nbsp;&nbsp;&nbsp; &nbsp; PRINT b$; " "; a$<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXIT FOR<BR>&nbsp;&nbsp;&nbsp; END IF<BR>&nbsp; END IF<BR>NEXT<BR>END<BR>&nbsp;&nbsp;&nbsp; 注意：若将问题中的字符串理解为英文字母组成的单词，那么输出的排列结果即为字典的顺序。要用这里设计的算法排列单词的字典顺序，算法中的字符串长度 m，n 的输入将会显得十分烦琐，应将长度隐含在单词的输入之中。例如：可以约定单词输入后再输入一个特别约定的字符作为结束输入一个单词的标记。<BR>相关下载：<A href="http://go2.163.com/hajy/aszl/bcjx/jsltjx/JSLT1-1.BAS">JSLT1-1.BAS</A><BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：淮安市信息技术教学教研网<br>
+                            
+                            共有4087位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=311.htm" temptabs="http://www.mydrs.org/program/list?id=311">搜索算法基础教程</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=313.htm" temptabs="http://www.mydrs.org/program/list?id=313">求N的不同因数的个数 </a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=312.htm" temptabs="http://www.mydrs.org/program/sendmail?id=312" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\ASCⅡ码字符串输出.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0312.htm" temptabs="http://www.mydrs.org/program/html/0312.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=312.htm" temptabs="http://www.mydrs.org/program/list?id=312">ASCⅡ码字符串输出</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

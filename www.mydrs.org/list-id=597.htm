@@ -1,0 +1,329 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>华裔菲尔兹奖得主的奥赛故事-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=18.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=18">感悟OI</a>>>华裔菲尔兹奖得主的奥赛故事
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>华裔菲尔兹奖得主的奥赛故事</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;9/2/2006&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　“中国也有不少奥数奖牌得主，却没有人能够取得像陶哲轩或佩雷尔曼那样杰出的成就，有些人甚至远离了数学。”</P>
+<P>　　“数学研究和奥数所需的环境不一样，奥数就像是在可以预知的条件下进行短跑比赛，而数学研究则是在现实生活的不可预知条件下进行的一场马拉松，需要更多的耐心，在攻克大难题之前要有首先研究小问题的意愿。”</P>
+<P><IMG hspace=0 src="external/images.csdn.net/20060831/20060831020216.jpg" temptabs="http://images.csdn.net/20060831/20060831020216.jpg" align=baseline border=0>&nbsp;</P>
+<P>　　1983年7岁的陶哲轩和10年级学生一起参加数学考试。(澳大利亚《星岛日报》图) 　　　　本报记者 李虎军</P>
+<P>　　陶哲轩从西班牙国王卡洛斯一世手中领走了菲尔兹奖章。上个月，他刚满31岁。</P>
+<P>　　目前在美国洛杉矶加州大学数学系任教的陶哲轩(Terence Tao)，是赢得菲尔兹奖的第一位澳大利亚人，也是继1982年的丘成桐之后获此殊荣的第二位华人。</P>
+<P>　　本月22日至30日，第25届国际数学家大会在西班牙马德里举行。该大会每四年举行一次，大会开幕式上专为40岁以下杰出数学家颁发的菲尔兹奖，则被誉为“数学界的诺贝尔奖”。</P>
+<P>　　此次与陶哲轩同获菲尔兹奖的，还有美国普林斯顿大学的欧克恩科夫(Andrei Okounkov)、法国巴黎第十一大学的沃纳(Wendelin Werner)，以及过着隐居生活的俄罗斯人佩雷尔曼(Grigori Perelman)。而陶哲轩是最年轻的一位。</P>
+<P>　　“陶哲轩是一位解决问题的顶尖高手……他的兴趣横跨多个数学领域，包括调和分析、非线性偏微分方程和组合论。”颁奖词称。 </P>
+<P>　　听到自己获奖时，陶哲轩最初的反应是非常惊讶。他对本报记者说：“几天以后，我才开始适应……”当一位友人发电子邮件向他祝贺时，他回复说：“现在我仍在继续进行我的研究项目，我想要解决的那些难题，并没有因为获奖就魔法般地自动得到解决。”</P>
+<P>　　但在许多数学家看来，陶哲轩的获奖并无悬念。“我并不惊讶，”洛杉矶加州大学物质科学学院院长、数学教授陈繁昌(Tony Chan)说，“像他这样的人数十年才出一个。他解决了几个数学领域中困扰别人多时的重要问题。”</P>
+<P>　　“他就像莫扎特，数学是从他身体中流淌出来的，”洛杉矶加州大学数学系前主任约翰・加内特(John Garnett)说，“不同的是，他没有莫扎特的人格问题，所有人都喜欢他。他是一个令人难以置信的天才，还可能是目前世界上最好的数学家。” </P>
+<P>　　29岁时即获得菲尔兹奖的普林斯顿大学教授查尔斯・费弗曼(Charles Fefferman)则愿意用著名作曲家斯特拉文斯基来形容陶哲轩。他告诉本报记者：“莫扎特的音乐只有一种风格，陶的数学却有很多种风格，他大概更像斯特拉文斯基。”</P>
+<P>　　<STRONG>天才儿童</STRONG></P>
+<P>　　1975年7月15日，陶哲轩出生在澳大利亚阿得雷德，是家中的长子。</P>
+<P>　　他的父亲陶象国(Billy Tao)和母亲梁蕙兰(Grace Tao)均毕业于香港大学。陶象国后来成了一名儿科医生。梁蕙兰是物理和数学专业的高才生，曾做过中学数学教师。1972年，夫妇俩从香港移民到了澳大利亚。</P>
+<P>　　陶哲轩两岁的时候，父母就发现这个孩子对数字非常着迷，还试图教别的孩子用数字积木进行计算。</P>
+<P>　　3岁半时，早慧的陶哲轩被父母送进一所私立小学。然而，研究天才教育的新南威尔士大学教授米那卡・格罗斯(Miraca Gross)在陶哲轩11岁时出版的一篇论文中写道，陶哲轩的智力明显超过班上其他孩子，但他不知道怎么与那些比自己大两岁的孩子相处，而学校的老师面对这种状况也束手无策。</P>
+<P>　　几个星期以后，陶哲轩退学了。陶象国夫妇从这次失败经历中吸取的一个宝贵教训是：培养孩子一定要和孩子的天分同步，太快太慢都不是好事。陶象国对本报记者说：“我们决定还是让他去上幼儿园。”幼儿园里有陶哲轩的同龄人。</P>
+<P>　　上幼儿园的一年半里，陶哲轩还在母亲梁蕙兰指导下完成了几乎全部小学数学课程。母亲更多是对他进行启发，而不是进行填鸭式的教育。而陶哲轩更喜欢的也似乎是自学，他贪婪地阅读了许多数学书。</P>
+<P>　　陶象国夫妇还开始阅读天才教育的书籍，并且加入了南澳大利亚天才儿童协会。陶哲轩也因此结识了其他的天才儿童。</P>
+<P>　　5岁生日过后，陶哲轩再次迈进了小学的大门。这一次，父母考察当地很多学校后，最终选择了离家2英里外的一所公立学校。这所小学的校长答应他们，为陶哲轩提供灵活的教育方案。刚进校时，陶哲轩和二年级孩子一起学习大多数课程，数学课则与5年级孩子一起上。</P>
+<P>　　7岁时，陶哲轩开始自学微积分。“这不是我们逼他看的，是他自己感兴趣。”陶象国说。而小学校长也意识到小学数学课程已经无法满足陶哲轩的需要，在与陶象国夫妇讨论之后，他成功地说服附近一所中学的校长，让陶哲轩每天去中学听一两堂数学课。 </P>
+<P>　　陶哲轩8岁半升入了中学。9岁半时，他有三分之一时间在离家不远的弗林德斯大学学习数学和物理。8岁零10个月时，陶哲轩曾参加一项数学才能测试，得了760分的高分。在美国，十七八岁的学生中只有1%能够达到750分，而8岁的孩子里面还没有人超过700分。</P>
+<P>　　这期间，美国约翰・霍普金斯大学的一位教授将陶象国夫妇和陶哲轩邀请到美国，游历了三个星期。夫妇俩曾请教费弗曼和其他数学家，陶哲轩是否真的有天才。“还好我们做了肯定答复，否则今天我们会觉得自己是傻瓜。”费弗曼回忆说。</P>
+<P>　　一年后，陶象国夫妇面临一个重大抉择：陶哲轩什么时候升入大学？格罗斯教授在她的论文中写道，陶哲轩的智商介于220至230之间，如此高的智商百万人中才会有一个，他也完全有能力在12岁生日前读完大学课程，打破当时最年轻大学毕业生的记录。</P>
+<P>　　但他们觉得没有必要仅仅为了一个所谓的记录就让孩子提前升入大学，希望他在科学、哲学、艺术等各个方面打下更坚实的基础。</P>
+<P>　　此外，陶象国认为，让陶哲轩在中学阶段多呆3年，同时先进修一部分大学课程，等到升入大学以后，他才可以有更多的时间去做一些自己感兴趣的事情，去创造性地思考问题。</P>
+<P>　　后来，陶哲轩20岁获得普林斯顿大学博士学位，24岁被洛杉矶加州大学聘为正教授。</P>
+<P>　　<STRONG>奥数金牌</STRONG></P>
+<P>　　陶哲轩的数学生涯也并非一帆风顺。9岁多时，他未能入选澳大利亚队，去参加国际数学奥林匹克竞赛。 </P>
+<P>　　但接下来三年中，他先后三次代表澳大利亚参赛，分别获得铜牌、银牌和金牌。他在1988年获得金牌时，尚不满13岁，这一纪录至今无人打破。</P>
+<P>　　有意思的是，澳大利亚堪培拉大学彼得・泰勒(Peter Taylor)教授告诉本报记者，陶哲轩还有两个弟弟，其中一位有自闭症，是澳大利亚的国际象棋冠军，并且拥有非凡的音乐才能。这两个弟弟同时参加了1995年多伦多国际奥数。他们解题时采用同样的方法，得到同样的分数，最终双双获得铜牌。</P>
+<P>　　本次菲尔兹奖得主之一、俄罗斯数学家佩雷尔曼也曾参加过1982年奥数并获得金牌。于是有人感叹，中国也有不少奥数奖牌得主，却没有人能够取得像陶哲轩或佩雷尔曼那样杰出的成就，有些人甚至远离了数学。</P>
+<P>　　这是一个令顶尖数学家们都很难回答的问题。在香港长大的陈繁昌教授对本报记者说，他不知道这个问题的答案，但数学研究和数学竞赛所需的才能并不一样，尽管有些人(比如陶哲轩)可以同时擅长数学研究和数学竞赛。</P>
+<P>　　陶哲轩也告诉本报记者，很多奥数奖牌得主后来没有继续数学研究的原因之一是，数学研究和奥数所需的环境不一样，奥数就像是在可以预知的条件下进行短跑比赛，而数学研究则是在现实生活的不可预知条件下进行的一场马拉松，需要更多的耐心，在攻克大难题之前要有首先研究小问题的意愿。</P>
+<P>　　和中国一样，澳大利亚参加奥数的选手也需要集训，但集训的时间并不是很长。陶哲轩说，他当时参加了为期两周的训练营，“我们白天练习解题，晚上玩各种游戏。”“他主要是喜欢做数学，而不是为了(获)奖去做数学。”陶象国说。</P>
+<P>　　泰勒教授说，目前澳大利亚会为那些最好的学生再提供为期十天的集训，但通常他们只会从各自的学校缺课一周，“我不了解中国集训的情况，但可能澳大利亚的训练要松散一些。”</P>
+<P>　　在中国，不少中学和中学生将奥数视为升入大学的一条捷径，投入大量时间进行训练。陶象国说，如果参加奥数只是为了升入一所好的大学，“这个目标太小了”。 </P>
+<P>　　一位奥数奖牌得主、目前在美国某大学任教的华人数学家认为，中国奥数奖牌得主之所以不那么成功，原因之一是在奥数环境下有平等的机会，但在现实中，也许除了陈省身和丘成桐所在的几何和微分方程领域以外，华人数学家与西方数学家的机会并不均等。中国数学教育和研究的大环境还无法与根基深厚的发达国家相比。</P>
+<P>　　陶象国也说，如果陶哲轩在中国内地成长，恐怕就没有那么幸运了。“在国外，我们做家长的可以和学校协商(培养方案)，哲轩7岁开始在中学修课，在中国哪个学校肯收他？”</P>
+<P>　　中国著名的少年班天才宁铂后来出家做了和尚，对这一现象，陶象国认为，“对于孩子，只可以带引他，鼓励他，教他怎么走，但中国很多父母望子成龙，推孩子的速度太快，但推得太快，可能走不稳，就会跌倒。”</P>
+<P>　　<STRONG>快乐生活</STRONG></P>
+<P>　　佩雷尔曼也被视作一位卓有成就的数学天才。不过，这位天才离群索居，通常不喜和人合作。</P>
+<P>　　陶象国说：“假如你的孩子是天才，你大概会希望他像哲轩一样，是一个容易亲近的天才。”</P>
+<P>　　陶哲轩是一位论文产出数量和质量都极高的数学家。他先后发表了100多篇论文，其中30多篇系与他人合作。</P>
+<P>　　他说：“我喜欢与合作者一起工作，我从他们身上学到很多。实际上，我能够从谐波分析领域出发，涉足其他的数学领域，都是因为在那个领域找到了一位非常优秀的合作者。我将数学看作一个统一的科目，当我将某个领域形成的想法应用到另一个领域时，我总是很开心。” </P>
+<P>　　费弗曼则说，陶哲轩是一个好的倾听者，善于向别人学习，他同时也擅长向别人清楚地解释自己的想法。</P>
+<P>　　加内特更是说：“一流的数学家喜欢与他一起工作，他的合作者就能组建起世界上最好的数学系。”</P>
+<P>　　陶象国认为，一流数学家喜欢与陶哲轩合作的一个重要原因是，他在合作中不是利用别人，而是激发合作者的才能。“哲轩从来没有和别人争执过，他想的都是怎么开开心心地和别人合作，而不是互相指责，争权夺利。中国的数学家们如果多一些合作，少一些争执，中国的数学才会有更快的发展。” </P>
+<P>　　很多人问陶象国，为什么陶哲轩不会说中文。陶象国的解释是，他和妻子发现陶哲轩的二弟陶哲渊有自闭症以后，担心同时讲英文和中文不利于哲渊的成长，在家里就只说英文了。</P>
+<P>　　陶哲轩在自己的网页上说：他首先是一个澳大利亚人，他喜欢澳大利亚的肉馅饼和板球，以及澳大利亚随和、坦诚和无拘无束的文化。由于不会中文，陶哲轩无法直接了解中国文化。不过，父母的中国背景多少对他产生了一些间接影响。他对本报记者说：“在我成长过程中，中国和澳大利亚文化对我都有熏陶，我不知道自己是否能够区分其间的差别。”陶象国则提到，陶哲轩从中国文化里学到的一点是保持谦逊，从不自大。 </P>
+<P>　　在洛杉矶加州大学任教以后，陶哲轩认识了听他课的一位韩裔女孩。这位女孩名叫劳拉(Laura)，主修工程，年龄比他小三岁。后来，两人开始交往，并于四年多以前结婚，生有一子。劳拉目前是美国宇航局喷气推进实验室(JPL)的一名工程师，参与了火星探测计划。</P>
+<P>　　陶象国说，陶哲轩一家是快乐家庭生活的一个好典型，“我们和哲轩都觉得，做人最重要的是快乐。” </P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：新浪科技<br>
+                            
+                            共有1474位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=596.htm" temptabs="http://www.mydrs.org/program/list?id=596">NOI竞赛委员会组织机构</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=598.htm" temptabs="http://www.mydrs.org/program/list?id=598">受邀参观微软总部的重庆OIer</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=597.htm" temptabs="http://www.mydrs.org/program/sendmail?id=597" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\华裔菲尔兹奖得主的奥赛故事.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0597.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=597.htm" temptabs="http://www.mydrs.org/program/list?id=597">华裔菲尔兹奖得主的奥赛故事</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

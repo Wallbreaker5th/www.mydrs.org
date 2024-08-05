@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2001－聪明的打字员-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>NOI2001－聪明的打字员
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2001－聪明的打字员</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/27/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　阿兰是某机密部门的打字员，她现在接到一个任务：需要在一天之内输入几百个长度固定为6的密码。当然，她希望输入的过程中敲击键盘的总次数越少越好。<BR>　　不幸的是，出于保密的需要，该部门用于输入密码的键盘是特殊设计的，键盘上没有数字键，而只有以下六个键：Swap0, Swap1, Up, Down, Left, Right，为了说明这6个键的作用，我们先定义录入区的6个位置的编号，从左至右依次为1，2，3，4，5，6。下面列出每个键的作用：<BR>　　Swap0：按Swap0，光标位置不变，将光标所在位置的数字与录入区的1号位置的数字（左起第一个数字）交换。如果光标已经处在录入区的1号位置，则按Swap0键之后，录入区的数字不变；<BR>　　Swap1：按Swap1，光标位置不变，将光标所在位置的数字与录入区的6号位置的数字（左起第六个数字）交换。如果光标已经处在录入区的6号位置，则按Swap1键之后，录入区的数字不变；<BR>　　Up：按Up，光标位置不变，将光标所在位置的数字加1（除非该数字是9）。例如，如果光标所在位置的数字为2，按Up之后，该处的数字变为3；如果该处数字为9，则按Up之后，数字不变，光标位置也不变；<BR>　　Down：按Down，光标位置不变，将光标所在位置的数字减1（除非该数字是0），如果该处数字为0，则按Down之后，数字不变，光标位置也不变；<BR>　　Left：按Left，光标左移一个位置，如果光标已经在录入区的1号位置（左起第一个位置）上，则光标不动；<BR>　　Right：按Right，光标右移一个位置，如果光标已经在录入区的6号位置（左起第六个位置）上，则光标不动。<BR>　　当然，为了使这样的键盘发挥作用，每次录入密码之前，录入区总会随机出现一个长度为6的初始密码，而且光标固定出现在1号位置上。当巧妙地使用上述六个特殊键之后，可以得到目标密码，这时光标允许停在任何一个位置。<BR>　　现在，阿兰需要你的帮助，编写一个程序，求出录入一个密码需要的最少的击键次数。 </P><BR><P><B>输入文件（clever.in）</B><BR>　　文件仅一行，含有两个长度为6的数，前者为初始密码，后者为目标密码，两个密码之间用一个空格隔开。</P><BR><P><B>输出文件（clever.out）</B><BR>　　文件仅一行，含有一个正整数，为最少需要的击键次数。</P><BR><P><B>输入样例</B><BR>123456 654321</P><BR><P><B>输出样例</B><BR>11</P><BR><P><BR><B>样例说明：</B><BR>　　初始密码是123456，光标停在数字1上。对应上述最少击键次数的击键序列为：</P><BR><P>　　<IMG height=375 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1017-1-1.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1017-1-1.gif" width=471><BR>　　最少的击键次数为11。</P><BR><P align=center><B>NOI2001试题：炮兵阵地<BR>cannon.pas/c/cpp</B></P><BR><P>　　司令部的将军们打算在N*M的网格地图上部署他们的炮兵部队。一个N*M的地图由N行M列组成，地图的每一格可能是山地（用"H" 表示），也可能是平原（用"P"表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示：<BR>　　　　　　　　　　 <IMG height=189 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1017-1-2.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1017-1-2.gif" width=261><BR></P><BR><P>　　如果在地图中的灰色所标识的平原上部署一支炮兵部队，则图中的黑色的网格表示它能够攻击到的区域：沿横向左右各两格，沿纵向上下各两格。图上其它白色网格均攻击不到。从图上可见炮兵的攻击范围不受地形的影响。<BR>　　现在，将军们规划如何部署炮兵部队，在防止误伤的前提下（保证任何两支炮兵部队之间不能互相攻击，即任何一支炮兵部队都不在其他支炮兵部队的攻击范围内），在整个地图区域内最多能够摆放多少我军的炮兵部队。</P><BR><P><B>输入文件（cannon.in）</B><BR>　　文件的第一行包含两个由空格分割开的正整数，分别表示N和M；<BR>　　接下来的N行，每一行含有连续的M个字符（'P'或者'H'），中间没有空格。按顺序表示地图中每一行的数据。<BR>　　N≤100；M≤10。</P><BR><P><B>输出文件（cannon.out）</B><BR>　　文件仅在第一行包含一个整数K，表示最多能摆放的炮兵部队的数量。</P><BR><P><B>输入样例</B><BR>5 4<BR>PHPP<BR>PPHH<BR>PPPP<BR>PHPP<BR>PHHP</P><BR><P><B>输出样例</B><BR>6</P><BR><P align=center><B>从noi2001两道题看最优化问题BFS与DFS算法的优化</B></P><BR><P align=center><B>福州一中 林元</B></P><BR><P align=center>【摘要】</P><BR><P>　　关于最优化问题的搜索算法优化，下面以NOI2001的两道题为例分别分析。<BR>　　从Clever一题看BFS算法的优化。由于约束条件复杂，我们很难找到好的启发式搜索方法，所以可以确定这题要用BFS算法来解决。状态的过多不但造成了空间的浪费，由于状态数多往往是搜索树节点分支过多造成的，BFS算法的速度也要受到极大的影响。新的状态表示只有区区276480种状态，使用hash表就能够很圆满地解决了。<BR>　　BFS优化总结。相对于DFS来说，BFS更强调理论上的状态总数，对于实际搜索时的状态总数要求不高。最后，BFS算法的一个很大速度依赖来自状态标记数组。在状态能够装得下的条件下，利用快速的数组或hash表访问来提高BFS的速度必不可少。<BR>　　从Cannon一题看DFS算法的优化。对于DFS算法，由于只要求最优解，最重要的优化办法就是定界。剪枝在本题的解决中并未起到最大的作用，但是对于任何一道DFS题不剪枝都将是失败的，所以我们还是需要对本题进行剪枝。众所周知，局部搜索的复杂度相对于全局搜索极小，符合我们的要求。<BR>　　DFS优化总结。从上面的分析可以看出，DFS算法由于其本身的特点，在空间上没有太大的要求，优化主要集中在时间压缩方面。预处理也是DFS算法优化的一个重要方面。</P><BR><P align=center>【关键字】</P><BR><P>　　最优化问题，BFS，DFS，NOI，状态表示，hash表，队列，搜索树，剪枝，分支定界，局部搜索，预处理，无后效性，时间复杂度，空间复杂度。</P><BR><P align=center>【概述】</P><BR><P>　　最优化问题在现实生活中意义很大。但由于这些问题的规模往往较大，无法人工解决，常需要借助于计算机程序。在竞赛中，为了较全面地考察选手的素质，最优化问题也经常出现。由于最优化问题没有固定的解法，所以它对选手的分析能力与算法能力都有很高的要求。<BR>　　最优化问题最完美的解决方法当然是将指数级复杂度的工作量降到O（n^p）（p为常数）内。比如经典的动态规划算法、网络流算法、贪心算法等等。但是还有许多最优化问题无法用这些高效率算法解决，或者在赛场上由于时间或其他方面的限制选手无法在特定环境下找到套用这些算法的正确途径，这是搜索算法就成为了正确解决问题的唯一工具。众所周知，搜索算法实际上是穷举所有可能的状态以得到最优解的"笨"算法，伴随着的往往是令人无法忍受的时间或空间复杂度。这时就需要选手举有很强的优化能力，利用强有力的剪枝等技术在不牺牲正确性的条件下提高搜索的效率，以在较短的时间、较小的空间内解决问题。<BR>　　搜索算法主要有BFS与DFS两种，即广度优先搜索与深度优先搜索。两种搜索算法的特点各不相同，优化的角度也各不相同。下面以NOI2001的两道题为例分别分析。</P><BR><P align=center>【从Clever一题看BFS算法的优化】</P><BR><P>　　BFS算法又称广度优先算法，是按层扫描搜索树来得到最优解的搜索算法。代表题目如NOI2001的Clever。<BR><BR><B>〖题目描述〗</B><BR>　　给出一个六位数，要求对其进行最少的操作后得到一个新的给出的六位数。一次操作可以是以下六种操作中的一种：将光标（表示六个数字中当前被操作的数的位置）向左或右移动一位；将首数与光标所在的数交换且光标位置不变；将尾数与光标所在的数交换且光标位置不变；将光标指向的数加1或减1。<BR>　　输入原始六位数与目标六位数，输出最少的操作次数。设开始时光标在最左边，操作结束时光标允许在任意位置。<BR><BR><B>〖基本算法〗</B><BR>　　本题是典型的搜索题，因为约束条件复杂多样，很难存在什么好的贪心算法；而且存在交换操作，也不存在无后效性与最优子结构性质，无法用动态规划来解决。在这种情况下，我们当机立断地选择了搜索算法。<BR>　　仔细分析一下本题状态数，数字的可能性有10^6种，还有光标的6种可能，共6000000个状态，如果选择DFS算法，在出第一个解之前，我们根据什么决定搜索的深度呢？？总不能说，所有状态都访问过了，所以不搜了--那么搜索深度至少有30000层啊。由于操作复杂，我们也很难找到好的启发式搜索方法，所以可以确定这题要用BFS算法来解决。<BR><BR>　　进一步，由于本题的操作具有明显的可逆性，可以考虑使用效率更高的双向搜索。双向搜索的数据结构与算法流程如下：<BR>　　1．初始化；<BR>　　　分别建立2个空队列A与B，将原始状态（光标置于1）入队A，目标状态下对应光标的6个位置的6种不同末状态入队B。在内存允许的情况下，建1个记录状态是否被2个队访问过的标记数组（每个状态只需要2bit的存储空间），并分别为队A与队B内的状态做标记。清初始步数p为0。<BR>　　2．如果队B内的新状态未被队A访问过，将p加1，扩展BFS搜索树A；<BR>　　　对队A内现在head到tail的所有状态扩展下一步，如果未与前面A内出现过的状态重复，则依次加入到tail后面。完成后将head指向tail后一位，tail指向队尾。另：新状态即队内head到tail的所有状态。<BR>　　3．如果队A内的新状态未被队B访问过，将p加1，扩展BFS搜索树B；否则到第5步；<BR>　　　扩展搜索树B的算法参见第2步。<BR>　　4．回到第2步；<BR>　　5．打印p并结束程序。<BR>　　经测试可以发现，虽然双向搜索可以在题目要求的时间内出解，但是速度极慢，而且空间占用极大，普通的Pascal IDE根本无法满足程序的内存需求。虽然可以进行优化，但无论怎样也无法从根本上改善双向搜索算法的效率。连效率高过BFS算法数倍的双向搜索都如此，看来本题使用普通的搜索架构是无法解决的。我们必须建立一种新的搜索方式。<BR><BR><B>〖算法优化〗</B><BR>　　容易看出，本题的状态数太多是造成BFS算法与双向搜索算法效率低下的罪魁祸首。状态的过多不但造成了空间的浪费，由于状态数多往往是搜索树节点分支过多造成的，BFS算法的速度也要受到极大的影响。要提高算法的效率，如何压缩状态是最大的关键。事实上，状态的压缩就是对题目的搜索约束条件的合理简化。所以，我们首先必须对6种操作有一个充分的认识，然后考虑以下的优化。<BR>　　一个简单的剪枝是：对于1个原始数，我们要不不改变它的值--即不对它进行Up或Down操作，要不只改变一次，这一次是指若干次连续的Up或Down操作，此次操作后再也不对它的值进行改变。这个剪枝是很容易想到的，但是作用不够大，因为如果一个数还没有改变过，那么我们在每一次光标移动到它上面是都要决定是否改变，改变成什么值。而且上面的判断会给搜索造成巨大的麻烦，直接后果就是程序难写，痛苦的反复检查大大降低了原本就很慢的速度。<BR><BR>　　那么，在这个剪枝上我们真的没有文章可做了吗？？不是的。再深入地思考一下，我们会发现原来Up与Down操作在整个操作过程中的顺序是无关紧要的。如果在最优方案中某个原始数的值有改变，我们只要保证在最后一次光标停止在它上面的时候一次性进行Up或Down操作，将其变为目标状态中对应的数就行了。这样，我们实际上在一开始就"瞄准"了每一个数最后的位置与大小，我们所要做的就是在该改变大小的原始数均有被光标访问过的前提下将原始的123456的位置关系变为我们"瞄准"的位置关系就行了。比如说将数456789变成987654，最优方案实际上可以描述为：开始"456789"的位置关系被固定地表示为123456，即"4"是第1个数，"5"是第2个数，……最终的"987654"的位置关系为563421，即"9"是原来的第5个数"8"，"8"为原来的第6个数"9"，"7"为原来的第3个数"6"，"6"为原来的第4个数"7"，"5"为原来的第2个数"5"，"4"为原来的第1个数"4"。这样除了最后在第5、6位上的"5"、"4"外，最终数的前4位都经过了变化，即要求光标必须曾经访问过原来的第5、6、3、4个数。<BR>　　现在，我们又有了一个新的状态表示方案：P_XXXXXX_??????。P表示光标的当前位置，XXXXXX表示现在的状态相对于原来6个数的位置关系，??????是一个二进制数，反映当前状态每个位置上的数是（1）否（0）被光标访问过。举个例子，原始状态被固定地表示为1_123456_100000，经过以下2个操作（Right，Swap0）后变成2_213456_110000。大家可以看到，这种状态表示方法忽略了Up与Down操作。这是因为一旦"瞄准"了最终状态，Up与Down操作的最少总次数就已经定了，不需要我们在状态表示中赘述。<BR>　　现在算一算状态数吧：P有6种可能，XXXXXX是6的全排列，共P（6，6）=720种可能，??????是六位二进制数，共2^6=64种方案。状态总数为6*720*64=276480，不到原来状态数的二十分之一！！不要忘记，由于光标访问过的数是有增无减地，所以二进制数??????中1的个数至少是1，随着搜索的进行有增无减，所以实际上有可能出现的状态数只有5605种！！这样，我们只需要用1个BFS算法就能够在不到1s的时间内算出原始状态到所有状态的最短距离了！！而这里却不能使用双向搜索，因为光标访问过的位置的变化是不可逆的。至于这区区276480种状态的标记数组的存储，使用hash表就能够很圆满地解决了。<BR><BR>　　最后，我们来研究最优解的确定。我们知道，目标六位数与原始六位数对应的位置关系只有P（6，6）=720种。而对于每种对应关系，除了光标位置有6种外，由于每个原始数的最终值都确定了，它们的Up或Down的最短编辑距离也就确定了，剩下的就是满足该改的数必须被光标访问过这一条件。其实这很简单，无非是求所有制定的位为1的六位二进制数，复杂度为O（n）。这样，我们用几重循环就能检查目标六位数所可能对应的所有末状态，而检查的过程只不过是对一个hash表的某个制定元素返回值取min，复杂度为O（n）。这样的检查，相对于全面的BFS来，其时间是远远不能相比的。<BR>　　按照此优化重写的程序，速度固定在CII800+fp的1s左右，大大低于题目要求的时限。而且空间占用小，甚至有可能使用640K的内存就能放下（以速度为代价放弃标记数组或按位压缩hash表），时空比俱佳。本题得到了圆满地解决。<BR>　　那么，为什么这样的优化能大大提高算法的效率呢？？很重要的一个原因，就是由于Up与Down操作的剥离，每个节点的分支数从原来的6个减少到了现在的4个，大大缩小了搜索树的体积，提高了速度。还有一点，剥离Up与Down操作也是搜索层数减少了，又大大压缩了搜索树，提高了程序效率。<BR><BR><B>〖BFS优化总结〗</B><BR>　　从上面的例子中我们可以看到，BFS算法并非总比不上双向搜索。它具有更大的优化空间，不像双向搜索编程繁琐，优化的空间不大。BFS的优化主要集中在压缩状态与分离约束条件上，hash表是BFS经常使用的优化策略。相对于DFS来说，BFS更强调理论上的状态总数，对于实际搜索时的状态总数要求不高。最后，BFS算法的一个很大速度依赖来自状态标记数组。在状态能够装得下的条件下，利用快速的数组或hash表访问来提高BFS的速度必不可少。<BR>另外，减少每个状态节点的分支是搜索优化中必不可少的一环，不论BFS还是DFS都一样。下面我们再从NOI2001的另一道题Cannon来看看这个优化的重要性。</P><BR><P align=center>【从Cannon一题看DFS算法的优化】</P><BR><P>　　DFS算法又称深度优先算法，是按深度遍历搜索树以得到最优解或可行解（的个数）的搜索算法。下面以NOI2001的Cannon一题为例子，分析一下用DFS算法求最优解的一般优化策略。<BR><BR><B>〖题目描述〗</B><BR>　　对于一个给定的n*m棋盘，某些格子不允许放置棋子，每个棋子的攻击范围为以自己为中心的边长为2的十字。求能放置最多的不受其他棋子攻击的棋子的最优方案。<BR><BR><B>〖基本算法〗</B><BR>　　容易想到的带简单的分支定界的DFS搜索算法流程如下：<BR>　　1． 初始化；<BR>　　　　建立记录每个格子被攻击情况的n*m数组A，清A[i,j]为0，清障碍格子A[i,j]为1。建立记录放置棋方案的n*m数组B，清B[i,j]为0。置最优解p为0。<BR>　　2． 搜索；<BR>　　　　对于当前格，分为放与不放棋子2种状况；如放置棋子，则将相应的A数组内元素加1，置相应的B数组内元素为1；判断当前已放棋子数加上以后最多能放的棋子数是否大于p，是则继续搜索。<BR>　　3． 搜索底部检查；<BR>　　　　当搜索到达底部时，检查当前已放棋子数是否大于p，是则为p赋新值。<BR>　　4．打印p并结束程序。<BR>　　上述算法的判断以后最多能放的棋子是根据一个棋子占4格的平均情况估算的，很夸大。因此搜索的效率很低，除了许多无用解，速度使人无法忍受。<BR><BR><B>〖算法优化〗</B><BR>　　对于DFS算法，由于只要求最优解，最重要的优化办法就是定界。本题主要的定界是定当前解的上界。首先，我们需要借助一些贪心的思想，让程序能够很快得到最优解或较优解。怎么做呢？？很简单，就是让程序尽量先搜当前格放置棋子的情况，这样就能尽量早地出较优解，给后面的分支定界留下了足够大的优化空间。<BR>　　接下来就是剪枝了。剪枝在本题的解决中并未起到最大的作用，但是对于任何一道DFS题不剪枝都将是失败的，所以我们还是需要对本题进行剪枝。本题的一个主要剪枝就是：要求放置棋子过程中决不能留下一个完整的"眼"，即上下左右都被占领或攻击，自己安然无恙的空位。因为很明显的，这样得到的最优解在这个眼填上棋子后一定变成了更优的，所以这种解必须剪掉。其他剪枝的作用就不大了，比如说如果出现连续2行的空白就可以使用分治法……等等，不一而足，但都没有这个剪枝与下面的定界有力，反而增加了编程复杂度，这里就不再介绍了。<BR>　　然后是最重要的--定当前解的最优上界。换句话说，就是计算剩下的还未检查过的格子最多还能放多少个棋子。如果即使这样总放置的棋子数还是达不到已知的最优解的棋子数，当前棋盘的搜索显然没有建设性，不必继续了。当然，如果有一种特殊的快速的算法能够直接求出准确的当前解最优上界，我们根本就无需搜索了--直接用这种算法求空白棋盘的"最优上界"不就行了？！所以这个计算只能是大致的估算。估算的结果不能太小，否则会剪掉不该剪掉的解；又不能太大，否则就像原始的基本程序一样没有效率。与此同时，估算函数的复杂度也是影响搜索速度的一个重要环节。如果一味地追求估算的准确而采用复杂度大估算函数，甚至会因为估算的规模超过了剪枝的规模而弄得得不偿失。<BR>　　本题我们使用的估算函数，是局部搜索。怎么说呢？？我们要看到本题估算结果的可重复利用性，即：在剩下的未检查的格子较多情况下，已检查的棋盘的棋子放置策略对未检查棋盘的微小影响不会过多地干扰到剩余棋盘的最优上界。也就是说，如果棋盘有1000行，在检查了前200行后，对于任意的当前解，后800行的最优上界基本上是不变的。这是因为每个棋子最多只能影响到周围5*5范围内的棋子，即具有一定的无后效性。<BR>　　那么，我们能不能预先算出每个剩余棋盘的大致最优上界，以供搜索时直接调用呢？？答案是肯定的。如前所述，由于本题具有一定的无后效性，加上优化算法本身要求的最优上界只是一个估计值，所以完全可以进行数据的重复使用。这样一来，我们只需找出一个复杂度远小于搜索的预处理算法以确定每个剩余棋盘的最优上界就行了。这里我们可以使用局部搜索算法。众所周知，局部搜索的复杂度相对于全局搜索极小，符合我们的要求。更重要的一点就是局部搜索还可以利用更早的预处理数据，实现递归的优化。这样定下来的搜索算法流程如下：<BR>　　1． 搜索最后1行的最优解max[1]；<BR>　　2． 利用max[i]搜索最后i+1行的最优解max[i+1]；<BR>　　3． 返回第2步，直到i=n。<BR>　　注意，上面只提到利用最后i行的最优解，是因为过分地分割棋盘并没有太大的意义。另外还因为本题的m规模很小（m&lt;=10），我们实际上可以预先算出每行放置棋子的所有可能状态（不超过60种），搜索时直接按行搜索，这样事实上利用了双层嵌套搜索的思想，又大大提高了程序的速度效率。<BR>　　经过测试，这时的搜索+优化算法已经达到了本题的标准算法--动态规划的时间水平，应付题目时限内的测试数据更是绰绰有余了。本题已经圆满地得到了解决。<BR><BR><B>〖DFS优化总结〗</B><BR>　　从上面的分析可以看出，DFS算法由于其本身的特点，在空间上没有太大的要求，优化主要集中在时间压缩方面。DFS算法是遍历整棵搜索树的算法，在时间复杂度上没有BFS的先天优势，只有靠后天的优化。DFS算法解决最优化问题的优化主要包括以下三个方面：一，剪枝。二，定界。三，预处理。可以看到，在本题的优化过程中，我们十分强调预处理，就是因为预处理的数据能够重复使用，不需要很大的复杂度就能够达到减少搜索树节点的分支的目的。<BR>　　DFS最优化问题算法的最根本优化方法就是搜索算法本身的优化。比如说，双重嵌套搜索，启发式搜索，可变深度搜索等等。这些优化的效果往往十分惊人，但都需要对题目有深刻的分析与理解。这对选手的分析能力与算法能力的要求都很高，也就无怪乎竞赛老要考最优化问题了--这的确是最能全面反映选手素质的考察手段。<BR>　　搜索算法的优化算法还有很多，也还有许多问题正待解决。未来，最优化搜索算法优化的路还很长。我们都将面对越来越大的挑战。学无止境，只有不断思考，不断创新，才能拥有自己的风格，才能开发出一块属于自己的新天地。<BR>　　让我们前行。<BR></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：林元 <br>
+                            
+                            来 源：福州一中<br>
+                            
+                            共有3807位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=261.htm" temptabs="http://www.mydrs.org/program/list?id=261">NOI2001－方程的解数</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=263.htm" temptabs="http://www.mydrs.org/program/list?id=263">第七届分区联赛初赛答案</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=262.htm" temptabs="http://www.mydrs.org/program/sendmail?id=262" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2001－聪明的打字员.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0262.htm" temptabs="http://www.mydrs.org/program/html/0262.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

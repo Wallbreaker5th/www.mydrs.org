@@ -1,0 +1,280 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>解题策略源于问题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>解题策略源于问题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>解题策略源于问题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/11/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              　　策略，从广义上讲，是指解决问题所采取的方法。它包括解决方方面面各种问题的方法，例如：工作需要策略、学习需要策略、战争需要策略……本文讨论的策略，是指利用计算机编程解题时所采用的行之有效的方法，即编程解题策略。<BR>　　为了论述的方便，我们约定：策略是一个宏观概念，算法是微观上的操作方法。在利用计算机解决问题时，先设法找到解决问题的策略，再根据这一策略构造出适当的算法，编写程序解决问题。显然，如何获得解决问题的策略（或称之为策略的谋划），是解决问题不可缺少的先驱过程。从某种意义上说，在谋划宏观策略的同时，也应考虑微观算法的实现。<BR>　　编写程序解决问题常见的策略有：数学模型（规律）策略、分治策略、贪心策略、穷举（含搜索）策略等等。本文的任务是探讨策略的谋划（如何获得解决问题的策略）。<BR><BR>　　显然，解决同一个问题可以采用多种不同的策略，对于一个具体问题能够想到采用某种策略来解决它，是个人的分析思维能力的表现。但是，一个问题是否可以采用某种策略来解决，或者怎样采用某种策略，从本质上说，是由问题本身的性质所决定的，也就是说，寻求解决问题的策略必须从问题给出的条件入手。<BR>　　问题一：（最佳航空路线问题）你在加拿大航空公司组织的一次竞赛中获奖，奖品是一张免费机票，可在加拿大旅行，从最西的一个城市出发，单方向从西到东经若干城市到达最东的城市，然后再单方向从东到西飞回起点。除起点城市外，任何城市只能访问一次。起点城市被访问二次：出发一次，返回一次。除指定的航线外，不允许乘其它航线，也不允许使用其它交通工具。求解的问题是：给定城市表列及两城市之间的直通航线表列，请找出一条旅行航线在满足上述限制条件下，使访问的城市尽可能多。<BR>对于这个大家熟悉的问题，我们分析下面几种解题策略：<BR>　　[策略1]搜索策略<BR>这个问题有明确的状态表示，而且状态之间的转移规则也是确定的，可以由初状态开始，根据状态转移规则，逐个枚举出所有的可能状态，从而得到答案。这就是状态穷举策略，也就是我们常说的“搜索策略”。<BR>　　确定了采用搜索策略之后，还有一个实施策略的方法问题。如果仅从实际旅行的路线来看，可以先从西向东，再从东向西，搜索出一条旅行路径，这就是“单路”搜索。根据题目给出“旅行先从西到东，再从东到西”的条件，可以换个角度思考，把这一次“往返”的旅行看成是两次“单程”的从西到东的旅行。经过这样的转变之后，可以同时从西向东搜索出两条路径，这就是“双路”搜索。从题目的条件中又可以知道，从东到西的路径也可以看成是从西到东的路径，于是就可以从东、西两个方向同时向中间搜索，采用“双向”搜索，甚至还可以同时结合前面说过的“双路”搜索得到“双向双路”搜索。<BR>　　上面所说的搜索策略，不论是“单向”还是“双向”，也不管是“单路”还是“双路”，都是针对问题给出的旅行信息而得到的。<BR>　　[策略2]数学模型策略1<BR>　　我们根据题目所给出的条件，对问题的形式进行转化。<BR>　　把一次“往返”的旅行看成是两次“单程”的从西到东的旅行，同时考虑两路的旅行路线来描述问题的状态，其状态可以表示为：（X，Y），其中X、Y分别表示当前两条路线所达到的城市。例如：在图1所表示的航线中，初始状态就是（A，A），结束状态是（E，E）。<BR><BR>D<BR><BR>A E<BR><BR>B C<BR>（图1）<BR><BR>　　由于在一个状态中包含有两条路径的信息，因此在状态转移过程中就有一个优先问题。从状态（A，B）到（D，C）,可以先转移到（A，C）再转移到（D，C）,也可以先转移到（D，B）再转移到（D，C）。这显然是一种重复。为了解决这一问题，我们可以规定状态转移时仅取离开始点较近的那一个城市，若两个城市离开始点一样近就可以任取一个城市。这样状态（A，A）只能转移为（A，B）或者（A，D）；状态（A，B）也只能转移为（D，B）……<BR>　　根据这样的转移规则得到图1的状态转移图如下：<BR><BR><BR>（A，B） （D，B） （D，C） （D，E）<BR>（A，A） （E，E）<BR>（A，D） （B，D） （C，D） （E，D）<BR><BR>(图2)<BR><BR>　　显然，这是一张有向无环图。其中，点表示状态，边表示状态之间的转移关系。对应于本题，状态每发生一次转移，就经过一个新的城市，题目中要求的经过城市数目最多，也就是说状态转移的次数最多，对应于图2也就是从点（A，A）到点（E，E）经过的边数最多。如果，我们规定图2中的所有的边的权重都为-1，那么问题的最优解就对应于图2中从点（A，A）到点（E，E）的一条最短路径。<BR>　　通过上述的对问题的抽象、变形，问题就转化为我们熟悉的“最短路问题”。由于图2是一张有向无环图，因此图中就不存在负回路，“最短路问题”就可以用动态规划这一数学模型策略来解决，其动态转移方程如下：<BR><BR><BR><BR>Min（u(i,k)-1） （i&gt;＝j；j&lt;k&lt;=n；(k&lt;&gt;i) or (i=n)）<BR>（城市j到城市k有直达航线）<BR>ｕ（ｉ，ｊ）=<BR>Min（u(k,j)-1） （i&lt;＝j；i&lt;k&lt;=n；(k&lt;&gt;j) or (j=n)）<BR>（城市i到城市k有直达航线）<BR><BR>｛按从西到东顺序给城市编号，u(i,j)表示(i,j)到(n,n)的最短路径的权值，u(n,n)=0｝<BR>所能经过的最多城市数即为－ｕ（１，１）。<BR>　　[策略3]数学模型策略2<BR>　　题目给出的条件要求“往返”过程经过的城市数最多，也就相当于用两条路径来“覆盖”最多的城市，这两条路径的起点和终点是最西的城市和最东的城市，也就是说路径的起止是确定的。这就使我们由“从起点到终点的两条路径”联想到“从源点到汇点的两条流”。<BR>为此，从“网络流”数学模型的角度考虑，建立一个流网络，它可以在城市网络的基础上经过　　下面的变化得到：<BR>　　（１）把城市网络中的边的方向规定出来，即每一条边都是由西向东的。这样，城市网络就成为一张有向图。<BR>　　（２）由于题目中规定除起点外每个城市只能经过一次，这必须在流网络上表达出来，常用的方法是把一个城市X分裂成两个点X`和X``，两点之间连一条容量为１的有向边，原来所有指向城市X的边都指向点X`；原来所有由城市X指出的边都改由点X``指出。如图3所示：<BR><BR>… … … X` X`` …<BR>… X …<BR>（图3） X<BR><BR>　　（３）“网络流求极值”最常用的就是求最大流或者最小费用。由于我们已经把“两条路径”看成是“两条流”，也就是说流量已经定为２，因此就无所谓什么最大流问题，只能朝着最小费用的方向考虑。而题目中又要求经过最多的城市，这就存在一个最多与最少的转化问题。我们可以做一个等效代换：“被经过的城市数目最多”就相当于“不被经过的城市的数目最少”，接着要做的就是将“不经过的城市数目”和流网络中边的费用联系起来。看下面的图示：<BR><BR><BR><BR>１ ２ ３ ４<BR>（图4）<BR><BR>　　在这个城市网络中，如果选择走航线１à４，那么我们就称作城市２和３分别被“跳”过一次，同样，如果选择走航线２à４，城市３就被“跳”过一次。由于题目中规定每个城市最多被访问１次，因此，在从西向东的两次旅行中，每个城市（除了最东和最西的城市外）至少会被“跳”过一次。于是我们就得到了“被‘跳’过的总次数”和“不被经过的城市的数目”之间的关系：除最东的和最西的城市外，中间的城市若不被经过，则被“跳”过的次数为２；若被经过，则被“跳”过的次数为１。于是得到：<BR>　　不被经过的城市数＝被“跳”过的总次数－（城市总数－２）<BR>　　这样，“不被经过的城市数最少”就对应于“被‘跳’过的总次数最少”。我们就可以用选择某条航线“‘跳’过的城市数”作为该航线对应的边的费用，从而使问题转化为“最小费用流”问题。<BR>　　通过上面的分析，对于图1给出的例子，可以得到下面的流网络：<BR><BR>D` D``<BR>2 0 0&nbsp;<BR>A` A`` 1 0 E` E``<BR>(S) 0 0 2 0 (T)<BR>B` 0 B`` C` 0 C`` 1<BR>0<BR>(图5)<BR>　　图中，各边的费用已在图上标出，<BR>　　除了与源点(S)汇点(T)相关联的边容量为２外，其它各边的容量都为１<BR><BR>　　对这一流网络，求流值为２的最小费用流就对应于题目的一个解。<BR>　　当然采用网络流求极值这种数学模型策略，不仅可以求“往返”（２路）的最佳航空路线，而且还可以求得３路、４路，甚至更多路的最佳航空路线，这恐怕是动态规划和搜索策略难以办到的。<BR>　　上面用了各种不同的策略来解决同一道题，归根到底都是由问题本身的条件所决定的，不是所有的问题都可以如此求解。我们的任务就是分析题目给出的条件的内涵，获得解题的策略。这也就是说“策略源于问题”。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：黄高峰 <br>
+                            
+                            来 源：清华大学<br>
+                            
+                            共有2269位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=169.htm" temptabs="http://www.mydrs.org/program/list?id=169">解题策略的谋划</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=171.htm" temptabs="http://www.mydrs.org/program/list?id=171">ACM网上竞赛消息</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=170.htm" temptabs="http://www.mydrs.org/program/sendmail?id=170" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\解题策略源于问题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0170.htm" temptabs="http://www.mydrs.org/program/html/0170.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=170.htm" temptabs="http://www.mydrs.org/program/list?id=170">解题策略源于问题</a><br>
+                  
+                  <a href="list-id=169.htm" temptabs="http://www.mydrs.org/program/list?id=169">解题策略的谋划</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

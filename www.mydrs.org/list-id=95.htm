@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>趣谈数据结构（七）-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>趣谈数据结构（七）
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>趣谈数据结构（七）</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/4/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <br><BR>        　　有了前面的数据结构基础，这一讲开始，我们谈点较深入的数据结构知识。本讲，我们先来谈谈&quot;树&quot;，建立&quot;树&quot;的基本概念与基本的处理方式。<br><BR>        <br><BR>        　　树是一种重要的非线性数据结构，直观地看，它是数据元素（在树中称为结点）按分支关系组织起来的结构，很象自然界中的树那样。树结构在客观世界中广泛存在，如人类社会的族谱和各种社会组织机构都可用树形象表示。树在计算机领域中也得到广泛应用，如在编译源程序如下时，可用树表示源源程序如下的语法结构。又如在数据库系统中，树型结构也是信息的重要组织形式之一。一切具有层次关系的问题都可用树来描述。<br><BR>        <br><BR>        <b>一、树的概述</b><br><BR>        <br><BR>        　　树结构的特点是：它的每一个结点都可以有不止一个直接后继，除根结点外的所有结点都有且只有一个直接前趋。以下具体地给出树的定义及树的数据结构表示。<br><BR>        <br><BR>        　　（一）树的定义<br><BR>        <br><BR>        　　树是由一个或多个结点组成的有限集合，其中：<br><BR>        　　⒈必有一个特定的称为根(ROOT)的结点；<br><BR>        　　⒉剩下的结点被分成ｎ&gt;=0个互不相交的集合T1、T2、......Tn，而且， 这些集合的每一个又都是树。树T1、T2、......Tn被称作根的子树(Subtree)。<br><BR>        <br><BR>        　　例如，一个集团公司，可以描述如下:</p><BR>      <p align="center"> <img src="pic/0321-1.gif" temptabs="http://www.mydrs.org/program/pic/0321-1.gif" width="496" height="217"> <BR>      </p><BR>      <p><br><BR>        　　它很象一株倒悬着的树，从树根到大分枝、小分枝、直到叶子把数据联系起来，这种数据结构就叫做树结构，简称树。<br><BR>        <br><BR>        　　树中每个分叉点称为结点，起始结点称为树根，任意两个结点间的连接关系称为树枝，结点下面不再有分枝称为树叶。结点的前趋结点称为该结点的&quot;双亲&quot;，结点的后趋结点称为该结点的&quot;子女&quot;或&quot;孩子&quot;，同一结点的&quot;子女&quot;之间互称&quot;兄弟&quot;。<br><BR>        <br><BR>        　　（二）树的表示<br><BR>        <br><BR>        　　树中每个结点的内容分两部分表示：⒈结点的性质；⒉结点的指针域。<br><BR>        　　结点的性质：描述结点的必要数据。<br><BR>        　　结点的指针域：指向结点的每一个孩子。<br><BR>        　　指针域采用多重链表，又分为不定长度结点的多重链表与固定长度结点的多重链表。<br><BR>        　　不定长度结点的多重链表表示树时，每个结点的指针域个数等于该结点的孩子的个数，其形式如下：<br><BR>      </p><BR>      <table width="409" border="1" cellspacing="0" cellpadding="0" align="center"><BR>        <tr> <BR>          <td width="86"> <BR>            <div align="center">DATA</div><BR>          </td><BR>          <td width="83"> <BR>            <div align="center">CHILD1</div><BR>          </td><BR>          <td width="79"> <BR>            <div align="center">CHILD2</div><BR>          </td><BR>          <td width="68"> <BR>            <div align="center">……</div><BR>          </td><BR>          <td width="81"> <BR>            <div align="center">CHILDn</div><BR>          </td><BR>        </tr><BR>      </table><BR>      <p><br><BR>        　　每个指针域指向一个孩子，这样虽然不浪费空间，但由于结点长度不等，将给存储分配造成困难，给各种运算带来极大不便。<br><BR>        　　固定长度结点的多重链表表示树时，树中每个结点的指针域个数都相等于树中结点的最大度数，也就是说，不论结点的孩子多少，其长度均取最大长度。这样长度划一，处理问题简单方便，但对存储空间浪费很大。<br><BR>        　　为了寻求一种恰当的树的存储表示方法，我们将讨论一种称之为二叉树的树型结构。<br><BR>        <br><BR>        <b>二、二叉树</b><br><BR>        <br><BR>        　　二叉树是一种十分重要的树型结构。它的特点是，树中的每个结点最多只有两棵子树，即树中任何结点的度数不得大于２。二叉树的子树有左右之分，而且，子树的左右次序是重要的，即使在只有一棵子树的情况下，也应分清是左子树还是右子树。<br><BR>        <br><BR>        　　（一）定义<br><BR>        <br><BR>        　　二叉树是结点的有限集合，这个集合或是空的，或是由一个根结点和两棵互不相交的称之为左子树和右子树的二叉树组成。<br><BR>        　　图2列出了二叉树的五种基本形态。</p><BR>      <p align="center"> <img src="pic/0321-2.gif" temptabs="http://www.mydrs.org/program/pic/0321-2.gif" width="472" height="103"></p><BR>      <p> 　　　　　　　　　　　　　　　　　　　　　 图 2<br><BR>        <br><BR>        　　(a)为空二叉树；(b)只有一个结点的二叉树；(c)只有左子树的二叉树；(d)只有右子树的二叉树；(e)左右完全的二叉树。<br><BR>        <br><BR>        　　（二）满二叉树<br><BR>        <br><BR>        　　一棵深度为K的满二叉树，是有2K-1个结点的深度为K的二叉树。2K-1个结点是二叉树所能具有的最大结点个数。图3所示为一棵深度为４的满二叉树。</p><BR>      <p align="center"><br><BR>        <img src="pic/0321-3.gif" temptabs="http://www.mydrs.org/program/pic/0321-3.gif" width="509" height="180"></p><BR>      <p>　　　 　　　　 　　 　　　　　　 　　<br><BR>        　　　　　　　　　　　　　　　图 3 　　　　　　　　　　　　　　图 4　 <br><BR>        <br><BR>        　　（三）完全二叉树<br><BR>        <br><BR>        　　对满二叉树，从第一层的结点(即根)开始，由下而上，由左及右，按顺序结点编号，便得到满二叉树的一个顺序表示。据此编号，完全二叉树定义如下：一棵具有ｎ个结点，深度为K的二叉树，当且仅当所有结点对应于深度为K的满二叉树中编号由１至ｎ的那些结点时，该二叉树便是完全二叉树。图4是一棵完全二叉树。<br><BR>        <br><BR>        　　（四）二叉树的存储<br><BR>        <br><BR>        　　二叉树一般采用双重链表作为其存储结构，表中每个结点都有三个域：数据域DATA、左指针域LCHILD和右指针域RCHILD。其中指针域LCHILD和RCHILD分别指向其左孩子和右孩子。如图5所示。</p><BR>      <p align="center"><br><BR>        <img src="pic/0321-4.gif" temptabs="http://www.mydrs.org/program/pic/0321-4.gif" width="428" height="92"> </p><BR>      <p><br><BR>        　　　　　　　　　　　　　　　　 图5 　二叉树结点的结构形式<br><BR>        <br><BR>        <b>三、二叉树的遍历</b><br><BR>        <br><BR>        　　遍历是对树的一种最基本的运算，所谓遍历二叉树，就是按一定的规则和顺序走遍二叉树的所有结点，使每一个结点都被访问一次，而且只被访问一次。由于二叉树是非线性结构，因此，树的遍历实质上是将二叉树的各个结点转换成为一个线性序列来表示。<br><BR>        <br><BR>        　　设L、D、R分别表示遍历左子树、访问根结点和遍历右子树， 则对一棵二叉树的遍历有三种情况：DLR（称为先根次序遍历），LDR（称为中根次序遍历），LRD <BR>        （称为后根次序遍历）。<br><BR>        <br><BR>        　　（一）先根次序遍历的递归定义<br><BR>        <br><BR>        　　若二叉树为空，则返回；否则，依次执行以下操作：<br><BR>        　　⒈访问根结点；<br><BR>        　　⒉按先根次序遍历左子树；<br><BR>        　　⒊按先根次序遍历右子树；<br><BR>        　　⒋返回。<br><BR>        <br><BR>        　　例1 图6为表示表达式 （ａ＋ｂ×（ｃ－ｄ））－ｅ/ｆ的二叉树。</p><BR>      <p align="center"><img src="pic/0321-5.gif" temptabs="http://www.mydrs.org/program/pic/0321-5.gif" width="232" height="255"></p><BR>      <p> 　　　　　　　　　　　　　　　　　　　　　图 6<br><BR>        <br><BR>        　　先序遍历此树时，首先访问根结点，得到字符&quot;－&quot;。继而访问结点&quot;－&quot;的左子树，按递归定义，先访问子树的根结点，得到字符&quot;＋&quot;。类推访问结点&quot;＋&quot;的左子树，此时只有叶子。得到叶子&quot;ａ&quot;后，访问叶子&quot;ａ&quot;父结点的右子树，得到右子树的根结点字符&quot;×&quot;。再访问结点&quot;×&quot;的左子树，得到叶子字符&quot;ｂ&quot;后，访问字符&quot;ｂ&quot;父结点的右子树，得到右子树根结点字符&quot;－&quot;，……。先序遍历完整棵树，得到序列为： <BR>        －＋ａ×ｂ－ｃｄ/ ｅｆ<br><BR>        　　这就是表达式的前缀表示或称波兰表示。<br><BR>        <br><BR>        　 （二）中根次序遍历的递归定义<br><BR>        <br><BR>        　　若二叉树为空，则返回；否则，作如下操作：<br><BR>        　　⒈按中根次序遍历左子树；<br><BR>        　　⒉访问根结点；<br><BR>        　　⒊按中根次序遍历右子树；<br><BR>        　　⒋返回。<br><BR>        <br><BR>        　　中序遍历图6二叉树时，引入栈，先将根结点字符&quot;－&quot;入栈，按定义访问根结点的左子树，遇到子树的根结点字符&quot;＋&quot;入栈，访问结点&quot;＋&quot;的左子树，到达叶子字符&quot;ａ&quot;，则字符&quot;ａ&quot;为第一个访问的结点。接着，将栈顶字符出栈，访问子树根结点字符&quot;＋&quot;。继而访问其右子树，方法同上，子树根结点&quot;×&quot;入栈，……。这样，中序遍历完整棵树后，得到的序列为： <BR>        ａ＋ｂ×ｃ－ｄ－ｅ/ ｆ<br><BR>        这就是表达式的中缀表示。<br><BR>        <br><BR>        　 （三）后根次序遍历的递归定义<br><BR>        <br><BR>        　　若二叉树为空，则返回；否则，作如下操作：<br><BR>        　　⒈按后根次序遍历左子树；<br><BR>        　　⒉按后根次序遍历右子树；<br><BR>        　　⒊访问根结点；<br><BR>        　　⒋返回。<br><BR>        　　对图6二叉树，后序遍历后得到的序列为： 　 ａｂｃｄ－×＋ｄｆ/ －<br><BR>        　　这就是表达式的后缀表示或称表达式的逆波兰表示。逆波兰表示的表达式的优点在于它得到的是不加括号的表示式，但从表示式中确能确定表达式的运算先后顺序。故在源程序如下编译表达式值的处理等方面的应用中经常用到。</p> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：福州一中计算机组　陈颖 <br>
+                            
+                            来 源：曙光奥赛<br>
+                            
+                            共有6495位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=94.htm" temptabs="http://www.mydrs.org/program/list?id=94">趣谈数据结构（六）</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=96.htm" temptabs="http://www.mydrs.org/program/list?id=96">递推基础与实例</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=95.htm" temptabs="http://www.mydrs.org/program/sendmail?id=95" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\趣谈数据结构（七）.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0095.htm" temptabs="http://www.mydrs.org/program/html/0095.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=164.htm" temptabs="http://www.mydrs.org/program/list?id=164">谈谈数据结构</a><br>
+                  
+                  <a href="list-id=95.htm" temptabs="http://www.mydrs.org/program/list?id=95">趣谈数据结构（七）</a><br>
+                  
+                  <a href="list-id=94.htm" temptabs="http://www.mydrs.org/program/list?id=94">趣谈数据结构（六）</a><br>
+                  
+                  <a href="list-id=93.htm" temptabs="http://www.mydrs.org/program/list?id=93">趣谈数据结构（五）</a><br>
+                  
+                  <a href="list-id=92.htm" temptabs="http://www.mydrs.org/program/list?id=92">趣谈数据结构（四）</a><br>
+                  
+                  <a href="list-id=91.htm" temptabs="http://www.mydrs.org/program/list?id=91">趣谈数据结构（三）</a><br>
+                  
+                  <a href="list-id=90.htm" temptabs="http://www.mydrs.org/program/list?id=90">趣谈数据结构（二）</a><br>
+                  
+                  <a href="list-id=89.htm" temptabs="http://www.mydrs.org/program/list?id=89">趣谈数据结构（一）</a><br>
+                  
+                  <a href="list-id=39.htm" temptabs="http://www.mydrs.org/program/list?id=39">实数类型</a><br>
+                  
+                  <a href="list-id=31.htm" temptabs="http://www.mydrs.org/program/list?id=31">数据结构-线性表 （三）</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

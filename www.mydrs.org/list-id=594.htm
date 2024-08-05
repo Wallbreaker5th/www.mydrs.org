@@ -1,0 +1,469 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>IOI2006中国队8月赴墨西哥参赛-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>IOI2006中国队8月赴墨西哥参赛
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>IOI2006中国队8月赴墨西哥参赛</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/1/2006&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly"><A href="http://www.noi.cn/" target=_blank><IMG alt=选拔赛06副本.jpg src="external/www.noi.cn/noi/image/200605151227141.jpg" temptabs="http://www.noi.cn/noi/image/200605151227141.jpg" align=left border=0></A> </P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly; mso-pagination: widow-orphan" align=left>IOI2006中国队选拔赛于<SPAN lang=EN-US>2006年<SPAN lang=EN-US>5月<SPAN lang=EN-US>10-14日在北京航空航天大学举行，国家集训队的<SPAN lang=EN-US>20名选手参加了选拔赛。此外，为满足一部分希望有更多机会参与交流的选手的需要，本次选拔赛同期举办观摩赛，有<SPAN lang=EN-US>23名选手参加。辅导这些选手的老师、有关方面负责人也参加了本次选拔赛活动。会间，举行了辅导教师研讨会和选手的交流活动。<SPAN lang=EN-US><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly; mso-pagination: widow-orphan" align=left>经过两天的选拔，<A href="http://www.noi.cn/noi/image/200605171531161.JPG">朱泽园</A>（南京外国语学校）、<A href="http://www.noi.cn/noi/image/200605171540491.JPG">王栋</A>（乌鲁木齐一中）、<A href="http://www.noi.cn/noi/image/200605171542341.JPG">龙凡</A>（长沙雅礼中学）及<A href="http://www.noi.cn/noi/image/200605171541081.JPG">李天翼</A>（上海复旦附中）入选国家队，他们将于<SPAN lang=EN-US>8月份代表中国赴墨西哥参加<SPAN lang=EN-US>IOI2006比赛。本次中国队的领队为清华大学的<?xml:namespace prefix = st1 ns = "urn:schemas-microsoft-com:office:smarttags" /><st1:PersonName w:st="on" ProductID="王宏">王宏</st1:PersonName>博士，副领队是北京航空航天大学的<st1:PersonName w:st="on" ProductID="尹宝林">尹宝林</st1:PersonName>教授。</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly; mso-pagination: widow-orphan" align=left>在选拔赛闭幕式上，举行了选拔赛证书颁发仪式，科学委员会主席<st1:PersonName w:st="on" ProductID="吴文虎">吴文虎</st1:PersonName>教授、副主席<st1:PersonName w:st="on" ProductID="尹宝林">尹宝林</st1:PersonName>教授向获得前<SPAN lang=EN-US>20名（包括观摩选手在内）的选手颁发了证书（名单见下）。<SPAN lang=EN-US><A href="http://www.noi.cn/" target=_blank></A> <o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly; mso-pagination: widow-orphan" align=left>本次选拔赛得到了北航计算机学院在人力、场地、设备、活动组织等方面的大力支持，计算机学院院长、中国计算机学会常务理事<st1:PersonName w:st="on" ProductID="马殿富">马殿富</st1:PersonName>教授亲临开幕式、闭幕式并发表讲话，他还代表北航向中国计算机学会赠送了纪念品。</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly; mso-pagination: widow-orphan" align=left>又讯：在闭幕式上，中国计算机学会秘书长杜子德宣布了科学委员会新的组成名单，<st1:PersonName w:st="on" ProductID="吴文虎">吴文虎</st1:PersonName>教授任名誉主席，<st1:PersonName w:st="on" ProductID="王宏">王宏</st1:PersonName>博士任主席，他们在会上发表了演讲。</P>
+<P ><o:p> </o:p></P>
+<P >获得前<SPAN lang=EN-US>20名选手名单：</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 20pt; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.0; mso-line-height-rule: exactly">
+<TABLE class=MsoTableGrid style="WIDTH: 248.4pt; BORDER-COLLAPSE: collapse; mso-yfti-tbllook: 480; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt" cellSpacing=0 cellPadding=0 width=331 border=0>
+<TBODY>
+<TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<TD  vAlign=top width=31>
+<P >1<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >李天翼</P></TD>
+<TD  vAlign=top width=156>
+<P >上海复旦附中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手</P></TD></TR>
+<TR style="mso-yfti-irow: 1">
+<TD  vAlign=top width=31>
+<P >2<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >朱泽园</P></TD>
+<TD  vAlign=top width=156>
+<P >南京外国语学校</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手</P></TD></TR>
+<TR style="mso-yfti-irow: 2">
+<TD  vAlign=top width=31>
+<P >3<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >郭华阳</P></TD>
+<TD  vAlign=top width=156>
+<P >长沙长郡中学</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手</P></TD></TR>
+<TR style="mso-yfti-irow: 3">
+<TD  vAlign=top width=31>
+<P >4<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >高逸涵</P></TD>
+<TD  vAlign=top width=156>
+<P >清华附中<o:p></o:p></P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 4">
+<TD  vAlign=top width=31>
+<P >5<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >王栋 </P></TD>
+<TD  vAlign=top width=156>
+<P >新疆乌鲁木齐一中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 5">
+<TD  vAlign=top width=31>
+<P >6<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P ><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体">杨弋 </P></TD>
+<TD  vAlign=top width=156>
+<P ><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体">安徽师大附中</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 6">
+<TD  vAlign=top width=31>
+<P >7<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >龙<SPAN lang=EN-US><SPAN style="mso-spacerun: yes">  凡</P></TD>
+<TD  vAlign=top width=156>
+<P >长沙雅礼中学</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 7">
+<TD  vAlign=top width=31>
+<P >8<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >周以苏</P></TD>
+<TD  vAlign=top width=156>
+<P >成都七中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 8">
+<TD  vAlign=top width=31>
+<P >9<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >陈启峰</P></TD>
+<TD  vAlign=top width=156>
+<P >广东中山纪念中学</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 9">
+<TD  vAlign=top width=31>
+<P >10<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >于航</P></TD>
+<TD  vAlign=top width=156>
+<P >唐山一中</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 10">
+<TD  vAlign=top width=31>
+<P >11<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >杨沐</P></TD>
+<TD  vAlign=top width=156>
+<P >福州三中</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 11">
+<TD  vAlign=top width=31>
+<P >12<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >陈首元</P></TD>
+<TD  vAlign=top width=156>
+<P >华东师大二附中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 12">
+<TD  vAlign=top width=31>
+<P >13<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >周戈林</P></TD>
+<TD  vAlign=top width=156>
+<P >长沙长郡中学</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 13">
+<TD  vAlign=top width=31>
+<P >14<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >朱晨光</P></TD>
+<TD  vAlign=top width=156>
+<P >安徽芜湖一中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 14">
+<TD  vAlign=top width=31>
+<P >15<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >贾由</P></TD>
+<TD  vAlign=top width=156>
+<P >武钢三中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 15">
+<TD  vAlign=top width=31>
+<P >16<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >汪晔</P></TD>
+<TD  vAlign=top width=156>
+<P >安徽芜湖一中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 16">
+<TD  vAlign=top width=31>
+<P >17<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >唐文斌</P></TD>
+<TD  vAlign=top width=156>
+<P >绍兴一中</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 17">
+<TD  vAlign=top width=31>
+<P >18<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >余远铭</P></TD>
+<TD  vAlign=top width=156>
+<P >广东北江中学</P></TD>
+<TD vAlign=top width=84>
+<P >选拔赛选手<o:p></o:p></P></TD></TR>
+<TR style="mso-yfti-irow: 18">
+<TD  vAlign=top width=31>
+<P >19<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >董婧媛</P></TD>
+<TD  vAlign=top width=156>
+<P >石家庄一中</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手<o:p></o:p></P></TD></TR>
+<TR >
+<TD  vAlign=top width=31>
+<P >20<o:p></o:p></P></TD>
+<TD vAlign=top width=60>
+<P >龚良琪</P></TD>
+<TD  vAlign=top width=156>
+<P >九江一中</P></TD>
+<TD vAlign=top width=84>
+<P >观摩选手</P></TD></TR></TBODY></TABLE></P>
+	 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：IOI <br>
+                            
+                            来 源：NOI.cn<br>
+                            
+                            共有1700位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593">NOI2006获奖选手名单</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=595.htm" temptabs="http://www.mydrs.org/program/list?id=595">NOI竞赛委员会条例</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=594.htm" temptabs="http://www.mydrs.org/program/sendmail?id=594" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\IOI2006中国队8月赴墨西哥参赛.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0594.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=594.htm" temptabs="http://www.mydrs.org/program/list?id=594">IOI2006中国队8月赴墨西哥参赛</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,280 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>解题策略的谋划-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>解题策略的谋划
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>解题策略的谋划</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/11/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B>1、降格思想</B>：从对问题的特殊和简单状态的分析中归纳出问题的实质内涵或规律，从而得到问题的一般解法，也就是我们常说的"投石问路"或者叫做"尝试归纳"。这种通过特殊求得一般、通过实际求得抽象的思想在谋划策略的过程中是十分有效的，特别是当题目中所给的数据比较大或者很抽象而难以入手时，常用这种思想来谋划策略。<BR><BR><B>问题一</B>：（台阶问题）一个人登上一个10级的台阶，可以一步登1级，也可以一步登2级。问：一共有几种登法？<BR>这道题中的台阶数为10，虽然不是很大，但一时也很难入手。我们运用降格思想分析这个问题，先看几种简单的情形：<BR>A、仅有1级台阶时，登法只有1种：一步1级。<BR>B、有2级台阶时，登法有2种：一步2级；1级＋1级（两步）。<BR>C、有3级台阶时，登法有3种：1级＋1级＋1级；1级＋2级；2级＋1级。<BR>　　这里"1级＋2级"表示先登1级再登2级；"2级＋1级"表示先登2级再登1级，显然这两种登法是不同的。<BR>D、有4级台阶时，登法有5种：<BR>　　1级＋1级＋1级＋1级；<BR>　　1级＋1级＋2级；<BR>　　1级＋2级＋1级；<BR>　　2级＋1级＋1级；<BR>　　2级＋2级。<BR>E、有5级台阶时，登法有8种：<BR>　　1级＋1级＋1级＋1级＋1级；<BR>　　1级＋1级＋1级＋2级；<BR>　　1级＋1级＋2级＋1级；<BR>　　1级＋2级＋1级＋1级；<BR>　　1级＋2级＋2级；<BR>　　2级＋1级＋1级＋1级；<BR>　　2级＋1级＋2级；<BR>　　2级＋2级＋1级。<BR>按照台阶数递增的次序把登法的种数排列如下：<BR>1，2，3，5，8……<BR>容易想到这是菲波那契数列的一部分，这就找到了问题的规律，同时也谋划出解决问题的策略：数学模型（规律）策略。容易得到后继数据是：13，21，34，55，89……,于是得到问题的解：10级台阶共有89种登法。<BR>当然，关于找到的规律的正确性必须给出详细的证明，这里不再详述。应用这个例子无非是为了说明从简单出发考虑问题的优越性，同时指出，敏锐的洞察已有数据的能力对于谋划策略也是相当重要的。<BR><B>2、升格思想</B>：这种思想与第一种思想恰恰相反，它是把一些过于具体的问题抽象化，目的是忽略其中的一些次要因素，从而更好地把握其中的主要因素，通过解决一般问题从而解决具体问题。有时会发生这样的情况：由于问题中给出的数据过于具体，往往会形成一种思维定势，一直针对具体的数据进行分析，而忽视了问题中显而易见的东西。运用这一思想有利于突破思维定势，更快地找到解决问题的策略，其关键是在于对抽象问题的分析和推理。<BR><BR>我们把"台阶问题"抽象化，设有n级台阶，登台阶规则不变。对于登n级台阶的最后一步有两种情况：<BR>（１）由第n-1级台阶跨一步（1级）到达第n级；<BR>（２）由第n-2级台阶跨一步（2级）到达第n级。<BR>　　显然，以上的两类登法是不同的，n级台阶的总登法就是这两类登法的总和。我们用F(x)表示x级台阶的登法种数，则有： F(n)=F(n-1)+F(n-2)以及F(1)=1；F(2)=2。<BR>这就迅速地得到了问题的数学模型，也就谋划出解决问题的策略：数学模型（规律）策略。<BR>　　从这个例子的分析中可以看出，对问题的抽象概括，寻求问题的一般解法，对于某些问题的解决是十分简便的。适当运用升格思想往往可以"一箭中的"，迅速描述出问题的本质，从而得到解决问题的策略。<BR><B>3、分格思想</B>：把整个问题划分为几个相联系的子问题或几个连续的解题步骤，再一一设法解决，最后综合各个部分的解就可以得到整个问题的解。作为一种思维方法，在分析问题的时候恰当运用，对于谋划解题策略是很有效的。划分问题的方法有很多种，最基本的原则是把难以描述的问题化为易于描述的问题，把不易求解的化为易求解的。<BR>　　仍是看上面的"台阶问题"，由登10级台阶所用的步数不同，可以划分为如下的几种情况：<BR>A、共要登10步（全部都是每步登1级）：有1种登法；<BR>B、共要登9步（只有某一步登2级，其余每步登1级）：有C１９=9种登法；<BR>C、共要登8步（只有某两步每步登2级）：有C２８=28种登法；<BR>D、共要登7步（只有某三步每步登2级）：有C３７=35种登法；<BR>E、共要登6步（只有某四步每步登2级）：有C４６=15种登法；<BR>F、共要登5步（全部都是每步登2级）：有C５５=1种登法；<BR>因此总共的登法有1+9+28+35+15+1=89种。<BR><BR>　　通过上面的对问题划分的过程以及计算的结果的分析，我们可以得到以下的两种策略：<BR>（１）分治策略，直接仿照上面的划分过程由计算机加以实现。<BR>（２）数学模型（规律）策略，从中归纳出：对于n级台阶的登法有<BR>&nbsp;<IMG alt="" hspace=0 src="external/www.chinaschool.org/aosai/lwjl/images/2.gif" temptabs="http://www.chinaschool.org/aosai/lwjl/images/2.gif" border=0>种。<BR>通过上面的例子可以看出：分格思想关键在一个"分"字，也就是如何划分问题，划分中应注意两点：<BR>１、划分必须根据统一的标准，不重复，不遗漏；<BR>２、划分必须具有启发性，即对于谋划问题的策略有一定的启发作用。<BR><B>4、变格思想：</B>通过转换问题某些信息，从而转化问题的形式，达到化显为隐、化繁为简、化难为易、化未知为已知的目的，通过解决等效问题来解决原问题。<BR>再看上面的"台阶问题"，我们运用变格思想对问题进行转化，考虑人在台阶上的位置变化，比如：人处于第１台阶上时，若一步登１级就可以到达第２级台阶；若一步登２级就可以到达第３级台阶。我们用点表示每一级台阶，用边表示台阶之间可以"一步到达"的关系，就可以得到下面的图：<BR>　　于是，问题就转化为：在图6中，求从点0到点10的所有路径总数。这是一个为我们所熟悉的图论问题，可以用穷举策略解决，当然这种策略相对于前面所谋划的那些策略而言没有什么优势，但毕竟也是解决问题的策略之一。<BR>　　如果说变格思想在上面的这个例子中的运用相对于其它思想没有什么优势的话，那么回想一下在解决"最佳航空路线问题"时，我们把它转化为"最短路径问题"、"最小费用流问题"就都是变格思想成功运用的例子了。<BR>运用变格思想的关键就是要"变"得巧妙，这种思想对于探索新问题，特别是未知问题是很有效的。<BR>以上所说的这些策略的具体算法在计算机上都是很容易实现的，具体的程序就不再给出了。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：黄高峰 <br>
+                            
+                            来 源：清华大学<br>
+                            
+                            共有2246位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=168.htm" temptabs="http://www.mydrs.org/program/list?id=168">《战略游戏》解题报告</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=170.htm" temptabs="http://www.mydrs.org/program/list?id=170">解题策略源于问题</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=169.htm" temptabs="http://www.mydrs.org/program/sendmail?id=169" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\解题策略的谋划.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0169.htm" temptabs="http://www.mydrs.org/program/html/0169.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=170.htm" temptabs="http://www.mydrs.org/program/list?id=170">解题策略源于问题</a><br>
+                  
+                  <a href="list-id=169.htm" temptabs="http://www.mydrs.org/program/list?id=169">解题策略的谋划</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

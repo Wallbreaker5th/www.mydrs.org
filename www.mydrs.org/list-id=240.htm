@@ -1,0 +1,272 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid="></a>>><a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=&Nclassid="></a>>>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>99年北京程序设计复赛</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/6/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              西城区1999年中小学计算机<BR>程序设计竞赛小学BASIC组试题 </P><P>一. 某人的生日的月份乘以31, 日期乘以12, 其和为 170, 编程求他的生日为何月何日, 输出格式为: 月-日. ( 10分, 存盘文件名为T1 )<BR>CLS<BR>FOR a = 1 TO 12<BR>FOR b = 1 TO 31<BR>IF a * 31 + b * 12 = 170 THEN PRINT a; "-"; b<BR>NEXT b, a<BR>END</P><P>二. 将3,4,5,6,7五个数字放在五边形 ABCDE 的五个顶点上, 这样从顶点A开始沿顺时针方向和逆时针方向从顶点取出数字, 可以得到不同的两个五位数, 要求这两个五位数都能被 7 整除,问这五个数字应如何摆放? ( 10分, 存盘文件名为T2 )<BR>( 1 )<BR>CLS<BR>DIM a(5), b(5)<BR>FOR i = 1 TO 5<BR>a(i) = i + 2<BR>NEXT i<BR>FOR a = 1 TO 5: b(1) = a<BR>FOR b = 1 TO 5: b(2) = b<BR>FOR c = 1 TO 5: b(3) = c<BR>FOR d = 1 TO 5: b(4) = d<BR>e = 15 - a - b - c - d: b(5) = e<BR>IF a * b * c * d * e <> 120 THEN 10<BR>r = a(b(1)): l = r<BR>FOR i = 2 TO 5<BR>r = r * 10 + a(b(i))<BR>l = l * 10 + a(b(7 - i))<BR>NEXT i<BR>IF r / 7 <> INT(r / 7) OR l / 7 <> INT(l / 7) THEN 10<BR>FOR i = 1 TO 5<BR>PRINT CHR$(64 + i); a(b(i)),<BR>NEXT i<BR>10 NEXT d, c, b, a<BR>END<BR>( 2 )<BR>CLS<BR>FOR a = 3 TO 7<BR>FOR b = 3 TO 7<BR>IF a = b THEN 40<BR>FOR c = 3 TO 7<BR>IF c = a OR c = b THEN 30<BR>FOR d = 3 TO 7<BR>IF d = a OR d = b OR d = c THEN 20<BR>FOR e = 3 TO 7<BR>IF e = a OR e = b OR e = c OR e = d THEN 10<BR>r = 10000 * a + 1000 * b + 100 * c + 10 * d + e<BR>l = 10000 * a + 1000 * e + 100 * d + 10 * c + b<BR>IF r / 7 <> INT(r / 7) OR l / 7 <> INT(l / 7) THEN 10<BR>PRINT "A="; a; " B="; b; " C="; c; " D="; d; " E="; e<BR>10 NEXT e<BR>20 NEXT d<BR>30 NEXT c<BR>40 NEXT b, a<BR>END</P><P>三. 编程判断1999是否为质数, 用yes/no回答,并求出比1999大且离1999最近的N个不同质数,N(N<10)由键盘输入. (质数是指这样的自然数, 它除了1和自身以外不能被其他自然数整除) ( 15分, 存盘文件名为T3 )<BR>CLS<BR>x = 1999: n = 0<BR>GOSUB 100<BR>PRINT x; : IF k = 1 THEN PRINT "no" ELSE PRINT "yes"<BR>10 x = x + 2<BR>GOSUB 100<BR>IF k = 0 THEN PRINT x: n = n + 1<BR>IF n < 5 THEN 10<BR>END<BR>100 k = 0<BR>FOR i = 3 TO SQR(x) STEP 2<BR>IF x / i = x \ i THEN k = 1: GOTO 110<BR>NEXT i<BR>110 RETURN</P><P>四. 从键盘输入真分数的分子A和分母B,编程判断这个真分数是否可以表示为两个自然数的倒数和; 如果可以,就输出这两个自然数,(不止一个解答的只给出一个即可) 否则输出"NO".<BR>例如: 输入 A, B= 5, 6<BR>输出 N1, N2= 2, 3 ( 15分, 存盘文件名为T4 )<BR>( 1 )<BR>CLS<BR>10 INPUT "A="; a<BR>IF a < 1 OR a <> INT(a) THEN 10<BR>20 INPUT "B="; b<BR>IF b <= a OR b <> INT(b) THEN 20<BR>k = 0<BR>FOR x = 2 TO (b / a) * 2<BR>y = x * b / (a * x - b)<BR>IF y = INT(y) AND y > 0 THEN PRINT "N1, N2="; x; ","; y: k = k + 1<BR>NEXT x<BR>IF k = 0 THEN PRINT "NO"<BR>END<BR>( 2 )<BR>CLS<BR>10 INPUT "A="; a: IF a < 1 OR a <> INT(a) THEN 10<BR>20 INPUT "B="; b: IF b <= a OR b <> INT(b) THEN 20<BR>k = 0: c = (b / a) * 2: x = 1<BR>30 x = x + 1: IF x > c THEN 40<BR>IF a / b < 1 / x THEN 30<BR>y = x * b: z = a * x - b<BR>IF y / z = INT(y / z) THEN k = k + 1: PRINT "N1, N2="; x; ","; y / z<BR>GOTO 30<BR>40 IF k = 0 THEN PRINT "NO"<BR>END</P><P>五. 赵,王,李,关四位教师在操场进行一场羽毛球双打比赛,同学们谈论这四位老师的年纪:<BR>(1) 关老师比李老师年轻;<BR>(2) 赵老师比他的两个对手年龄都大;<BR>(3) 关老师比`他的伙伴年龄大;<BR>(4) 赵老师与王老师不同时为最大和最小.<BR>请你根据上面几点,试编程分析四位老师年龄的大小顺序,以及谁与谁是比赛搭档.编程时用Z,W,L,G分别表示赵,王,李,关四位教师,输出时按年龄从大到小的顺序排列; 用两个减号"--"分开4位教师表示双打安排,例如 ZW--LG 表示赵王对李关.<BR>( 20分, 存盘文件名为T5 )<BR>CLS<BR>DIM a(9): t = 1: s = 0: x$(1) = " D=4": x$(2) = " D=8"<BR>FOR i = 1 TO 9<BR>s = s + i: t = t * i<BR>NEXT i<BR>FOR w = 1 TO 2<BR>READ d: a(4) = d<BR>k = 0: PRINT "("; w; ") "; x$(w)<BR>FOR a = 1 TO 7: a(1) = a<BR>FOR b = 1 TO 9: a(2) = b<BR>FOR c = 1 TO 9: a(3) = c<BR>p = 2 * d \ 10: h = 2 * d MOD 10: a(8) = h<BR>FOR e = 6 - a - 1 TO 8 - a: a(5) = e<BR>FOR f = 1 TO 9: a(6) = f<BR>FOR g = 1 TO 9: a(7) = g<BR>i = c + g + p: a(9) = i<BR>IF a + b + c + d + e + f + g + h + i <> s THEN 10<BR>IF a * b * c * d * e * f * g * h * i <> t THEN 10<BR>x = 1000 * a + 100 * b + 10 * c + d<BR>y = 1000 * e + 100 * f + 10 * g + d<BR>z = 1000 * h + 100 * e + 10 * i + h<BR>IF x + y <> z THEN 10<BR>IF w = 1 AND (x / 3 <> x \ 3 OR y / 3 <> y \ 3) THEN 10<BR>k = k + 1<BR>FOR v = 1 TO 9<BR>PRINT CHR$(64 + v); "="; a(v); " ";<BR>NEXT v: PRINT : GOTO 20<BR>10 NEXT g, f, e, c, b, a<BR>PRINT<BR>20 NEXT w<BR>IF k = 0 THEN PRINT "NO"<BR>END<BR>DATA 4,8 </P><P>六. 用 9 个字母ABCDEFGHI 分别表示 1-9 阿拉伯数码中的某一个(没有重复).<BR>(1) 当D=4时,下列加法算式成立,且被加数 ABCD 和加数 EFGD 均是3的倍数,编程求这几个字母分别代表几?<BR>(2) 当D=8时,有没有符合要求的解答,若有输出各个字母分别代表几; 若没有则输出 "NO".<BR>A B C D<BR>+ E F G D<BR>-------------<BR>H E I H ( 20分, 存盘文件名为T6 )<BR>CLS<BR>DIM a(9): t = 1: s = 0: x$(1) = " D=4": x$(2) = " D=8"<BR>FOR i = 1 TO 9<BR>s = s + i: t = t * i<BR>NEXT i<BR>FOR w = 1 TO 2<BR>READ d: a(4) = d<BR>k = 0: PRINT "("; w; ") "; x$(w)<BR>FOR a = 1 TO 7: a(1) = a<BR>FOR b = 1 TO 9: a(2) = b<BR>FOR c = 1 TO 9: a(3) = c<BR>p = 2 * d \ 10: h = 2 * d MOD 10: a(8) = h<BR>FOR e = 6 - a - 1 TO 8 - a: a(5) = e<BR>FOR f = 1 TO 9: a(6) = f<BR>FOR g = 1 TO 9: a(7) = g<BR>i = c + g + p: a(9) = i<BR>IF a + b + c + d + e + f + g + h + i <> s THEN 10<BR>IF a * b * c * d * e * f * g * h * i <> t THEN 10<BR>x = 1000 * a + 100 * b + 10 * c + d<BR>y = 1000 * e + 100 * f + 10 * g + d<BR>z = 1000 * h + 100 * e + 10 * i + h<BR>IF x + y <> z THEN 10<BR>IF w = 1 AND (x / 3 <> x \ 3 OR y / 3 <> y \ 3) THEN 10<BR>k = k + 1<BR>FOR v = 1 TO 9<BR>PRINT CHR$(64 + v); "="; a(v); " ";<BR>NEXT v: PRINT : GOTO 20<BR>10 NEXT g, f, e, c, b, a<BR>PRINT<BR>20 NEXT w<BR>IF k = 0 THEN PRINT "NO"<BR>END<BR>DATA 4,8 </P><P>七. 随机产生出 100 个 100 以内的全部没有重复的自然数, 按产生的先后顺序逐一放入 10*10 方格中, 输出此 10*10 数阵,输出时每行两数之间相隔 5 个字符的位置. 假定方格中有两个自然数 A和B,且 A<B; 从A所在的方格沿水平或垂直方向沿最短路线到下一个自然数 A+1 所在方格, 并一直进行下去, 直到 B 所在的方格为止.<BR>问题 1. 由键盘输入 A,B, 试统计从 A 经过 A+1, A+2,....到 B 所经过的方格总数(要求自然数 A,B<100, 且 A<B), 例如在下图中,若A=3, B=6,从 A 到 B 的方格总数为15.<BR>. . . . . . .<BR>... 24 3 91 34 65 5 .....<BR>... 6 71 44 13 93 28 .....<BR>... 12 32 77 45 4 66 .....<BR>. . . . . . . <BR>问题 2. 输入自然数 M (M<100), 请你找到自然数 C,D (C,D均小于100 且C<D),使得 D-C=M, 且从 C 经过 C+1, C+2,....到 D 所经过的方格总数最少. 键盘输入自然数 M, 输出 C,D 所在方格的行号和列号.<BR>程序的第一条语句必须使用: RANDOMIZE TIMER ( 30分, 存盘文件名为T7 )<BR>CLS<BR>RANDOMIZE TIMER<BR>DIM a(100), b(10, 10), s(100), c$(100), d$(100), px(100), py(100): p = 1E+38<BR>10 INPUT "A,B="; a, b<BR>IF a < 1 OR a <> a \ 1 OR b <= a OR b <> b \ 1 OR b > 99 THEN 10<BR>20 INPUT "M="; m: IF m < 1 OR m > 99 OR m <> m \ 1 THEN 20<BR>FOR i = 1 TO 100<BR>30 a(i) = INT(RND * 100 + 1)<BR>FOR j = 1 TO i - 1<BR>IF a(i) = a(j) THEN 30<BR>NEXT j, i<BR>FOR i = 1 TO 10<BR>FOR j = 1 TO 10<BR>k = k + 1: b(i, j) = a(k): PRINT TAB(5 * j); a(k);<BR>NEXT j, i: PRINT : PRINT<BR>PRINT " ( 1 )"; : s = 1<BR>GOSUB 100: PRINT " S="; s: PRINT<BR>PRINT " ( 2 )";<BR>FOR x = 1 TO 100 - m<BR>a = x: b = m + x: GOSUB 200<BR>s = 1: GOSUB 100<BR>s(x) = s: px(x) = x: py(x) = b<BR>NEXT x<BR>FOR i = 1 TO 100 - m<BR>IF s(i) < p THEN p = s(i): pc$ = c$(i): pd$ = d$(i): px = px(i): py = py(i)<BR>NEXT i<BR>PRINT " C="; px; "("; pc$; ")", "D="; py; "("; pd$; ")", "S="; p<BR>END<BR>100 c = a + 1<BR>FOR i = 1 TO 10<BR>FOR j = 1 TO 10<BR>IF b(i, j) = a THEN ai = i: aj = j<BR>IF b(i, j) = c THEN ci = i: cj = j<BR>NEXT j, i<BR>s = s + ABS(ai - ci) + ABS(aj - cj)<BR>a = a + 1: IF a < b THEN 100<BR>RETURN<BR>200 FOR i = 1 TO 10<BR>FOR j = 1 TO 10<BR>IF b(i, j) = a THEN c$(x) = STR$(i) + " , " + STR$(j)<BR>IF b(i, j) = b THEN d$(x) = STR$(i) + " , " + STR$(j)<BR>NEXT j, i<BR>RETURN</P><P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            共有1136位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=239.htm" temptabs="http://www.mydrs.org/program/list?id=239">98年北京程序设计初赛</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=241.htm" temptabs="http://www.mydrs.org/program/list?id=241">信息学竞赛岂止在考场上</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=240.htm" temptabs="http://www.mydrs.org/program/sendmail?id=240" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0240.htm" temptabs="http://www.mydrs.org/program/html/0240.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=240.htm" temptabs="http://www.mydrs.org/program/list?id=240">99年北京程序设计复赛</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

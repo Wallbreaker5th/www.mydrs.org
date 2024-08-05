@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>数据结构-线性表 （二）-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>数据结构-线性表 （二）
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>数据结构-线性表 （二）</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;5/27/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              线性表的顺序存储结构和基本操作<BR>    在计算机内存中如何存放线性表呢？其中最简单和常用的方式是用一组地址边续的的存储单元依次存储线性表的元素。假没线性表的每个元素占用Ｌ个存储单元，并以所占的第一个单元的存储地址作为数据元素位置，则线性表中第i+1个数据元素的存储位置loc(ai+1)和i个数据元素的存储位置loc(ai)之间应满足下列关系：<BR>loc(ai+1)=loc(ai)+L<BR>如果loc(ai)=b+(i-1)L<BR>线性表的这种机内表示法称为线性表的顺序存储结构。也就是主元素在计算机内以“物理位相邻“来表示线性表中数据元素之间的关系。每一个数据元素的存储位置都和线性表的起始位置相差一个和数据元素在线性表中的位序成正比的常数（如图2.6）。因此，只要确定了存储线性表的起始位置，线性表中任一数据元素都可以随机存取，所以线性表的顺序存储结构是一种随机存取的存储结构。<BR>在ＰＡＳＣＡＬ语言中可用一给数组描述线性表的顺序存储结构：<BR>const<BR>  lmaxsize={线性表可能达的最大长度};<BR>type<BR>  lelement={线性表元素的数据类型};<BR>  lposition=0..lmaxsize;<BR>  list=record<BR>      date:array[1..lmaxsize]of lelement;<BR>      last:lposition;<BR>      end;<BR>kusterrir=(bierrmubdexerrmfubdfaukmiverfkiwmybderfkiw)l<BR>    在上述   述中，线性表的顺序存储结构是一个记录类型的结构，其中lelement描述线性表元素的数据类型，数据域data描述了线性表中的数据元素占用的数组空间，数组的第i个分量表示线性表中第i个数据元素的存储映像，数据域last指示最后一个数据元素在数组空间中的位置。此处数据元素的存储位置由数组的下标值（即相对于线性表的起始位置的值）来表示。listerror记录对指定的线性表操作后的情况，分别是“操作无误“，“检索出错“，“找不到“，“上溢出“，“下溢出“。<BR>    对于图2.1 学生成绩表，假设最多只有300个学生，用PASCAL语言描述的线性表的顺序存储结构如下：<BR>    const<BR>      lmaxize=300;<BR>    type<BR>      lelement=record<BR>            name:string[8];<BR>           chinese:real;<BR>           math:real;<BR>                     sum:real;<BR>                     average:real;<BR>                  end;<BR>    lposition=0..lmaxize;<BR>        list=record<BR>          data:array[1..lmaxize]of lelement;<BR>                    last:lposition;<BR>                 end;<BR>{定义线性表为list，它最多能容纳lmaxize个元素，首元素序号为1，尾元素序号为last。从宏观角度，如果只关心元素与元素关系时，我们常常把每个元素称为一个结点。}<BR>    listerror=(noerro，indexerro，findfail，overflow，underflow）；<BR>  var<BR>        L:list;<BR>    lerro:listerro;<BR>    线性表是一个相当灵活的数据结构，它的长度可根据需增加或缩短，即对线性表的数据元系不仅可以进行访问，还可进行插入和删除。为了完成线性表的基本操作，我们常常自定义下列函数或过程，参考算法描述如下：<BR>1.初始化操作过程。<BR>procedure lcreate(var L:list);<BR>{没定一个空的线性表L}<BR>  begin<BR>L.last:=0:<BR>Lerro:=noerro;<BR>  end;<BR>2.求和度函数。<BR>function llength(var L:list):lposition;<BR>{函数值为给定的线性表L中数据元素的个数，函数值为零表示线性表没有元素}<BR>  begin<BR>llengtyh:=L.last:<BR>end;<BR>3.判空表函数。<BR>function lempty(var L:list):boolean;<BR>{若L为空表，则返回布尔值true，否则返回布尔值false}<BR>  begin<BR>lempty:=(L.last=0);<BR>end;<BR>4.判满函数。<BR>function lfull(var L:list):boolean;<BR>{如果表中已装满元素，函数值为true，否则为false}<BR>  begin<BR>     lfull:=(L.last=lmaxsize);<BR>  end;<BR>5.求首结点元素位置函数。<BR>function lfirst(var L:list):lposition:<BR>    begin<BR>        if L.last=0<BR>            then lfirst:=0<BR>            else lfirst:=1;<BR>    end;<BR>6.求尾结点元素位置函数。<BR>function llast(var L:list):lposition:<BR>  begin<BR>     llast:=L.last;<BR>  end;<BR>7.求前趋函数。<BR>function lprior(p:lposition;var L:list):lposition;<BR>{已知给定线性表L的一个元素的位序p，若1&lt;p&lt;=llength(L)，则函数值为p的前趋位序，否则指出错误}<BR>  begin<BR>    if(p&lt;=1)or(p&gt;llength(L))<BR>          then<BR>             begin<BR>                  lerro:=indexerro;<BR>                  lprior:=0;<BR>             end<BR>          else lprior:=p-1;<BR>  end;<BR>8.求后继函数。<BR>function lnext(p:lposition;var L:list):lposition;<BR>{已知给定线性表L的一个元素位序p,若1&lt;=p&lt;llength(L),则函数值为p.的后继，否则为空元素}<BR>  begin<BR>    if(p&lt;=0)or(p&gt;=llength(L))<BR>       then<BR>         begin<BR>             lerro:=indexerro;<BR>             lnext:=0;<BR>         end<BR>       else lnext:=p+1;<BR>  end;<BR>9.取元素函数。<BR>procedure lretrieve(p:lposition;var e:lelement;var L:list);<BR>{若1&lt;=p&lt;=llength(L)则函数值为给定的线性表L中第i个数据元素，否则指出错误。p称为该数据元素在线性表中的位序}<BR>  begin<BR>    if(p&lt;=0)or(p&gt;llength(L))<BR>    then lerro:=indexerro<BR>    else e:=L.data[p];<BR>  end;<BR>10.修改元素数据过程。<BR>procedure lupdate(e:lelement;p:lposition;var L:list);<BR>  begin<BR>    if(p&lt;=0)or(p&gt;llength(L))<BR>      then lerro:=indexerro<BR>      else L.data[p]:=e;<BR>  end;<BR>11.删除操作过程。<BR>procedure ldelete(p:lposition;var L:list);<BR>{若1&lt;=p&lt;=llength(L),删除给定线性表中第p个数据元素，使操作之前和度为n的线性表(a1,a2,…,ap-1,ap,…an)变成长度为n-1的线性表(a'1,a'2,…,a'p-1,a'p…a'n-1），其中当1&lt;=j&lt;=p-1时a'j=aj，当p&lt;=j&lt;=n-1时a'j=aj+1。若p&lt;1或p&gt;llength(L)，则此操作无意义}<BR>  var i:lposition;<BR>  begin<BR>    if llength(L)=0<BR>       then lerro:=indexerro<BR>       else if(p&lt;1)or(p&gt;llength(L))<BR>              then lerro:=indexerro<BR>              else<BR>                  begin<BR>                           for i:=p to llength(L)-1 do<BR>                                 L.data[i]:=L.data[i+1]:{第i后元素逐个前移}<BR>                           L.last:=L.last-1;{尾元素序号减1，即线性表长度减1}<BR>                  end;<BR>end;<BR>12.后插操作过程。<BR>procedure lisertafter(e:lelement;p:lposition;var L:list);<BR>{在给定线性表中第p个元素之后插入一个新的数据元素e，使操作之前和度为n的线性表(a1,a2,…ap,ap+1,…an)变成长度为n+1的线性表(a'1,a'2,…a'p,e,a'p+2,…a'n)，其中e 为操作后的线性表L、中敏p+1个数据元素，且当1&lt;=i&lt;=p时a'i=ai，当p+2&lt;=i&lt;=n+1时a'i=ai-1。可见此操作仅在1&lt;=p&lt;=n时可行}<BR>var<BR>  i:lposition;<BR>begin<BR>  if llength(L)=0<BR>    then<BR>      begin<BR>        L.data[1]:=e;<BR>        L.last:=1;<BR>      end<BR>    else if(p&lt;0)or(p&gt;llength(L))<BR>               then lerro:=indexerro;<BR>               else if llength(L)=lmaxsize<BR>                 then lerro:=overflow<BR>                 else<BR>                     begin<BR>                         for i:=llength(L)downto p+1 do<BR>                               L.data[i+1]:=L.data[i];{从最后元素开始到第i个元素逐个后移}<BR>                         L.data[p+1]:=e;{插入}<BR>                         L.last:=L.last+1;{尾元素序号加1，即线性表长度加1}<BR>                    end;<BR>  end;<BR>13.判断两元素是否相同函数。<BR>function lequal(e,f:lelement):boolean:<BR>{若e,f值相等，函数值为true，否则flse}<BR>  begin<BR>    {example}<BR>    lequal:=(e.name=f.name)and(e.chinese=f.chinese)and(e.math=f.math)<BR>                                    and(e.sum=f.sum)and(e.average=f.average);<BR>  end;<BR>14.定位函数。<BR>function lfind(e.lelement;var L:list):lposition;<BR>{给定值e,若线性表L中存在值和e相同的数据元素不止一个，则函数值为这此元素在线性表L中的位序的最小值}<BR>var<BR>    p:integer;<BR>begin<BR>p:=1;<BR>Lerro:=findfail;<BR>lfind:=0;<BR>while(Lerro=findfail)and(p&lt;=llength(L))do<BR>  begin<BR>    if lequal(e,L.data[p])<BR>       then<BR>         begin<BR>            lfind:=p;<BR>            lerro:=noerro;<BR>         end;<BR>      p:=p+1;<BR>   end;<BR>end;<BR>15.前插过程。<BR>    在上述函数或过程的基础上，我们还可以根所需要增加一些有用的自定义函数或过程，例如下面的在一个元素前插过程：<BR>procedure linserbefore(e:lelement;p:lposition;var L:list);<BR>  var<BR>        temp:lelement;<BR>begin<BR>  if(p&lt;0)or(p&gt;llength(L))<BR>    then lerro:=indexerro<BR>    else if lempty(L)<BR>        then linsertafter(e,p,L);{调用后插过程}<BR>        else<BR>            begin<BR>                p:=lprior(p,L);{求p的前一个位置并把新结点插入其后}<BR>                linsertafter(e,p,L);{调用后插过程}<BR>                end;<BR>end;<BR>例题：用线性表编一个学生成绩表，并对其进行插入、修改、删除、追加、显示、退出等操作。<BR>解答：<BR>{<BR>By Unite Space 2001<BR>http://www.cpascal.com<BR>e-mail:webmaster@cpascal.com<BR>}<BR>program data_structure_application_chapter2_sample_2;<BR>uses crt;<BR>const<BR>  lmaxsize=300;<BR>type<BR>  lelement=record<BR>             name:string[8];<BR>             chinese:real;<BR>             math:real;<BR>             sum:real;<BR>             average:real;<BR>           end;<BR>  lposition=0..lmaxsize;<BR>  list=record<BR>         data:array[1..lmaxsize]of lelement;<BR>         last:lposition;<BR>       end;<BR>  listerro=(noerror,indexerror,findfail,overflow,underflow);<BR>var<BR>  l:list;<BR>  lerro:listerro;<BR>  menu,p:integer;<BR>  e:lelement;<BR>procedure lcreate(var l:list);<BR>  begin<BR>    l.last:=0;<BR>    lerro:=noerror;<BR>  end;<BR>function llength(var l:list):lposition;<BR>  begin<BR>    llength:=l.last;<BR>  end;<BR>function lempty(var l:list):boolean;<BR>  begin<BR>    if l.last=0 then lempty:=true<BR>      else lempty:=false;<BR>  end;<BR>procedure linsertafter(e:lelement;p:lposition;var l:list);<BR>  var<BR>    i:lposition;<BR>  begin<BR>    if llength(l)=0<BR>      then<BR>        begin<BR>          l.data[1]:=e;<BR>          l.last:=1;<BR>        end<BR>    else if(p&lt;0)or(p&gt;llength(l))<BR>      then lerro:=indexerror<BR>      else  if llength(l)=lmaxsize<BR>        then lerro:=overflow<BR>          else<BR>            begin<BR>              for i:=llength(l) downto p+1 do<BR>                l.data[i+1]:=l.data[i];<BR>              l.data[p+1]:=e;<BR>              inc(l.last);<BR>            end;<BR>  end;<BR>procedure lupdate(e:lelement;p:lposition;var l:list);<BR>  begin<BR>    if (p&lt;=0)or(p&gt;llength(l))<BR>      then lerro:=indexerror<BR>        else l.data[p]:=e;<BR>  end;<BR>procedure ldelete(p:lposition;var l:list);<BR>  var i:lposition;<BR>  begin<BR>    if llength(l)=0<BR>      then lerro:=indexerror<BR>      else if (p&lt;1)or(p&gt;llength(l))<BR>        then lerro:=indexerror<BR>          else<BR>            begin<BR>               for i:=p to llength(l)-1 do<BR>                 l.data[i]:=l.data[i+1];<BR>               dec(l.last);<BR>            end;<BR>  end;<BR>procedure erromessage;<BR>  begin<BR>    case lerro of<BR>      noerror:writeln('ok!');<BR>      indexerror:writeln('index error!');<BR>      findfail:writeln('find fail!');<BR>      overflow:writeln('overflow error!');<BR>      underflow:writeln('underflow error!');<BR>    end;<BR>    readln;<BR>  end;<BR>procedure readrecord(var e:lelement);<BR>  begin<BR>    with e do<BR>      begin<BR>        write('name:');<BR>        readln(name);<BR>        write('chinese:');<BR>        readln(chinese);<BR>        write('math:');<BR>        readln(math);<BR>        sum:=chinese+math;<BR>        average:=sum/2;<BR>      end;<BR>  end;<BR>procedure readposition(var p:integer;message:string);<BR>  begin<BR>    write('please input ',message,' position');<BR>    readln(p);<BR>  end;<BR>procedure printlist(var l:list);<BR>  var<BR>    i:integer;<BR>  begin<BR>    if lempty(l)<BR>      then writeln('It is empty now!')<BR>    else<BR>      writeln('no':10,'name':10,'chinese':10,'math':10,'average':10);<BR>      for i:=1 to llength(l) do<BR>        with l.data[i] do<BR>          begin<BR>            writeln(i:10,name:10,chinese:10:1,math:10:1,average:10:1);<BR>          end;<BR>  end;<BR>begin<BR>  lcreate(l);<BR>  repeat<BR>    clrscr;<BR>    lerro:=noerror;<BR>    write('1--insert,2--edit,3--delete,4--append,5--list,0--quit:');<BR>    readln(menu);<BR>    case menu of<BR>      1:begin<BR>        readrecord(e);<BR>        readposition(p,'insert');<BR>        linsertafter(e,p,l);<BR>      end;<BR>      2:begin<BR>        readrecord(e);<BR>        readposition(p,'edit');<BR>        lupdate(e,p,l);<BR>      end;<BR>      3:begin<BR>        readposition(p,'delete');<BR>        ldelete(p,l);<BR>      end;<BR>      4:begin<BR>        readrecord(e);<BR>        linsertafter(e,llength(l),l);<BR>      end;<BR>      5:printlist(l);<BR>      0:halt;<BR>      else<BR>        writeln('please input number of 0--4! press any key to continue.');<BR>        readln;<BR>      end;<BR>        erromessage;<BR>      until false;<BR>  end.<BR>{<BR>By Unite Space 2001<BR>http://www.cpascal.com<BR>e-mail:webmaster@cpascal.com<BR>}<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：联合空间网络工作室 <br>
+                            
+                            来 源：cpascal.com<br>
+                            
+                            共有4867位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=29.htm" temptabs="http://www.mydrs.org/program/list?id=29">数据结构-线性表 （一）</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=31.htm" temptabs="http://www.mydrs.org/program/list?id=31">数据结构-线性表 （三）</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=30.htm" temptabs="http://www.mydrs.org/program/sendmail?id=30" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\数据结构-线性表 （二）.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0030.htm" temptabs="http://www.mydrs.org/program/html/0030.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=164.htm" temptabs="http://www.mydrs.org/program/list?id=164">谈谈数据结构</a><br>
+                  
+                  <a href="list-id=95.htm" temptabs="http://www.mydrs.org/program/list?id=95">趣谈数据结构（七）</a><br>
+                  
+                  <a href="list-id=94.htm" temptabs="http://www.mydrs.org/program/list?id=94">趣谈数据结构（六）</a><br>
+                  
+                  <a href="list-id=93.htm" temptabs="http://www.mydrs.org/program/list?id=93">趣谈数据结构（五）</a><br>
+                  
+                  <a href="list-id=92.htm" temptabs="http://www.mydrs.org/program/list?id=92">趣谈数据结构（四）</a><br>
+                  
+                  <a href="list-id=91.htm" temptabs="http://www.mydrs.org/program/list?id=91">趣谈数据结构（三）</a><br>
+                  
+                  <a href="list-id=90.htm" temptabs="http://www.mydrs.org/program/list?id=90">趣谈数据结构（二）</a><br>
+                  
+                  <a href="list-id=89.htm" temptabs="http://www.mydrs.org/program/list?id=89">趣谈数据结构（一）</a><br>
+                  
+                  <a href="list-id=39.htm" temptabs="http://www.mydrs.org/program/list?id=39">实数类型</a><br>
+                  
+                  <a href="list-id=31.htm" temptabs="http://www.mydrs.org/program/list?id=31">数据结构-线性表 （三）</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

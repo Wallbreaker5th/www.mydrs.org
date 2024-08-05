@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>动态规划的状态表示(二)-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>动态规划的状态表示(二)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>动态规划的状态表示(二)</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;8/6/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B>三、状态表示对动态规划性能的影响</B><BR><BR>　　我们分析问题的时候，总是从不同的角度去思考，以便能全面、本质地认识问题。分析问题的状态表示，我们也是尽可能从不同角度去思考。由此会得到对问题的不同状态表示，从动态规划原理来看，其中有些状态表示不能合乎要求，而在满足要求的那些状态表示中，我们可以以之为基础，构造动态规划模型，实现动态规划算法。在通常情况下，基于不同的状态表示的动态规划算法性能存在着差异，这主要从算法的时间复杂度和空间复杂度体现出来。<BR>上面介绍了问题二的两种状态表示， 状态表示2-1从问题的自然特征来思考， 提出对一般多边形的表示方法，具有其通用性，状态表示2-2则根据多边形划分中关于顶点划分的性质来思考，进而提出了半连续多边形， 现在我们考虑关于多边形边的划分性质，提出状态表示2-3， 并比较三种状态表示，探讨状态表示对动态规划性能的影响。<BR><BR>状态表示2-3<BR>定义2-3 多边形（A1,A2,…,Ak）是由多边形（1，2，…，N）划分而来的多边形，我们称多边形（A1,A2,…,Ak）为连续多边形，当且仅当Ai+1 = Ai+1 ,<BR>k&gt;i &gt;0。图6中多边形（3，4，5，6，7）就是一个连续多边形。<BR>性质2-3 对于一个多边形，它的任一条边一定与另一个顶点组成三角形。如图5，边（1，2）可以与顶点4等顶点相连，形成三角形。&nbsp;<BR>根据性质2-3， 对多边形划分时，我们可以按需要选择边来与其他顶点相连，而不会遗漏多边形的任一种划分，自然也不会遗漏多边形的最优划分。<BR><BR>　　 连续多边形（X，X+1，,…,Y）可以用二元组（X,Y）来表示，则D(X,Y)表示连续多边形的划分区域数。<BR>　　对于连续多边形（X，Y），只要我们选择边（X，Y）与顶点Z(X&lt;Z&lt;Y)连接，那么（X，Y）划分为三部分：连续多边形（X，Z）、连续多边形（Z，Y）和三角形（X,Z,Y）。（X，Y）的最优划分包含了（X，Z）、（Z，Y）的最优划分，满足最优子结构性质。<BR>注意到初始多边形是一个连续多边形，根据数学归纳法，它的子问题都是连续多边形。因此二元组（X，Y）是一个正确的状态表示。状态转移方程为<BR>D(X,Y) = min(g(X,Y,Z) + D(X,Z)+D(Z,Y)), X&lt;Z&lt;Y,<BR>f(i,i) = 0, n+1&gt;i&gt;0,<BR>当x,y,z在一条直线时，g(x,y,z) = 0, 否则g(x,y,z) = 1。<BR>子问题空间复杂度是O（n2），在本文的假设条件下，使用基本堆空间可以处理顶点数700以内的多边形。下面是求连续多边形最优划分区域数的函数。<BR>[算法2-3]：<BR>function Dynamic(s, t : integer) : integer; {求连续多边形（s,t）的最优划分}<BR>var j, tot : integer;<BR>begin<BR>if D[s, t][1] = 255 then<BR>if t - s = 1 then D[s, t][1] := 0&nbsp;<BR>else<BR>begin<BR>for j := s + 1 to t - 1 do {j 是边（s,t）要连接的顶点}<BR>if 顶点j与顶点s、t连接合法 then<BR>begin<BR>Tot := Dynamic(s, j) + Dynamic(j, t); {子多边形的最优划分}<BR>If 顶点s、t、j不在一条直线上 then Tot := Tot + 1;&nbsp;<BR>if Tot &lt; D[s, t][1] then<BR>begin<BR>D[s, t][1] := Tot;<BR>D[s, t][2] := j;<BR>end;<BR>end;<BR>end;<BR>Dynamic := D[s, t][1];<BR>end;<BR><BR><BR><BR><BR>图7<BR>我们来比较三种状态表示描述的子问题空间以及相应动态规划算法的时空性能。在图7中，动态规划的时间复杂度、空间复杂度与子问题空间增长是同阶的。事实上，这样的关系不仅仅局限于这个例子，它具有普遍意义。首先，动态规划空间花费主要是用来存储描述子问题的状态表示，因此空间复杂度自然随着子问题的增多而增大。其次，动态规划的时间花费主要取决于要解决的不同子问题的数目，随着子问题数目的增多，时间复杂度当然就增大了。<BR>既然不同的状态表示会描述不同大小的子问题空间，那么原因何在呢？在这道题中，我们仅仅从多边形的定义来看，有这样的关系：{连续多边形} 是{半连续多边形}的子集，{半连续多边形}是{多边形}的子集。由此可知，应该是状态表示描述子问题不精确造成。<BR>回顾状态表示2-1和状态表示2-2、2-3的分析，我们之所以采取状态表示2-1 是基于对多边形自然特征的认识，而没有考虑到在特定环境下多边形划分而成的子多边形与多边形本身有特殊的联系。比较状态表示2-2、2-3，两者都利用了多边形划分的性质，但显然研究的深度不同。状态表示2-3保证了每种划分都是对多边形的不同划分，因为至少有一条边所在的三角形是与其他划分中所在的三角形不一样。状态2-2就不能保证这一点，如下图所示的两种划分顺序得出了同一种划分。因为这种无意义的划分而产生的多边形属于{半连续多边形}-{连续多边形}，如半连续多边形（1，3，5）。<BR><BR><BR>状态表示的改进不仅仅使动态规划的性能提高，通常也会使算法实现更加简洁。比较算法[2-2]、[2-3]我们就可以看出这一点。算法[2-3]的程序见附录。<BR>以上，我们主要讨论状态表示描述的子问题空间不同而影响动态规划。这是状态表示影响动态规划性能的主要原因，但是在算法实现过程中，由于某种原因我们可能对同一子问题采取了不同的描述方法，存储空间会产生极大的差异。下面这个例子说明了这个问题。<BR>问题三： “#”这个操作符被定义为一个双目运算符，且两个运算对象为正整数，对于整数X，Y，# 号运算定义为（X#Y）=十进制数X各数字之和*十进制数Y的最大数字+十进制数Y的最小数字。例<BR>（9#30）=9*3+0=27，（30#9）=3*9+9=36<BR>对于表达式我们约定或是一正数或是（表达式#表达式）。以下表达式是合法的表达式<BR>a<BR>(a#a)<BR>((a#a)#a)<BR>(a#(a#a)#(a#a)#a))<BR>对于给定的十进制正数a和表达式的值K，计算具有K值的表达式中“#”的个数。具有k值的表达式可能有许多，并且具有不同的#个数，只需输出最小个数。a，k是均不大于1000000000的正整数。<BR><BR>运算时，我们描述的是正整数k的各位数字和、最大数字和最小数字两个信息（这里把最大、最小数字看成一个信息）以及得到k所用的最少 # 数，那么可以有两种状态表示。<BR>状态表示3-1<BR>我们用一元组（k）表示正数k, D(k)表示所用的#数目。(k)已经隐含了各数字和、最大数字和最小数字两个信息。<BR>状态表示3-2<BR>因为对每个数而言，各位数字和与最大数字、最小数字两个信息具有独立性，我们可以分别记录这两个信息。用一元组（X）表示各位数字和，用二元组（Y,Z）表示最大数字、最小数字。<BR>我们对输入的数a进行特殊处理，而一次运算后的最大数字不超过738，状态表示3-1只要开一个数组，定义如下<BR>Type NumBerType = array[1..738] of integer&nbsp;<BR>因为一次运算后的数值最大是三位数，各位数值和不超过27，用来存储数值和的数组可定义为<BR>Type TotalType = array[1..27] of integer<BR>最大数字、最小数字与数大小无关，它们范围在[0，9]，定义为<BR>Type MaxMinType = array[0..9,0..9] of integer&nbsp;<BR>状态表示3-1用一元组同时记录了两个信息，而状态表示3-2则分别记录了这两个信息。显然状态表示3-2所用的空间比状态表示3-1所用的要小的多。同样一个对象，只是由于我们采取不同的描述方法，所用的空间大小就迥然不同。程序见附录。<BR><BR>综上所述，状态表示对动态规划的性能的影响是多方面的。因此，在解决问题时，从各方面比较状态表示，根据具体情况选择高效的状态表示，才能进一步优化动态规划。<BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：黄浩达(福建师大附中校友) <br>
+                            
+                            来 源：中国科技大学计算机系<br>
+                            
+                            共有5918位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=160.htm" temptabs="http://www.mydrs.org/program/list?id=160">动态规划的状态表示(一)</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=162.htm" temptabs="http://www.mydrs.org/program/list?id=162">动态规划的状态表示(三)</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=161.htm" temptabs="http://www.mydrs.org/program/sendmail?id=161" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\动态规划的状态表示(二).htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0161.htm" temptabs="http://www.mydrs.org/program/html/0161.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=534.htm" temptabs="http://www.mydrs.org/program/list?id=534">动态规划入门练习题</a><br>
+                  
+                  <a href="list-id=463.htm" temptabs="http://www.mydrs.org/program/list?id=463">动态规划空间“降一维”</a><br>
+                  
+                  <a href="list-id=392.htm" temptabs="http://www.mydrs.org/program/list?id=392">石子归并问题(DP)</a><br>
+                  
+                  <a href="list-id=391.htm" temptabs="http://www.mydrs.org/program/list?id=391">过桥问题(DP)</a><br>
+                  
+                  <a href="list-id=390.htm" temptabs="http://www.mydrs.org/program/list?id=390">抄写图书问题(DP)</a><br>
+                  
+                  <a href="list-id=361.htm" temptabs="http://www.mydrs.org/program/list?id=361">《Kitty猫基因突变》</a><br>
+                  
+                  <a href="list-id=348.htm" temptabs="http://www.mydrs.org/program/list?id=348">[专题]学习动态规划</a><br>
+                  
+                  <a href="list-id=341.htm" temptabs="http://www.mydrs.org/program/list?id=341">动态规划问题的BASIC程序解</a><br>
+                  
+                  <a href="list-id=340.htm" temptabs="http://www.mydrs.org/program/list?id=340">动态规划问题的经典实例</a><br>
+                  
+                  <a href="list-id=318.htm" temptabs="http://www.mydrs.org/program/list?id=318">巧记电话号码</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

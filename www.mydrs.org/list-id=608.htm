@@ -1,0 +1,706 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>Turbo Pascal各语句运行速度比较-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=6.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=6">算法与技巧</a>>>Turbo Pascal各语句运行速度比较
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>Turbo Pascal各语句运行速度比较</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/10/2006&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <TABLE width=728 border=0>
+<TBODY>
+<CENTER>
+<TR>
+<TD align=middle width=720 colSpan=2></TD></TR>
+<TR>
+<TD width=720 colSpan=2>
+<P style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; TEXT-INDENT: 10px; LINE-HEIGHT: 150%">以下结果在总线133MHz,CPU 866MHz, Windows 98 第二版, 用 Turbo Pascal 7.0 的环境下得.</P>
+<P style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; TEXT-INDENT: 10px; LINE-HEIGHT: 150%">编译指示:</P>
+<P style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; TEXT-INDENT: 10px; LINE-HEIGHT: 150%">{$A+,B-,D-,E+,F-,G+,I-,L-,N+,O-,P+,X+,Y-,Q-,R-,S-,T-,V-}<BR>&nbsp; {$M 65520,0,655360}</P></TD></TR>
+<TR>
+<TD width=720 colSpan=2><FONT face=华文楷体 size=4>算术函数,逻辑,判断</FONT></TD></TR>
+<TR>
+<TD width=20></TD>
+<TD width=694>
+<TABLE width=694 border=1>
+<COLGROUP>
+<COL style="WIDTH: 82pt; mso-width-source: userset; mso-width-alt: 3488" width=109>
+<COL style="WIDTH: 64pt; mso-width-source: userset; mso-width-alt: 2720" span=7 width=85>
+<TBODY>
+<TR style="HEIGHT: 14.25pt; mso-height-source: userset" height=19>
+<TD class=xl37 style="BORDER-RIGHT: black 1pt solid; HEIGHT: 14.25pt" align=right width=95 height=19>
+<P align=center></P></TD>
+<TD class=xl37 style="BORDER-RIGHT: black 1pt solid; HEIGHT: 14.25pt" align=right width=583 colSpan=7 height=19>
+<P align=center>数据类型</P></TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl36 style="HEIGHT: 14.25pt" align=left width=95 height=19>
+<P align=center>函数名</P></TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=79>Integer</TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=79>LongInt</TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=79>Real</TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=79>Single</TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=79>Double</TD>
+<TD class=xl24 style="BORDER-LEFT: medium none" align=left width=81>Extended</TD>
+<TD class=xl25 style="BORDER-LEFT: medium none" align=left width=78>Comp</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="HEIGHT: 14.25pt" align=middle width=95 height=19>:= 赋值</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.49">1.49</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.85">3.85</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.11">5.11</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="14.8">14.80</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="14.7">14.70</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="18.4">18.40</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="23.68">23.68</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19 x:str="'-  相反数">-<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>相反数</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.62">1.62</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.01">5.01</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="194">194.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="13.8">13.80</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="16">16.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="11.8">11.80</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="17.2">17.20</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&nbsp;+ 或 -</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="2.33">2.33</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.41">5.41</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="290">290.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="15.5">15.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="18.6">18.60</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="13.1">13.10</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="27.68">27.68</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>*</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.26">3.26</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="79.1">79.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="290">290.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="17.7">17.70</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="21">21.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="13">13.00</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="29.3">29.30</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>/</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="330">330.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="60.1">60.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="60.1">60.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="62.3">62.30</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="68.9">68.90</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Abs()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.18">3.18</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="6.88">6.88</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="196">196.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="13.5">13.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="14.5">14.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="12.3">12.30</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="17.1">17.10</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Ln()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1054">1054.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="872">872.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="872">872.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="872">872.00</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="875">875.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Exp()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1319">1319.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1149">1149.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1150">1150.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="1150">1150.00</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="1159">1159.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Sqr()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="196">196.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="18.3">18.30</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="16.4">16.40</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="12.6">12.60</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="17.3">17.30</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Sqrt()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="330">330.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="153">153.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="153">153.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="156">156.00</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="161">161.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>sin()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1260">1260.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1100">1100.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1070">1070.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="1100">1100.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="1120">1120.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>cos()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1320">1320.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1120">1120.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1050">1050.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="1050">1050.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="1000">1000.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>ArcTan()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1129">1129.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="790">790.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="795">795.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="900">900.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="800">800.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Frac()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="323">323.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="147">147.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="143">143.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="144">144.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="144">144.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Trunc()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="219">219.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="128">128.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="128">128.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="129">129.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="134">134.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Int()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="328">328.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="141">141.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="142">142.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="142">142.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="145">145.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Round()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="185">185.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="92">92.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="89">89.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="97">97.00</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="98">98.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl31 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl31 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl31 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Inc()或Dec()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="6.36">6.36</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.11">5.11</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Div</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="26.5">26.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="129">129.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>Mod</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.1">29.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="129">129.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>pred或succ</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.43">1.43</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5">5.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>shr或shl</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="2.53">2.53</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="70.5">70.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>and</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="2.42">2.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.6">5.60</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>or</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="2.47">2.47</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.71">5.71</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>not</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.72">1.72</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="4.31">4.31</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>xor</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="2.41">2.41</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.62">5.62</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&gt;</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="13.42">13.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="4.61">4.61</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="234">234.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="38.1">38.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="38.5">38.50</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="34.8">34.80</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="32">32.00</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&lt;</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.53">3.53</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="6.43">6.43</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="224">224.00</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.3">29.30</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.3">29.30</TD>
+<TD class=xl27 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="34.32">34.32</TD>
+<TD class=xl28 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="39.1">39.10</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&lt;=</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="14">14.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="7.69">7.69</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="228.7">228.70</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="40.32">40.32</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="39.8">39.80</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="50.82">50.82</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="46.92">46.92</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl32 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&gt;=</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.51">3.51</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="6.37">6.37</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="224">224.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.3">29.30</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.3">29.30</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="34.1">34.10</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="40.1">40.10</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19 x:str="'=">=</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="3.52">3.52</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="5.55">5.55</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="219">219.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="23.3">23.30</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="29.1">29.10</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="34.5">34.50</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="40.3">40.30</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>&lt;&gt;</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="13.6">13.60</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="4.45">4.45</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="230">230.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="40">40.00</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="40.3">40.30</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="50.72">50.72</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="46.9">46.90</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl26 style="BORDER-TOP: medium none; HEIGHT: 14.25pt" align=middle width=95 height=19>SizeOf()</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.42">1.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.42">1.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.42">1.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.42">1.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79 x:num="1.42">1.42</TD>
+<TD class=xl29 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81 x:num="1.42">1.42</TD>
+<TD class=xl30 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78 x:num="1.42">1.42</TD></TR>
+<TR style="HEIGHT: 15pt" height=20>
+<TD class=xl33 style="BORDER-TOP: medium none; HEIGHT: 15pt" align=middle width=95 height=20>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=79>　</TD>
+<TD class=xl34 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=81>　</TD>
+<TD class=xl35 style="BORDER-TOP: medium none; BORDER-LEFT: medium none" align=right width=78>　</TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD width=20></TD>
+<TD width=694>
+<TABLE>
+<COLGROUP>
+<COL style="WIDTH: 82pt; mso-width-source: userset; mso-width-alt: 3488" width=109>
+<TBODY>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="WIDTH: 466pt; HEIGHT: 14.25pt" width=619 height=19 x:str="*   三角函数的计算时间变化约±7% ">*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>计算三角函数的时间因数据变化而产生的变化约±10%<SPAN style="mso-spacerun: yes">&nbsp;</SPAN></TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Trunc 函数测速格式：LongInt:=Trunc(anyType)</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Round函数测速格式：LongInt:=Round(anyType)</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>判断操作格式<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>boolean:=anyType<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>anyOperation<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>anyType</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>形如：c:=a anyOperation c<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>的操作并不比<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>c:=a anyOperation b 快。</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>越快的运算其 运算时间 的精度越难保证，例如 :=<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>(赋值)运算，误差可能高达 ±100%</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>所有数据的第一位有效数字以后的仅供参考。</TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>*<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>所有 运算时间 包括赋值。</TD></TR>
+<CENTER></CENTER>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>
+<P align=right><A href="http://enjoy-math.equn.com/Programs/timers.xls">它的 Excal 版</A></P></TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>
+<P align=center>总结 </P></TD></TR>
+<TR style="HEIGHT: 14.25pt" height=19>
+<TD class=xl24 style="HEIGHT: 14.25pt" height=19>
+<P style="MARGIN: 5px 0px; WORD-SPACING: 0px; TEXT-INDENT: 30px; LINE-HEIGHT: 150%">对于实数的运算，Extended 类型表现极好，不仅精度高，而且运算时间与其它实数类型相差很小，甚至过之。</P>
+<P style="MARGIN: 5px 0px; WORD-SPACING: 0px; TEXT-INDENT: 30px; LINE-HEIGHT: 150%">对于整数运算，整体来说 LongInt 比 Integer 慢一倍，但是 shl,shr,&gt;,&lt;=,&lt;&gt;&nbsp; 运算是例外。 </P></TD></TR></TBODY></TABLE></TD></TR></CENTER></TBODY></TABLE> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：xyy82148@163.com <br>
+                            
+                            来 源：enjoy-math.equn.com<br>
+                            
+                            共有3595位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607">noip倒计时 by 枯叶蝴蝶</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609">关于APIO2007与IOI2007选拔赛的通告</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=608.htm" temptabs="http://www.mydrs.org/program/sendmail?id=608" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\Turbo Pascal各语句运行速度比较.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0608.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608">Turbo Pascal各语句运行速度比较</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

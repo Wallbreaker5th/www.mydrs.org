@@ -1,0 +1,302 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>动态规划入门练习题-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=8.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=8">Pascal练习</a>>>动态规划入门练习题
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>动态规划入门练习题</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;12/4/2003&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P>　　一些动态规划的入门练习题，难度不大，适合初学者练习，以便掌握动态规划这个高效算法。欢迎您将以下各题的解答投稿至本站：<A href="mailto:drs@fjsdfz.org">drs@fjsdfz.org</A>，标题中请包含“drs”字样。 </P>
+<P><STRONG>石子合并</STRONG><BR>在一个圆形操场的四周摆放着N堆石子(N&lt;= 100),现要将石子有次序地合并成一堆.规定每次只能选取相邻的两堆合并成新的一堆,并将新的一堆的石子数,记为该次合并的得分.编一程序,由文件读入堆栈数N及每堆栈的石子数(&lt;=20).<BR>(!)选择一种合并石子的方案,使用权得做N－1次合并,得分的总和最小;<BR>(2)选择一种合并石子的方案,使用权得做N－1次合并,得分的总和最小;<BR>输入数据:<BR>第一行为石子堆数N;<BR>第二行为每堆的石子数,每两个数之间用一个空格分隔.<BR>输出数据:<BR>从第一至第N行为得分最小的合并方案.第N+1行是空行.从第N+2行到第2N+1行是得分最大合并方案.每种合并方案用N行表示,其中第i行(1&lt;=i&lt;=N)表示第i次合并前各堆的石子数(依顺时针次序输出,哪一堆先输出均可).要求将待合并的两堆石子数以相应的负数表示.<BR>输入输出范例:<BR>输入:<BR>4<BR>4 5 9 4<BR><BR>输出:<BR>－４ ５ ９ －４<BR>－８ －５ ９<BR>－１３ －９<BR>２２ ４ －５ －９ ４<BR>４ －１４ －４<BR>－４ －１８<BR>２２ </P>
+<P><STRONG>最小代价子母树</STRONG> 设有一排数，共ｎ个，例如：22 14 7 13 26 15 11.任意2个相邻的数可以进行归并,归并的代价为该两个数的和,经过不断的归并,最后归为一堆,而全部归并代价的和称为总代价,给出一种归并算法,使总代价为最小.<BR>输入、输出数据格式与“石子合并”相同。<BR>输入样例：<BR>4<BR>12 5 16 4<BR>输出样例：<BR>－１２ －５ １６ ４<BR>１７ －１６ －４<BR>－１７ －２０<BR>３７ </P>
+<P><STRONG>背包问题</STRONG> 设有ｎ种物品，每种物品有一个重量及一个价值。但每种物品的数量是无限的，同时有一个背包，最大载重量为ＸＫ，今从ｎ种物品中选取若干件（同一种物品可以多次选取），使其重量的和小于等于ＸＫ，而价值的和为最大。<BR>输入数据：<BR>第一行两个数：物品总数Ｎ，背包载重量ＸＫ；两个数用空格分隔；<BR>第二行N个数,为Ｎ种物品重量；两个数用空格分隔；<BR>第三行N个数,为N种物品价值; 两个数用空格分隔；<BR>输出数据：<BR>第一行总价值；<BR>以下N行，每行两个数，分别为选取物品的编号及数量；<BR>输入样例：<BR>4 10<BR>2 3 4 7<BR>1 3 5 9<BR>输出样例：<BR>12<BR>2 1<BR>4 1 </P>
+<P><STRONG>商店购物</STRONG><BR>某商店中每种商品都有一个价格。例如，一朵花的价格是2 ICU(ICU 是信息学竞赛的货币的单位）;一个花瓶的价格是5 ICU。为了吸引更多的顾客，商店提供了特殊优惠价。特殊优惠商品是把一种或几种商品分成一组。并降价销售。例如:3朵花的价格不是6而是5 ICU ;2个花瓶加1朵花是10 ICU不是12 ICU。<BR>编一个程序，计算某个顾客所购商品应付的费用。 要充分利用优惠价以使顾客付款最小。请注意，你不能变更顾客所购商品的种类及数量， 即使增加某些商品会使付款总数减小也不允许你作出任何变更。假定各种商品价格用优惠价如上所述， 并且某顾客购买物品为:3朵花和2个花瓶。那么顾客应付款为14 ICU因为:<BR>1朵花加2个花瓶: 优惠价:10 ICU<BR>2朵花 正常价: 4 ICU<BR>输入数据<BR>用两个文件表示输入数据。第一个文件INPUT．TXT描述顾客所购物品（放在购物筐中）;第二个文件描述商店提供的优惠商品及价格（文件名为OFF ER．TXT）。 两个文件中都只用整数。<BR>第一个文件INPUT．TXT的格式为:第一行是一个数字B（0≤B≤5），表示所购商品种类数。下面共B行，每行中含3个数C，K，P。 C 代表商品的编码（每种商品有一个唯一的编码），1≤C≤999。K代表该种商品购买总数，1≤K≤5。P 是该种商品的正常单价（每件商品的价格），1≤P≤999。请注意，购物筐中最多可放5*5＝25件商品。<BR>第二个文件OFFER．TXT的格式为:第一行是一个数字S（0≤S≤9 9），表示共有S 种优惠。下面共S行，每一行描述一种优惠商品的组合中商品的种类。下面接着是几个数字对（C，K），其中C代表商品编码，1≤C≤9 99。K代表该种商品在此组合中的数量，1≤K≤5。本行最后一个数字P（1≤ P≤9999）代表此商品组合的优惠价。当然， 优惠价要低于该组合中商品正常价之总和。<BR>输出数据<BR>在输出文件OUTPUT．TXT中写 一个数字（占一行）， 该数字表示顾客所购商品（输入文件指明所购商品）应付的最低货款。<BR>输入/输出数据举例 <BR>┌────────┐ ┌────────────┐┌────────┐<BR>│ INPUT │ │ OFFER．TXT ││ OUTPUＴ．TXT│<BR>├────────┤ ├────────────┤├────────┤<BR>│ 2 │ │ 2 ││ 14 │<BR>│ ７ ３ ２ │ │ 1 7 3 5 ││ │<BR>│ ８ ２ ５ │ │ 2 7 1 8 2 10 ││ │<BR>└────────┘ └────────────┘└────────┘<BR>简析：<BR>算法： 动态规划<BR>数据结构： 字符串<BR>题型： II 型<BR>难度： 4 分<BR>编程时间： 4分钟<BR>简述： 本题竞赛时有一个很长的文件测试数据，用动态规划可较快的出答<BR>案。 </P>
+<P><STRONG>旅游预算</STRONG><BR>一个旅行社需要估算乘汽车从某城市到另一城市的最小费用，沿路有若干加油站，每个加油站收费不一定相同。<BR>旅游预算有如下规则：<BR>若油箱的油过半，不停车加油，除非油箱中的油不可支持到下一站；每次加油时都加满；在一个加油站加油时，司机要花费2元买东西吃；司机不必为其他意外情况而准备额外的油；汽车开出时在起点加满油箱；计算精确到分（1元=100分）。编写程序估计实际行驶在某路线所需的最小费用。<BR>输入格式：<BR>从当前目录下的文本文件“route.dat”读入数据。按以下格式输入若干旅行路线的情况：<BR>第一行为起点到终点的距离（实数）<BR>第二行为三个实数，后跟一个整数，每两个数据间用一个空格隔开。其中第一个数为汽车油箱的容量（升），第二个数是每升汽油行驶的公里数，第三个数是在起点加满油箱的费用，第四个数是加油站的数量。（〈=50）。接下去的每行包括两个实数，每个数据之间用一个空格分隔，其中第一个数是该加油站离起点的距离，第二个数是该加油站每升汽油的价格（元/升）。加油站按它们与起点的距离升序排列。所有的输入都有一定有解。<BR>输出格式：<BR>答案输出到当前目录下的文本文件“route.out”中。<BR>该文件包括两行。第一行为一个实数和一个整数，实数为旅行的最小费用，以元为单位，精确到分，整数表示途中加油的站的N。第二行是N个整数，表示N个加油的站的编号，按升序排列。数据间用一个空格分隔，此外没有多余的空格。<BR>输入输出举例：<BR>输入文件：（route.dat） 输出文件（route.out）<BR>516.3 38.09 1<BR>15.7 22.1 20.87 3 2 <BR>125.4 1.259 <BR>297.9 1.129 <BR>345.2 0.999 </P>
+<P><STRONG>海上交通控制<BR></STRONG>海上交通图可以用一个有向图来表示，顶点表示港口，边表示两个港口之间是否有航线可通。为保证海上交通安全和以尽量快的速度到达目的地，每艘船在出发前都将航行计划（包括出发时间、速度、出发与到达港口）提交给海上交通控制局，由海上交通控制局为它们制定航线。现给出一系列的船只航行计划（包括出发时间、速度、出发与到达港口），请你根据以下原则编程为它们制定航线：<BR>1、 每艘船在出发的一瞬间提交航行计划（提交和出发的时间差可以忽略）；<BR>2、 每艘船都严格按照出发时间出发，不能提前，也不能延迟；<BR>3、 在任何时间一条航道（两港口间的直达航线）上只能有一艘船，因此，一艘船在出发的瞬间发现某航道将在末来的某段时间内会被在它之前出发的船占用，则它在那一段时间内将不会使用该航道，当然其余时间还是可以使用该航道；<BR>4、 每个港口均可被无限艘船同时使用；<BR>5、 在满足上述条件后，要使本船航行的时间最短；<BR>6、 假如某船不能到达目标港口，那么它将放弃这个航程；<BR>7、 船在任何时候都不能停下来，即从出发后，要一直航行到目的地，中途不得在航道或港口中停留。<BR>时间用4位数字表示如2345表示23：45，速度单位用节（海里/小时）表示。在计算时间时，中间结果应是精确的时间（即不要四舍五入到分钟），而航行时间的计算是以总距离除以速度为准，最终到目标地的时刻应是航行时刻加上航行时间的四舍五入到分钟的结果。<BR>输入格式：<BR>从当前目录下的文本文件“LANE.DAT”读入数据。输入的数据一定有解，且不会出现跨越00：00的情况，例如，一艘船在23：55出发，第二天0：15到达的情况是不会出现的。输入文件开头是港口定义：<BR>第一行是港口数N（〈=26）；<BR>第二行是一个长度为N的大写字母串，每个字母表示一个港口名字；<BR>第三行开始N行的N X N矩阵是一个邻接矩阵，每行有N个整数，其值为港口间距离（单位为海里），整数间以空格分隔（若为0表示两港口没有直达航线相连）；<BR>接着的一行是一个整数M（〈=50），表示共有M艘船提交航行计划；<BR>接下去的每3行表示一艘船的航行计划，其中第一行是船名，第二行是出发时间和航速，两者均为整数，以一个空格分隔，第三行是两个大写安母，之间没有任何分隔，第一个表示出发的港口，第二个表示目的港口；<BR>输出格式：<BR>答案输出到当前目录下的文本文件“LANE.OUT”中。该文件的每3行表示一艘船的航线，其中第一行是船名，第二行是出发时间和到达时间，两者均为整数，以一个空格分隔，第三行是数个大写字母，之间没有任何分隔，表示该船经过的港口（包括出发和目的港口）。如果这艘船放弃航程时，到达时间用－１来表示，并留空第三行。<BR>注意：在输入和输出中航行计划和航线均按出发时间排序，时间精确到分钟。<BR>输入输出举例：<BR>输入文件：LANE.DAT 输出文件：LANE.OUT<BR>5 Bluesky<BR>ABCDE 800 1000<BR>0 10 0 50 10 CB<BR>10 0 20 70 0 Blackhorse<BR>0 20 0 20 0 900 1100<BR>50 70 20 0 10 AB<BR>10 0 0 10 0 Greenforest<BR>4 1000 1130<BR>Bluesky DEAB<BR>0800 10 Silverboat<BR>CB 1200 1300<BR>Blackhorse DC<BR>0900 5 <BR>AB <BR>Greenforest <BR>1000 20 <BR>DB <BR>Silverboat <BR>1200 20 <BR>DC </P>
+<P><STRONG>防卫导弹</STRONG><BR>一种新型的防卫导弹可截击多个攻击导弹。它可以向前飞行，也可以用很快的速度向下飞行，可以毫无损伤地截击进攻导弹，但不可以向后或向上飞行。但有一个缺点，尽管它发射时可以达到任意高度，但它只能截击比它上次截击导弹时所处高度低或者高度相同的导弹。现对这种新型 防卫导弹进行测试，在每一次测试中，发射一系列的测试导弹（这些导弹发射的间隔时间固定，飞行速度相同），该防卫导弹所能获得的信息包括各进攻导弹的高度，以及它们发射次序。现要求编一程序，求在每次测试中，该防卫导弹最多能截击的进攻导弹数量，一个导弹能被截击应满足下列两个条件之一：<BR>1、 它是该次测试中第一个被防卫导弹截击的导弹；<BR>2、 它是在上一次被截击导弹的发射后发射，且高度不大于上一次被截击导弹的高度的导弹。<BR>输入格式：<BR>从当前目录下的文本文件“CATCHER.DAT”读入数据。该文件的第一行是一个整数N（0〈=N〈=4000），表示本次测试中，发射的进攻导弹数，以下N行每行各有一个整数hi（0〈=hi〈=32767），表示第i个进攻导弹的高度。文件中各行的行首、行末无多余空格，输入文件中给出的导弹是按发射顺序排列的。<BR>输出格式：<BR>答案输出到当前目录下的文本文件“CATCHER.OUT”中，该文件第一行是一个整数max，表示最多能截击的进攻导弹数，以下的max行每行各有一个整数，表示各个被截击的进攻导弹的编号（按被截击的先后顺序排列）。输出的答案可能不唯一，只要输出其中任一解即可。<BR>输入输出举例：<BR>输入文件：CATCHER.DAT 输出文件：CATCHER.OUT<BR>3 2<BR>25 1<BR>36 3<BR>23 </P>
+<P><STRONG>求函数最大值</STRONG><BR>已知3个函数A，B，C值如下表示，自变量取值为0----10的整数。请用动态规划的方法求出一组x，y，z，使得A(x)+B(y)+C(z)为最大，并且满足x2+y2+z2<N，N由键盘输入。-<BR>X 0 1 2 3 4 5 6 7 8 9 10<BR>A(x) 2 4 7 11 13 15 18 22 18 15 11<BR>B(x) 5 10 15 20 24 18 12 9 5 3 1<BR>C(x) 8 12 17 22 19 16 14 11 9 7 4 </P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            来 源：大榕树论坛<br>
+                            
+                            共有32452位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=533.htm" temptabs="http://www.mydrs.org/program/list?id=533">Pascal的多种退出语句用法</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=535.htm" temptabs="http://www.mydrs.org/program/list?id=535">用栈实现分数四则运算</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=534.htm" temptabs="http://www.mydrs.org/program/sendmail?id=534" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\动态规划入门练习题.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0534.htm" temptabs="http://www.mydrs.org/program/html/0534.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=534.htm" temptabs="http://www.mydrs.org/program/list?id=534">动态规划入门练习题</a><br>
+                  
+                  <a href="list-id=463.htm" temptabs="http://www.mydrs.org/program/list?id=463">动态规划空间“降一维”</a><br>
+                  
+                  <a href="list-id=392.htm" temptabs="http://www.mydrs.org/program/list?id=392">石子归并问题(DP)</a><br>
+                  
+                  <a href="list-id=391.htm" temptabs="http://www.mydrs.org/program/list?id=391">过桥问题(DP)</a><br>
+                  
+                  <a href="list-id=390.htm" temptabs="http://www.mydrs.org/program/list?id=390">抄写图书问题(DP)</a><br>
+                  
+                  <a href="list-id=361.htm" temptabs="http://www.mydrs.org/program/list?id=361">《Kitty猫基因突变》</a><br>
+                  
+                  <a href="list-id=348.htm" temptabs="http://www.mydrs.org/program/list?id=348">[专题]学习动态规划</a><br>
+                  
+                  <a href="list-id=341.htm" temptabs="http://www.mydrs.org/program/list?id=341">动态规划问题的BASIC程序解</a><br>
+                  
+                  <a href="list-id=340.htm" temptabs="http://www.mydrs.org/program/list?id=340">动态规划问题的经典实例</a><br>
+                  
+                  <a href="list-id=318.htm" temptabs="http://www.mydrs.org/program/list?id=318">巧记电话号码</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>数的划分的研究-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>数的划分的研究
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>数的划分的研究</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/25/2002&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <B>问题描述</B><BR>　　求把一个整数n无序划分成k份互不相同的正整数之和的方法总数。<BR><BR><B>分析</B><BR>　　我们其实可以将这题转化一下.因为我们知道我们在划分时只要按不下降排列就不会有重复.并且每一份都不为0.我们可以形象的把n的k-自然数剖分看作把n块积木堆成k列，且每列的积木个数依次递增，也就是这n块积木被从左到右积木被堆成了"楼梯状"。比如，下图是10的几种4-剖分。 <BR>　　<IMG height=169 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-01.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-01.gif" width=443><BR><BR>　　现在，我们不妨把这三个图顺时针旋转90度，成为 ：<BR><BR>　　<IMG height=153 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-02.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-02.gif" width=455><BR>　　对于这道题我们很容易可以想到一种状态表示方法,即用F(I,J,K)来表示把J无序划分成I份其中最大为K的划分方案数.那么,它就等于把J-K无序划分成I-1份,其中最大不超过K的划分方案数，状态转移方程就是<BR>　　　　　　　　　<IMG height=47 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-03.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-03.gif" width=188 align=absMiddle><BR>　　对应的pascal程序如下:<BR>　　procedure dp;<BR>　　var i,j,k,l:integer;<BR>　　begin<BR>　　　　assign(output,outputfile);<BR>　　　　rewrite(output);<BR>　　　　f[0,0,0]:=1;<BR>　　　　for i:=1 to m do<BR>　　　　　for j:=i to n do<BR>　　　　　　for k:=1 to j do<BR>　　　　　　　for l:=0 to k do<BR>　　　　　　　　inc(f[i,j,k],f[i-1,j-k,l]);<BR>　　　　for i:=1 to n do inc(count,f[m,n,i]);<BR>　　　　writeln(count);<BR>　　　　close(output);<BR>　　end;<BR><BR>　　但是如果我们再把上图逆时针翻转90度，那么其实也就等于先在最下一行各摆上一块积木接下来也就是把I-J块积木放上去,并要保持楼梯状.我们可以发现其实上就是把I-J无序拆分成1～K份。那么我们可以得到如下动态转移方程<BR>　 　　　　　　　　　　<IMG height=47 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-04.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-04.gif" width=134><BR>　　procedure dp;<BR>　　var i,j,k:integer;<BR>　　begin<BR>　　　f[0,0]:=1;<BR>　　　for i:=1 to n do<BR>　　　　for j:=1 to m do<BR>　　　　　if j&lt;=i then<BR>　　　　　　for k:=0 to j do<BR>　　　　　　　inc(f[i,j],f[i-j,k]);<BR>　　　assign(output,outputfile);<BR>　　　rewrite(output);<BR>　　　writeln(f[n,m]);<BR>　　　close(output);<BR>　　end;<BR><BR>　　我们还可以把上述式子继续简化,因为我们发现,其实<BR>　　　　　　　　　　F[I-1,J-1]=<IMG height=46 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-05.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-05.gif" width=247 align=absMiddle><BR>　　那么我们在计算F[I,J]的时候就可以只做F[I,J]=F[I-1,J-1]+F[I-J,J]一次简单的加法运算就可以了,这样可以大大减少时间.<BR>　　procedure dp;<BR>　　var i,j,k:integer;<BR>　　begin<BR>　　　f[0,0]:=1;<BR>　　　for i:=1 to n do<BR>　　　　for j:=1 to m do<BR>　　　　　if i&gt;=j then f[i,j]:=f[i-j,j]+f[i-1,j-1];<BR>　　　assign(output,outputfile);<BR>　　　rewrite(output);<BR>　　　writeln(f[n,m]);<BR>　　　close(output);<BR>　　end;<BR>　　其实对于这题我们还可以继续优化,例如用滚动数组的方法使存处空间减少,这里就不再累赘了.<BR>　　这里还想介绍一种更容易的做法.<BR>　　若用F(I,J)表示把I无序划分成J份的方案数,则F(5,2)=({1,4},{2,3}); F(6,3)=({1,1,4},{1,2,3},{2,2,2})<BR>　　你一定会发现如果把I无序划分为J份,那么它的前几个划分一定等于把I-1无序划分成J-1份每份前面加1的方案数.<BR>　　那么后面那一部拆分方案又会等于什么呢?我们不妨将后面每一份中的每一个数减1,我们会发现它与F(I-J,J)是一一对应的.<BR>证明如下<BR>　　我们将一个自然数I划分为K份，为了避免重复，习惯于从小到大地划分。我们将数I分为K份的方法数记作F（I，K），可知：F（I，K）=F（I-K，K）+F（I-1，K-1）<BR>证明：<BR>　　设集合{A}为I的所有划分方案的第一项，0〈A〈=（I DIV K），设每一种划分方案的以后K-1个数为A+D1，A+D2，A+D3 …A+Dk-1，Di≤Di+1，于是： <BR>　　　　　　　　　　　　<IMG height=51 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-06.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-06.gif" width=151><BR>　　D的不下降排列数即I的首项是A的不同划分数 。 <BR>　　同理，设{B}为I-K的划分方案的首项集合，以后的K-1个数是B+C1，B+C2… B+Ck-1，所以，<BR>　　　　　　　　　　　　<IMG height=48 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-07.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-07.gif" width=180><BR>　　C的不下降排列数就是I-K的首项是B的不同划分数 ，<BR>　　又因为：<BR>　　　　　　　　　　　<IMG height=44 src="external/www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-08.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/images/02-0411-08.gif" width=225> <BR>　　可知当A-1=B 时 ，方案数相同，其中A能从2取到（I div k） ，而B∈[1，(I-k) div k]<BR>即B∈[1,(I div k)-1], 所以，当A∈[2，I div k]时，方案总数是F（I-K，K）。又因为当A=1时，方案数是F（I-1，K-1），所以：<BR>　　F（I，K）=F（I-K，K）+F（I-1，K-1）成立。<BR><BR>　　由此我们也可以推出与上面第三个程序一样的状态转移方程. <BR> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：林渌 陈元凯 <br>
+                            
+                            来 源：福州一中<br>
+                            
+                            共有4631位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=368.htm" temptabs="http://www.mydrs.org/program/list?id=368">最短路径算法及应用</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=370.htm" temptabs="http://www.mydrs.org/program/list?id=370">初探队与广度优先搜索</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=369.htm" temptabs="http://www.mydrs.org/program/sendmail?id=369" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\数的划分的研究.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0369.htm" temptabs="http://www.mydrs.org/program/html/0369.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

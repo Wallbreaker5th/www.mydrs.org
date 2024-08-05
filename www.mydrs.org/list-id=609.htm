@@ -1,0 +1,305 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>关于APIO2007与IOI2007选拔赛的通告-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=13.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=13">奥赛消息</a>>>关于APIO2007与IOI2007选拔赛的通告
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>关于APIO2007与IOI2007选拔赛的通告</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/19/2006&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 24pt; TEXT-INDENT: -24pt; TEXT-ALIGN: justify; mso-list: l1 level1 lfo1; tab-stops: list 24.0pt"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-bidi-font-family: 宋体"><SPAN style="mso-list: Ignore">一、<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp; </SPAN></SPAN></SPAN></B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体">关于亚洲与太平洋地区信息学奥赛</SPAN><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 7.8pt; TEXT-ALIGN: justify; mso-para-margin-bottom: .5gd"><SPAN lang=EN-US style="FONT-SIZE: 10pt">1</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>．</SPAN><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">APIO</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">情况介绍</SPAN></B><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 18pt; mso-char-indent-count: 2.0; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>亚洲与太平洋地区信息学奥赛<B style="mso-bidi-font-weight: normal">（</B></SPAN><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt">APIO</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>：</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt">Asia Pacific Informatics Olympiad</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>）</SPAN></B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>已酝酿多年。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">IOI2006</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">期间，部分</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>亚洲与太平洋地区参赛团领队在多次领队会协商的基础上，并经</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt">IOI</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>主席、</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt">IOI</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>国际委员会与科学委员会批准，决定</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt">1</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>）</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">从<SPAN lang=EN-US>2007</SPAN>年开始举办</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>亚洲与太平洋地区信息学奥赛（简称</SPAN><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">APIO</SPAN></B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>）</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">。该竞赛性质为区域性的网上准同步赛，每年举办一届。竞赛时间暂定为每年<SPAN lang=EN-US>5</SPAN>月的第<SPAN lang=EN-US>1</SPAN>或第<SPAN lang=EN-US>2</SPAN>个周六。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>2</SPAN>）赛程<SPAN lang=EN-US>5</SPAN>个小时解答<SPAN lang=EN-US>3</SPAN>道题，相当于<SPAN lang=EN-US>IOI</SPAN>两试中的一试。题目难易程度类似<SPAN lang=EN-US>IOI</SPAN>，但测试数据的条件比<SPAN lang=EN-US>IOI</SPAN>略为宽松（即测试数据不像<SPAN lang=EN-US>IOI</SPAN>那样苛刻）。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>3</SPAN>）目前已确定今后两届的东道主，<SPAN lang=EN-US>APIO2007</SPAN>和<SPAN lang=EN-US>APIO2008</SPAN>分别由澳大利亚和泰国承办。东道主将负责征集题目、协调各参赛国确定题目以及赛后评测，并为每个参赛团的正式选手颁发获奖证书。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>4</SPAN>）<SPAN lang=EN-US>APIO2007</SPAN>目前已确定<SPAN lang=EN-US>16</SPAN>个参赛代表团，<SPAN style="COLOR: black">它们分别是（按</SPAN>参赛团<SPAN style="COLOR: black">英文字母排序）：</SPAN>澳大利亚、孟加拉、中国、中国台北、香港、印度、印度尼西亚、日本、澳门、蒙古、新西兰、韩国、新加坡、斯里兰卡、泰国、越南。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>5</SPAN>）每个参赛团参赛选手上限为<SPAN lang=EN-US>100</SPAN>名。其中成绩排在前<SPAN lang=EN-US>6</SPAN>名的选手作为代表该参赛团的正式选手统计成绩。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>6</SPAN>）根据规定，每个参赛团必须明确指定一个或多个竞赛场地，所有选手必须在指定的竞赛场地参赛并全程接受参赛团组织的监督。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>7</SPAN>）<SPAN lang=EN-US>APIO</SPAN>获奖证书类别分为金奖、银奖、铜奖和参赛奖。金、银、铜奖获奖比例将参照<SPAN lang=EN-US>IOI</SPAN>（例如参赛团<SPAN lang=EN-US>16</SPAN>个，每团取前<SPAN lang=EN-US>6</SPAN>名选手的成绩，正式选手共<SPAN lang=EN-US>96</SPAN>人，则根据<SPAN lang=EN-US>IOI</SPAN>的获奖比例，金奖约设<SPAN lang=EN-US>8</SPAN>人，银奖<SPAN lang=EN-US>16</SPAN>人，铜奖<SPAN lang=EN-US>24</SPAN>人，其余为参赛奖。最终比例将综合各参赛团的意见调整确定）。获奖证书将于同年<SPAN lang=EN-US>IOI</SPAN>竞赛期间颁发，由<SPAN lang=EN-US>IOI</SPAN>各参赛团带回国内。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 17pt; TEXT-ALIGN: justify; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 7.8pt; LINE-HEIGHT: 17pt; TEXT-ALIGN: justify; mso-para-margin-bottom: .5gd; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">2</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">．<B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US>APIO2007</SPAN>中国参赛团的组织与选拔</B><SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>1</SPAN>）<SPAN lang=EN-US>CCF NOI</SPAN>竞赛委员会和科学委员会决定，<SPAN lang=EN-US>APIO2007</SPAN>中国参赛团的<SPAN lang=EN-US>100</SPAN>名参赛选手按如下规则产生：<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 44pt; TEXT-INDENT: -20pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.0; mso-line-height-rule: exactly; mso-para-margin-left: 2.0gd"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">a)<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">所有参加<SPAN lang=EN-US>IOI2007</SPAN>中国队选拔赛的正式选手（国家集训队选手），共<SPAN lang=EN-US>20</SPAN>名；<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 44pt; TEXT-INDENT: -20pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.0; mso-line-height-rule: exactly; mso-para-margin-left: 2.0gd"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">b)<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">除国家集训队选手之外，每个省（自治区、直辖市）分配<SPAN lang=EN-US>1</SPAN>名参赛选手，共<SPAN lang=EN-US>30</SPAN>名；<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 44pt; TEXT-INDENT: -20pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.0; mso-line-height-rule: exactly; mso-para-margin-left: 2.0gd"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">c)<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">其余参赛选手（约<SPAN lang=EN-US>50</SPAN>名）根据<SPAN lang=EN-US>NOIP2006</SPAN>成绩排名产生，但每个省（自治区、直辖市）参赛人数不得多于<SPAN lang=EN-US>10</SPAN>人（包括国家集训队和分配选手在内）。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>2</SPAN>）提交给东道主的候选题目的命题工作由<SPAN lang=EN-US>NOI</SPAN>科学委员会负责。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>3</SPAN>）<SPAN lang=EN-US>APIO2007</SPAN>竞赛题目的翻译工作由<SPAN lang=EN-US>NOI</SPAN>科学委员会负责。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>4</SPAN>）<SPAN lang=EN-US>APIO2007</SPAN>中国赛区的比赛地点同<SPAN lang=EN-US>IOI2007</SPAN>中国队选拔赛的地点一致。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt 25pt; TEXT-INDENT: -25pt; LINE-HEIGHT: 18pt; TEXT-ALIGN: justify; mso-char-indent-count: -2.5; mso-line-height-rule: exactly"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">（<SPAN lang=EN-US>5</SPAN>）参加<SPAN lang=EN-US>APIO2007</SPAN>竞赛但是未能成为正式选手的参赛者将由中国计算机学会颁发证书。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 24pt; LINE-HEIGHT: 17pt; TEXT-ALIGN: justify; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-JUSTIFY: inter-ideograph; MARGIN: 7.8pt 0cm 7.8pt 24.1pt; TEXT-INDENT: -24.1pt; LINE-HEIGHT: 17pt; TEXT-ALIGN: justify; mso-list: l1 level1 lfo1; tab-stops: list 24.0pt; mso-para-margin-bottom: .5gd; mso-line-height-rule: exactly; mso-para-margin-left: 24.1pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-bidi-font-family: 黑体; mso-hansi-font-family: 宋体"><SPAN style="mso-list: Ignore">二、<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp;&nbsp; </SPAN></SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-hansi-font-family: 宋体">关于</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-fareast-font-family: 黑体">IOI</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-hansi-font-family: 宋体">2007</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-hansi-font-family: 宋体">中国队选拔赛与</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-fareast-font-family: 黑体">APIO</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-hansi-font-family: 宋体">2007</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 黑体; mso-hansi-font-family: 宋体">中国赛区比赛<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 20pt; LINE-HEIGHT: 19pt; mso-char-indent-count: 2.0; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">CCF NOI</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">竞赛委员会和科学委员会决定，<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 42pt; TEXT-INDENT: -18pt; LINE-HEIGHT: 19pt; mso-list: l0 level1 lfo2; tab-stops: list 42.0pt; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体"><SPAN style="mso-list: Ignore">1．<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp; </SPAN></SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">IOI2007</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">中国队选拔赛与<SPAN lang=EN-US>APIO2007</SPAN>中国赛区比赛在同一地点、同期举办。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 42pt; TEXT-INDENT: -18pt; LINE-HEIGHT: 19pt; mso-list: l0 level1 lfo2; tab-stops: list 42.0pt; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-fareast-font-family: " Roman?? New Times><SPAN style="mso-list: Ignore">2．<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp;&nbsp; </SPAN></SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">将<SPAN lang=EN-US>APIO2007</SPAN>竞赛作为<SPAN lang=EN-US>IOI2007</SPAN>中国队选拔赛两试中的一试，选拔赛总成绩将综合两试的评测结果得出。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 42pt; TEXT-INDENT: -18pt; LINE-HEIGHT: 19pt; mso-list: l0 level1 lfo2; tab-stops: list 42.0pt; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-fareast-font-family: " Roman?? New Times><SPAN style="mso-list: Ignore">3．<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp;&nbsp; </SPAN></SPAN></SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">NOI</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">科学委员会将根据东道主今后出台的<SPAN lang=EN-US>APIO2007</SPAN>竞赛规则制定相应的具体细则<A title="" style="mso-footnote-id: ftn1" href="http://www.noi.cn/noi/editor.htm#_ftn1" name=_ftnref1><SPAN class=MsoFootnoteReference><SPAN lang=EN-US><SPAN style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-bidi-font-family: " New Times Roman?; AR-SA? mso-bidi-language: ZH-CN; mso-fareast-language: EN-US; mso-ansi-language:>[1]</SPAN></SPAN></SPAN></SPAN></SPAN></A>。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 42pt; TEXT-INDENT: -18pt; LINE-HEIGHT: 19pt; mso-list: l0 level1 lfo2; tab-stops: list 42.0pt; mso-line-height-rule: exactly"><SPAN lang=EN-US style="FONT-SIZE: 10pt; mso-fareast-font-family: " Roman?? New Times><SPAN style="mso-list: Ignore">4．<SPAN style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" Roman?? New Times>&nbsp;&nbsp; </SPAN></SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-ascii-font-family: " Roman?? New Times ?Times mso-hansi-font-family: Roman?;>对</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">APIO</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体">相关事宜的意见、要求和建议可直接汇集到计算机学会崔茹华处。</SPAN></P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：中国计算机学会 <br>
+                            
+                            来 源：noi.cn<br>
+                            
+                            共有2764位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608">Turbo Pascal各语句运行速度比较</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=610.htm" temptabs="http://www.mydrs.org/program/list?id=610">什么是保送生 录取政策解读</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=609.htm" temptabs="http://www.mydrs.org/program/sendmail?id=609" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\关于APIO2007与IOI2007选拔赛的通告.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="index.htm" temptabs="http://www.mydrs.org/program/html/0609.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609">关于APIO2007与IOI2007选拔赛的通告</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

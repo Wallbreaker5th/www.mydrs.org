@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>Pascal基本教程 第六章-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>Pascal基本教程 第六章
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>Pascal基本教程 第六章</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;6/16/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              枚举型和子界型 </P><P>6.1　类型定义<BR>　　类型定义的语法格式：<BR>　　type<BR>　　&lt;标识符1&gt;=&lt;类型1&gt;；<BR>　　&lt;标识符1&gt;=&lt;类型1&gt;；<BR>　　……<BR>　　&lt;标识符n&gt;=&lt;类型n&gt;； </P><P>6.2　枚举类型<BR>　　通过预定义列出所有值的标识符来定义一个有序集合，这些值的次序和枚举类型说明中的标识符的次序识一致的。枚举类型的形式：(标识符1，……，标识符n)<BR>例如：type daystype=(sunday,monday,tuesday,wednesday,thursday,friday,saturday)<BR>　　枚举元素只能是标识符，而不能是数值常量或字符常量。例如以下的定义是错误的：<BR>type daystype=('sun','mon','tue','wed','thu','fri','sat')<BR>　　枚举元素是标识符，不要把作为枚举元素的标识符视作变量名，它不能被赋值。同一个枚举元素不能出现在两个或两个以上的枚举类型定义中。例如以下的定义是错误的：<BR>type daytype1=(monday,tuesday);<BR>       daytype2=(monday,wednesday);<BR>　　可以将枚举类型的定义和变量的定义结合在一起。例如：var a:(monday,tuesday,sunday)<BR>　　枚举类型属于顺序类型。根据定义类型时各枚举元素的排列顺序确定它们的序列，序列号从0开始。<BR>例如：已经定义daystype<BR>　　　ord(sunday)=0,succ(sunday)=monday,pred(friday)=thursday<BR>　　但是枚举类型中的第一个元素没有前趋，最后一个元素没有后继。Turbo Pascal不允许直接读写枚举值，所以枚举值的输出常用case语句间接的输出。枚举值的输入，则要一一判断读入字符是否是枚举类型的标识符。若是才能赋给枚举变量，否则就会出错。<BR>例如：枚举值的输出<BR>　case day of<BR>　　sunday:write('sunday');<BR>　　monday:write('monday');<BR>　　tuesday:write('tuesday');<BR>　　wednesday:write('wednesday');<BR>　　thursday:write('thursday');<BR>　　friday:write('friday');<BR>　　saturday:write('saturday');<BR>　end;</P><P>6.3　子界类型<BR>　　子界类型是由整型、字符型、枚举型、布尔型的两个常量指定该类型的值域区间。子界类型的形式：<BR>　　　　　　　　　　　　　　　　　　常量．．常量<BR>　　两个常量必须是同一种顺序类型。例如：a．．b，要求a&lt;=b<BR>例如：<BR>　　type a=1..3;<BR>                b='a'..'d';<BR>　　一个子界类型继承它的常量类型的运算符和标准函数，常量类型相容的不同子界类型可以混合运算，可以赋值。可以将子界类型的定义和变量的定义结合在一起。例如：var a:1．．9<BR>例　按月、日、年顺序读入一日期，输出该日期是这一年中的第几天。<BR>　program date;<BR>　　var year:0..2010;<BR>　　　　month,i:1..12;<BR>　　　　day:1..31;<BR>　　　　dayth:integer;<BR>　begin<BR>　　read(month,day,year);<BR>　　dyath:=0;<BR>　　for i:=1 to month-1 do<BR>　　　case i of<BR>　　　　1,3,5,7,8,10,12:dayth:=dayth+31;<BR>　　　　2:if ((year mod 4=0)and(year mod 100&lt;&gt;0)or(year mod 400 =0)<BR>　　　　　then dayth:=dayth+29<BR>　　　　　else dayth=:=dayth+28;<BR>　　　　4,6,9,11:dayth:=dayth+30;<BR>　　　end;<BR>　　dayth:=dayth+day;<BR>　　writeln(dayth)<BR>　end. </P><P>6.4　类型相容和赋值相容<BR>1.类型相容性<BR>　　类型相容是对参加同一运算的两个对象的类型要求。设有两个变量，如果满足下列条件之一，就说这两个变量的类型相容。<BR>　　(1)两个变量的类型相同<BR>　　　　　a.两个变量被同一类型说明。<BR>　　　　　　例如：var a,b:1..30;<BR>　　　　　b.两个变量的类型是同一类型标识符。<BR>　　　　　　例如：var a:1..30;<BR>                                          b:1..30;<BR>　　　　　c.两个变量的类型是不同的类型标识符，但在类型定义中已经说明两个标识符相同。<BR>　　　　　　例如：type date=1..100;<BR>                                           range=date;<BR>     　　　　　　　  var m:data;<BR>                                         n:range;<BR>　　(2)一个变量的类型是另一个变量的子界。<BR>　　(3)两个变量的类型都是同一基类型的子界。<BR>　　(4)两个变量的类型是基类型相容的集合类型。<BR>　　(5)两个变量的类型是成分相同的串类型。<BR>2.赋值相容性<BR>　　赋值相容是对赋值操作的两个对象的类型要求。设赋值语句“：＝”左边的变量类型为T，右边表达式的类型为E,若类型T和类型E满足下列条件之一，则称他们是赋值相容的。<BR>　　(1)T和E是相同的类型，而且类型不是文件类型，也不是具有文件类成分的构造类型。<BR>　　(2)T是实型，而E是整型或整型的子界。<BR>　　(3)T和E是类型相容的顺序类型，并且E的值不超出T所定义的值的范围<BR>　　(4)T和E是类型相容的集合类型，并且E的值不超出T所定义的值的范围<BR>　　(5)T和E是类型相容的串类型。<BR>　　当T和E是顺序类型或都是集合类型时，不仅要求这两个类型是相容的，而且要求E的值不超出T所定义的值的范围；否则将产生类型溢出，而这种错误只能在你运行程序时进行检查，因此你必须要避免不发生这种错误。 <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：联合空间网络工作室 <br>
+                            
+                            来 源：cpascal.com<br>
+                            
+                            共有17620位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=46.htm" temptabs="http://www.mydrs.org/program/list?id=46">IOI中国代表队脱颖而出</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=48.htm" temptabs="http://www.mydrs.org/program/list?id=48">Pascal基本教程 第七章</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=47.htm" temptabs="http://www.mydrs.org/program/sendmail?id=47" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\Pascal基本教程 第六章.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0047.htm" temptabs="http://www.mydrs.org/program/html/0047.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8307</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5911</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4956</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4107</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3595</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3182</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2946</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2764</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2684</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2169</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=127.htm" temptabs="http://www.mydrs.org/program/list?id=127">[专题] Pascal基本教程</a><br>
+                  
+                  <a href="list-id=52.htm" temptabs="http://www.mydrs.org/program/list?id=52">Pascal基本教程 第11章</a><br>
+                  
+                  <a href="list-id=51.htm" temptabs="http://www.mydrs.org/program/list?id=51">Pascal基本教程 第十章</a><br>
+                  
+                  <a href="list-id=50.htm" temptabs="http://www.mydrs.org/program/list?id=50">Pascal基本教程 第九章</a><br>
+                  
+                  <a href="list-id=49.htm" temptabs="http://www.mydrs.org/program/list?id=49">Pascal基本教程 第八章</a><br>
+                  
+                  <a href="list-id=48.htm" temptabs="http://www.mydrs.org/program/list?id=48">Pascal基本教程 第七章</a><br>
+                  
+                  <a href="list-id=47.htm" temptabs="http://www.mydrs.org/program/list?id=47">Pascal基本教程 第六章</a><br>
+                  
+                  <a href="list-id=35.htm" temptabs="http://www.mydrs.org/program/list?id=35">Pascal基本教程 第五章</a><br>
+                  
+                  <a href="list-id=34.htm" temptabs="http://www.mydrs.org/program/list?id=34">Pascal基本教程 第四章</a><br>
+                  
+                  <a href="list-id=33.htm" temptabs="http://www.mydrs.org/program/list?id=33">Pascal基本教程 第三章</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

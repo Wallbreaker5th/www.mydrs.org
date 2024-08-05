@@ -1,0 +1,296 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>NOI2001－食物链-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            Pascal语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            
+            <font color=blue>信息学奥赛</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=5">信息学奥赛</a>>><a href="index-classid=5&Nclassid=16.htm" temptabs="http://www.mydrs.org/program/index?classid=5&Nclassid=16">解题报告</a>>>NOI2001－食物链
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>NOI2001－食物链</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;10/27/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              <STRONG>NOI2001试题：食物链<BR>eat.pas/c/cpp</STRONG><BR><P align=left>　　动物王国中有三类动物A,B,C，这三类动物的食物链构成了有趣的环形。A吃B， B吃C，C吃A。<BR>　　现有N个动物，以1－N编号。每个动物都是A,B,C中的一种，但是我们并不知道它到底是哪一种。<BR>　　有人用两种说法对这N个动物所构成的食物链关系进行描述：<BR>　　第一种说法是"1 X Y"，表示X和Y是同类。<BR>　　第二种说法是"2 X Y"，表示X吃Y。<BR><BR>　　此人对N个动物，用上述两种说法，一句接一句地说出K句话，这K句话有的是真的，有的是假的。当一句话满足下列三条之一时，这句话就是假话，否则就是真话。<BR>　　1） 当前的话与前面的某些真的话冲突，就是假话；<BR>　　2） 当前的话中X或Y比N大，就是假话；<BR>　　3） 当前的话表示X吃X，就是假话。<BR><BR>　　你的任务是根据给定的N（1&lt;=N&lt;=50,000）和K句话（0&lt;=K&lt;=100,000），输出假话的总数。</P><BR><P><B>输入文件（eat.in）</B><BR>　　第一行是两个整数N和K，以一个空格分隔。<BR>　　以下K行每行是三个正整数 D，X，Y，两数之间用一个空格隔开，其中D表示说法的种类。<BR>　　若D=1，则表示X和Y是同类。<BR>　　若D=2，则表示X吃Y。</P><BR><P><B>输出文件（eat.out）</B><BR>　　只有一个整数，表示假话的数目。</P><BR><P><B>输入样例</B></P><BR><TABLE cellSpacing=0 cellPadding=0 width="31%" align=center border=1><BR><TBODY><BR><TR><BR><TD><BR><DIV align=center>输入文件</DIV></TD><BR><TD><BR><DIV align=center>对7句话的分析</DIV></TD></TR><BR><TR><BR><TD>100 7 </TD><BR><TD><BR><DIV align=center></DIV></TD></TR><BR><TR><BR><TD>1 101 1</TD><BR><TD><BR><DIV align=center>假话</DIV></TD></TR><BR><TR><BR><TD>2 1 2 </TD><BR><TD><BR><DIV align=center>真话</DIV></TD></TR><BR><TR><BR><TD>2 2 3 </TD><BR><TD><BR><DIV align=center>真话</DIV></TD></TR><BR><TR><BR><TD>2 3 3 </TD><BR><TD><BR><DIV align=center>假话</DIV></TD></TR><BR><TR><BR><TD>1 1 3 </TD><BR><TD><BR><DIV align=center>假话</DIV></TD></TR><BR><TR><BR><TD>2 3 1</TD><BR><TD><BR><DIV align=center>真话</DIV></TD></TR><BR><TR><BR><TD>1 5 5 </TD><BR><TD><BR><DIV align=center>真话</DIV></TD></TR></TBODY></TABLE><BR><P><B>输出样例</B><BR>3</P><BR><P align=center><B>食物链问题解题报告<BR><BR>福州一中　陈昊罡</B></P><BR><P><B>［题意简述］</B><BR>　　有N个动物，它们分别属于为A,B,C三类，其中A吃B、B吃C、C吃A。数据顺次给出K句话，每句话可以表示其中两个动物X与Y同类或X吃Y两种关系。若当前的话出现以下情况之一时，它就被视为假话：①与以前某句话所确定的种类关系冲突；②X自己吃自己；③X或Y&gt;N。题目要求统计出所有假话的个数。<BR><BR><B>［算法分析］</B><BR>　　很显然，对假话条件2、3的处理十分简单，只要在读入数据时作两个条件判断即可解决，题目的主要任务在于处理条件1。<BR>　　从表面上看，条件１的处理似乎也没有什么难度：一个动物无非就是A,B,C三类，而A,B,C之间的食物链关系是一对一单向环形的，也就是说如果已知动物X所属种类和X、Y之间的食物链关系，就一定可以确定出动物Y的种类，同时某个动物具体属于哪一类并不影响本题的结果，而只要求它与其他动物关系的相对位置正确即可。于是，我们不妨开3个数组A,B,C，分别记录着三种类的成员，首先假设第一句有效话中的动物X为A类，将其放入数组A，倘若Y与X同类，则把Y也放入A；若Y被X吃，则将Y放入B，如此反复操作所有的有效话，就可以确定每个动物的种类，并容易统计出假话的个数。（算法一）<BR><BR>　　问题似乎已经圆满地解决了，但是，稍稍认真思考就会发现，上面的这个算法存在着重大的错误，是十分片面的。如下面这个数据所示：<BR><IMG height=180 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-1.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-1.gif" width=148 align=left><BR>　　按照上面的做法，我们先把1,2放入A，然后由于3吃1，把3放入C；又2吃4，把4放入B。接下来的"2 6 5"却令我们不知所措，因为在此之前没有出现任何有关6或5的关系定义。那么，是不是也可以像开始一样随便找一个种类将它放入呢？比如将5放入A，则6应该放入B，7应该也放入A，这样，最后一行的"1 3 6"就成了假话，因为3和6不在同一组。可是我们完全可以构造出如下的结构，使得该数据的每句话都符合要求：<BR>　　　<IMG height=89 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-2.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-2.gif" width=230> <BR><BR>　　可见，这个算法只能当每一句话都可直接与此前已知的食物链建立明确关系的时候才能使用。而上面这个数据中，4、5两行中仅仅建立了5,6,7这三个动物的食物链关系，而他们与前面4种动物的关系则是在最后一行才确立起来的。也就是说在此之前1,2,3,4和5,6,7形成了两条互相之间关系未知的食物链，而最后一句话则将这两条链合并为一条。它们之间的关系可以表示为如下的形式：<BR>　　<IMG height=91 src="external/www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-3.gif" temptabs="http://www.chinaschool.org/aosai/axpy/sfsj/sfsj/images/1018-4-3.gif" width=596><BR><BR>　　明确了上面这个关系，我们就不难从算法1扩展出另一种算法：对于目前关系未知的动物X，我们为他新开辟一条食物链A2,B2,C2（在此称之为"组"，下同），显然，在这个新的组中，动物X所在的种类也是随意的，于是假设它在A2组，这样，所有与X的关系就可用与算法1同样的方式加入这个组中，而这个组与原先的组A1,B1,C1的关系是不确定的。如此反复，我们也可以得到组3、组4、组5……，一旦有一句话牵涉到某两个组的成员之间的食物链关系，我们就依据一定的换算规则将这两个组合并起来，以保证关系网的完整性。这样，我们得到算法二。<BR><BR><B>［数据结构定义］</B><BR>　　type gtype=record<BR>　　　　　　　　　　　g:word; { 动物所属的组，0代表目前不属于任何组 }<BR>　　　　　　　　　　　t:byte; { 动物的种类，0,1,2分别表示A,B,C }<BR>　　　　　　　end;<BR>　　var d:array[1..maxn] of gtype; { 存储N个动物的信息 }<BR>　　　　　　　　　　　cg,n:word; { cg：当前最大组的编号，n:动物总数 }<BR>　　　　　　　　　　　e:longint; { 统计当前假话的个数 }<BR><BR><B>［算法描述］</B><BR><BR>　　由于话的个数K比较大，我们采用边读数据边统计的做法。<BR>　　1、 读入一行数据o,x,y（o=1表示x,y同类，o=2表示x吃y）；<BR>　　2、 如果x&gt;n 或 y&gt;n，产生错误，e值加一，返回步骤1；<BR>　　3、 若o=1，same(x,y)；否则 kill(x,y)；</P><BR><P>　　两个函数same(x,y)和kill(x,y)定义如下：<BR>　　procedure same(a,b:word); { 用于设置 a,b 同类 }<BR>　　var i,ta,tb,gb:word;<BR>　　begin<BR>　　　if (d[a].g=d[b].g) and (d[a].t=d[b].t) and (d[a].g&lt;&gt;0) then exit; <BR>　　{ 若a,b同组同类，则不进行任何操作 }<BR>　　{ 以下为a,b中至少有一个未分组的情况 }<BR>　　　if (d[a].g=0) and (d[b].g=0) then begin { 若a,b匀尚未分组 }<BR>　　　　inc(cg); { 创建一个新组 }<BR>　　　　d[a].g:=cg; d[a].t:=0; { 把a,b加入这个组，并设为同类 }<BR>　　　　d[b].g:=cg; d[b].t:=0;<BR>　　　　exit;<BR>　　　end;<BR>　　　if (d[b].g=0) then begin { 若a已分组，b未分组 }<BR>　　　　d[b]:=d[a]; exit; { 将b加入a的组，并与a同类 }<BR>　　　end;<BR>　　　if (d[a].g=0) then begin { 若b已分组，a未分组 }<BR>　　　　d[a]:=d[b]; exit; { 将a加入b的组，并与b同类 }<BR>　　　end;<BR>　　{ 以下为a,b均已分组的情况 }<BR>　　　if d[a].g=d[b].g then { 若a,b在同一组，但不同类 }<BR>　　　　inc(e) { 产生错误 }<BR>　　　else begin { 若a,b不在同一组则合并两个组}<BR>　　　　ta:=d[a].t; tb:=d[b].t; gb:=d[b].g; <BR>　　　　for i:=0 to 2 do { 换算a,b两组的等价种类 }<BR>　　　　　r[(tb+i) mod 3]:=(ta+i) mod 3;<BR>　　　　for i:=1 to n do { 遍历所有动物 }<BR>　　　　　if d[i].g=gb then begin { 把所有属于b组的动物 }<BR>　　　　　　　d[i].g:=d[a].g; { 按照换算关系并入a组 }<BR>　　　　　　　d[i].t:=r[d[i].t];<BR>　　　　　end;<BR>　　　end;<BR>　　end;</P><BR><P><BR>　　procedure kill(a,b:word); { 用于设置 a吃b }<BR>　　var i,ta,tb,gb:word;<BR>　　begin<BR>　　{ 如果a=b，即自己吃自己，就产生错误 }<BR>　　if a=b then begin inc(e); exit; end;<BR>　　{ 若a,b 同组且a吃b，则不进行任何操作 }<BR>　　if (d[a].g=d[b].g) and (d[b].t=(d[a].t+1) mod 3) and (d[a].g&lt;&gt;0) then exit;<BR>　　{ 以下为a,b中至少有一个未分组的情况 }<BR>　　if (d[a].g=0) and (d[b].g=0) then begin { 若a,b匀尚未分组 }<BR>　　　inc(cg); { 创建一个新组 }<BR>　　　d[a].g:=cg; d[a].t:=0; { 把a,b加入这个组 }<BR>　　　d[b].g:=cg; d[b].t:=1; { 把a设为A类，b设为B类}<BR>　　　exit; { 即设置a吃b }<BR>　　end;<BR>　　if (d[b].g=0) then begin { 若a已分组，b未分组 }<BR>　　　d[b].g:=d[a].g; { 将b加入a的组 }<BR>　　　d[b].t:=(d[a].t+1) mod 3; { 设置b为a的下一类，即a吃b }<BR>　　　exit;<BR>　　end;<BR>　　if (d[a].g=0) then begin { 若b已分组，a未分组 }<BR>　　　d[a].g:=d[b].g; { 将a加入b的组 }<BR>　　　d[a].t:=(d[b].t+2) mod 3; { 设置a为b的下一类，即b吃a }<BR>　　　exit;<BR>　　end;<BR>　　{ 以下为a,b均已分组的情况 }<BR>　　if d[a].g=d[b].g then { 若a,b在同一组，而且同类 }<BR>　　　inc(e) { 产生错误 }<BR>　　else begin { 若a,b不在同一组则合并两个组}<BR>　　　ta:=d[a].t; tb:=d[b].t; gb:=d[b].g; <BR>　　　tb:=(tb+2) mod 3; { 换算a,b两组的等价种类 }<BR>　　　for i:=0 to 2 do<BR>　　　　r[(tb+i) mod 3]:=(ta+i) mod 3;<BR>　　　for i:=1 to n do { 遍历所有动物 }<BR>　　　　if d[i].g=gb then begin { 把所有属于b组的动物 }<BR>　　　　　　d[i].g:=d[a].g; { 按照换算关系并入a组 }<BR>　　　　　　d[i].t:=r[d[i].t];<BR>　　　　end;<BR>　　　end;<BR>　　end;</P><BR><P>　　最后，只要输出e的值就可以了。<BR><BR><B>［算法优化］</B><BR><BR>　　上面这个算法已经可以完全应付大量的测试数据。经过测试，所有本次NOI的测试数据都可以在0.5秒以内出正确解（Celeron 566 CPU, Free Pascal 1.0.4 for DOS），但是，它还有很大的优化空间。例如，在合并两个组的时候，本算法要遍历所有的动物去寻找与b同组的成员，当n较大的时候其时间代价显然相当大。而Free Pascal给我们提供了很大的内存，所以可以把当前各个组的成员信息全部存在一个链表数组中，这样，我们合并两个组的时候，只要把直接其中一个组的表尾合并到另一个组的表头上即可，这无疑将大大提高速度。另外，上面的算法总是将与b同组的成员合并到a所在的组，当与b同组的元素大大多于与a同组的元素的时候，显然会比将与a同组的成员合并到b所在的组耗时多很多，因此，我们还可以记录下每个组的成员数，合并时有选择的把小的组合并到大的组中。<BR>总之，本题还有很多可以优化的地方值得我们进一步探索。<BR></P><BR><P align=left><B>编者按：</B>本期刊登福州一中几位学生参加者NOI2001网上同步赛后，完成NOI2001试题，写出的解题报告与体会。供大家参考与批评指正。我们希望大家看后能提出你们的见解与你们的解答。我们将给予刊登，希望通过争鸣使大家的算法水平共同提高。来稿请寄<B><A href="mailto:fzyzcy@yeah.net">fzyzcy@yeah.net</A></B> </P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：陈昊罡 <br>
+                            
+                            来 源：福州一中<br>
+                            
+                            共有3045位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=256.htm" temptabs="http://www.mydrs.org/program/list?id=256">2001年NOI分区联赛初赛通知</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=258.htm" temptabs="http://www.mydrs.org/program/list?id=258">NOI2001-陨石的秘密</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=257.htm" temptabs="http://www.mydrs.org/program/sendmail?id=257" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\NOI2001－食物链.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0257.htm" temptabs="http://www.mydrs.org/program/html/0257.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=579.htm" temptabs="http://www.mydrs.org/program/list?id=579">中小学电脑报获NOI2005承办权</a><br>
+                  
+                  <a href="list-id=516.htm" temptabs="http://www.mydrs.org/program/list?id=516">NOI2003获奖名单</a><br>
+                  
+                  <a href="list-id=513.htm" temptabs="http://www.mydrs.org/program/list?id=513">NOI2003试题Word文档下载</a><br>
+                  
+                  <a href="list-id=512.htm" temptabs="http://www.mydrs.org/program/list?id=512">NOI2003 Day2 智破连环阵</a><br>
+                  
+                  <a href="list-id=511.htm" temptabs="http://www.mydrs.org/program/list?id=511">NOI2003 Day2 草莓</a><br>
+                  
+                  <a href="list-id=510.htm" temptabs="http://www.mydrs.org/program/list?id=510">NOI2003 Day2 数据生成器</a><br>
+                  
+                  <a href="list-id=509.htm" temptabs="http://www.mydrs.org/program/list?id=509">NOI2003 Day1 卫星探测</a><br>
+                  
+                  <a href="list-id=508.htm" temptabs="http://www.mydrs.org/program/list?id=508">NOI2003 Day1 文本编译器</a><br>
+                  
+                  <a href="list-id=507.htm" temptabs="http://www.mydrs.org/program/list?id=507">NOI2003 Day1 木棒游戏</a><br>
+                  
+                  <a href="list-id=506.htm" temptabs="http://www.mydrs.org/program/list?id=506">[正在进行]NOI2003赛场传真</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 

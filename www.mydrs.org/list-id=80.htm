@@ -1,0 +1,284 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+helpstat = false;
+stprompt = true;
+basic = false;
+function thelp(swtch){
+	if (swtch == 1){
+		basic = false;
+		stprompt = false;
+		helpstat = true;
+	} else if (swtch == 0) {
+		helpstat = false;
+		stprompt = false;
+		basic = true;
+	} else if (swtch == 2) {
+		helpstat = false;
+		basic = false;
+		stprompt = true;
+	}
+}
+
+function AddText(NewCode) {
+document.myform.txtcontent.value+=NewCode
+}
+
+function openscriphtml()
+{
+   newwin=window.open('htmledit/editor.html'/*tpa=http://www.mydrs.org/program/htmledit/editor.html*/,'','width=544,height=294');
+   newwin.focus();
+   
+}
+function runEx(){
+//alert('请注意，按下确定将生成页面，按下后请稍后....');
+var winEx = window.open("", "winEx", "width=300,height=200,status=yes,menubar=yes,scrollbars=yes,resizable=yes"); winEx.document.open("text/html", "replace"); 
+winEx.document.write(unescape(event.srcElement.parentElement.children[2].value)); 
+winEx.document.close(); 
+}
+function openScript(url, width, height) {
+        var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</SCRIPT>
+<script language="Javascript">
+<!-- hide
+
+function insertsmilie(smilieface){
+
+	document.frmAnnounce.body.value+=smilieface;
+}
+// -->
+</script>
+
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="myDrs.orgPascal,算法,数据结构,信息学竞赛">
+<LINK href="style.css" temptabs="http://www.mydrs.org/program/style.css" rel=stylesheet>
+<title>编程基本能力和技巧-Pascal,算法,数据结构,信息学竞赛|myDrs.org</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0">
+<table width="755" border="0" cellpadding="0" cellspacing="1" align="center" height="78">
+  <tr> 
+    <td width="120" align="center" valign="middle"><a href="http://www.mydrs.org/"><img src="pic/drs.gif" temptabs="http://www.mydrs.org/program/pic/drs.gif" width="100" height="50" alt="大榕树――让我们共成长！" border="0"><br>
+      <span style="font-size: 12px;"><font color="#009900"><strong>大榕树 </strong>myDrs.org</font></span></a></td>
+    <td align="center" width="560" valign="middle">
+<!-- Banner广告代码 -->
+<img src="pic/banner.gif" width="468" height="60">
+
+</td>
+    <td width=* align="right" valign="middle">
+<!--Google Firefox-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQrfCfnAIaCLjnP3nESJwNKL-_93M";
+google_ad_channel = "8121558239";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </td>
+  </tr>
+</table>
+<TABLE cellSpacing=0 cellPadding=0 width="755" border=0 align=center>
+  <TBODY> 
+  <TR> 
+    <TD bgColor="#333333"> 
+      <TABLE cellSpacing=1 cellPadding=4 width="100%" border=0>
+        <TR> 
+          <TD bgColor="#A9D46D" colspan="2" height="21">您的位置：<a href="http://www.mydrs.org/" class="title1">大榕树</a> \ <a href="default.htm" temptabs="http://www.mydrs.org/program/default" class="title1">编程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            |&nbsp;<a href="default-classid=2.htm" temptabs="http://www.mydrs.org/program/default?classid=2"> 
+            Logo语言
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=3.htm" temptabs="http://www.mydrs.org/program/default?classid=3"> 
+            
+            <font color=blue>Pascal语言</font> 
+            
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=5.htm" temptabs="http://www.mydrs.org/program/default?classid=5"> 
+            信息学奥赛
+            </a>&nbsp;
+            
+            |&nbsp;<a href="default-classid=9.htm" temptabs="http://www.mydrs.org/program/default?classid=9"> 
+            高考保送
+            </a>&nbsp;
+            &nbsp;|&nbsp; <a href="html/index.htm" temptabs="http://www.mydrs.org/program/html/">HTML版本</a>
+		</TD>
+        </TR>
+        <TR> <form method="post" name="myform" action="http://www.mydrs.org/program/ru_query">
+          <TD bgColor="#F4FAED" colspan="2"> 
+            |&nbsp;&nbsp;<a href="default.htm" temptabs="http://www.mydrs.org/program/index?classid=3">Pascal语言</a>>><a href="index-classid=3&Nclassid=5.htm" temptabs="http://www.mydrs.org/program/index?classid=3&Nclassid=5">Pascal入门</a>>>编程基本能力和技巧
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站全文搜索: 
+			<input type="hidden" name="action" value="content"><input type="text" name="keyword" size=20 value="" maxlength="50" onMouseOver="this.focus()" onFocus="this.select()" class="txt1" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" >
+            <input type="submit" name="Submit" value="搜索" class="input1">
+            <!--begin margeen-->
+            <MARQUEE height=1 hspace=5 id=srcolltext onmouseout=srcolltext.start() onmouseover=srcolltext.stop() scrollAmount=2  scrollDelay=10 width=90% align="middle"><IMG src="pic/new.gif" temptabs="http://www.mydrs.org/new.gif" width=35 height=15> 
+            友情提示： 
+                <SCRIPT language=javascript src="movetxt.js" temptabs="http://www.mydrs.org/program/movetxt.js"></SCRIPT>
+            </MARQUEE>
+            <!--end-->
+            <!--Google AD bar-->
+          </TD></form>
+        </TR>
+        <TR> 
+          <TD bgColor="#FFFFFF" colspan="2"> <br>
+            <center>
+              <b><font size=3>编程基本能力和技巧</font></b><br>
+              <a href="http://www.mydrs.org/" target="_blank">http://www.mydrs.org</a>&nbsp;&nbsp;7/1/2001&nbsp;&nbsp;<a href="http://www.mydrs.org/" target="_blank">大榕树</a> 
+            </center>
+            <p> 
+
+
+            <blockquote> <br>
+
+              下面讲的都比较简单，大家看完以后，有配套练习哦！</P><P>1 数组及其应用<BR>这里还是只讲一些应用，基础知识自己看书或我提供的几个INTERNET资源。<BR>1.下标的灵活运用<BR>例如对称的情形，可以把下标设成：<BR>a:array[-5..5] of integer;<BR>只要a[i]:=a[-i];就进行了一次“对称”的赋值。</P><P>2.常量数组<BR>善用可以减少不少程序量。<BR>例如P1-9《公式变形》。我的参考程序只有三十多行，主要是因为灵活的应用了数组，<BR>包括一个常量数组一个变量数组，减少了不少麻烦。</P><P>典型的常量数组有：</P><P>增量型：如在国际象棋棋盘上“马”的八个方向的活动可以用两的增量数组表示：<BR>dx:array[1..8] of shortint=(1,2,2,1,-1,-2,-2,-1);<BR>dy:array[1..8] of shortint=(-2,-1,1,2,2,1,-1,-2);<BR>移动第d个方向只需要：<BR>x:=x+dx[d];<BR>y:=y+dy[d];</P><P>枚举型：例如平年一年第N个月的天数：<BR>dcount:array[1..12] of shortint=(31,28,31,30,31,30,31,31,30,31,30,31);<BR>便于修改。</P><P>3.避免下标越界<BR>方法是{$R+}</P><P>4.数组的插入与删除<BR>虽然数组应该避免频繁的插入与删除，但有时不可避免。方法如下：<BR>插入：插入点以后每个元素往后移动一个位置，再插入：<BR>for i:=len downto p do<BR>  a[i+1]:=a[i];<BR>a[p]:=x;<BR>inc(len);</P><P>删除：删除点以后的每个元素往前移动一个位置，如：<BR>for i:=p to last do<BR>  a[i]:=a[i+1];<BR>dec(len);</P><P>2 字符串处理</P><P>字符串处理因为其灵活性常使初学者头疼！我以前也怕它，不过很快就适应了。<BR>一般常用的处理是：(以下的例子中s是一个字符串)<BR>1.扫描字符</P><P>第i个字符是s[i]<BR>例如s='Hello, world!'<BR>则s[1]='H', s[6]=',', s[7]=' '; s[13]='!'<BR>s的长度是length(s)</P><P>那么把字符串反转后输出的方法就是<BR>for i:=length(s) downto 1 do<BR>  write(s[i]);</P><P>2.定位<BR>  就是查找子串<BR>例如<BR>s1='Hello, my friend!';<BR>s2='my';</P><P>则pos(s2,s1)=8,即s2在s1的第8个字符处出现<BR>但pos('him','history')=0,因为'him'在'history'中并不出现</P><P>3.分割,合并,删除<BR>仅举几个例子。<BR>1)copy<BR>copy('Hello, my friend!',3,2)='ll'</P><P>2)delete<BR>若s='Hello, my friend';<BR>执行delete(s,4,4)<BR>后s='Helmy friend'';</P><P>3)<BR>s1='Hi,';<BR>s2='Alan';<BR>则s1+s2='Hi,Alan'</P><P>4.与数字互化<BR>s='1234';<BR>执行val(s,v,code)后v=1234; code=0; code=0说明成功的将字符串转化为了数字，否则code&lt;&gt;0</P><P>v=4567;<BR>执行str(v,s)后s='4567';</P><P>5.字符的ASCII码<BR>请自己看有关的书籍，一定要掌握！</P><P>注意：对于时间要求严格的题目，字符串操作的时间问题也不能忽视。</P><P>6.一个例子：<BR>输入k个字符串（中间可能有多个空格），把他们反着连在一起输出。<BR>如：<BR>输入：abc   d e    f      gh<BR>输出:ghfedabc<BR>分析：只要把空格删除，就可以得到这些字符串。<BR>var<BR>  p:integer;<BR>  s,s2:string;<BR>begin<BR>  readln(s);<BR>  s2:='';<BR>  repeat<BR>    while s[1]='' do delete(s,1,1); {删去开头的多余空格}<BR>    p:=pos(' ',s); {找第一个空格};<BR>    if p=0 then s2:=s+s2 {没有找到}<BR>           else begin<BR>             s2:=copy(s,1,p-1)+s2; {加入到s2的前面}<BR>             delete(s,1,p); {删去}<BR>           end;<BR>  until p=0; {没有空格了}<BR>  writeln(s2);<BR>end.</P><P>3 整数的处理<BR>主要是利用数学工具了。下面举几个例子。<BR>1.求最大公约数gcd（greatest common divisor）<BR>用欧几里德辗转相除法：<BR>function gcd(a,b:longint):longint;<BR>begin<BR>  if a mod b=0 then gcd:=b<BR>  else gcd:=gcd(b,a mod b);<BR>end;</P><P>2.求最小公倍数<BR>利用(a,b)*[a,b]=a*b 即可。<BR>例如：<BR>100和140的最大公约数为20,那么<BR>最小公倍数=100*140 div 20=700</P><P>3.分离数字<BR>很简单，涉及到数字的问题都可以借助于字符串。<BR>例如反转各位数字：(13765-&gt;56731)<BR>var<BR>  a:longint; {a=13765} <BR>  b:longint; {b will be 56731}<BR>  s1,s2:string;<BR>  i,code:integer;<BR>begin<BR>  a:=13765;<BR>  str(a,s1);<BR>  s2:='';<BR>  for i:=length(s1) downto 1 do<BR>    s2:=s2+s1[i];<BR>  val(s2,b,code);<BR>  {now, b=56731!}<BR>end.</P><P>4.素数的测试<BR>一般是:<BR>function isprime(k:longint):boolean;<BR>var<BR>  i:longint;<BR>begin<BR>  isprime:=false;<BR>  for i:=2 to trunc(sqrt(k)) do { ***}<BR>    if k mod i=0 then exit;  <BR>  isprime:=true;<BR>end;<BR>对于大的素数（在longint范围内）可以采用先生成一个小的素数表，在 { *** } 改为测试<BR>2到trunc(sqrt(k))内的所有素数。当然要保证素数表足够大。(到46341为止)<BR>更快的测试方法将在后面介绍。</P><P>一定要注意是否运算结果可能溢出。</P><P>4 排序</P><P>以下均是：<BR>a:array[1..n] of integer; 要求升序排列。</P><P>1.O(N^2)排序<BR>冒泡排序<BR>for i:=1 to n-1 do<BR>  for j:=i+1 to n do<BR>    if a[i]&lt;a[j] then swap(a[i],a[j]);<BR>算法时间复杂度为O(N^2).它的最佳，平均，最差情况是几乎一样的</P><P>选择排序：每次选最小的，然后把它去掉以后再选最小的...</P><P>2.O(nlogn)排序<BR>归并排序：分成两堆，分别排序，再合并。<BR>快速排序：选择一个支撑点，把比它小的放在左边，比他大的放在右边，分别排序。<BR>在“分治法”部分，我会再提到快速排序和它的一些类似的问题的。</P><P>3.不基于比较的排序<BR>如果数字都小于等于一个定值M，可以考虑数组排序：<BR>令b[i]为i出现的次数，则：<BR>fillchar(b,sizeof(b),0);<BR>for i:=1 to n do<BR>  inc(b[a[i]]);<BR>那么b中非零的数就组成了排好序的序列，也就是：<BR>for i:=1 to m do<BR>  for j:=1 to b[i] do<BR>    writeln(i);</P><P>如果b[i]是一个链表，就成了桶排序。</P><P>5 高精度数的处理</P><P>注意：只要你会笔算，照搬到这里就可以了。<BR>常用数据结构（这里我只讲一种）：数组,每个元素是一位数字。如：<BR>123456789123456789<BR>储存成：<BR>a:array[1..len]=(0,0,0...0,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9);<BR>加法就是：<BR>g:=0;<BR>for i:=len downto 1 do<BR>begin<BR>  s:=a[i]+b[i]+g;<BR>  c[i]:=s mod 10;<BR>  g:=s div 10;<BR>end;<BR>如果是N进制，把10换成N就可以了。</P><P>乘法（单精度与多精度）就是：<BR>g:=0;<BR>for i:=len downto 1 do<BR>begin<BR>  s:=a[i]*b+g;<BR>  c[i]:=s mod 10;<BR>  g:=s div 10;<BR>end;<BR>注意：b不一定只是一位数。</P><P>高精度乘法（字符串形式）我推荐使用多项式乘法的方式。<BR>const<BR>  maxn=100;<BR>type<BR>  bign=string[maxn];</P><P>procedure mul(a,b:bign; var c:bign); <BR>var<BR>  tmp:array[1..maxn*2] of integer;<BR>  i,j,g,p,k:integer;<BR>begin<BR>  {删除多余的零}<BR>  while (length(a)&gt;1)and(a[1]='0') do delete(a,1,1);<BR>  while (length(b)&gt;1)and(b[1]='0') do delete(b,1,1);</P><P>  {初始化积}<BR>  p:=length(a)+length(b);<BR>  for i:=1 to p do<BR>    tmp[i]:=0;</P><P>  {乘法：每两位相乘}<BR>  for i:=1 to length(a) do<BR>    for j:=1 to length(b) do<BR>    begin<BR>      k:=p-i-j; {结果在第几位}<BR>      inc(tmp[p-k]  ,v[a[i]]*v[b[j]] mod 10); {加到这一位上}<BR>      inc(tmp[p-k-1],v[a[i]]*v[b[j]] div 10);<BR>    end;</P><P>  {整理结果}<BR>  g:=0;<BR>  c:='';<BR>  for i:=p downto 1 do<BR>  begin<BR>    c:=ch[(tmp[i]+g) mod 10]+c;<BR>    g:=(tmp[i]+g) div 10;<BR>  end;</P><P>  {删除多余的零}<BR>  while (length(c)&gt;1)and(c[1]='0') do delete(c,1,1);<BR>end;</P><P>下面是一篇英文文章(PDF) Big numbers</P><P>6 进位制<BR>大家应该比较熟吧。运算可以按高精度数处理，而进制转换嘛，也不难。<BR>10进制换成N进制：<BR>readln(p); {p&lt;&gt;0时}<BR>i:=0;<BR>while p&gt;0 do<BR>begin<BR>  inc(i);<BR>  a[i]:=p mod n;<BR>  p:=p div n;<BR>end;<BR>for j:=i downto 1 do<BR>  write(a[j]);</P><P>N进制转化成10进制：<BR>p:=0;<BR>for i:=1 to len do<BR>  p:=p*n+a[i];</P><P>这次复赛（其实是N年以前的ACM题目）考了负数进位制，其实还有复数进位制和fibinacci进制的!<BR>他们都是基于定义的。利用类似的（广义）除法和取模运算，最后都能够得出正确的进制表示。<BR>说到应用，主要是数学题，例如《tower of hanoi》，还有压缩存储。例如《拯救大兵瑞恩》和<BR>《补丁vs错误》</P><P> <br>
+            </blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9190785958461047";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-11-02: top
+google_ad_channel = "8031657721";
+google_color_border = "44A938";
+google_color_bg = "E8F7E6";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "CAF99B";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js" temptabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+              <table width="100%">                
+                <tr> 
+                  <td width="50%" valign=top bgColor="#FFFFFF">
+                   <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr> 
+                        <td> 
+                          <p align=left> 
+                            
+                            作 者：SRbGa <br>
+                            
+                            来 源：OIBH<br>
+                            
+                            共有3600位读者阅读过此文 
+                            
+                        </td>
+                      </tr>
+                    </table></TD>
+                  <td width="50%" valign=top bgColor="#FFFFFF"> 
+                      <p> 
+                    <li><font color=#0772B1>上篇文章</font>：<a href="list-id=79.htm" temptabs="http://www.mydrs.org/program/list?id=79">Pascal编程基础</a> 
+                      
+                      <BR>
+                      
+                    <li><font color=#0772B1>下篇文章</font>：<a href="list-id=81.htm" temptabs="http://www.mydrs.org/program/list?id=81">Pascal解题步骤和比赛技巧</a></li> 
+                      
+                  </TD>
+                </TR>
+                <tr>
+                  <td height="8" colspan="2" valign=top bgColor="#FFFFFF">
+                      
+                      <p align="center"><a href="sendmail-id=80.htm" temptabs="http://www.mydrs.org/program/sendmail?id=80" target="_blank"><br>
+                      <img src="pic/mail.gif" temptabs="http://www.mydrs.org/program/pic/mail.gif" width="16" height="16" border="0">发送邮件</a>  
+                          <a href=# onClick="document.execCommand('SaveAs',false,'C:\My Documents\\编程基本能力和技巧.htm')"><img src="pic/save.gif" temptabs="http://www.mydrs.org/program/pic/save.gif" width="16" height="16" border="0">保存页面</a> 
+                          <a href="javascript:window.print()"><img src="pic/print.gif" temptabs="http://www.mydrs.org/program/pic/print.gif" width="16" height="14" border="0">打印文章</a> 
+                        <a href="html/0080.htm" temptabs="http://www.mydrs.org/program/html/0080.htm"><img src="pic/url.gif" temptabs="http://www.mydrs.org/program/pic/url.gif" width="16" height="16" border="0">HTML版本</a> <a href="http://www.mydrs.org/dv7"><img src="pic/bbs.gif" temptabs="http://www.mydrs.org/program/pic/bbs.gif" width="13" height="16" border="0">发表评论</a><br>
+                      </p></TD>
+                </TR>
+              </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            近期热门文章 </TD>
+          <TD bgColor="#A9D46D" width="50%" height="21">□- 
+            相关文章 </TD>
+        </TR>
+        <tr> 
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            1.<a href="list-id=603.htm" temptabs="http://www.mydrs.org/program/list?id=603" title="NOIP2006竞赛大纲" target=_top> 
+            NOIP2006竞赛大纲
+            </a>[<font color=red>8306</font>]<br>
+            2.<a href="list-id=613.htm" temptabs="http://www.mydrs.org/program/list?id=613" title="七类高中生具有保送资格" target=_top> 
+            七类高中生具有保送资格
+            </a>[<font color=red>5910</font>]<br>
+            3.<a href="list-id=593.htm" temptabs="http://www.mydrs.org/program/list?id=593" title="NOI2006获奖选手名单" target=_top> 
+            NOI2006获奖选手名单
+            </a>[<font color=red>4955</font>]<br>
+            4.<a href="list-id=605.htm" temptabs="http://www.mydrs.org/program/list?id=605" title="关于举办NOIP2006模拟赛的通告" target=_top> 
+            关于举办NOIP2006模拟赛的通告
+            </a>[<font color=red>4106</font>]<br>
+            5.<a href="list-id=608.htm" temptabs="http://www.mydrs.org/program/list?id=608" title="Turbo Pascal各语句运行速度比较" target=_top> 
+            Turbo Pascal各语句运行速... 
+            
+            </a>[<font color=red>3594</font>]<br>
+            6.<a href="list-id=604.htm" temptabs="http://www.mydrs.org/program/list?id=604" title="Turbo王者归来新Delphi免费注册使用" target=_top> 
+            Turbo王者归来新Delphi免费... 
+            
+            </a>[<font color=red>3181</font>]<br>
+            7.<a href="list-id=602.htm" temptabs="http://www.mydrs.org/program/list?id=602" title="IOI2006我国4名选手全部获得金牌" target=_top> 
+            IOI2006我国4名选手全部获得金... 
+            
+            </a>[<font color=red>2945</font>]<br>
+            8.<a href="list-id=609.htm" temptabs="http://www.mydrs.org/program/list?id=609" title="关于APIO2007与IOI2007选拔赛的通告" target=_top> 
+            关于APIO2007与IOI2007... 
+            
+            </a>[<font color=red>2763</font>]<br>
+            9.<a href="list-id=607.htm" temptabs="http://www.mydrs.org/program/list?id=607" title="noip倒计时 by 枯叶蝴蝶" target=_top> 
+            noip倒计时 by 枯叶蝴蝶
+            </a>[<font color=red>2683</font>]<br>
+            10.<a href="list-id=600.htm" temptabs="http://www.mydrs.org/program/list?id=600" title="朱泽园：思想上的金牌更重要" target=_top> 
+            朱泽园：思想上的金牌更重要
+            </a>[<font color=red>2168</font>]<br>
+            
+          </td>
+          <td width="50%" valign=top bgColor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  
+                  <a href="list-id=81.htm" temptabs="http://www.mydrs.org/program/list?id=81">Pascal解题步骤和比赛技巧</a><br>
+                  
+                  <a href="list-id=80.htm" temptabs="http://www.mydrs.org/program/list?id=80">编程基本能力和技巧</a><br>
+                  
+                  <a href="list-id=79.htm" temptabs="http://www.mydrs.org/program/list?id=79">Pascal编程基础</a><br>
+                  
+                  <a href="list-id=78.htm" temptabs="http://www.mydrs.org/program/list?id=78">程序设计起步</a><br>
+                  
+                </td>
+                <td width="100">&nbsp; </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<p align="center" style="font-size:10.5pt" face="宋体">
+  <a href="http://www.mydrs.org/about.htm">关于本站</a> <a href="mailto:mjbpjcmthh@mydrs.org">|</a> <a href="http://www.mydrs.org/partner.htm">合作伙伴</a> | <a href="http://www.mydrs.org/contact.htm">联系方式</a><br>
+    <strong><a href="http://www.mydrs.org/"><font color="#00BB00" face="宋体">大榕树</font></a></strong> 版权所有 &copy;1999-2006 
+    <a href="http://www.mydrs.org/">www<font color="#CC0000">.myDrs.org</font></a> 
+    </font> <a href="http://www.miibeian.gov.cn/">闽ICP备05000721号</a>
+<script src="http://www.google-analytics.com/urchin.js" temptabs="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3089348-1";
+urchinTracker();
+</script>
+</p>
+
+</body>                                 
+</html>                                 
